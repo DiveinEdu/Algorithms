@@ -1,66 +1,63 @@
 //
-//  DetailViewController.m
+//  LinkedListViewController.m
 //  Algorithms
 //
 //  Created by Carl & Hannah Wieland on 9/16/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
-#import "DetailViewController.h"
-
-@interface DetailViewController ()
+#import "LinkedListViewController.h"
+#import "LinkedList.h"
+@interface LinkedListViewController ()
+@property (nonatomic, strong) LinkedList* linkedList;
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
-- (void)configureView;
+
 @end
 
-@implementation DetailViewController
+@implementation LinkedListViewController
+@synthesize detailView;
+@synthesize insertValueField;
 
-#pragma mark - Managing the detail item
-
-- (void)setDetailItem:(id)newDetailItem
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    if (_detailItem != newDetailItem) {
-        [self.detailItem removeFromSuperview];
-
-        _detailItem = newDetailItem;
-        
-        // Update the view.
-        [self configureView];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        // Custom initialization
     }
-
-    if (self.masterPopoverController != nil) {
-        [self.masterPopoverController dismissPopoverAnimated:YES];
-    }        
-}
-
-- (void)configureView
-{
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        
-        [self.view addSubview:self.detailItem];
-    }
+    return self;
 }
 
 - (void)viewDidLoad
 {
+    self.linkedList = [LinkedList new];
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
+	// Do any additional setup after loading the view.
 }
 
 - (void)viewDidUnload
 {
+    [self setInsertValueField:nil];
+    [self setDetailView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return YES;
+	return YES;
 }
 
+- (IBAction)addValue:(id)sender {
+    [self.linkedList addValue:[[self.insertValueField text] integerValue]];
+    [self.linkedList traverse];
+}
+
+- (IBAction)removeFront:(id)sender {
+    [self.linkedList removeFront];
+    [self.linkedList traverse];
+
+    
+}
 #pragma mark - Split view
 
 - (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
@@ -76,5 +73,6 @@
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
 }
+
 
 @end

@@ -24,6 +24,9 @@
 		095434351606D233001D3E5D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 095434111606D232001D3E5D /* CoreData.framework */; };
 		0954343D1606D233001D3E5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0954343B1606D233001D3E5D /* InfoPlist.strings */; };
 		095434401606D233001D3E5D /* AlgorithmsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0954343F1606D233001D3E5D /* AlgorithmsTests.m */; };
+		0954344C1606D5F3001D3E5D /* LinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0954344B1606D5F3001D3E5D /* LinkedListViewController.m */; };
+		0954344F1606D875001D3E5D /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0954344E1606D875001D3E5D /* LinkedList.m */; };
+		095434521606D895001D3E5D /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 095434511606D895001D3E5D /* Node.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,12 @@
 		0954343C1606D233001D3E5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0954343E1606D233001D3E5D /* AlgorithmsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmsTests.h; sourceTree = "<group>"; };
 		0954343F1606D233001D3E5D /* AlgorithmsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmsTests.m; sourceTree = "<group>"; };
+		0954344A1606D5F3001D3E5D /* LinkedListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedListViewController.h; sourceTree = "<group>"; };
+		0954344B1606D5F3001D3E5D /* LinkedListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedListViewController.m; sourceTree = "<group>"; };
+		0954344D1606D875001D3E5D /* LinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedList.h; sourceTree = "<group>"; };
+		0954344E1606D875001D3E5D /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
+		095434501606D895001D3E5D /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
+		095434511606D895001D3E5D /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +139,9 @@
 				095434281606D232001D3E5D /* DetailViewController.h */,
 				095434291606D232001D3E5D /* DetailViewController.m */,
 				095434221606D232001D3E5D /* Algorithms.xcdatamodeld */,
+				095434501606D895001D3E5D /* Node.h */,
+				095434511606D895001D3E5D /* Node.m */,
+				095434491606D5BA001D3E5D /* LinkedList */,
 				095434141606D232001D3E5D /* Supporting Files */,
 			);
 			path = Algorithms;
@@ -163,6 +175,17 @@
 				0954343B1606D233001D3E5D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		095434491606D5BA001D3E5D /* LinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				0954344A1606D5F3001D3E5D /* LinkedListViewController.h */,
+				0954344B1606D5F3001D3E5D /* LinkedListViewController.m */,
+				0954344D1606D875001D3E5D /* LinkedList.h */,
+				0954344E1606D875001D3E5D /* LinkedList.m */,
+			);
+			name = LinkedList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +300,9 @@
 				095434241606D232001D3E5D /* Algorithms.xcdatamodeld in Sources */,
 				095434271606D232001D3E5D /* MasterViewController.m in Sources */,
 				0954342A1606D232001D3E5D /* DetailViewController.m in Sources */,
+				0954344C1606D5F3001D3E5D /* LinkedListViewController.m in Sources */,
+				0954344F1606D875001D3E5D /* LinkedList.m in Sources */,
+				095434521606D895001D3E5D /* Node.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +478,7 @@
 				095434451606D233001D3E5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		095434461606D233001D3E5D /* Build configuration list for PBXNativeTarget "AlgorithmsTests" */ = {
 			isa = XCConfigurationList;
@@ -460,6 +487,7 @@
 				095434481606D233001D3E5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
