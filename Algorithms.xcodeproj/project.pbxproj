@@ -27,6 +27,10 @@
 		0954344C1606D5F3001D3E5D /* LinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0954344B1606D5F3001D3E5D /* LinkedListViewController.m */; };
 		0954344F1606D875001D3E5D /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0954344E1606D875001D3E5D /* LinkedList.m */; };
 		095434521606D895001D3E5D /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 095434511606D895001D3E5D /* Node.m */; };
+		09E9573A1609500500F5D573 /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E957391609500500F5D573 /* StackViewController.m */; };
+		09E9573D1609501800F5D573 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
+		09E957401609525900F5D573 /* LinkedListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573F1609525900F5D573 /* LinkedListView.m */; };
+		09E957431609531B00F5D573 /* ListNodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E957421609531B00F5D573 /* ListNodeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +73,14 @@
 		0954344E1606D875001D3E5D /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		095434501606D895001D3E5D /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		095434511606D895001D3E5D /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		09E957381609500500F5D573 /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
+		09E957391609500500F5D573 /* StackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
+		09E9573B1609501800F5D573 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		09E9573C1609501800F5D573 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		09E9573E1609525900F5D573 /* LinkedListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedListView.h; sourceTree = "<group>"; };
+		09E9573F1609525900F5D573 /* LinkedListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedListView.m; sourceTree = "<group>"; };
+		09E957411609531B00F5D573 /* ListNodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListNodeView.h; sourceTree = "<group>"; };
+		09E957421609531B00F5D573 /* ListNodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListNodeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +153,7 @@
 				095434221606D232001D3E5D /* Algorithms.xcdatamodeld */,
 				095434501606D895001D3E5D /* Node.h */,
 				095434511606D895001D3E5D /* Node.m */,
+				09E9573616094FE300F5D573 /* Stack */,
 				095434491606D5BA001D3E5D /* LinkedList */,
 				095434141606D232001D3E5D /* Supporting Files */,
 			);
@@ -182,10 +195,25 @@
 			children = (
 				0954344A1606D5F3001D3E5D /* LinkedListViewController.h */,
 				0954344B1606D5F3001D3E5D /* LinkedListViewController.m */,
+				09E9573E1609525900F5D573 /* LinkedListView.h */,
+				09E9573F1609525900F5D573 /* LinkedListView.m */,
+				09E957411609531B00F5D573 /* ListNodeView.h */,
+				09E957421609531B00F5D573 /* ListNodeView.m */,
 				0954344D1606D875001D3E5D /* LinkedList.h */,
 				0954344E1606D875001D3E5D /* LinkedList.m */,
 			);
 			name = LinkedList;
+			sourceTree = "<group>";
+		};
+		09E9573616094FE300F5D573 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				09E957381609500500F5D573 /* StackViewController.h */,
+				09E957391609500500F5D573 /* StackViewController.m */,
+				09E9573B1609501800F5D573 /* Stack.h */,
+				09E9573C1609501800F5D573 /* Stack.m */,
+			);
+			name = Stack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +331,10 @@
 				0954344C1606D5F3001D3E5D /* LinkedListViewController.m in Sources */,
 				0954344F1606D875001D3E5D /* LinkedList.m in Sources */,
 				095434521606D895001D3E5D /* Node.m in Sources */,
+				09E9573A1609500500F5D573 /* StackViewController.m in Sources */,
+				09E9573D1609501800F5D573 /* Stack.m in Sources */,
+				09E957401609525900F5D573 /* LinkedListView.m in Sources */,
+				09E957431609531B00F5D573 /* ListNodeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

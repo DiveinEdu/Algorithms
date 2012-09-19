@@ -10,6 +10,7 @@
 #import "DetailViewController.h"
 
 @class LinkedList;
+@class LinkedListView;
 @interface LinkedListViewController :UIViewController <UISplitViewControllerDelegate>
 {
 }

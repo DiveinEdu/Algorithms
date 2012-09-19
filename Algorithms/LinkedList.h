@@ -14,12 +14,13 @@
     int size;
 }
 
-@property ( nonatomic, strong) Node* head;
-@property ( nonatomic, strong) Node* tail;
+@property (nonatomic, strong) Node* head;
+
 
 -(void)addValue:(int)value;
 -(void)removeFront;
 -(void)removeLast;
 -(void)traverse;
 -(int)getSize;
+
 @end

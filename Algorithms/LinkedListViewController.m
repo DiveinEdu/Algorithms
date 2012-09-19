@@ -8,6 +8,7 @@
 
 #import "LinkedListViewController.h"
 #import "LinkedList.h"
+#import "LinkedListView.h"
 @interface LinkedListViewController ()
 @property (nonatomic, strong) LinkedList* linkedList;
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -50,10 +51,12 @@
 - (IBAction)addValue:(id)sender {
     [self.linkedList addValue:[[self.insertValueField text] integerValue]];
     [self.linkedList traverse];
+    [self.detailView addNode:self.linkedList.head];
 }
 
 - (IBAction)removeFront:(id)sender {
     [self.linkedList removeFront];
+    [self.detailView removeNode];
     [self.linkedList traverse];
 
     
