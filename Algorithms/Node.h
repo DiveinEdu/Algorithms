@@ -10,9 +10,9 @@
 
 @interface Node : NSObject{
 }
--(id)initWithValue:(int)value;
+-(id)initWithValue:(id)value;
 @property ( nonatomic, strong) Node* next;
 @property ( nonatomic, weak) Node* previous;
 
--(int)getValue;
+-(id)getValue;
 @end

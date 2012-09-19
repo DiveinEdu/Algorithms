@@ -10,9 +10,9 @@
 @class Node;
 @interface LinkedListView : UIScrollView
 @property (nonatomic, strong)NSMutableArray* nodeViews;
+@property (nonatomic, strong)NSMutableArray* arrowViews;
 
 -(void)addNode:(Node*)node;
--(void)addNode:(Node *)node;
 -(void)removeNode;
 
 @end

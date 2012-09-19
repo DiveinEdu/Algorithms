@@ -18,7 +18,7 @@
     
     return self;
 }
--(void)addValue:(int)value{
+-(void)addValue:(id)value{
     Node* newNode = [[Node alloc] initWithValue:value];
     
     if(self.head)
@@ -30,7 +30,7 @@
     Node* n = self.head;
     NSMutableString* list = [NSMutableString string];
     while(n!=nil){
-        [list appendFormat:@"%i,",[n getValue]];
+        [list appendFormat:@"%@,",[[n getValue]description]];
         n = n.next;
     }
     NSLog(@"%@",list);

@@ -8,21 +8,21 @@
 
 #import "Node.h"
 @interface Node ()
-@property (nonatomic) int value;
+@property (nonatomic, strong) id value;
 @end
 
 @implementation Node
--(id)initWithValue:(int)value{
+-(id)initWithValue:(id)value{
     self = [super init];
     if(self !=nil){
         self.value = value;
     }
     return self;
 }
--(int)getValue{
+-(id)getValue{
     return self.value;
 }
 -(NSString*)description{
-    return [NSString stringWithFormat:@"Node: %i",self.value];
+    return [NSString stringWithFormat:@"%@",self.value];
 }
 @end

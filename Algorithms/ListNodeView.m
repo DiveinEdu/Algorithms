@@ -9,16 +9,24 @@
 #import "ListNodeView.h"
 #import "Node.h"
 #define kListNodeWidth  100
+#define kListNodeHeight 40
 #define kMoveDistance   150
 @implementation ListNodeView
 
 -(id)initWithNode:(Node *)node{
-    self = [super initWithFrame:CGRectMake(0, 0, kListNodeWidth, 40)];
+    self = [super initWithFrame:CGRectMake(0, 0, kListNodeWidth, kListNodeHeight)];
     if(self){
         self.node=node;
-        UILabel* value = [[UILabel alloc] initWithFrame:CGRectMake(20,20 , 80, 20)];
+        UILabel* value = [[UILabel alloc] initWithFrame:CGRectMake(0,0 , kListNodeWidth-30, kListNodeHeight)];
+        [value.layer setBorderWidth:3];
+        [value.layer setBorderColor:[UIColor blackColor].CGColor];
+        [value setAdjustsFontSizeToFitWidth:YES];
+        [value setAdjustsLetterSpacingToFitWidth:YES];
+        [value setTextAlignment:NSTextAlignmentCenter];
         [value setText:[self.node description]];
         [self addSubview:value];
+        [self.layer setBorderColor:[UIColor blackColor].CGColor];
+        [self.layer setBorderWidth:3];
     }
     return self;
 }
@@ -30,7 +38,7 @@
     [UIView commitAnimations];
 }
 -(void)moveLeft{
-    [UIView beginAnimations:@"MoveRight" context:nil];
+    [UIView beginAnimations:@"MoveLeft" context:nil];
     [UIView setAnimationCurve:UIViewAnimationCurveEaseIn];
     [UIView setAnimationDuration:0.15f];
     self.frame = CGRectMake(self.frame.origin.x-kMoveDistance, self.frame.origin.y,self.frame.size.width , self.frame.size.height);

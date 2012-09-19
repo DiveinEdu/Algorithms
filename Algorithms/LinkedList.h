@@ -17,7 +17,7 @@
 @property (nonatomic, strong) Node* head;
 
 
--(void)addValue:(int)value;
+-(void)addValue:(id)value;
 -(void)removeFront;
 -(void)removeLast;
 -(void)traverse;

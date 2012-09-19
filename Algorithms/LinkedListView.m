@@ -9,6 +9,7 @@
 #import "LinkedListView.h"
 #import "Node.h"
 #import "ListNodeView.h"
+#import "ArrowView.h"
 @implementation LinkedListView
 
 - (id)initWithFrame:(CGRect)frame
@@ -23,9 +24,13 @@
     ListNodeView* listNode = [[ListNodeView alloc] initWithNode:node];
     for (ListNodeView* node in self.nodeViews) {
         [node moveRight];
+        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(node.frame.size.width-15, node.frame.size.height/4, node.frame.size.width,node.frame.size.height/2 )];
+        [self.arrowViews addObject:arrow];
+        [self addSubview:arrow];
+        
     }
     [self.nodeViews addObject:listNode];
-    [self setContentSize:CGSizeMake([self.nodeViews count]*([listNode frame].size.width+100), 100)];
+    [self setContentSize:CGSizeMake([self.nodeViews count]*([listNode frame].size.width), 100)];
     [self addSubview:listNode];
 
 }
@@ -41,7 +46,12 @@
         return _nodeViews;
     _nodeViews=[NSMutableArray new];
     return _nodeViews;
-
+}
+-(NSMutableArray*)arrowViews{
+    if (_arrowViews!=nil)
+        return _arrowViews;
+    _arrowViews=[NSMutableArray new];
+    return _arrowViews;
 }
 /*
 // Only override drawRect: if you perform custom drawing.

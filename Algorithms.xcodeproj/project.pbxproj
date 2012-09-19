@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094B746A160A6EF000C47C3E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 094B7469160A6EF000C47C3E /* arrow_right.png */; };
+		094B746D160A6F3200C47C3E /* ArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094B746C160A6F3200C47C3E /* ArrowView.m */; };
 		0954340C1606D232001D3E5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954340B1606D232001D3E5D /* UIKit.framework */; };
 		0954340E1606D232001D3E5D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954340D1606D232001D3E5D /* Foundation.framework */; };
 		095434101606D232001D3E5D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954340F1606D232001D3E5D /* CoreGraphics.framework */; };
@@ -27,6 +29,7 @@
 		0954344C1606D5F3001D3E5D /* LinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0954344B1606D5F3001D3E5D /* LinkedListViewController.m */; };
 		0954344F1606D875001D3E5D /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0954344E1606D875001D3E5D /* LinkedList.m */; };
 		095434521606D895001D3E5D /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 095434511606D895001D3E5D /* Node.m */; };
+		096912C9160A6BE600E5AFB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096912C8160A6BE600E5AFB7 /* QuartzCore.framework */; };
 		09E9573A1609500500F5D573 /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E957391609500500F5D573 /* StackViewController.m */; };
 		09E9573D1609501800F5D573 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
 		09E957401609525900F5D573 /* LinkedListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573F1609525900F5D573 /* LinkedListView.m */; };
@@ -44,6 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		094B7469160A6EF000C47C3E /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
+		094B746B160A6F3200C47C3E /* ArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowView.h; sourceTree = "<group>"; };
+		094B746C160A6F3200C47C3E /* ArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowView.m; sourceTree = "<group>"; };
 		095434071606D232001D3E5D /* Algorithms.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Algorithms.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0954340B1606D232001D3E5D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0954340D1606D232001D3E5D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -73,6 +79,7 @@
 		0954344E1606D875001D3E5D /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		095434501606D895001D3E5D /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		095434511606D895001D3E5D /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		096912C8160A6BE600E5AFB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		09E957381609500500F5D573 /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
 		09E957391609500500F5D573 /* StackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
 		09E9573B1609501800F5D573 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -88,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096912C9160A6BE600E5AFB7 /* QuartzCore.framework in Frameworks */,
 				0954340C1606D232001D3E5D /* UIKit.framework in Frameworks */,
 				0954340E1606D232001D3E5D /* Foundation.framework in Frameworks */,
 				095434101606D232001D3E5D /* CoreGraphics.framework in Frameworks */,
@@ -109,9 +117,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		094B7467160A6EA500C47C3E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				094B7469160A6EF000C47C3E /* arrow_right.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		095433FC1606D232001D3E5D = {
 			isa = PBXGroup;
 			children = (
+				096912C8160A6BE600E5AFB7 /* QuartzCore.framework */,
 				095434131606D232001D3E5D /* Algorithms */,
 				095434381606D233001D3E5D /* AlgorithmsTests */,
 				0954340A1606D232001D3E5D /* Frameworks */,
@@ -153,6 +170,8 @@
 				095434221606D232001D3E5D /* Algorithms.xcdatamodeld */,
 				095434501606D895001D3E5D /* Node.h */,
 				095434511606D895001D3E5D /* Node.m */,
+				094B746B160A6F3200C47C3E /* ArrowView.h */,
+				094B746C160A6F3200C47C3E /* ArrowView.m */,
 				09E9573616094FE300F5D573 /* Stack */,
 				095434491606D5BA001D3E5D /* LinkedList */,
 				095434141606D232001D3E5D /* Supporting Files */,
@@ -163,6 +182,7 @@
 		095434141606D232001D3E5D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				094B7467160A6EA500C47C3E /* Images */,
 				095434151606D232001D3E5D /* Algorithms-Info.plist */,
 				095434161606D232001D3E5D /* InfoPlist.strings */,
 				095434191606D232001D3E5D /* main.m */,
@@ -289,6 +309,7 @@
 			files = (
 				095434181606D232001D3E5D /* InfoPlist.strings in Resources */,
 				095434211606D232001D3E5D /* MainStoryboard.storyboard in Resources */,
+				094B746A160A6EF000C47C3E /* arrow_right.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +356,7 @@
 				09E9573D1609501800F5D573 /* Stack.m in Sources */,
 				09E957401609525900F5D573 /* LinkedListView.m in Sources */,
 				09E957431609531B00F5D573 /* ListNodeView.m in Sources */,
+				094B746D160A6F3200C47C3E /* ArrowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

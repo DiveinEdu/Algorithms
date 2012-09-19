@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+
 @class Node;
 @interface ListNodeView : UIView
 @property ( nonatomic, weak)Node* node;
