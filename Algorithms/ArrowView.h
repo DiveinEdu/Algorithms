@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+typedef enum {
+    ARROW_TYPE_FILLED,
+    ARROW_TYPE_EMPTY
+}ARROW_TYPE;
 
 @interface ArrowView : UIView
+-(id)initWithFrame:(CGRect)frame andArrowType:(ARROW_TYPE)type;
 @end

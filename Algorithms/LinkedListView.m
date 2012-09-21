@@ -33,7 +33,7 @@
     [UIView commitAnimations];
 
     if ([self.nodeViews count]>1) {
-        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width, kListNodeHeight/4, kMoveDistance-kListNodeWidth , kListNodeHeight/2)];
+        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width, kListNodeHeight/4, kMoveDistance-kListNodeWidth , kListNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
         [listNode addSubview:arrow];
         
     }

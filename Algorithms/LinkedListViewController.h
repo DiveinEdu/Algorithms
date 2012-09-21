@@ -8,15 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailViewController.h"
-
+#import "DataViewController.h"
 @class LinkedList;
 @class LinkedListView;
-@interface LinkedListViewController :UIViewController <UISplitViewControllerDelegate>
-{
+@interface LinkedListViewController :DataViewController {
+    
 }
 @property (weak, nonatomic) IBOutlet UITextField *insertValueField;
 @property (weak, nonatomic) IBOutlet LinkedListView *detailView;
 - (IBAction)addValue:(id)sender;
 - (IBAction)removeFront:(id)sender;
+- (IBAction)showCode:(id)sender;
 
 @end

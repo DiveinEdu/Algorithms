@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class DetailViewController;
+@class DataViewController;
 
 #import <CoreData/CoreData.h>
 
 @interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
-@property (strong, nonatomic) DetailViewController<UISplitViewControllerDelegate> *detailViewController;
+@property (strong, nonatomic) DataViewController<UISplitViewControllerDelegate> *detailViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
