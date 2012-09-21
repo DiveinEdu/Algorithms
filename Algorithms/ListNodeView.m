@@ -8,9 +8,7 @@
 
 #import "ListNodeView.h"
 #import "Node.h"
-#define kListNodeWidth  100
-#define kListNodeHeight 40
-#define kMoveDistance   150
+
 @implementation ListNodeView
 
 -(id)initWithNode:(Node *)node{

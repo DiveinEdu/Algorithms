@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#define kListNodeWidth  100
+#define kListNodeHeight 40
+#define kMoveDistance   150
 
 @class Node;
 @interface ListNodeView : UIView

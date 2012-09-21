@@ -24,15 +24,19 @@
     ListNodeView* listNode = [[ListNodeView alloc] initWithNode:node];
     for (ListNodeView* node in self.nodeViews) {
         [node moveRight];
-        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(node.frame.size.width-15, node.frame.size.height/4, node.frame.size.width,node.frame.size.height/2 )];
-        [self.arrowViews addObject:arrow];
-        [self addSubview:arrow];
-        
     }
     [self.nodeViews addObject:listNode];
-    [self setContentSize:CGSizeMake([self.nodeViews count]*([listNode frame].size.width), 100)];
+    [self setContentSize:CGSizeMake(([self.nodeViews count]*kMoveDistance)+40, 100)];
+    [UIView beginAnimations:@"NewNode" context:nil];
+    [UIView setAnimationDuration:.1];
     [self addSubview:listNode];
+    [UIView commitAnimations];
 
+    if ([self.nodeViews count]>1) {
+        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width, kListNodeHeight/4, kMoveDistance-kListNodeWidth , kListNodeHeight/2)];
+        [listNode addSubview:arrow];
+        
+    }
 }
 -(void)removeNode{
     [[self.nodeViews lastObject] removeFromSuperview];
