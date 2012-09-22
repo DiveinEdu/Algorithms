@@ -39,9 +39,6 @@
     if(self.head)
         self.head = [self.head next];
 }
--(void)removeLast{
-    
-}
 -(int)getSize{
     return size;
 }

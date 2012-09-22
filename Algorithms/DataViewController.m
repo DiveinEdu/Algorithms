@@ -7,6 +7,8 @@
 //
 
 #import "DataViewController.h"
+#import "CodePopoverController.h"
+
 
 @interface DataViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -16,7 +18,7 @@
 
 - (void)viewDidLoad
 {
-    UIBarButtonItem* codeButton = [[UIBarButtonItem alloc]initWithTitle:@"Code" style:UIBarButtonItemStylePlain target:self action:@selector(loadCode)];
+    UIBarButtonItem* codeButton = [[UIBarButtonItem alloc]initWithTitle:@"Code" style:UIBarButtonItemStylePlain target:self action:@selector(loadCode:)];
     [self.navigationItem setRightBarButtonItem:codeButton];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
@@ -53,10 +55,31 @@
 
 
 
--(void)loadCode{
+-(IBAction)loadCode:(id)sender{
     NSLog(@"%@",[[self class]description] );
+    NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
+    bundleRoot =[bundleRoot stringByAppendingPathComponent:@"code"];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    NSArray *dirContents = [fm contentsOfDirectoryAtPath:bundleRoot error:nil];
+    NSMutableSet* files=[NSMutableSet set];
+    for (NSString* file in dirContents) {
+        [files addObject:[file stringByDeletingPathExtension]];
+    }
+    NSPredicate *fltr = [NSPredicate predicateWithFormat:@"%@ contains self ",[[self class] description]];
+    [files filterUsingPredicate:fltr];
     
+    UINavigationController* navCont =[self.storyboard instantiateViewControllerWithIdentifier:@"popNavController"];
+    
+    self.codePicker = [[navCont viewControllers] lastObject];
+    [self.codePicker setFiles:[NSMutableArray arrayWithArray:dirContents]];
+    
+    self.codePickerPopover = [[UIPopoverController alloc]
+                                initWithContentViewController:navCont];
+    
+    [self.codePickerPopover presentPopoverFromBarButtonItem:sender
+                                permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
+
 
 
 @end

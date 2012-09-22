@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64AD160E5D0200F9439A /* CodeViewController.m */; };
 		094B746A160A6EF000C47C3E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 094B7469160A6EF000C47C3E /* arrow_right.png */; };
 		094B746D160A6F3200C47C3E /* ArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094B746C160A6F3200C47C3E /* ArrowView.m */; };
 		0954340C1606D232001D3E5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954340B1606D232001D3E5D /* UIKit.framework */; };
@@ -28,6 +29,11 @@
 		0954344C1606D5F3001D3E5D /* LinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0954344B1606D5F3001D3E5D /* LinkedListViewController.m */; };
 		0954344F1606D875001D3E5D /* LinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0954344E1606D875001D3E5D /* LinkedList.m */; };
 		095434521606D895001D3E5D /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 095434511606D895001D3E5D /* Node.m */; };
+		09584E10160E4FC200AF8427 /* LinkedList.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0954344E1606D875001D3E5D /* LinkedList.m */; };
+		09584E11160E4FC900AF8427 /* LinkedList.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0954344D1606D875001D3E5D /* LinkedList.h */; };
+		09584E12160E4FD000AF8427 /* Node.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095434501606D895001D3E5D /* Node.h */; };
+		09584E13160E4FD200AF8427 /* Node.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095434511606D895001D3E5D /* Node.m */; };
+		09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09584E15160E55B000AF8427 /* CodePopoverController.m */; };
 		096912C9160A6BE600E5AFB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096912C8160A6BE600E5AFB7 /* QuartzCore.framework */; };
 		09E9573A1609500500F5D573 /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E957391609500500F5D573 /* StackViewController.m */; };
 		09E9573D1609501800F5D573 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
@@ -49,7 +55,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		09584E0E160E4FA300AF8427 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = code;
+			dstSubfolderSpec = 7;
+			files = (
+				09584E10160E4FC200AF8427 /* LinkedList.m in CopyFiles */,
+				09584E11160E4FC900AF8427 /* LinkedList.h in CopyFiles */,
+				09584E13160E4FD200AF8427 /* Node.m in CopyFiles */,
+				09584E12160E4FD000AF8427 /* Node.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		091F64AC160E5D0200F9439A /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
+		091F64AD160E5D0200F9439A /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeViewController.m; sourceTree = "<group>"; };
 		094B7469160A6EF000C47C3E /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		094B746B160A6F3200C47C3E /* ArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowView.h; sourceTree = "<group>"; };
 		094B746C160A6F3200C47C3E /* ArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowView.m; sourceTree = "<group>"; };
@@ -80,6 +104,8 @@
 		0954344E1606D875001D3E5D /* LinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedList.m; sourceTree = "<group>"; };
 		095434501606D895001D3E5D /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; };
 		095434511606D895001D3E5D /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; };
+		09584E14160E55B000AF8427 /* CodePopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodePopoverController.h; sourceTree = "<group>"; };
+		09584E15160E55B000AF8427 /* CodePopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodePopoverController.m; sourceTree = "<group>"; };
 		096912C8160A6BE600E5AFB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		09E957381609500500F5D573 /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
 		09E957391609500500F5D573 /* StackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
@@ -181,6 +207,10 @@
 				094B746C160A6F3200C47C3E /* ArrowView.m */,
 				09F0D401160CF04A00CF657E /* DataViewController.h */,
 				09F0D402160CF04A00CF657E /* DataViewController.m */,
+				09584E14160E55B000AF8427 /* CodePopoverController.h */,
+				09584E15160E55B000AF8427 /* CodePopoverController.m */,
+				091F64AC160E5D0200F9439A /* CodeViewController.h */,
+				091F64AD160E5D0200F9439A /* CodeViewController.m */,
 				09E9573616094FE300F5D573 /* Stack */,
 				095434491606D5BA001D3E5D /* LinkedList */,
 				095434141606D232001D3E5D /* Supporting Files */,
@@ -255,6 +285,7 @@
 				095434031606D232001D3E5D /* Sources */,
 				095434041606D232001D3E5D /* Frameworks */,
 				095434051606D232001D3E5D /* Resources */,
+				09584E0E160E4FA300AF8427 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -369,6 +400,8 @@
 				09E957431609531B00F5D573 /* ListNodeView.m in Sources */,
 				094B746D160A6F3200C47C3E /* ArrowView.m in Sources */,
 				09F0D403160CF04A00CF657E /* DataViewController.m in Sources */,
+				09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */,
+				091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

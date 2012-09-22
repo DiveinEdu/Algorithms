@@ -19,7 +19,6 @@
 
 -(void)addValue:(id)value;
 -(void)removeFront;
--(void)removeLast;
 -(void)traverse;
 -(int)getSize;
 

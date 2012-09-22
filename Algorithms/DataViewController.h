@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CodePopoverController;
 
 @interface DataViewController : UIViewController<UISplitViewControllerDelegate>
 @property (strong, nonatomic) id detailItem;
--(void)loadCode;
+@property (nonatomic, retain) CodePopoverController *codePicker;
+@property (nonatomic, retain) UIPopoverController *codePickerPopover;
+-(IBAction)loadCode:(id)sender;
 
 
 @end
