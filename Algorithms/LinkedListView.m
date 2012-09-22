@@ -21,22 +21,29 @@
     return self;
 }
 -(void)addNode:(Node *)node{
-    ListNodeView* listNode = [[ListNodeView alloc] initWithNode:node];
+
     for (ListNodeView* node in self.nodeViews) {
         [node moveRight];
     }
+
+    ListNodeView* listNode = [[ListNodeView alloc] initWithNode:node];
+    [listNode setAlpha:0];
     [self.nodeViews addObject:listNode];
     [self setContentSize:CGSizeMake(([self.nodeViews count]*kMoveDistance)+40, 100)];
-    [UIView beginAnimations:@"NewNode" context:nil];
-    [UIView setAnimationDuration:.1];
+
     [self addSubview:listNode];
-    [UIView commitAnimations];
 
     if ([self.nodeViews count]>1) {
-        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width, kListNodeHeight/4, kMoveDistance-kListNodeWidth , kListNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
+        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width-15, kListNodeHeight/4, kMoveDistance-kListNodeWidth +15, kListNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
         [listNode addSubview:arrow];
         
     }
+    [UIView beginAnimations:@"NewNode" context:nil];
+    [UIView setAnimationDelay:.2];
+    [UIView setAnimationDuration:.1];
+    [listNode setAlpha:1];
+    [UIView commitAnimations];
+
 }
 -(void)removeNode{
     [[self.nodeViews lastObject] removeFromSuperview];

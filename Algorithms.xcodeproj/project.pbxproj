@@ -137,7 +137,6 @@
 		095433FC1606D232001D3E5D = {
 			isa = PBXGroup;
 			children = (
-				096912C8160A6BE600E5AFB7 /* QuartzCore.framework */,
 				095434131606D232001D3E5D /* Algorithms */,
 				095434381606D233001D3E5D /* AlgorithmsTests */,
 				0954340A1606D232001D3E5D /* Frameworks */,
@@ -157,6 +156,7 @@
 		0954340A1606D232001D3E5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				096912C8160A6BE600E5AFB7 /* QuartzCore.framework */,
 				0954340B1606D232001D3E5D /* UIKit.framework */,
 				0954340D1606D232001D3E5D /* Foundation.framework */,
 				0954340F1606D232001D3E5D /* CoreGraphics.framework */,
