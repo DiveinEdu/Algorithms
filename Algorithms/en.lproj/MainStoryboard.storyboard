@@ -133,21 +133,23 @@
                 <viewController id="TnO-kk-TxJ" customClass="CodeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B5C-4E-nqh">
                         <rect key="frame" x="0.0" y="64" width="400" height="336"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" editable="NO" id="Mct-wB-CRQ">
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="ZB2-Ap-Grz">
                                 <rect key="frame" x="0.0" y="0.0" width="400" height="336"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="TnO-kk-TxJ" id="Top-Al-PRa"/>
+                                </connections>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="S6x-5W-YI8"/>
                     <connections>
-                        <outlet property="codeView" destination="Mct-wB-CRQ" id="VLQ-L7-oyg"/>
+                        <outlet property="codeView" destination="ZB2-Ap-Grz" id="D5d-b7-mZ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQO-H0-IvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -268,7 +270,8 @@
         <class className="CodeViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CodeViewController.h"/>
             <relationships>
-                <relationship kind="outlet" name="codeView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="codeView" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>
         <class className="DataViewController" superclassName="UIViewController">

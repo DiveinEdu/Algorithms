@@ -43,6 +43,16 @@
 		09F0D3F5160CEB9600CF657E /* arrow_right_filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F1160CEB9600CF657E /* arrow_right_filled@2x.png */; };
 		09F0D3F7160CEB9600CF657E /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F3160CEB9600CF657E /* arrow_right@2x.png */; };
 		09F0D403160CF04A00CF657E /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D402160CF04A00CF657E /* DataViewController.m */; };
+		09F929F0160EB4F400FC497A /* prettify.css in Resources */ = {isa = PBXBuildFile; fileRef = 09F929DC160EB4F400FC497A /* prettify.css */; };
+		09F929F1160EB4F400FC497A /* prettify.js in Sources */ = {isa = PBXBuildFile; fileRef = 09F929DD160EB4F400FC497A /* prettify.js */; };
+		09F929F8160EB68900FC497A /* prettify.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929DD160EB4F400FC497A /* prettify.js */; };
+		09F929F9160EB68C00FC497A /* prettify.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929DC160EB4F400FC497A /* prettify.css */; };
+		09F929FB160EC04700FC497A /* sons-of-obsidian.css in Resources */ = {isa = PBXBuildFile; fileRef = 09F929FA160EC04700FC497A /* sons-of-obsidian.css */; };
+		09F929FD160EC06B00FC497A /* sunburst.css in Resources */ = {isa = PBXBuildFile; fileRef = 09F929FC160EC06B00FC497A /* sunburst.css */; };
+		09F929FF160EC0B700FC497A /* desert.css in Resources */ = {isa = PBXBuildFile; fileRef = 09F929FE160EC0B700FC497A /* desert.css */; };
+		09F92A00160EC0EF00FC497A /* desert.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929FE160EC0B700FC497A /* desert.css */; };
+		09F92A01160EC0F100FC497A /* sunburst.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929FC160EC06B00FC497A /* sunburst.css */; };
+		09F92A02160EC0F300FC497A /* sons-of-obsidian.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929FA160EC04700FC497A /* sons-of-obsidian.css */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +76,20 @@
 				09584E11160E4FC900AF8427 /* LinkedList.h in CopyFiles */,
 				09584E13160E4FD200AF8427 /* Node.m in CopyFiles */,
 				09584E12160E4FD000AF8427 /* Node.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09F929F3160EB65500FC497A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = js;
+			dstSubfolderSpec = 7;
+			files = (
+				09F929F8160EB68900FC497A /* prettify.js in CopyFiles */,
+				09F929F9160EB68C00FC497A /* prettify.css in CopyFiles */,
+				09F92A01160EC0F100FC497A /* sunburst.css in CopyFiles */,
+				09F92A02160EC0F300FC497A /* sons-of-obsidian.css in CopyFiles */,
+				09F92A00160EC0EF00FC497A /* desert.css in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +144,11 @@
 		09F0D3F3160CEB9600CF657E /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right@2x.png"; sourceTree = "<group>"; };
 		09F0D401160CF04A00CF657E /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		09F0D402160CF04A00CF657E /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		09F929DC160EB4F400FC497A /* prettify.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = prettify.css; sourceTree = "<group>"; };
+		09F929DD160EB4F400FC497A /* prettify.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = prettify.js; sourceTree = "<group>"; };
+		09F929FA160EC04700FC497A /* sons-of-obsidian.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sons-of-obsidian.css"; sourceTree = "<group>"; };
+		09F929FC160EC06B00FC497A /* sunburst.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = sunburst.css; path = ../sunburst.css; sourceTree = "<group>"; };
+		09F929FE160EC0B700FC497A /* desert.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = desert.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +250,7 @@
 		095434141606D232001D3E5D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				09F929C9160EB4F400FC497A /* prettify */,
 				094B7467160A6EA500C47C3E /* Images */,
 				095434151606D232001D3E5D /* Algorithms-Info.plist */,
 				095434161606D232001D3E5D /* InfoPlist.strings */,
@@ -275,6 +305,18 @@
 			name = Stack;
 			sourceTree = "<group>";
 		};
+		09F929C9160EB4F400FC497A /* prettify */ = {
+			isa = PBXGroup;
+			children = (
+				09F929FE160EC0B700FC497A /* desert.css */,
+				09F929FC160EC06B00FC497A /* sunburst.css */,
+				09F929FA160EC04700FC497A /* sons-of-obsidian.css */,
+				09F929DC160EB4F400FC497A /* prettify.css */,
+				09F929DD160EB4F400FC497A /* prettify.js */,
+			);
+			path = prettify;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,6 +328,7 @@
 				095434041606D232001D3E5D /* Frameworks */,
 				095434051606D232001D3E5D /* Resources */,
 				09584E0E160E4FA300AF8427 /* CopyFiles */,
+				09F929F3160EB65500FC497A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -353,6 +396,10 @@
 				09F0D3F4160CEB9600CF657E /* arrow_right_filled.png in Resources */,
 				09F0D3F5160CEB9600CF657E /* arrow_right_filled@2x.png in Resources */,
 				09F0D3F7160CEB9600CF657E /* arrow_right@2x.png in Resources */,
+				09F929F0160EB4F400FC497A /* prettify.css in Resources */,
+				09F929FB160EC04700FC497A /* sons-of-obsidian.css in Resources */,
+				09F929FD160EC06B00FC497A /* sunburst.css in Resources */,
+				09F929FF160EC0B700FC497A /* desert.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -402,6 +449,7 @@
 				09F0D403160CF04A00CF657E /* DataViewController.m in Sources */,
 				09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */,
 				091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */,
+				09F929F1160EB4F400FC497A /* prettify.js in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

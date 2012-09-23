@@ -56,7 +56,6 @@
 
 
 -(IBAction)loadCode:(id)sender{
-    NSLog(@"%@",[[self class]description] );
     NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
     bundleRoot =[bundleRoot stringByAppendingPathComponent:@"code"];
     NSFileManager *fm = [NSFileManager defaultManager];

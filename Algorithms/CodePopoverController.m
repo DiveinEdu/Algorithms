@@ -64,11 +64,11 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     UITableViewCell* cell = sender;
     NSString* fileName = [[cell textLabel] text];
-    CodeViewController* dest = [segue destinationViewController];
     NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
     bundleRoot =[bundleRoot stringByAppendingPathComponent:@"code"];
     NSString* fullPath = [bundleRoot stringByAppendingPathComponent:fileName];
-    NSLog(@"%@",[NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:nil]);
+    
+    CodeViewController* dest = [segue destinationViewController];
     [dest setFullPath:fullPath];
     
     

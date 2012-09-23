@@ -9,6 +9,7 @@
 #import "CodeViewController.h"
 
 @interface CodeViewController ()
+-(NSString*)htmlifyString:(NSString*)string;
 
 @end
 
@@ -22,11 +23,25 @@
     }
     return self;
 }
-
+-(NSString*)htmlifyString:(NSString*)string{
+    NSString* toReturn = [string stringByReplacingOccurrencesOfString:@"<" withString:@"&lt;"];
+    toReturn = [toReturn stringByReplacingOccurrencesOfString:@">" withString:@"&gt;"];
+    
+    return toReturn;
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.codeView setText:[NSString stringWithContentsOfFile:self.fullPath encoding:NSUTF8StringEncoding error:nil]];
+
+    NSString* code = [NSString stringWithContentsOfFile:self.fullPath encoding:NSUTF8StringEncoding error:nil];
+    
+    NSString* htmlPage = [NSString stringWithFormat:@"<html>\
+                                                      <link href=\"./js/sons-of-obsidian.css\" type=\"text/css\" rel=\"stylesheet\" />\
+                                                      <script type=\"text/javascript\" src=\"./js/prettify.js\"></script>\
+                                                      <body onload=\"prettyPrint()\">\
+                                                      <pre class=\"prettyprint\">%@</pre>\
+                                                      </body></html>",[self htmlifyString:code]];
+    [self.codeView loadHTMLString:htmlPage  baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
 
 	// Do any additional setup after loading the view.
 }
@@ -39,6 +54,12 @@
 
 - (void)viewDidUnload {
     [self setCodeView:nil];
+    [self setCodeView:nil];
+    [self setScrollView:nil];
     [super viewDidUnload];
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    [self.scrollView setContentSize:self.codeView.frame.size];
 }
 @end
