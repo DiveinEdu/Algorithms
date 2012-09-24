@@ -9,7 +9,7 @@
 #import "DataManager.h"
 #import "Category.h"
 #import "Algorithm.h"
-#import "RelatedFiles.h"
+#import "RelatedFile.h"
 
 @implementation DataManager
 @synthesize managedObjectContext = _managedObjectContext;
@@ -30,26 +30,28 @@
         Category* algo = nil;
         Category* data = nil;
         for (NSDictionary* dict in categories) {
-            Category* cat = [NSEntityDescription insertNewObjectForEntityForName:@"Category" inManagedObjectContext:self.managedObjectContext];
+            Category* cat = [NSEntityDescription insertNewObjectForEntityForName:@"Category"
+                                                          inManagedObjectContext:self.managedObjectContext];
             [cat setValuesForKeysWithDictionary:dict];
-            if ([[cat name] isEqualToString:@"Algorithms"]) {
+            if ([[cat name] isEqualToString:@"Algorithms"])
                 algo = cat;
-            }
-            else{
+            else
                 data = cat;
-            }
+            
         }
         for (NSDictionary* dict in [jsonDict objectForKey:@"data"]) {
-            Algorithm* newAlg = [NSEntityDescription insertNewObjectForEntityForName:@"Algorithm" inManagedObjectContext:self.managedObjectContext];
+            Algorithm* newAlg = [NSEntityDescription insertNewObjectForEntityForName:@"Algorithm"
+                                                              inManagedObjectContext:self.managedObjectContext];
             [newAlg setValuesForKeysWithDictionary:dict];
             [newAlg setCategory:data];
-            
+            [self setUpFilePathsFor:newAlg inDictionary:dict];
         }
         for (NSDictionary* dict in [jsonDict objectForKey:@"algorithms"]) {
-            Algorithm* newAlg = [NSEntityDescription insertNewObjectForEntityForName:@"Algorithm" inManagedObjectContext:self.managedObjectContext];
+            Algorithm* newAlg = [NSEntityDescription insertNewObjectForEntityForName:@"Algorithm"
+                                                              inManagedObjectContext:self.managedObjectContext];
             [newAlg setValuesForKeysWithDictionary:dict];
             [newAlg setCategory:algo];
-            
+            [self setUpFilePathsFor:newAlg inDictionary:dict];            
         }
     
     }
@@ -58,7 +60,18 @@
     
 }
 
-
+-(void)setUpFilePathsFor:(Algorithm*)algo inDictionary:(NSDictionary*)dict{
+    NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
+    bundleRoot =[bundleRoot stringByAppendingPathComponent:@"code"];
+    for (NSString* fileName in [dict objectForKey:@"related"]) {
+        RelatedFile* file = [NSEntityDescription insertNewObjectForEntityForName:@"RelatedFile"
+                                                          inManagedObjectContext:self.managedObjectContext];
+        [file setName:fileName];
+        [file setFilePath:[bundleRoot stringByAppendingPathComponent:fileName]];
+        [file setAlgorithm:algo];
+        
+    }
+}
 +(DataManager *)shared
 {
     static DataManager *_sharedInstance;

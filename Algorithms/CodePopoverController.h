@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class  Algorithm;
 
-@interface CodePopoverController : UITableViewController
-@property (nonatomic, retain) NSMutableArray *files;
--(id)initWithFiles:(NSArray*)files;
+@interface CodePopoverController : UITableViewController <NSFetchedResultsControllerDelegate>
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, weak) Algorithm *algorithm;
+
+-(id)initWithAlgorithm:(Algorithm*)algorithm;
+
+
 @end

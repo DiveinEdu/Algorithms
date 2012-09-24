@@ -1,5 +1,5 @@
 //
-//  RelatedFiles.h
+//  RelatedFile.h
 //  Algorithms
 //
 //  Created by Carl & Hannah Wieland on 9/23/12.
@@ -11,9 +11,11 @@
 
 @class Algorithm;
 
-@interface RelatedFiles : NSManagedObject
+@interface RelatedFile : NSManagedObject
 
+@property (nonatomic, retain) NSString * fileData;
 @property (nonatomic, retain) NSString * filePath;
-@property (nonatomic, retain) Algorithm *algorithms;
+@property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) Algorithm *algorithm;
 
 @end

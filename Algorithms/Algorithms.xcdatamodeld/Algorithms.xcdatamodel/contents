@@ -4,20 +4,21 @@
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="viewID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="algorithms" inverseEntity="Category" syncable="YES"/>
-        <relationship name="relatedFiles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RelatedFiles" inverseName="algorithms" inverseEntity="RelatedFiles" syncable="YES"/>
+        <relationship name="relatedFiles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RelatedFile" inverseName="algorithm" inverseEntity="RelatedFile" syncable="YES"/>
     </entity>
     <entity name="Category" representedClassName="Category" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="algorithms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="category" inverseEntity="Algorithm" syncable="YES"/>
     </entity>
-    <entity name="RelatedFiles" syncable="YES">
+    <entity name="RelatedFile" representedClassName="RelatedFile" syncable="YES">
         <attribute name="fileData" attributeType="String" syncable="YES"/>
         <attribute name="filePath" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="algorithms" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="relatedFiles" inverseEntity="Algorithm" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="algorithm" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="relatedFiles" inverseEntity="Algorithm" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Algorithm" positionX="54" positionY="63" width="128" height="103"/>
-        <element name="Category" positionX="270" positionY="-81" width="128" height="73"/>
-        <element name="RelatedFiles" positionX="-162" positionY="198" width="128" height="88"/>
+        <element name="Algorithm" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Category" positionX="196" positionY="0" width="128" height="75"/>
+        <element name="RelatedFile" positionX="-288" positionY="167" width="128" height="103"/>
     </elements>
 </model>

@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 @class CodePopoverController;
+@class Algorithm;
 
 @interface DataViewController : UIViewController<UISplitViewControllerDelegate>
 @property (strong, nonatomic) id detailItem;
 @property (nonatomic, retain) CodePopoverController *codePicker;
 @property (nonatomic, retain) UIPopoverController *codePickerPopover;
+@property (nonatomic, weak) Algorithm* algorithm;
 -(IBAction)loadCode:(id)sender;
 
 

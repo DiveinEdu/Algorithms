@@ -8,7 +8,7 @@
 
 #import "DataViewController.h"
 #import "CodePopoverController.h"
-
+#import "Algorithm.h"
 
 @interface DataViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -56,7 +56,21 @@
 
 
 -(IBAction)loadCode:(id)sender{
-    NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
+    if(self.algorithm){
+        UINavigationController* navCont =[self.storyboard instantiateViewControllerWithIdentifier:@"popNavController"];
+        
+        self.codePicker = [[navCont viewControllers] lastObject];
+        [self.codePicker setAlgorithm:self.algorithm];;
+        
+        self.codePickerPopover = [[UIPopoverController alloc]
+                                  initWithContentViewController:navCont];
+        
+        [self.codePickerPopover presentPopoverFromBarButtonItem:sender
+                                       permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+
+    }
+    
+    /*NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
     bundleRoot =[bundleRoot stringByAppendingPathComponent:@"code"];
     NSFileManager *fm = [NSFileManager defaultManager];
     NSArray *dirContents = [fm contentsOfDirectoryAtPath:bundleRoot error:nil];
@@ -76,7 +90,7 @@
                                 initWithContentViewController:navCont];
     
     [self.codePickerPopover presentPopoverFromBarButtonItem:sender
-                                permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+                                permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];*/
 }
 
 

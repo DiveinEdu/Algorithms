@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		09006219160FEB3100360BFE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09006218160FEB3100360BFE /* DataManager.m */; };
 		09006229160FEE4700360BFE /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 09006228160FEE4700360BFE /* Algorithm.m */; };
-		09006234160FEE8400360BFE /* RelatedFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 09006231160FEE8400360BFE /* RelatedFiles.m */; };
 		09006235160FEE8400360BFE /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 09006233160FEE8400360BFE /* Category.m */; };
+		0900623C160FF7A200360BFE /* RelatedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900623B160FF7A200360BFE /* RelatedFile.m */; };
 		091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64AD160E5D0200F9439A /* CodeViewController.m */; };
 		094B746A160A6EF000C47C3E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 094B7469160A6EF000C47C3E /* arrow_right.png */; };
 		094B746D160A6F3200C47C3E /* ArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094B746C160A6F3200C47C3E /* ArrowView.m */; };
@@ -100,10 +100,10 @@
 		09006218160FEB3100360BFE /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		09006227160FEE4600360BFE /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		09006228160FEE4700360BFE /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
-		09006230160FEE8400360BFE /* RelatedFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedFiles.h; sourceTree = "<group>"; };
-		09006231160FEE8400360BFE /* RelatedFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedFiles.m; sourceTree = "<group>"; };
 		09006232160FEE8400360BFE /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		09006233160FEE8400360BFE /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		0900623A160FF7A200360BFE /* RelatedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedFile.h; sourceTree = "<group>"; };
+		0900623B160FF7A200360BFE /* RelatedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedFile.m; sourceTree = "<group>"; };
 		091F64AC160E5D0200F9439A /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
 		091F64AD160E5D0200F9439A /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeViewController.m; sourceTree = "<group>"; };
 		094B7469160A6EF000C47C3E /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
@@ -192,14 +192,14 @@
 			children = (
 				09006227160FEE4600360BFE /* Algorithm.h */,
 				09006228160FEE4700360BFE /* Algorithm.m */,
+				0900623A160FF7A200360BFE /* RelatedFile.h */,
+				0900623B160FF7A200360BFE /* RelatedFile.m */,
 				095434221606D232001D3E5D /* Algorithms.xcdatamodeld */,
 				09006232160FEE8400360BFE /* Category.h */,
 				09006233160FEE8400360BFE /* Category.m */,
 				09006217160FEB3100360BFE /* DataManager.h */,
 				09006218160FEB3100360BFE /* DataManager.m */,
 				099EC974160FDC3C00FD136A /* Objects.json */,
-				09006230160FEE8400360BFE /* RelatedFiles.h */,
-				09006231160FEE8400360BFE /* RelatedFiles.m */,
 			);
 			name = "Core Data Stack";
 			sourceTree = "<group>";
@@ -474,8 +474,8 @@
 				091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */,
 				09006219160FEB3100360BFE /* DataManager.m in Sources */,
 				09006229160FEE4700360BFE /* Algorithm.m in Sources */,
-				09006234160FEE8400360BFE /* RelatedFiles.m in Sources */,
 				09006235160FEE8400360BFE /* Category.m in Sources */,
+				0900623C160FF7A200360BFE /* RelatedFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

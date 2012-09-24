@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "DataViewController.h"
+#import "Algorithm.h"
 
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
@@ -69,8 +70,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    UIViewController* controller =[self.storyboard instantiateViewControllerWithIdentifier:[object valueForKey:@"viewID"]];
+    Algorithm *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    DataViewController* controller =[self.storyboard instantiateViewControllerWithIdentifier:[object valueForKey:@"viewID"]];
+    [controller setAlgorithm:object];
     [self.detailViewController.navigationController setViewControllers:@[controller]];
     //[self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, controller,nil]];
 

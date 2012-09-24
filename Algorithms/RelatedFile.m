@@ -1,18 +1,20 @@
 //
-//  RelatedFiles.m
+//  RelatedFile.m
 //  Algorithms
 //
 //  Created by Carl & Hannah Wieland on 9/23/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
-#import "RelatedFiles.h"
+#import "RelatedFile.h"
 #import "Algorithm.h"
 
 
-@implementation RelatedFiles
+@implementation RelatedFile
 
+@dynamic fileData;
 @dynamic filePath;
-@dynamic algorithms;
+@dynamic name;
+@dynamic algorithm;
 
 @end
