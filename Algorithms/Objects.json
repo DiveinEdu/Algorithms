@@ -1,0 +1,38 @@
+{
+    "categories":
+    [
+                      {
+                        "name":"Algorithms",
+                        
+                      },
+                      {
+                  
+                  
+                        "name":"Data Structures",
+                  
+                      }
+    ],
+    "data":
+    [
+        {
+            "name":"Linked List",
+            "viewID":"linkedList",
+            "related":["LinkedList.m","LinkedList.h","Node.h","Node.m"]
+        },
+        {
+            "name":"Stack",
+            "viewID":"linkedList",
+            "related":["Stack.m","Stack","Node.h","Node.m"]
+        }
+    
+    
+    ],
+    "algorithms":
+    [
+        {
+            "name":"Bubble Sort",
+            "viewID":"linkedList"
+
+        }
+    ]
+}
