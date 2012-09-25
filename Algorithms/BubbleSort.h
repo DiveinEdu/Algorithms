@@ -13,5 +13,4 @@
 @interface BubbleSort : NSObject
 
 +(void)sortLinkedList:(LinkedList*)list;
-+(void)sortDoublyLinkedList:(DoublyLinkedList*)list;
 @end
