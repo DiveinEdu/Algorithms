@@ -48,7 +48,7 @@
 }
 
 - (IBAction)addValue:(id)sender {
-    [self.linkedList addValue:[self.insertValueField text] ];
+    [self.linkedList addValueToFront:[self.insertValueField text] ];
     [self.linkedList traverse];
     [self.detailView addNode:self.linkedList.head];
 }

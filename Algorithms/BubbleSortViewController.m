@@ -39,9 +39,9 @@
 -(IBAction)test:(id)sender{
     LinkedList* linkedList = [LinkedList new];
     for (int i =0; i < 10; i++){
-        [linkedList addValue:[NSNumber numberWithInt:arc4random()%100]];
+        [linkedList addValueToFront:[NSNumber numberWithInt:arc4random()%100]];
     }
     BubbleSort* bsort = [BubbleSort new];
-    [bsort sort:linkedList];
+    [bsort sortLinkedList:linkedList];
 }
 @end
