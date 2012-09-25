@@ -64,11 +64,20 @@
     NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
     bundleRoot =[bundleRoot stringByAppendingPathComponent:@"code"];
     for (NSString* fileName in [dict objectForKey:@"related"]) {
-        RelatedFile* file = [NSEntityDescription insertNewObjectForEntityForName:@"RelatedFile"
-                                                          inManagedObjectContext:self.managedObjectContext];
-        [file setName:fileName];
-        [file setFilePath:[bundleRoot stringByAppendingPathComponent:fileName]];
-        [file setAlgorithm:algo];
+        NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"RelatedFile"];
+        [request setPredicate:[NSPredicate predicateWithFormat:@"name = %@",fileName]];
+        NSArray* files = [self.managedObjectContext executeFetchRequest:request error:nil];
+        
+        if([files count]>0){
+            [[files lastObject] addAlgorithmObject:algo];
+        }
+        else{
+            RelatedFile* file = [NSEntityDescription insertNewObjectForEntityForName:@"RelatedFile"
+                                                              inManagedObjectContext:self.managedObjectContext];
+            [file setName:fileName];
+            [file setFilePath:[bundleRoot stringByAppendingPathComponent:fileName]];
+            [file addAlgorithmObject:algo];
+        }
         
     }
 }

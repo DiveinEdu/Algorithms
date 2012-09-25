@@ -8,12 +8,12 @@
 
 #import "StackView.h"
 #import "NodeView.h"
-#import "Node.h"
+#import "ListNode.h"
 #import "ArrowView.h"
 
 @implementation StackView
 
--(void)addNode:(Node *)node{
+-(void)addNode:(ListNode *)node{
     
     for (NodeView* node in self.nodeViews) {
         [node moveDown];

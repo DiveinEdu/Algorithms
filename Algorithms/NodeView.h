@@ -26,11 +26,11 @@ typedef enum{
 }NODE_DIRECTION;
 
 
-@class Node;
+@class ListNode;
 @interface NodeView : UIView
-@property ( nonatomic, weak)Node* node;
+@property ( nonatomic, weak)ListNode* node;
 
--(id)initWithNode:(Node*)node andDirection:(NODE_DIRECTION)direction;
+-(id)initWithNode:(ListNode*)node andDirection:(NODE_DIRECTION)direction;
 -(void)moveLeft;
 -(void)moveRight;
 -(void)moveUp;

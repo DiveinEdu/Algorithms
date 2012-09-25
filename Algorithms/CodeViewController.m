@@ -7,7 +7,7 @@
 //
 
 #import "CodeViewController.h"
-
+#import "RelatedFile.h"
 @interface CodeViewController ()
 -(NSString*)htmlifyString:(NSString*)string;
 
@@ -32,16 +32,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if ([self.file fileData]) {
+        [self.codeView loadHTMLString:[self.file fileData]  baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
 
-    NSString* code = [NSString stringWithContentsOfFile:self.fullPath encoding:NSUTF8StringEncoding error:nil];
+    }
+    else{
+        NSString* code = [NSString stringWithContentsOfFile:[self.file filePath] encoding:NSUTF8StringEncoding error:nil];
+        
+        NSString* htmlPage = [NSString stringWithFormat:@"<html>\
+                              <link href=\"./js/sons-of-obsidian.css\" type=\"text/css\" rel=\"stylesheet\" />\
+                              <script type=\"text/javascript\" src=\"./js/prettify.js\"></script>\
+                              <body onload=\"prettyPrint()\">\
+                              <pre class=\"prettyprint\">%@</pre>\
+                              </body></html>",[self htmlifyString:code]];
+        [self.codeView loadHTMLString:htmlPage  baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
+        [self.file setFileData:htmlPage];
+    }
     
-    NSString* htmlPage = [NSString stringWithFormat:@"<html>\
-                                                      <link href=\"./js/sons-of-obsidian.css\" type=\"text/css\" rel=\"stylesheet\" />\
-                                                      <script type=\"text/javascript\" src=\"./js/prettify.js\"></script>\
-                                                      <body onload=\"prettyPrint()\">\
-                                                      <pre class=\"prettyprint\">%@</pre>\
-                                                      </body></html>",[self htmlifyString:code]];
-    [self.codeView loadHTMLString:htmlPage  baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
 
 	// Do any additional setup after loading the view.
 }
@@ -55,11 +62,8 @@
 - (void)viewDidUnload {
     [self setCodeView:nil];
     [self setCodeView:nil];
-    [self setScrollView:nil];
+
     [super viewDidUnload];
 }
 
--(void)webViewDidFinishLoad:(UIWebView *)webView{
-    [self.scrollView setContentSize:self.codeView.frame.size];
-}
 @end

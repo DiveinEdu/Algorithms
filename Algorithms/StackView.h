@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-@class Node;
+@class ListNode;
 
 @interface StackView : UIScrollView
 @property (nonatomic, strong)NSMutableArray* nodeViews;
 @property (nonatomic, strong)NSMutableArray* arrowViews;
 
--(void)addNode:(Node*)node;
+-(void)addNode:(ListNode*)node;
 -(void)removeNode;
 @end

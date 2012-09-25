@@ -7,17 +7,17 @@
 //
 
 #import "DoublyLinkedList.h"
-#import "Node.h"
+#import "ListNode.h"
 @implementation DoublyLinkedList
 
 
 -(void)addValueToFront:(id)value{
-    [super addValueToBack:value];
+    [super addValueToFront:value];
     [self.head.next setPrevious:self.head];
 }
 //We introduce a tail pointer to keep things simpler
 -(void)addValueToBack:(id)value{
-    Node* newNode = [[Node alloc] initWithValue:value];
+    ListNode* newNode = [[ListNode alloc] initWithValue:value];
 
     if (self.tail ==nil) {
         self.tail = self.head;

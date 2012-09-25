@@ -7,29 +7,29 @@
 //
 
 #import "Stack.h"
-#import "Node.h"
+#import "ListNode.h"
 
 @interface Stack ()
-@property ( nonatomic, strong)Node* top;
+@property ( nonatomic, strong)ListNode* top;
 
 @end
 
 @implementation Stack
 -(void)addValue:(id)value{
-    Node* newNode = [[Node alloc] initWithValue:value];
+    ListNode* newNode = [[ListNode alloc] initWithValue:value];
     [self push:newNode];
 
 }
--(void)push:(Node*)node{
+-(void)push:(ListNode*)node{
     node.next=self.top;
     self.top=node;
 }
--(Node*)pop{
-    Node* oldTop = self.top;
+-(ListNode*)pop{
+    ListNode* oldTop = self.top;
     self.top=[self.top next];
     return oldTop;
 }
--(Node*)peek{
+-(ListNode*)peek{
     return self.top;
 }
 

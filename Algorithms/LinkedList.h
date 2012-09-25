@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Node;
+@class ListNode;
 
 
 @interface LinkedList : NSObject{
     int size;
 }
 
-@property (nonatomic, strong) Node* head;
+@property (nonatomic, strong) ListNode* head;
 -(void)addValueToFront:(id)value;
 -(void)addValueToBack:(id)value;
 -(void)removeFront;

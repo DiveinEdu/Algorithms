@@ -9,7 +9,7 @@
 #import "StackViewController.h"
 #import "StackView.h"
 #import "Stack.h"
-#import "Node.h"
+#import "ListNode.h"
 @interface StackViewController ()
 
 @end
@@ -54,7 +54,7 @@
 }
 
 - (IBAction)peekValue:(id)sender {
-    Node* n = [stack peek];
+    ListNode* n = [stack peek];
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Peek!" message:[NSString stringWithFormat:@"Peek returned a node with value: %@",[n description]] delegate:nil cancelButtonTitle:@"Great" otherButtonTitles: nil];
     [alert show];
 }

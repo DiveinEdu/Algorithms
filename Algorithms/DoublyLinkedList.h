@@ -8,9 +8,9 @@
 
 
 #import "LinkedList.h"
-@class Node;
+@class ListNode;
 
 @interface DoublyLinkedList : LinkedList
-@property (nonatomic, weak) Node* tail;
+@property (nonatomic, weak) ListNode* tail;
 
 @end

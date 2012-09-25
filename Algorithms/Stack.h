@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-@class Node;
+@class ListNode;
 @interface Stack : NSObject{
     int size;
 }
 -(void)addValue:(id)value;
--(void)push:(Node*)node;
--(Node*)pop;
--(Node*)peek;
+-(void)push:(ListNode*)node;
+-(ListNode*)pop;
+-(ListNode*)peek;
 
 @end

@@ -2,7 +2,7 @@
 //  RelatedFile.h
 //  Algorithms
 //
-//  Created by Carl Wieland on 9/23/12.
+//  Created by Carl & Hannah Wieland on 9/25/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
@@ -16,6 +16,14 @@
 @property (nonatomic, retain) NSString * fileData;
 @property (nonatomic, retain) NSString * filePath;
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) Algorithm *algorithm;
+@property (nonatomic, retain) NSSet *algorithm;
+@end
+
+@interface RelatedFile (CoreDataGeneratedAccessors)
+
+- (void)addAlgorithmObject:(Algorithm *)value;
+- (void)removeAlgorithmObject:(Algorithm *)value;
+- (void)addAlgorithm:(NSSet *)values;
+- (void)removeAlgorithm:(NSSet *)values;
 
 @end

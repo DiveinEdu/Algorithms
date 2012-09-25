@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class RelatedFile;
 @interface CodeViewController : UIViewController <UIWebViewDelegate>
-@property ( nonatomic, strong) NSString* fullPath;
+@property ( nonatomic, weak) RelatedFile* file;
 @property (weak, nonatomic) IBOutlet UIWebView *codeView;
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 
 @end

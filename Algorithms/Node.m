@@ -1,15 +1,16 @@
 //
 //  Node.m
-//  Algorithms
+//  
 //
-//  Created by Carl Wieland on 9/16/12.
-//  Copyright (c) 2012 balanceoni. All rights reserved.
+//  Created by Carl & Hannah Wieland on 9/25/12.
+//
 //
 
 #import "Node.h"
-@interface Node ()
+@interface Node()
 @property (nonatomic, strong) id value;
 @end
+
 
 @implementation Node
 -(id)initWithValue:(id)value{

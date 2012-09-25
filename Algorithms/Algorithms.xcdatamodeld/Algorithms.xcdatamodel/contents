@@ -11,10 +11,10 @@
         <relationship name="algorithms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="category" inverseEntity="Algorithm" syncable="YES"/>
     </entity>
     <entity name="RelatedFile" representedClassName="RelatedFile" syncable="YES">
-        <attribute name="fileData" attributeType="String" syncable="YES"/>
+        <attribute name="fileData" attributeType="String" storedInTruthFile="YES" syncable="YES"/>
         <attribute name="filePath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="algorithm" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="relatedFiles" inverseEntity="Algorithm" syncable="YES"/>
+        <relationship name="algorithm" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="relatedFiles" inverseEntity="Algorithm" syncable="YES"/>
     </entity>
     <elements>
         <element name="Algorithm" positionX="0" positionY="0" width="128" height="105"/>

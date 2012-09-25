@@ -1,18 +1,15 @@
 //
 //  Node.h
-//  Algorithms
+//  
 //
-//  Created by Carl Wieland on 9/16/12.
-//  Copyright (c) 2012 balanceoni. All rights reserved.
+//  Created by Carl & Hannah Wieland on 9/25/12.
+//
 //
 
 #import <Foundation/Foundation.h>
 
-@interface Node : NSObject{
-}
+@interface Node : NSObject
 -(id)initWithValue:(id)value;
-@property ( nonatomic, strong) Node* next;
-@property ( nonatomic, weak) Node* previous;
-
 -(id)getValue;
+
 @end

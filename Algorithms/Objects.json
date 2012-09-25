@@ -13,14 +13,18 @@
         {
             "name":"Linked List",
             "viewID":"linkedList",
-            "related":["LinkedList.m","LinkedList.h","Node.h","Node.m"]
+            "related":["LinkedList.m","LinkedList.h","ListNode.m","ListNode.h","Node.h","Node.m"]
         },
         {
             "name":"Stack",
             "viewID":"stackView",
-            "related":["Stack.m","Stack.h","Node.h","Node.m"]
+            "related":["Stack.m","Stack.h","ListNode.m","ListNode.h","Node.h","Node.m"]
+        },
+        {
+            "name":"Doubly Linked List",
+            "viewID":"doublyLinkedList",
+            "related":["LinkedList.m","LinkedList.h","ListNode.m","ListNode.h","Node.h","Node.m","DoublyLinkedList.h","DoublyLinkedList.m"]
         }
-    
     
     ],
     "algorithms":
@@ -35,7 +39,7 @@
          {
          "name":"Merge Sort",
          "viewID":"mergeSort",
-         "related":["MergeSort.m","MergeSort.h","Node.m","Node.h","LinkedList.h","LinkedList.m"]
+         "related":["MergeSort.m","MergeSort.h"]
          },
     ]
 }

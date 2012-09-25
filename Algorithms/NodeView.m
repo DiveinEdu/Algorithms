@@ -7,7 +7,7 @@
 //
 
 #import "NodeView.h"
-#import "Node.h"
+#import "ListNode.h"
 
 @implementation NodeView
 
@@ -21,7 +21,7 @@
 }
 
 
--(id)initWithNode:(Node *)node andDirection:(NODE_DIRECTION)direction{
+-(id)initWithNode:(ListNode *)node andDirection:(NODE_DIRECTION)direction{
     UILabel* value;
     switch (direction) {
         case NODE_DIRECTION_RIGHT:

@@ -53,7 +53,7 @@
     //codeViewController
     RelatedFile* selected = [self.fetchedResultsController objectAtIndexPath:indexPath];
     CodeViewController* codeView = [self.storyboard instantiateViewControllerWithIdentifier:@"codeViewController"];
-    [codeView setFullPath:[selected filePath]];
+    [codeView setFile:selected];
     [self.navigationController pushViewController:codeView animated:YES];
 }
 
@@ -71,14 +71,14 @@
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"RelatedFile" inManagedObjectContext:[DataManager context]];
     [fetchRequest setEntity:entity];
     
-    NSPredicate* pred = [NSPredicate predicateWithFormat:@"algorithm = %@",self.algorithm];
+    NSPredicate* pred = [NSPredicate predicateWithFormat:@"algorithm contains %@",self.algorithm];
     [fetchRequest setPredicate:pred];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];

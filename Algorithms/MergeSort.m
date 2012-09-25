@@ -7,7 +7,7 @@
 //
 
 #import "MergeSort.h"
-#import "Node.h"
+#import "ListNode.h"
 #import "LinkedList.h"
 
 @implementation MergeSort
@@ -18,9 +18,9 @@
     [list traverse];
 }
 
-+(Node*) mergeSort:(Node *)head
++(ListNode*) mergeSort:(ListNode *)head
 {
-    Node *secondNode;
+    ListNode *secondNode;
     
     if (head == NULL)
         return NULL;
@@ -33,7 +33,7 @@
     }
 }
 
-+(Node*) merge:(Node*)firstNode with:(Node*) secondNode
++(ListNode*) merge:(ListNode*)firstNode with:(ListNode*) secondNode
 {
     if (firstNode == NULL) return secondNode;
     else if (secondNode == NULL) return firstNode;
@@ -48,9 +48,9 @@
     }
 }
 
-+(Node*)split:(Node*)head
++(ListNode*)split:(ListNode*)head
 {
-    Node* secondNode;
+    ListNode* secondNode;
     
     if (head == NULL) return NULL;
     else if (head.next == NULL) return NULL;

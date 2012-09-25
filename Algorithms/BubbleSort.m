@@ -9,17 +9,17 @@
 #import "BubbleSort.h"
 #import "LinkedList.h"
 #import "DoublyLinkedList.h"
-#import "Node.h"
+#import "ListNode.h"
 
 @implementation BubbleSort
 
 
--(void)sortLinkedList:(LinkedList *)list{
++(void)sortLinkedList:(LinkedList *)list{
     [list traverse];
     int i ,j;
-    Node* cur = nil;
-    Node* tmp = nil;
-    Node* prev = nil;
+    ListNode* cur = nil;
+    ListNode* tmp = nil;
+    ListNode* prev = nil;
     int size = [list size];
     for(i = 0;i <= size - 1; i++)
     {
@@ -53,12 +53,12 @@
     [list traverse];
 }
 
--(void)sortDoublyLinkedList:(DoublyLinkedList *)list{
++(void)sortDoublyLinkedList:(DoublyLinkedList *)list{
     [list traverse];
     int i ,j;
-    Node* cur = nil;
-    Node* tmp = nil;
-    Node* prev = nil;
+    ListNode* cur = nil;
+    ListNode* tmp = nil;
+    ListNode* prev = nil;
     int size = [list size];
     for(i = 0;i <= size - 1; i++)
     {

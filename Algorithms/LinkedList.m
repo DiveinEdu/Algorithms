@@ -7,7 +7,7 @@
 //
 
 #import "LinkedList.h"
-#import "Node.h"
+#import "ListNode.h"
 @implementation LinkedList
 -(id)init{
     
@@ -19,7 +19,7 @@
     return self;
 }
 -(void)addValueToFront:(id)value{
-    Node* newNode = [[Node alloc] initWithValue:value];
+    ListNode* newNode = [[ListNode alloc] initWithValue:value];
     
     if(self.head)
         [newNode setNext:self.head];
@@ -28,16 +28,16 @@
     size++;
 }
 -(void)addValueToBack:(id)value{
-    Node* newNode = [[Node alloc] initWithValue:value];
+    ListNode* newNode = [[ListNode alloc] initWithValue:value];
 
-    Node* cur = self.head;
+    ListNode* cur = self.head;
     while (cur.next!=nil)
         cur = cur.next;
     cur.next = newNode;
     
 }
 -(void)traverse{
-    Node* n = self.head;
+    ListNode* n = self.head;
     NSMutableString* list = [NSMutableString string];
     while(n!=nil){
         [list appendFormat:@"%@,",[[n getValue]description]];
