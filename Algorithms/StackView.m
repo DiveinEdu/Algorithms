@@ -1,40 +1,40 @@
 //
-//  LinkedListView.m
+//  StackView.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 9/18/12.
+//  Created by Carl & Hannah Wieland on 9/24/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
-#import "LinkedListView.h"
-#import "Node.h"
+#import "StackView.h"
 #import "NodeView.h"
+#import "Node.h"
 #import "ArrowView.h"
-@implementation LinkedListView
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
+@implementation StackView
+
 -(void)addNode:(Node *)node{
-
+    
     for (NodeView* node in self.nodeViews) {
-        [node moveRight];
+        [node moveDown];
     }
-
-    NodeView* listNode = [[NodeView alloc] initWithNode:node andDirection:NODE_DIRECTION_RIGHT];
+    
+    NodeView* listNode = [[NodeView alloc] initWithNode:node andDirection:NODE_DIRECTION_DOWN];
     [listNode setAlpha:0];
     [self.nodeViews addObject:listNode];
-    [self setContentSize:CGSizeMake(([self.nodeViews count]*kHorizontalMoveDistance)+40, 100)];
-
+    [self setContentSize:CGSizeMake(200,([self.nodeViews count]*kVerticalMoveDistance)+40)];
+    
     [self addSubview:listNode];
-
+    
     if ([self.nodeViews count]>1) {
-        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width-15, kListNodeHeight/4, kHorizontalMoveDistance-kListNodeWidth +15, kListNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
+        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width/2, kListNodeHeight,kVerticalMoveDistance, kListNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
+        [arrow.layer setAnchorPoint:CGPointMake(0, 1.0)];
+        arrow.center = CGPointMake(listNode.frame.size.width/2, kListNodeHeight-15);
+        
+        // Rotate 90 degrees to hide it off screen
+        CGAffineTransform rotationTransform = CGAffineTransformIdentity;
+        rotationTransform = CGAffineTransformRotate(rotationTransform, M_PI_2);
+        arrow.transform = rotationTransform;
         [listNode addSubview:arrow];
         
     }
@@ -43,13 +43,13 @@
     [UIView setAnimationDuration:.1];
     [listNode setAlpha:1];
     [UIView commitAnimations];
-
+    
 }
 -(void)removeNode{
     [[self.nodeViews lastObject] removeFromSuperview];
     [self.nodeViews removeLastObject];
     for (NodeView* node in self.nodeViews) {
-        [node moveLeft];
+        [node moveUp];
     }
 }
 -(NSMutableArray*)nodeViews{
@@ -64,13 +64,5 @@
     _arrowViews=[NSMutableArray new];
     return _arrowViews;
 }
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

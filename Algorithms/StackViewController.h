@@ -6,8 +6,17 @@
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "DataViewController.h"
 
-@interface StackViewController : UIViewController
+@class StackView;
+@class Stack;
+@interface StackViewController : DataViewController{
+    Stack* stack;
+}
+@property (weak, nonatomic) IBOutlet UITextField *valueField;
+@property (weak, nonatomic) IBOutlet StackView *stackView;
+- (IBAction)pushValue:(id)sender;
+- (IBAction)popValue:(id)sender;
+- (IBAction)peekValue:(id)sender;
 
 @end

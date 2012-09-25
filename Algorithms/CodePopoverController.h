@@ -14,7 +14,5 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic, weak) Algorithm *algorithm;
 
--(id)initWithAlgorithm:(Algorithm*)algorithm;
-
 
 @end

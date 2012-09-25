@@ -11,7 +11,7 @@
 @interface Stack : NSObject{
     int size;
 }
-
+-(void)addValue:(id)value;
 -(void)push:(Node*)node;
 -(Node*)pop;
 -(Node*)peek;

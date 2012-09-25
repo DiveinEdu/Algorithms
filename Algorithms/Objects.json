@@ -21,8 +21,8 @@
         },
         {
             "name":"Stack",
-            "viewID":"linkedList",
-            "related":["Stack.m","Stack","Node.h","Node.m"]
+            "viewID":"stackView",
+            "related":["Stack.m","Stack.h","Node.h","Node.m"]
         }
     
     

@@ -7,6 +7,8 @@
 //
 
 #import "StackViewController.h"
+#import "StackView.h"
+#import "Stack.h"
 
 @interface StackViewController ()
 
@@ -25,6 +27,7 @@
 
 - (void)viewDidLoad
 {
+    stack=[Stack new];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -35,4 +38,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setValueField:nil];
+    [self setStackView:nil];
+    [super viewDidUnload];
+}
+- (IBAction)pushValue:(id)sender {
+    [stack addValue:[ self.valueField text]];
+    [self.stackView addNode:[stack peek]];
+}
+
+- (IBAction)popValue:(id)sender {
+    [stack pop];
+    [self.stackView removeNode];
+}
+
+- (IBAction)peekValue:(id)sender {
+}
 @end

@@ -15,7 +15,11 @@
 @end
 
 @implementation Stack
+-(void)addValue:(id)value{
+    Node* newNode = [[Node alloc] initWithValue:value];
+    [self push:newNode];
 
+}
 -(void)push:(Node*)node{
     node.next=self.top;
     self.top=node;
