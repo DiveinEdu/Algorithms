@@ -27,7 +27,7 @@
     [
         {
             "name":"Bubble Sort",
-            "viewID":"linkedList"
+            "viewID":"bubbleSort"
 
         }
     ]

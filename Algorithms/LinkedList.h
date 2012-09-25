@@ -15,11 +15,10 @@
 }
 
 @property (nonatomic, strong) Node* head;
-
-
--(void)addValue:(id)value;
+-(void)addValueToFront:(id)value;
+-(void)addValueToBack:(id)value;
 -(void)removeFront;
 -(void)traverse;
--(int)getSize;
+-(int)size;
 
 @end

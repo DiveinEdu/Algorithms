@@ -18,13 +18,23 @@
     
     return self;
 }
--(void)addValue:(id)value{
+-(void)addValueToFront:(id)value{
     Node* newNode = [[Node alloc] initWithValue:value];
     
     if(self.head)
         [newNode setNext:self.head];
 
     self.head = newNode;
+    size++;
+}
+-(void)addValueToBack:(id)value{
+    Node* newNode = [[Node alloc] initWithValue:value];
+
+    Node* cur = self.head;
+    while (cur.next!=nil)
+        cur = cur.next;
+    cur.next = newNode;
+    
 }
 -(void)traverse{
     Node* n = self.head;
@@ -36,10 +46,13 @@
     NSLog(@"%@",list);
 }
 -(void)removeFront{
-    if(self.head)
+    if(self.head){
         self.head = [self.head next];
+        size--;
+    }
+    
 }
--(int)getSize{
+-(int)size{
     return size;
 }
 @end

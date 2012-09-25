@@ -12,6 +12,8 @@
 		09006235160FEE8400360BFE /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 09006233160FEE8400360BFE /* Category.m */; };
 		0900623C160FF7A200360BFE /* RelatedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900623B160FF7A200360BFE /* RelatedFile.m */; };
 		091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64AD160E5D0200F9439A /* CodeViewController.m */; };
+		0937E3281612106C0044040F /* BubbleSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E3271612106C0044040F /* BubbleSortViewController.m */; };
+		0937E32D161210B00044040F /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E32C161210B00044040F /* BubbleSort.m */; };
 		094B746A160A6EF000C47C3E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 094B7469160A6EF000C47C3E /* arrow_right.png */; };
 		094B746D160A6F3200C47C3E /* ArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094B746C160A6F3200C47C3E /* ArrowView.m */; };
 		0954340C1606D232001D3E5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954340B1606D232001D3E5D /* UIKit.framework */; };
@@ -51,6 +53,7 @@
 		09F0D3F5160CEB9600CF657E /* arrow_right_filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F1160CEB9600CF657E /* arrow_right_filled@2x.png */; };
 		09F0D3F7160CEB9600CF657E /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F3160CEB9600CF657E /* arrow_right@2x.png */; };
 		09F0D403160CF04A00CF657E /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F0D402160CF04A00CF657E /* DataViewController.m */; };
+		09F1525F161221040088A374 /* DoublyLinkedList.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F1525E161221040088A374 /* DoublyLinkedList.m */; };
 		09F929F8160EB68900FC497A /* prettify.js in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929DD160EB4F400FC497A /* prettify.js */; };
 		09F929F9160EB68C00FC497A /* prettify.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929DC160EB4F400FC497A /* prettify.css */; };
 		09F92A00160EC0EF00FC497A /* desert.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929FE160EC0B700FC497A /* desert.css */; };
@@ -111,6 +114,10 @@
 		0900623B160FF7A200360BFE /* RelatedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedFile.m; sourceTree = "<group>"; };
 		091F64AC160E5D0200F9439A /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
 		091F64AD160E5D0200F9439A /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeViewController.m; sourceTree = "<group>"; };
+		0937E3261612106B0044040F /* BubbleSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSortViewController.h; sourceTree = "<group>"; };
+		0937E3271612106C0044040F /* BubbleSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortViewController.m; sourceTree = "<group>"; };
+		0937E32B161210B00044040F /* BubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
+		0937E32C161210B00044040F /* BubbleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
 		094B7469160A6EF000C47C3E /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		094B746B160A6F3200C47C3E /* ArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowView.h; sourceTree = "<group>"; };
 		094B746C160A6F3200C47C3E /* ArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowView.m; sourceTree = "<group>"; };
@@ -160,6 +167,8 @@
 		09F0D3F3160CEB9600CF657E /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right@2x.png"; sourceTree = "<group>"; };
 		09F0D401160CF04A00CF657E /* DataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataViewController.h; sourceTree = "<group>"; };
 		09F0D402160CF04A00CF657E /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
+		09F1525D161221040088A374 /* DoublyLinkedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoublyLinkedList.h; sourceTree = "<group>"; };
+		09F1525E161221040088A374 /* DoublyLinkedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoublyLinkedList.m; sourceTree = "<group>"; };
 		09F929DC160EB4F400FC497A /* prettify.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = prettify.css; sourceTree = "<group>"; };
 		09F929DD160EB4F400FC497A /* prettify.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = prettify.js; sourceTree = "<group>"; };
 		09F929FA160EC04700FC497A /* sons-of-obsidian.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sons-of-obsidian.css"; sourceTree = "<group>"; };
@@ -209,6 +218,57 @@
 				099EC974160FDC3C00FD136A /* Objects.json */,
 			);
 			name = "Core Data Stack";
+			sourceTree = "<group>";
+		};
+		0937E32216120FE10044040F /* CodeViews */ = {
+			isa = PBXGroup;
+			children = (
+				09584E14160E55B000AF8427 /* CodePopoverController.h */,
+				09584E15160E55B000AF8427 /* CodePopoverController.m */,
+				091F64AC160E5D0200F9439A /* CodeViewController.h */,
+				091F64AD160E5D0200F9439A /* CodeViewController.m */,
+			);
+			name = CodeViews;
+			sourceTree = "<group>";
+		};
+		0937E32416120FF60044040F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				09F152611612210A0088A374 /* DoublyLinkedList */,
+				09E9573616094FE300F5D573 /* Stack */,
+				095434491606D5BA001D3E5D /* LinkedList */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		0937E325161210100044040F /* Auxilary views */ = {
+			isa = PBXGroup;
+			children = (
+				094B746B160A6F3200C47C3E /* ArrowView.h */,
+				094B746C160A6F3200C47C3E /* ArrowView.m */,
+				09C070A316115BDD001F4C12 /* NodeView.h */,
+				09C070A416115BDD001F4C12 /* NodeView.m */,
+			);
+			name = "Auxilary views";
+			sourceTree = "<group>";
+		};
+		0937E329161210710044040F /* BubbleSort */ = {
+			isa = PBXGroup;
+			children = (
+				0937E3261612106B0044040F /* BubbleSortViewController.h */,
+				0937E3271612106C0044040F /* BubbleSortViewController.m */,
+				0937E32B161210B00044040F /* BubbleSort.h */,
+				0937E32C161210B00044040F /* BubbleSort.m */,
+			);
+			name = BubbleSort;
+			sourceTree = "<group>";
+		};
+		0937E32A1612107C0044040F /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				0937E329161210710044040F /* BubbleSort */,
+			);
+			name = Algorithms;
 			sourceTree = "<group>";
 		};
 		094B7467160A6EA500C47C3E /* Images */ = {
@@ -265,18 +325,12 @@
 				09006236160FEE8B00360BFE /* Core Data Stack */,
 				095434501606D895001D3E5D /* Node.h */,
 				095434511606D895001D3E5D /* Node.m */,
-				094B746B160A6F3200C47C3E /* ArrowView.h */,
-				094B746C160A6F3200C47C3E /* ArrowView.m */,
 				09F0D401160CF04A00CF657E /* DataViewController.h */,
 				09F0D402160CF04A00CF657E /* DataViewController.m */,
-				09584E14160E55B000AF8427 /* CodePopoverController.h */,
-				09584E15160E55B000AF8427 /* CodePopoverController.m */,
-				091F64AC160E5D0200F9439A /* CodeViewController.h */,
-				091F64AD160E5D0200F9439A /* CodeViewController.m */,
-				09C070A316115BDD001F4C12 /* NodeView.h */,
-				09C070A416115BDD001F4C12 /* NodeView.m */,
-				09E9573616094FE300F5D573 /* Stack */,
-				095434491606D5BA001D3E5D /* LinkedList */,
+				0937E325161210100044040F /* Auxilary views */,
+				0937E32216120FE10044040F /* CodeViews */,
+				0937E32416120FF60044040F /* Data */,
+				0937E32A1612107C0044040F /* Algorithms */,
 				095434141606D232001D3E5D /* Supporting Files */,
 			);
 			path = Algorithms;
@@ -338,6 +392,15 @@
 				09E9573C1609501800F5D573 /* Stack.m */,
 			);
 			name = Stack;
+			sourceTree = "<group>";
+		};
+		09F152611612210A0088A374 /* DoublyLinkedList */ = {
+			isa = PBXGroup;
+			children = (
+				09F1525D161221040088A374 /* DoublyLinkedList.h */,
+				09F1525E161221040088A374 /* DoublyLinkedList.m */,
+			);
+			name = DoublyLinkedList;
 			sourceTree = "<group>";
 		};
 		09F929C9160EB4F400FC497A /* prettify */ = {
@@ -486,6 +549,9 @@
 				0900623C160FF7A200360BFE /* RelatedFile.m in Sources */,
 				09C0709C1611579C001F4C12 /* StackView.m in Sources */,
 				09C070A516115BDD001F4C12 /* NodeView.m in Sources */,
+				0937E3281612106C0044040F /* BubbleSortViewController.m in Sources */,
+				0937E32D161210B00044040F /* BubbleSort.m in Sources */,
+				09F1525F161221040088A374 /* DoublyLinkedList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
