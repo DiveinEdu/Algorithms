@@ -9,7 +9,7 @@
 #import "MasterViewController.h"
 #import "DataViewController.h"
 #import "Algorithm.h"
-
+#import "Category.h"
 @interface MasterViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
@@ -73,9 +73,10 @@
     Algorithm *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
     DataViewController* controller =[self.storyboard instantiateViewControllerWithIdentifier:[object valueForKey:@"viewID"]];
     [controller setAlgorithm:object];
-    [self.detailViewController.navigationController setViewControllers:@[controller]];
-    //[self.splitViewController setViewControllers:[NSArray arrayWithObjects:self.navigationController, controller,nil]];
-
+    UINavigationController* navcontroller = [[UINavigationController alloc] initWithRootViewController:controller];
+    
+    [self.splitViewController setViewControllers:@[self.navigationController,navcontroller]];
+    
     
 
 }
@@ -97,7 +98,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];

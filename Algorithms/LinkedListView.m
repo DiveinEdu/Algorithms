@@ -34,7 +34,7 @@
     [self addSubview:listNode];
 
     if ([self.nodeViews count]>1) {
-        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width-15, kHorizontalNodeWidth/4, kHorizontalMoveDistance-kHorizontalNodeWidth +15, kHorizontalNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
+        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width-15, kHorizontalNodeHeight/4, kHorizontalMoveDistance-kHorizontalNodeWidth +15, kHorizontalNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
         [listNode addSubview:arrow];
         
     }

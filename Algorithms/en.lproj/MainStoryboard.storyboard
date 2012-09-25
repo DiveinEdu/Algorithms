@@ -157,6 +157,7 @@
         <!--Navigation Controller-->
         <scene sceneID="50">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="42" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="43">
                         <autoresizingMask key="autoresizingMask"/>
@@ -165,7 +166,6 @@
                         <segue destination="Bhk-Ud-EPp" kind="relationship" relationship="rootViewController" id="ATR-C0-4ji"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="49" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-308" y="-234"/>
         </scene>
@@ -320,7 +320,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="lXj-oT-CUg" customClass="StackView">
-                                <rect key="frame" x="161" y="78" width="384" height="606"/>
+                                <rect key="frame" x="161" y="78" width="384" height="608"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </scrollView>
                         </subviews>

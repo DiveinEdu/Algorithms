@@ -26,6 +26,8 @@
     switch (direction) {
         case NODE_DIRECTION_RIGHT:
             value= [[UILabel alloc] initWithFrame:CGRectMake(0,0 , kHorizontalNodeWidth-30, kHorizontalNodeHeight)];
+            self = [super initWithFrame:CGRectMake(0, 0, kHorizontalNodeWidth, kHorizontalNodeHeight)];
+
             break;
         case NODE_DIRECTION_DOWN:
             value= [[UILabel alloc] initWithFrame:CGRectMake(0,0, kVerticalNodeWidth, kVerticalNodeHeight-30)];
