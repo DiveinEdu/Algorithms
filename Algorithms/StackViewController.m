@@ -2,14 +2,14 @@
 //  StackViewController.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 9/18/12.
+//  Created by Carl Wieland on 9/18/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
 #import "StackViewController.h"
 #import "StackView.h"
 #import "Stack.h"
-
+#import "Node.h"
 @interface StackViewController ()
 
 @end
@@ -54,5 +54,8 @@
 }
 
 - (IBAction)peekValue:(id)sender {
+    Node* n = [stack peek];
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Peek!" message:[NSString stringWithFormat:@"Peek returned a node with value: %@",[n description]] delegate:nil cancelButtonTitle:@"Great" otherButtonTitles: nil];
+    [alert show];
 }
 @end

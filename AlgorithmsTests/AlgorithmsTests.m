@@ -2,7 +2,7 @@
 //  AlgorithmsTests.m
 //  AlgorithmsTests
 //
-//  Created by Carl & Hannah Wieland on 9/16/12.
+//  Created by Carl Wieland on 9/16/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 

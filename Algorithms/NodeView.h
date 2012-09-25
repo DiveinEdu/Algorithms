@@ -2,17 +2,22 @@
 //  NodeView.h
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 9/24/12.
+//  Created by Carl Wieland on 9/24/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
-#define kListNodeWidth  100
-#define kListNodeHeight 40
+#define kHorizontalNodeWidth  100
+#define kHorizontalNodeHeight 40
 #define kHorizontalMoveDistance   150
-#define kVerticalMoveDistance   50
+
+#define kVerticalNodeWidth  100
+#define kVerticalNodeHeight 70
+#define kVerticalMoveDistance   150
+
+
 typedef enum{
     NODE_DIRECTION_DOWN,
     NODE_DIRECTION_UP,

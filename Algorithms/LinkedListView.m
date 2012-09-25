@@ -2,7 +2,7 @@
 //  LinkedListView.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 9/18/12.
+//  Created by Carl Wieland on 9/18/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
@@ -34,7 +34,7 @@
     [self addSubview:listNode];
 
     if ([self.nodeViews count]>1) {
-        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width-15, kListNodeHeight/4, kHorizontalMoveDistance-kListNodeWidth +15, kListNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
+        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width-15, kHorizontalNodeWidth/4, kHorizontalMoveDistance-kHorizontalNodeWidth +15, kHorizontalNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
         [listNode addSubview:arrow];
         
     }

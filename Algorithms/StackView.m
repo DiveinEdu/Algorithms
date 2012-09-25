@@ -2,7 +2,7 @@
 //  StackView.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 9/24/12.
+//  Created by Carl Wieland on 9/24/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
@@ -27,11 +27,11 @@
     [self addSubview:listNode];
     
     if ([self.nodeViews count]>1) {
-        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width/2, kListNodeHeight,kVerticalMoveDistance, kListNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
-        [arrow.layer setAnchorPoint:CGPointMake(0, 1.0)];
-        arrow.center = CGPointMake(listNode.frame.size.width/2, kListNodeHeight-15);
+        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(listNode.frame.size.width/2 -(kVerticalNodeHeight/4) , kVerticalNodeHeight,kVerticalMoveDistance-kVerticalNodeHeight +15, kVerticalNodeHeight/2) andArrowType:ARROW_TYPE_FILLED];
+        [arrow.layer setAnchorPoint:CGPointMake(0, .5)];
+        arrow.center = CGPointMake(listNode.frame.size.width/2, kVerticalNodeHeight-15);
         
-        // Rotate 90 degrees to hide it off screen
+        // Rotate 90 degrees
         CGAffineTransform rotationTransform = CGAffineTransformIdentity;
         rotationTransform = CGAffineTransformRotate(rotationTransform, M_PI_2);
         arrow.transform = rotationTransform;

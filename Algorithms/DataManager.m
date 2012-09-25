@@ -2,7 +2,7 @@
 //  DataManager.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 9/23/12.
+//  Created by Carl Wieland on 9/23/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 

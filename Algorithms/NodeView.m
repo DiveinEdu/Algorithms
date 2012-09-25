@@ -2,7 +2,7 @@
 //  NodeView.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 9/24/12.
+//  Created by Carl Wieland on 9/24/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
@@ -22,22 +22,27 @@
 
 
 -(id)initWithNode:(Node *)node andDirection:(NODE_DIRECTION)direction{
-    self = [super initWithFrame:CGRectMake(0, 0, kListNodeWidth, kListNodeHeight)];
+    UILabel* value;
+    switch (direction) {
+        case NODE_DIRECTION_RIGHT:
+            value= [[UILabel alloc] initWithFrame:CGRectMake(0,0 , kHorizontalNodeWidth-30, kHorizontalNodeHeight)];
+            break;
+        case NODE_DIRECTION_DOWN:
+            value= [[UILabel alloc] initWithFrame:CGRectMake(0,0, kVerticalNodeWidth, kVerticalNodeHeight-30)];
+            self = [super initWithFrame:CGRectMake(0, 0, kVerticalNodeWidth, kVerticalNodeHeight )];
+
+            break;
+            
+        default:
+            value= [[UILabel alloc] initWithFrame:CGRectMake(0,0 , kHorizontalNodeWidth-30, kHorizontalNodeHeight)];
+            self = [super initWithFrame:CGRectMake(0, 0, kHorizontalNodeWidth, kHorizontalNodeHeight)];
+
+            break;
+    }
+    self.node=node;
+
     if(self){
-        self.node=node;
-        UILabel* value;
-        switch (direction) {
-            case NODE_DIRECTION_RIGHT:
-                value= [[UILabel alloc] initWithFrame:CGRectMake(0,0 , kListNodeWidth-30, kListNodeHeight)];
-                break;
-            case NODE_DIRECTION_DOWN:
-                value= [[UILabel alloc] initWithFrame:CGRectMake(0,0, kListNodeWidth, kListNodeHeight-10)];
-                break;
-                
-            default:
-                value= [[UILabel alloc] initWithFrame:CGRectMake(0,0 , kListNodeWidth-30, kListNodeHeight)];
-                break;
-        }
+
         [value.layer setBorderWidth:3];
         [value.layer setBorderColor:[UIColor blackColor].CGColor];
         [value setAdjustsFontSizeToFitWidth:YES];
