@@ -1,5 +1,5 @@
 //
-//  BubbleSort.h
+//  MergeSort.h
 //  Algorithms
 //
 //  Created by Carl & Hannah Wieland on 9/25/12.
@@ -8,10 +8,7 @@
 
 #import <Foundation/Foundation.h>
 @class LinkedList;
-@class DoublyLinkedList;
-
-@interface BubbleSort : NSObject
-
+@interface MergeSort : NSObject
 +(void)sortLinkedList:(LinkedList*)list;
-+(void)sortDoublyLinkedList:(DoublyLinkedList*)list;
+
 @end

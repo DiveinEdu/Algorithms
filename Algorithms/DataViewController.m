@@ -69,28 +69,7 @@
                                        permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 
     }
-    
-    /*NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
-    bundleRoot =[bundleRoot stringByAppendingPathComponent:@"code"];
-    NSFileManager *fm = [NSFileManager defaultManager];
-    NSArray *dirContents = [fm contentsOfDirectoryAtPath:bundleRoot error:nil];
-    NSMutableSet* files=[NSMutableSet set];
-    for (NSString* file in dirContents) {
-        [files addObject:[file stringByDeletingPathExtension]];
-    }
-    NSPredicate *fltr = [NSPredicate predicateWithFormat:@"%@ contains self ",[[self class] description]];
-    [files filterUsingPredicate:fltr];
-    
-    UINavigationController* navCont =[self.storyboard instantiateViewControllerWithIdentifier:@"popNavController"];
-    
-    self.codePicker = [[navCont viewControllers] lastObject];
-    [self.codePicker setFiles:[NSMutableArray arrayWithArray:dirContents]];
-    
-    self.codePickerPopover = [[UIPopoverController alloc]
-                                initWithContentViewController:navCont];
-    
-    [self.codePickerPopover presentPopoverFromBarButtonItem:sender
-                                permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];*/
+
 }
 
 

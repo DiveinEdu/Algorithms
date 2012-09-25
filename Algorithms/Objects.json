@@ -27,8 +27,15 @@
     [
         {
             "name":"Bubble Sort",
-            "viewID":"bubbleSort"
+            "viewID":"bubbleSort",
+            "related":["BubbleSort.m","BubbleSort.h"]
 
-        }
+
+        },
+         {
+         "name":"Merge Sort",
+         "viewID":"mergeSort",
+         "related":["MergeSort.m","MergeSort.h","Node.m","Node.h","LinkedList.h","LinkedList.m"]
+         },
     ]
 }

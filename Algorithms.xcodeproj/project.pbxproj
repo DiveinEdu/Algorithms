@@ -11,7 +11,11 @@
 		09006229160FEE4700360BFE /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 09006228160FEE4700360BFE /* Algorithm.m */; };
 		09006235160FEE8400360BFE /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 09006233160FEE8400360BFE /* Category.m */; };
 		0900623C160FF7A200360BFE /* RelatedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0900623B160FF7A200360BFE /* RelatedFile.m */; };
+		09038F37161252C500D4E530 /* MergeSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F36161252C500D4E530 /* MergeSort.m */; };
+		09038F3A1612554D00D4E530 /* MergeSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F391612554D00D4E530 /* MergeSortViewController.m */; };
 		091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64AD160E5D0200F9439A /* CodeViewController.m */; };
+		092F4D6E16122CFE003F4850 /* BubbleSort.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0937E32C161210B00044040F /* BubbleSort.m */; };
+		092F4D7016122D01003F4850 /* BubbleSort.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0937E32B161210B00044040F /* BubbleSort.h */; };
 		0937E3281612106C0044040F /* BubbleSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E3271612106C0044040F /* BubbleSortViewController.m */; };
 		0937E32D161210B00044040F /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E32C161210B00044040F /* BubbleSort.m */; };
 		094B746A160A6EF000C47C3E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 094B7469160A6EF000C47C3E /* arrow_right.png */; };
@@ -83,6 +87,8 @@
 				09584E11160E4FC900AF8427 /* LinkedList.h in CopyFiles */,
 				09C0709F16115802001F4C12 /* Stack.m in CopyFiles */,
 				09584E13160E4FD200AF8427 /* Node.m in CopyFiles */,
+				092F4D7016122D01003F4850 /* BubbleSort.h in CopyFiles */,
+				092F4D6E16122CFE003F4850 /* BubbleSort.m in CopyFiles */,
 				09584E12160E4FD000AF8427 /* Node.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +118,10 @@
 		09006233160FEE8400360BFE /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		0900623A160FF7A200360BFE /* RelatedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedFile.h; sourceTree = "<group>"; };
 		0900623B160FF7A200360BFE /* RelatedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedFile.m; sourceTree = "<group>"; };
+		09038F35161252C500D4E530 /* MergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeSort.h; sourceTree = "<group>"; };
+		09038F36161252C500D4E530 /* MergeSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeSort.m; sourceTree = "<group>"; };
+		09038F381612554D00D4E530 /* MergeSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeSortViewController.h; sourceTree = "<group>"; };
+		09038F391612554D00D4E530 /* MergeSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeSortViewController.m; sourceTree = "<group>"; };
 		091F64AC160E5D0200F9439A /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
 		091F64AD160E5D0200F9439A /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeViewController.m; sourceTree = "<group>"; };
 		0937E3261612106B0044040F /* BubbleSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSortViewController.h; sourceTree = "<group>"; };
@@ -220,6 +230,17 @@
 			name = "Core Data Stack";
 			sourceTree = "<group>";
 		};
+		09038F33161252B500D4E530 /* MergeSort */ = {
+			isa = PBXGroup;
+			children = (
+				09038F381612554D00D4E530 /* MergeSortViewController.h */,
+				09038F391612554D00D4E530 /* MergeSortViewController.m */,
+				09038F35161252C500D4E530 /* MergeSort.h */,
+				09038F36161252C500D4E530 /* MergeSort.m */,
+			);
+			name = MergeSort;
+			sourceTree = "<group>";
+		};
 		0937E32216120FE10044040F /* CodeViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,6 +287,7 @@
 		0937E32A1612107C0044040F /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				09038F33161252B500D4E530 /* MergeSort */,
 				0937E329161210710044040F /* BubbleSort */,
 			);
 			name = Algorithms;
@@ -552,6 +574,8 @@
 				0937E3281612106C0044040F /* BubbleSortViewController.m in Sources */,
 				0937E32D161210B00044040F /* BubbleSort.m in Sources */,
 				09F1525F161221040088A374 /* DoublyLinkedList.m in Sources */,
+				09038F37161252C500D4E530 /* MergeSort.m in Sources */,
+				09038F3A1612554D00D4E530 /* MergeSortViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

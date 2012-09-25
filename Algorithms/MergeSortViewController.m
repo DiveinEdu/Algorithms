@@ -1,20 +1,20 @@
 //
-//  BubbleSortViewController.m
+//  MergeSortViewController.m
 //  Algorithms
 //
 //  Created by Carl & Hannah Wieland on 9/25/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
-#import "BubbleSortViewController.h"
-#import "BubbleSort.h"
+#import "MergeSortViewController.h"
 #import "LinkedList.h"
+#import "MergeSort.h"
 
-@interface BubbleSortViewController ()
+@interface MergeSortViewController ()
 
 @end
 
-@implementation BubbleSortViewController
+@implementation MergeSortViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,12 +36,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
--(IBAction)test:(id)sender{
+
+- (IBAction)testSort:(id)sender {
     LinkedList* linkedList = [LinkedList new];
     for (int i =0; i < 10; i++){
         [linkedList addValueToFront:[NSNumber numberWithInt:arc4random()%100]];
     }
-
-    [BubbleSort sortLinkedList:linkedList];
+    
+    [MergeSort sortLinkedList:linkedList];
 }
 @end
