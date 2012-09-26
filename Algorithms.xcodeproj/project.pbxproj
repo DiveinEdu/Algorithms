@@ -56,6 +56,11 @@
 		09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09584E15160E55B000AF8427 /* CodePopoverController.m */; };
 		096912C9160A6BE600E5AFB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096912C8160A6BE600E5AFB7 /* QuartzCore.framework */; };
 		099EC975160FDC3C00FD136A /* Objects.json in Resources */ = {isa = PBXBuildFile; fileRef = 099EC974160FDC3C00FD136A /* Objects.json */; };
+		09B33FA316128C58000FF89F /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FA216128C58000FF89F /* BinarySearchTree.m */; };
+		09B33FA61612937F000FF89F /* BSTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FA51612937F000FF89F /* BSTViewController.m */; };
+		09B33FA7161296CE000FF89F /* BinarySearchTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA116128C58000FF89F /* BinarySearchTree.h */; };
+		09B33FA8161296D1000FF89F /* BinarySearchTree.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA216128C58000FF89F /* BinarySearchTree.m */; };
+		09B33FAB16129796000FF89F /* BSTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FAA16129796000FF89F /* BSTView.m */; };
 		09C0709C1611579C001F4C12 /* StackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C0709B1611579C001F4C12 /* StackView.m */; };
 		09C0709E161157FF001F4C12 /* Stack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573B1609501800F5D573 /* Stack.h */; };
 		09C0709F16115802001F4C12 /* Stack.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
@@ -106,6 +111,8 @@
 				09038F3E16125B0000D4E530 /* MergeSort.m in CopyFiles */,
 				09038F4A16125F7A00D4E530 /* Node.h in CopyFiles */,
 				09038F4C16125F7A00D4E530 /* Node.m in CopyFiles */,
+				09B33FA7161296CE000FF89F /* BinarySearchTree.h in CopyFiles */,
+				09B33FA8161296D1000FF89F /* BinarySearchTree.m in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +193,12 @@
 		09584E15160E55B000AF8427 /* CodePopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodePopoverController.m; sourceTree = "<group>"; };
 		096912C8160A6BE600E5AFB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		099EC974160FDC3C00FD136A /* Objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Objects.json; sourceTree = "<group>"; };
+		09B33FA116128C58000FF89F /* BinarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
+		09B33FA216128C58000FF89F /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
+		09B33FA41612937E000FF89F /* BSTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTViewController.h; sourceTree = "<group>"; };
+		09B33FA51612937F000FF89F /* BSTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTViewController.m; sourceTree = "<group>"; };
+		09B33FA916129796000FF89F /* BSTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTView.h; sourceTree = "<group>"; };
+		09B33FAA16129796000FF89F /* BSTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTView.m; sourceTree = "<group>"; };
 		09C0709A1611579C001F4C12 /* StackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackView.h; sourceTree = "<group>"; };
 		09C0709B1611579C001F4C12 /* StackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackView.m; sourceTree = "<group>"; };
 		09C070A316115BDD001F4C12 /* NodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeView.h; sourceTree = "<group>"; };
@@ -292,6 +305,7 @@
 		0937E32416120FF60044040F /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				09B33F9F16128C29000FF89F /* BinarySearchTree */,
 				09F152611612210A0088A374 /* DoublyLinkedList */,
 				09E9573616094FE300F5D573 /* Stack */,
 				095434491606D5BA001D3E5D /* LinkedList */,
@@ -306,6 +320,8 @@
 				094B746C160A6F3200C47C3E /* ArrowView.m */,
 				09C070A316115BDD001F4C12 /* NodeView.h */,
 				09C070A416115BDD001F4C12 /* NodeView.m */,
+				09B33FA916129796000FF89F /* BSTView.h */,
+				09B33FAA16129796000FF89F /* BSTView.m */,
 			);
 			name = "Auxilary views";
 			sourceTree = "<group>";
@@ -437,6 +453,17 @@
 				0954344E1606D875001D3E5D /* LinkedList.m */,
 			);
 			name = LinkedList;
+			sourceTree = "<group>";
+		};
+		09B33F9F16128C29000FF89F /* BinarySearchTree */ = {
+			isa = PBXGroup;
+			children = (
+				09B33FA41612937E000FF89F /* BSTViewController.h */,
+				09B33FA51612937F000FF89F /* BSTViewController.m */,
+				09B33FA116128C58000FF89F /* BinarySearchTree.h */,
+				09B33FA216128C58000FF89F /* BinarySearchTree.m */,
+			);
+			name = BinarySearchTree;
 			sourceTree = "<group>";
 		};
 		09E9573616094FE300F5D573 /* Stack */ = {
@@ -620,6 +647,9 @@
 				09038F4716125F2300D4E530 /* TreeNode.m in Sources */,
 				09038F4B16125F7A00D4E530 /* Node.m in Sources */,
 				09038F501612615300D4E530 /* RelatedFile.m in Sources */,
+				09B33FA316128C58000FF89F /* BinarySearchTree.m in Sources */,
+				09B33FA61612937F000FF89F /* BSTViewController.m in Sources */,
+				09B33FAB16129796000FF89F /* BSTView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

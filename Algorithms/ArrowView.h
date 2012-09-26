@@ -13,5 +13,6 @@ typedef enum {
 }ARROW_TYPE;
 
 @interface ArrowView : UIView
+-(id)initWithStartPoint:(CGPoint)start andEndPoint:(CGPoint)end;
 -(id)initWithFrame:(CGRect)frame andArrowType:(ARROW_TYPE)type;
 @end

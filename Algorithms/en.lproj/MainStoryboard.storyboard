@@ -328,6 +328,54 @@
             </objects>
             <point key="canvasLocation" x="1020" y="2162"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="oFY-En-wvi">
+            <objects>
+                <viewController storyboardIdentifier="bstView" id="5Zr-p5-WYw" customClass="BSTViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M4v-yk-97M">
+                        <rect key="frame" x="0.0" y="20" width="703" height="748"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vbY-pc-ooh">
+                                <rect key="frame" x="331" y="20" width="98" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add Value">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToTree:" destination="5Zr-p5-WYw" eventType="touchUpInside" id="EJk-J3-7Ct"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="cSm-x3-6mt">
+                                <rect key="frame" x="132" y="27" width="191" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="RQh-rg-CGr">
+                                <rect key="frame" x="20" y="180" width="663" height="548"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="treeView" destination="RQh-rg-CGr" id="7LR-wj-WQK"/>
+                        <outlet property="valueField" destination="cSm-x3-6mt" id="M5G-41-C5p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2H-7h-0Xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2318" y="1947"/>
+        </scene>
         <!--Stack View Controller-->
         <scene sceneID="Fl6-75-NnC">
             <objects>
@@ -472,6 +520,14 @@
         </scene>
     </scenes>
     <classes>
+        <class className="BSTViewController" superclassName="DataViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BSTViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addToTree:"/>
+                <relationship kind="outlet" name="treeView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="valueField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
         <class className="BubbleSortViewController" superclassName="DataViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BubbleSortViewController.h"/>
             <relationships>
@@ -485,7 +541,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CodeViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="codeView" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
             </relationships>
         </class>
         <class className="DataViewController" superclassName="UIViewController">
@@ -497,11 +552,12 @@
         <class className="DoublyLinkedListView" superclassName="UIScrollView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DoublyLinkedListView.h"/>
         </class>
-        <class className="DoublyLinkedListViewController" superclassName="UIViewController">
+        <class className="DoublyLinkedListViewController" superclassName="DataViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DoublyLinkedListViewController.h"/>
             <relationships>
                 <relationship kind="action" name="addBack:"/>
                 <relationship kind="action" name="addFront:"/>
+                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="listView" candidateClass="DoublyLinkedListView"/>
             </relationships>
         </class>

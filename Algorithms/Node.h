@@ -11,5 +11,5 @@
 @interface Node : NSObject
 -(id)initWithValue:(id)value;
 -(id)getValue;
-
+- (NSComparisonResult)compare:(Node *)otherObject;
 @end
