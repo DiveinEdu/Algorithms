@@ -13,6 +13,6 @@
 @property (nonatomic, strong) TreeNode* root;
 
 -(TreeNode*)addValue:(id)value;
--(BOOL)addNode:(TreeNode*)node withRoot:(TreeNode*)node;
+-(TreeNode*)removeValue:(id)value;
 -(void)traverse;
 @end

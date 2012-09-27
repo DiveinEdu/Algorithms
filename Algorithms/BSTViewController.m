@@ -39,6 +39,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)removeFromTree:(id)sender {
+    TreeNode* node = [self.binarySearchTree removeValue:[self.valueField text]];
+    if(node)
+        [self.rootView removeNode:node];
+}
+
 - (IBAction)addToTree:(id)sender {
     TreeNode* node = [self.binarySearchTree addValue:[self.valueField text]];
     if(node){

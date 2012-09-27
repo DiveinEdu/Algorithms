@@ -10,42 +10,48 @@
 #import "TreeNode.h"
 
 @implementation BinarySearchTree
+
 -(TreeNode*)addValue:(id)value{
+    [self traverse];
     TreeNode* node = [[TreeNode alloc] initWithValue:value];
     if(self.root == nil){
         self.root = node;
         return node;
     }
     else{
-        if([self addNode:node withRoot:self.root])
+        if([self.root addNode:node])
             return node;
         else return nil;
     }
-    
+    [self traverse];    
 }
 
--(BOOL)addNode:(TreeNode*)node withRoot:(TreeNode*)root{
-    switch ([node compare:root]) {
-        case NSOrderedAscending:
-            if (root.right == nil){
-                root.right = node;
-                return YES;
-            }
-            else
-                return [self addNode:node withRoot:root.right];
-        case NSOrderedDescending:
-            if  (root.left==nil){
-                root.left = node;
-                return YES;
-            }
-            else
-                return [self addNode:node withRoot:root.left];
-        case NSOrderedSame:
-            return false;
+
+-(TreeNode*)removeValue:(id)value{
+    TreeNode* removed = nil;
+    [self traverse];
+    if (self.root == nil)
+        removed= self.root;
+    else {
+        TreeNode* auxRoot = [[TreeNode alloc] initWithValue:value];
+
+        if ([[self.root getValue] integerValue] == [value integerValue]) {
+            TreeNode* tmpRoot = [[TreeNode alloc] initWithValue:0];
+            tmpRoot.left = self.root;
+            self.root.parent = tmpRoot;
+            removed = [self.root removeNode:auxRoot];
+            self.root = tmpRoot.left;
+
+        } else {
+            removed=[self.root removeNode:auxRoot];
+        }
     }
-    
-    
+    [self traverse];
+    return removed;
 }
+
+
+
 -(void)traverse{
     NSMutableString* path = [NSMutableString new];
     [self visit:self.root toString:path];

@@ -15,6 +15,7 @@
 @property (weak, nonatomic) BSTView *rootView;
 @property (nonatomic, strong) BinarySearchTree* binarySearchTree;
 @property (weak, nonatomic) IBOutlet UIScrollView *treeView;
+- (IBAction)removeFromTree:(id)sender;
 
 - (IBAction)addToTree:(id)sender;
 

@@ -33,6 +33,7 @@
         case NSOrderedDescending:
             if (self.right == nil){
                 self.right = view;
+                view.parent = self;
                 [self addSubview:view];
 
                 
@@ -43,6 +44,7 @@
         case NSOrderedAscending:
             if  (self.left==nil){
                 self.left = view;
+                view.parent = self;
                 [self addSubview:view];
             }
             else
@@ -51,16 +53,23 @@
         case NSOrderedSame:
             break;
     }
+    [self fixViews];
+}
+-(void)fixViews{
     //reset the arrows
     [self.rightArrow removeFromSuperview];
     [self.leftArrow removeFromSuperview];
+    [self.left removeFromSuperview];
+    [self.right removeFromSuperview];
+    [self addSubview:self.right];
+    [self addSubview:self.left];
     //calculate the space needed for both views.
-    CGFloat width = (self.right.frame.size.width+150+self.left.frame.size.width);
+    CGFloat width = (self.right != self.left) ? (self.right.frame.size.width+150+self.left.frame.size.width) : 50;
     CGFloat height = ( MAX(self.right.frame.size.height,self.left.frame.size.height) +100);
     CGSize size = CGSizeMake(width,height);
     
     
-    self.frame = CGRectMake(0,0,size.width ,size.height);
+    self.frame = CGRectMake(self.frame.origin.x,self.frame.origin.y,size.width ,size.height);
     
     //update left side
     [self.left setFrame:CGRectMake(0, 100, self.left.frame.size.width, self.left.frame.size.height)];
@@ -84,5 +93,75 @@
         
     }
 }
+-(BOOL)removeNode:(TreeNode *)node{
+    switch ([node compare:self.node]) {
+        case NSOrderedDescending:
+            if (self.left != NULL){
+                [self.left removeNode:node] ;
+                [self.parent fixViews];
+            }
+            else
+                return NO;
+        case NSOrderedAscending:
+            if (self.right != NULL){
+                [self.right removeNode:node ];
+                [self.parent fixViews];
+                return true;
+            }
+            else
+                return NO;
+        case NSOrderedSame:
+            //I am need to remove myself!
+            
+            if (self.left != NULL && self.right != NULL) {
+                //we find the lowest node on the right
+                BSTView* cur = self.right;
+                while (cur.left!=nil) {
+                    cur = cur.left;
+                }
+                if (cur.parent !=self) {
+                    //cut cur off and replace this node
+                    cur.parent.left = nil;
+                    cur.parent = self.parent;
+                    cur.left = self.left;
+                    cur.right = self.right;
+                }
+                else{
+                    //fix my parents view
+                    if (self == self.parent.left){
+                        self.parent.left = cur;
+                        
+                    }
+                    else{
+                        self.parent.right = cur;
+                    }
+                    //fix my views
+                    cur.left = self.left;
+                    
+                    [cur setParent:self.parent];
+                    self.left = nil;
+                    self.right = nil;
+                    [cur fixViews];
+                }
+                
+                
+            } else if (self.parent.left == self) {
+                self.parent.left = (self.left != NULL) ? self.left : self.right;
+                [self.parent.left setParent:self.parent];
+            } else if (self.parent.right == self) {
+                self.parent.right = (self.left != NULL) ? self.left : self.right;
+                [self.parent.right setParent:self.parent];
+            }
+            for (UIView* view in [self subviews]) {
+                [view removeFromSuperview];
+            }
+            [self removeFromSuperview];
+            [self.parent fixViews];
+            break;
+        default:
+            break;
+    }
 
+    return true;
+}
 @end
