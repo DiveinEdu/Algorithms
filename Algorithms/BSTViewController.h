@@ -10,7 +10,7 @@
 @class BinarySearchTree;
 @class BSTView;
 
-@interface BSTViewController : DataViewController
+@interface BSTViewController : DataViewController <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
 @property (weak, nonatomic) BSTView *rootView;
 @property (nonatomic, strong) BinarySearchTree* binarySearchTree;

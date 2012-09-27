@@ -13,10 +13,10 @@
 #import <math.h>
 @implementation BSTView
 -(id)initWithNode:(TreeNode *)node{
-    self = [super initWithFrame:CGRectMake(0, 0, 100, 100)];
+    self = [super initWithFrame:CGRectMake(0, 0, 150, 150)];
     if(self){
         self.node = node;
-        self.value = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+        self.value = [[UILabel alloc] initWithFrame:CGRectMake((self.frame.size.width/2)-25, 0, 50, 50)];
         [self.value setText:[self.node description]];
         [self.value.layer setBorderWidth:3];
         [self.value.layer setBorderColor:[UIColor blackColor].CGColor];
@@ -25,8 +25,6 @@
         [self.value setTextAlignment:NSTextAlignmentCenter];
         [self.value setText:[self.node description]];
         [self addSubview:self.value];
-        [self.layer setBorderColor:[UIColor blackColor].CGColor];
-        [self.layer setBorderWidth:3];
     }
     return self;
 }
@@ -74,9 +72,15 @@
     
     
     if (self.right) {
-
+        //create the right arrow
+        self.rightArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.right.center.x, self.right.frame.origin.y) ];
+        [self addSubview:self.rightArrow];
     }
+    
     if (self.left) {
+        self.leftArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.left.center.x, self.left.frame.origin.y) ];
+        [self addSubview:self.leftArrow];
+        
         
     }
 }

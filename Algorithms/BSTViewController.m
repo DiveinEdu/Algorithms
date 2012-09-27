@@ -27,6 +27,8 @@
 - (void)viewDidLoad
 {
     self.binarySearchTree = [BinarySearchTree new];
+    self.treeView.delegate = self;
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -44,17 +46,23 @@
         if (self.rootView == nil) {
             self.rootView = newTree;
             [self.treeView addSubview:newTree];
-            [newTree setFrame:CGRectMake( self.treeView.frame.size.width/2, 0,newTree.frame.size.width, newTree.frame.size.height)];
+            [newTree setFrame:CGRectMake( 0, 0,newTree.frame.size.width, newTree.frame.size.height)];
         }
         else{
             [self.rootView addBSTView:newTree];
             [self.treeView setContentSize:self.rootView.frame.size];
 
         }
+        self.treeView.minimumZoomScale = self.rootView.frame.size.width / self.rootView.frame.size.width;
+        self.treeView.maximumZoomScale = 2.0;
+        [self.treeView setZoomScale:self.treeView.minimumZoomScale];
 
         [self.binarySearchTree traverse];
     }
     
+}
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
+    return self.rootView;
 }
 - (void)viewDidUnload {
     [self setValueField:nil];

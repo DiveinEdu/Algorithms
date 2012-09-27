@@ -7,6 +7,7 @@
 //
 
 #import "ArrowView.h"
+#import <QuartzCore/QuartzCore.h>
 #import <math.h>
 @interface ArrowView()
 -(UIImage*)imageForType:(ARROW_TYPE) type;
@@ -14,21 +15,55 @@
 
 @implementation ArrowView
 -(id)initWithStartPoint:(CGPoint)start andEndPoint:(CGPoint)end{
-    NSLog(@"%f %f to %f %f",start.x, start.y, end.x, end.y);
-    CGRect frame = CGRectMake(0, 0, MAX(end.x-start.x,10), MAX(end.y-start.y,10));
-    NSLog(@"%f %f %f %f ",frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
+    CGFloat leftX = MIN(start.x, end.x);
+    CGFloat leftY = MIN(start.y, end.y);
+    
+    
+    CGRect frame = CGRectMake(leftX, leftY, MAX(abs(end.x-start.x),10), MAX(abs(end.y-start.y),10));
+
     self = [super initWithFrame:frame];
     if(self){
-        CGFloat x = MAX(end.x - start.x,10);
-        CGFloat y = MAX(end.y - start.y,10);
+        CGFloat x = self.frame.size.width;
+        CGFloat y = self.frame.size.height;
+        CGFloat len = sqrtf((x*x) + (y*y));
         CGFloat angle = atan(y / x);
-        CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
-
-        UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
-        [arrowView setFrame:CGRectMake(x, y, 10, 10)];
-        [arrowView setTransform:transform];
         
+        NSLog(@"x: %f Y: %f len:%f",x,y,len);
+        UIView * separator = nil;
+        UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
+
+        if (start.x < end.x) {
+            //we are going to the right
+            separator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, len, 1)];
+            [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
+            [arrowView setFrame:CGRectMake(frame.size.width-10, frame.size.height-5, 10, 10)];
+            [self setAnchorPoint:CGPointMake(1, .5) forView:arrowView];
+            CGAffineTransform arrow = CGAffineTransformMakeRotation(angle);
+            [arrowView setTransform:arrow];
+        }
+        else{
+            //going to the left
+            separator = [[UIView alloc] initWithFrame:CGRectMake(0,frame.size.height, len, 1)];
+            [self setAnchorPoint:CGPointMake(0, 1) forView:separator];
+            [arrowView setFrame:CGRectMake(-10, frame.size.height-5, 10, 10)];
+            [self setAnchorPoint:CGPointMake(1, .5) forView:arrowView];
+            CGAffineTransform arrow = CGAffineTransformMakeRotation(-(M_PI+angle));
+            [arrowView setTransform:arrow];
+            angle *=-1;
+
+
+        }
+        
+        separator.backgroundColor = [UIColor blackColor];
+        [self addSubview:separator];
         [self addSubview:arrowView];
+
+
+
+        
+        CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
+        [separator setTransform:transform];
+
     }
     return self;
     
@@ -92,6 +127,29 @@
             return [UIImage imageNamed:@"arrow_right.png"];
     }
 }
+
+
+-(void)setAnchorPoint:(CGPoint)anchorPoint forView:(UIView *)view
+{
+    CGPoint newPoint = CGPointMake(view.bounds.size.width * anchorPoint.x, view.bounds.size.height * anchorPoint.y);
+    CGPoint oldPoint = CGPointMake(view.bounds.size.width * view.layer.anchorPoint.x, view.bounds.size.height * view.layer.anchorPoint.y);
+    
+    newPoint = CGPointApplyAffineTransform(newPoint, view.transform);
+    oldPoint = CGPointApplyAffineTransform(oldPoint, view.transform);
+    
+    CGPoint position = view.layer.position;
+    
+    position.x -= oldPoint.x;
+    position.x += newPoint.x;
+    
+    position.y -= oldPoint.y;
+    position.y += newPoint.y;
+    
+    view.layer.position = position;
+    view.layer.anchorPoint = anchorPoint;
+}
+
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
