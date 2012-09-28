@@ -56,21 +56,18 @@
     [self fixViews];
 }
 -(void)fixViews{
+    NSLog(@"Fixing views for: %@",self.node);
     //reset the arrows
     [self.rightArrow removeFromSuperview];
     [self.leftArrow removeFromSuperview];
-    [self.left removeFromSuperview];
-    [self.right removeFromSuperview];
-    [self addSubview:self.right];
-    [self addSubview:self.left];
+
     //calculate the space needed for both views.
     CGFloat width = (self.right != self.left) ? (self.right.frame.size.width+150+self.left.frame.size.width) : 50;
     CGFloat height = ( MAX(self.right.frame.size.height,self.left.frame.size.height) +100);
     CGSize size = CGSizeMake(width,height);
     
-    
     self.frame = CGRectMake(self.frame.origin.x,self.frame.origin.y,size.width ,size.height);
-    
+    NSLog(@"%f %f %f %f",self.frame.origin.x, self.frame.origin.y, self.frame.size.width,self.frame.size.height);
     //update left side
     [self.left setFrame:CGRectMake(0, 100, self.left.frame.size.width, self.left.frame.size.height)];
     
@@ -81,50 +78,76 @@
     
     
     if (self.right) {
+        if (![[self subviews] containsObject:self.right]) {
+            [self addSubview: self.right];
+        }
         //create the right arrow
         self.rightArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.right.center.x, self.right.frame.origin.y) ];
         [self addSubview:self.rightArrow];
     }
     
     if (self.left) {
-        self.leftArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.left.center.x, self.left.frame.origin.y) ];
+        if (![[self subviews] containsObject:self.left]) {
+            [self addSubview: self.left];
+        }        self.leftArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.left.center.x, self.left.frame.origin.y) ];
         [self addSubview:self.leftArrow];
         
         
     }
 }
 -(BOOL)removeNode:(TreeNode *)node{
+    BSTView* cur;
     switch ([node compare:self.node]) {
         case NSOrderedDescending:
             if (self.left != NULL){
                 [self.left removeNode:node] ;
-                [self.parent fixViews];
+                [self fixViews];
             }
             else
                 return NO;
         case NSOrderedAscending:
             if (self.right != NULL){
                 [self.right removeNode:node ];
-                [self.parent fixViews];
+                [self fixViews];
                 return true;
             }
             else
                 return NO;
         case NSOrderedSame:
             //I am need to remove myself!
-            
+            for (UIView* view in [self subviews]) {
+                [view removeFromSuperview];
+            }
+            [self removeFromSuperview];
+
             if (self.left != NULL && self.right != NULL) {
                 //we find the lowest node on the right
-                BSTView* cur = self.right;
+                cur = self.right;
                 while (cur.left!=nil) {
                     cur = cur.left;
                 }
-                if (cur.parent !=self) {
+                if (cur.parent != self) {
                     //cut cur off and replace this node
-                    cur.parent.left = nil;
-                    cur.parent = self.parent;
+                    cur.parent.left = cur.right;
+                    [cur.parent fixViews];
+                    for (UIView* view in [cur subviews]) {
+                        [view removeFromSuperview];
+                    }
+                    [cur removeFromSuperview];
+                    [cur setParent: self.parent];
+                    [cur.parent addSubview:cur];
+
+                    if (self == self.parent.left){
+                        self.parent.left = cur;
+                        
+                    }
+                    else{
+                        self.parent.right = cur;
+                    }
                     cur.left = self.left;
                     cur.right = self.right;
+                    [cur addSubview:cur.right];
+                    [cur addSubview:cur.left];
                 }
                 else{
                     //fix my parents view
@@ -137,12 +160,16 @@
                     }
                     //fix my views
                     cur.left = self.left;
-                    
+                    [cur.parent fixViews];
+
                     [cur setParent:self.parent];
-                    self.left = nil;
-                    self.right = nil;
-                    [cur fixViews];
                 }
+                self.left = nil;
+                self.right = nil;
+                [cur setFrame:CGRectMake(cur.frame.origin.x, cur.frame.origin.y-100, cur.frame.size.width, cur.frame.size.height)];
+                [cur addSubview:cur.value];
+                [cur fixViews];
+
                 
                 
             } else if (self.parent.left == self) {
@@ -152,11 +179,7 @@
                 self.parent.right = (self.left != NULL) ? self.left : self.right;
                 [self.parent.right setParent:self.parent];
             }
-            for (UIView* view in [self subviews]) {
-                [view removeFromSuperview];
-            }
-            [self removeFromSuperview];
-            [self.parent fixViews];
+
             break;
         default:
             break;

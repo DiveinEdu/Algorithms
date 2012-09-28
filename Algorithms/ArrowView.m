@@ -28,7 +28,6 @@
         CGFloat len = sqrtf((x*x) + (y*y));
         CGFloat angle = atan(y / x);
         
-        NSLog(@"x: %f Y: %f len:%f",x,y,len);
         UIView * separator = nil;
         UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
 

@@ -48,17 +48,22 @@
             
             
             if (self.left != NULL && self.right != NULL) {
-                //we find the lowest node on the right
+                //we find the lowest node on the right subtree
                 TreeNode* cur = self.right;
                 while (cur.left!=nil) {
                     cur = cur.left;
                 }
                 if (cur.parent !=self) {
-                    //cut cur off and replace this node
+                    //cut off the leaf and use it to fill this spot
                     cur.parent.left = nil;
                     cur.parent = self.parent;
                     cur.left = self.left;
                     cur.right = self.right;
+                    if (self == self.parent.left)
+                        self.parent.left = cur;
+                    
+                    else
+                        self.parent.right = cur;
                 }
                 else{
                     if (self == self.parent.left)
@@ -69,18 +74,20 @@
                     
                     cur.left = self.left;
                     cur.parent = self.parent;
-                    self.left = nil;
-                    self.right = nil;
+
 
                 }
-
-                
+                self.left = nil;
+                self.right = nil;
                 return self;
             } else if (self.parent.left == self) {
                 self.parent.left = (self.left != NULL) ? self.left : self.right;
+                [self.parent.left setParent:self.parent];
                 return self;
             } else if (self.parent.right == self) {
                 self.parent.right = (self.left != NULL) ? self.left : self.right;
+                [self.parent.right setParent:self.parent];
+
                 return self;
             }
         default:

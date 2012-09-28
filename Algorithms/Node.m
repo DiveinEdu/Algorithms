@@ -27,7 +27,8 @@
     return [NSString stringWithFormat:@"%@",self.value];
 }
 
-- (NSComparisonResult)compare:(Node *)otherObject {    
+- (NSComparisonResult)compare:(Node *)otherObject {
+
     if ([[self getValue] integerValue] > [[otherObject getValue] integerValue]) {
         return NSOrderedAscending;
     }
