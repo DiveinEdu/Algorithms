@@ -72,7 +72,7 @@
             [self.treeView setContentSize:self.rootView.frame.size];
 
         }
-        self.treeView.minimumZoomScale = self.rootView.frame.size.width / self.rootView.frame.size.width;
+        self.treeView.minimumZoomScale = self.treeView.frame.size.width / self.rootView.frame.size.width;
         self.treeView.maximumZoomScale = 2.0;
         [self.treeView setZoomScale:self.treeView.minimumZoomScale];
 

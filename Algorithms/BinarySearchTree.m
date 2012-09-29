@@ -12,7 +12,7 @@
 @implementation BinarySearchTree
 
 -(TreeNode*)addValue:(id)value{
-    [self traverse];
+    //[self traverse];
     TreeNode* node = [[TreeNode alloc] initWithValue:value];
     if(self.root == nil){
         self.root = node;
@@ -23,13 +23,13 @@
             return node;
         else return nil;
     }
-    [self traverse];    
+    //[self traverse];
 }
 
 
 -(TreeNode*)removeValue:(id)value{
     TreeNode* removed = nil;
-    [self traverse];
+    //[self traverse];
     if (self.root == nil)
         removed= self.root;
     else {
@@ -46,7 +46,7 @@
             removed=[self.root removeNode:auxRoot];
         }
     }
-    [self traverse];
+    //[self traverse];
     return removed;
 }
 

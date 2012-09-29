@@ -82,7 +82,7 @@
         
         UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
 
-        UIView * separator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, len, 1)];
+        UIView * separator = [[UIView alloc] initWithFrame:CGRectMake(0, 1.5, len, 3)];
         separator.backgroundColor = [UIColor blackColor];
         [self addSubview:separator];
         [self addSubview:arrowView];

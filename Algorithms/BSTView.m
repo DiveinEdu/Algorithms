@@ -56,7 +56,6 @@
     [self fixViews];
 }
 -(void)fixViews{
-    NSLog(@"Fixing views for: %@",self.node);
     //reset the arrows
     [self.rightArrow removeFromSuperview];
     [self.leftArrow removeFromSuperview];
@@ -67,7 +66,6 @@
     CGSize size = CGSizeMake(width,height);
     
     self.frame = CGRectMake(self.frame.origin.x,self.frame.origin.y,size.width ,size.height);
-    NSLog(@"%f %f %f %f",self.frame.origin.x, self.frame.origin.y, self.frame.size.width,self.frame.size.height);
     //update left side
     [self.left setFrame:CGRectMake(0, 100, self.left.frame.size.width, self.left.frame.size.height)];
     

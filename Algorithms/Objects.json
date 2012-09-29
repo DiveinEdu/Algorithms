@@ -25,12 +25,46 @@
             "viewID":"doublyLinkedList",
             "related":["LinkedList.m","LinkedList.h","ListNode.m","ListNode.h","Node.h","Node.m","DoublyLinkedList.h","DoublyLinkedList.m"]
         },
-         {
+        {
              "name":"Binary Search Tree",
              "viewID":"bstView",
              "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
-         }
-    
+        },
+        {
+             "name":"Heap",
+             "viewID":"bstView",
+             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+        },
+                {
+             "name":"Graph",
+             "viewID":"bstView",
+             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+        },
+        {
+             "name":"AVL Tree",
+             "viewID":"bstView",
+             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+        },
+        {
+             "name":"Red Black Tree",
+             "viewID":"bstView",
+             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+        },
+        {
+             "name":"2 3 Tree",
+             "viewID":"bstView",
+             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+        },
+        {
+             "name":"Skip List",
+             "viewID":"bstView",
+             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+        },
+        {
+             "name":"Trie",
+             "viewID":"bstView",
+             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+        }
     ],
     "algorithms":
     [
