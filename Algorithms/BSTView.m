@@ -88,9 +88,7 @@
         if (![[self subviews] containsObject:self.left]) {
             [self addSubview: self.left];
         }        self.leftArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.left.center.x, self.left.frame.origin.y) ];
-        [self addSubview:self.leftArrow];
-        
-        
+        [self addSubview:self.leftArrow];        
     }
 }
 -(BOOL)removeNode:(TreeNode *)node{

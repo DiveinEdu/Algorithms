@@ -28,6 +28,7 @@
 		092F4D7016122D01003F4850 /* BubbleSort.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0937E32B161210B00044040F /* BubbleSort.h */; };
 		0937E3281612106C0044040F /* BubbleSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E3271612106C0044040F /* BubbleSortViewController.m */; };
 		0937E32D161210B00044040F /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E32C161210B00044040F /* BubbleSort.m */; };
+		094927041618CBEE00012500 /* HeapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094927031618CBEE00012500 /* HeapView.m */; };
 		094B746A160A6EF000C47C3E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 094B7469160A6EF000C47C3E /* arrow_right.png */; };
 		094B746D160A6F3200C47C3E /* ArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094B746C160A6F3200C47C3E /* ArrowView.m */; };
 		0954340C1606D232001D3E5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0954340B1606D232001D3E5D /* UIKit.framework */; };
@@ -65,6 +66,12 @@
 		09C0709E161157FF001F4C12 /* Stack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573B1609501800F5D573 /* Stack.h */; };
 		09C0709F16115802001F4C12 /* Stack.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
 		09C070A516115BDD001F4C12 /* NodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C070A416115BDD001F4C12 /* NodeView.m */; };
+		09C8ED711618D66A0076E2D0 /* Heap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA27461617D34D00738463 /* Heap.h */; };
+		09C8ED731618D66D0076E2D0 /* Heap.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA27471617D34D00738463 /* Heap.m */; };
+		09C8ED741618D6750076E2D0 /* ArrayHeap.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA274C1617D4BE00738463 /* ArrayHeap.h */; };
+		09C8ED751618D6780076E2D0 /* ArrayHeap.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA274D1617D4BE00738463 /* ArrayHeap.m */; };
+		09C8ED761618D67D0076E2D0 /* HeapNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA274F1617DE1700738463 /* HeapNode.h */; };
+		09C8ED771618D67F0076E2D0 /* HeapNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA27501617DE1700738463 /* HeapNode.m */; };
 		09E9573A1609500500F5D573 /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E957391609500500F5D573 /* StackViewController.m */; };
 		09E9573D1609501800F5D573 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
 		09E957401609525900F5D573 /* LinkedListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573F1609525900F5D573 /* LinkedListView.m */; };
@@ -78,6 +85,10 @@
 		09F92A00160EC0EF00FC497A /* desert.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929FE160EC0B700FC497A /* desert.css */; };
 		09F92A01160EC0F100FC497A /* sunburst.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929FC160EC06B00FC497A /* sunburst.css */; };
 		09F92A02160EC0F300FC497A /* sons-of-obsidian.css in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09F929FA160EC04700FC497A /* sons-of-obsidian.css */; };
+		09FA27481617D34D00738463 /* Heap.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA27471617D34D00738463 /* Heap.m */; };
+		09FA274B1617D36400738463 /* HeapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA274A1617D36400738463 /* HeapViewController.m */; };
+		09FA274E1617D4BE00738463 /* ArrayHeap.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA274D1617D4BE00738463 /* ArrayHeap.m */; };
+		09FA27511617DE1700738463 /* HeapNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA27501617DE1700738463 /* HeapNode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +108,12 @@
 			dstPath = code;
 			dstSubfolderSpec = 7;
 			files = (
+				09C8ED711618D66A0076E2D0 /* Heap.h in CopyFiles */,
+				09C8ED731618D66D0076E2D0 /* Heap.m in CopyFiles */,
+				09C8ED741618D6750076E2D0 /* ArrayHeap.h in CopyFiles */,
+				09C8ED751618D6780076E2D0 /* ArrayHeap.m in CopyFiles */,
+				09C8ED761618D67D0076E2D0 /* HeapNode.h in CopyFiles */,
+				09C8ED771618D67F0076E2D0 /* HeapNode.m in CopyFiles */,
 				09C0709E161157FF001F4C12 /* Stack.h in CopyFiles */,
 				09584E10160E4FC200AF8427 /* LinkedList.m in CopyFiles */,
 				09584E11160E4FC900AF8427 /* LinkedList.h in CopyFiles */,
@@ -159,6 +176,8 @@
 		0937E3271612106C0044040F /* BubbleSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortViewController.m; sourceTree = "<group>"; };
 		0937E32B161210B00044040F /* BubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
 		0937E32C161210B00044040F /* BubbleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
+		094927021618CBEE00012500 /* HeapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeapView.h; sourceTree = "<group>"; };
+		094927031618CBEE00012500 /* HeapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapView.m; sourceTree = "<group>"; };
 		094B7469160A6EF000C47C3E /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
 		094B746B160A6F3200C47C3E /* ArrowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrowView.h; sourceTree = "<group>"; };
 		094B746C160A6F3200C47C3E /* ArrowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrowView.m; sourceTree = "<group>"; };
@@ -221,6 +240,14 @@
 		09F929FA160EC04700FC497A /* sons-of-obsidian.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = "sons-of-obsidian.css"; sourceTree = "<group>"; };
 		09F929FC160EC06B00FC497A /* sunburst.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = sunburst.css; path = ../sunburst.css; sourceTree = "<group>"; };
 		09F929FE160EC0B700FC497A /* desert.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = desert.css; sourceTree = "<group>"; };
+		09FA27461617D34D00738463 /* Heap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Heap.h; sourceTree = "<group>"; };
+		09FA27471617D34D00738463 /* Heap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Heap.m; sourceTree = "<group>"; };
+		09FA27491617D36400738463 /* HeapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeapViewController.h; sourceTree = "<group>"; };
+		09FA274A1617D36400738463 /* HeapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapViewController.m; sourceTree = "<group>"; };
+		09FA274C1617D4BE00738463 /* ArrayHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayHeap.h; sourceTree = "<group>"; };
+		09FA274D1617D4BE00738463 /* ArrayHeap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayHeap.m; sourceTree = "<group>"; };
+		09FA274F1617DE1700738463 /* HeapNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeapNode.h; sourceTree = "<group>"; };
+		09FA27501617DE1700738463 /* HeapNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapNode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +314,8 @@
 				095434511606D895001D3E5D /* ListNode.m */,
 				09038F4516125F2200D4E530 /* TreeNode.h */,
 				09038F4616125F2300D4E530 /* TreeNode.m */,
+				09FA274F1617DE1700738463 /* HeapNode.h */,
+				09FA27501617DE1700738463 /* HeapNode.m */,
 			);
 			name = "Node Types";
 			sourceTree = "<group>";
@@ -305,6 +334,7 @@
 		0937E32416120FF60044040F /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				09FA27441617D33400738463 /* Heap */,
 				09B33F9F16128C29000FF89F /* BinarySearchTree */,
 				09F152611612210A0088A374 /* DoublyLinkedList */,
 				09E9573616094FE300F5D573 /* Stack */,
@@ -320,8 +350,6 @@
 				094B746C160A6F3200C47C3E /* ArrowView.m */,
 				09C070A316115BDD001F4C12 /* NodeView.h */,
 				09C070A416115BDD001F4C12 /* NodeView.m */,
-				09B33FA916129796000FF89F /* BSTView.h */,
-				09B33FAA16129796000FF89F /* BSTView.m */,
 			);
 			name = "Auxilary views";
 			sourceTree = "<group>";
@@ -460,6 +488,8 @@
 			children = (
 				09B33FA41612937E000FF89F /* BSTViewController.h */,
 				09B33FA51612937F000FF89F /* BSTViewController.m */,
+				09B33FA916129796000FF89F /* BSTView.h */,
+				09B33FAA16129796000FF89F /* BSTView.m */,
 				09B33FA116128C58000FF89F /* BinarySearchTree.h */,
 				09B33FA216128C58000FF89F /* BinarySearchTree.m */,
 			);
@@ -502,6 +532,21 @@
 				09F929DD160EB4F400FC497A /* prettify.js */,
 			);
 			path = prettify;
+			sourceTree = "<group>";
+		};
+		09FA27441617D33400738463 /* Heap */ = {
+			isa = PBXGroup;
+			children = (
+				09FA27491617D36400738463 /* HeapViewController.h */,
+				09FA274A1617D36400738463 /* HeapViewController.m */,
+				094927021618CBEE00012500 /* HeapView.h */,
+				094927031618CBEE00012500 /* HeapView.m */,
+				09FA27461617D34D00738463 /* Heap.h */,
+				09FA27471617D34D00738463 /* Heap.m */,
+				09FA274C1617D4BE00738463 /* ArrayHeap.h */,
+				09FA274D1617D4BE00738463 /* ArrayHeap.m */,
+			);
+			name = Heap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -650,6 +695,11 @@
 				09B33FA316128C58000FF89F /* BinarySearchTree.m in Sources */,
 				09B33FA61612937F000FF89F /* BSTViewController.m in Sources */,
 				09B33FAB16129796000FF89F /* BSTView.m in Sources */,
+				09FA27481617D34D00738463 /* Heap.m in Sources */,
+				09FA274B1617D36400738463 /* HeapViewController.m in Sources */,
+				09FA274E1617D4BE00738463 /* ArrayHeap.m in Sources */,
+				09FA27511617DE1700738463 /* HeapNode.m in Sources */,
+				094927041618CBEE00012500 /* HeapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

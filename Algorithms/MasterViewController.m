@@ -72,7 +72,10 @@
 {
     Algorithm *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
     DataViewController* controller =[self.storyboard instantiateViewControllerWithIdentifier:[object valueForKey:@"viewID"]];
-    [controller setAlgorithm:object];
+    if ([controller respondsToSelector:@selector(setAlgorithm:)]) {
+        [controller setAlgorithm:object];
+    }
+
     UINavigationController* navcontroller = [[UINavigationController alloc] initWithRootViewController:controller];
     
     [self.splitViewController setViewControllers:@[self.navigationController,navcontroller]];
