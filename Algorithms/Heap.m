@@ -28,7 +28,7 @@
 
 
 -(void)addValue:(id)value{
-    HeapNode* node = [[HeapNode alloc] initWithValue:value];
+    HeapNode* node = [[HeapNode alloc] initWithValue:value andType:heapType];
     if(self.root != nil){
         //find correct location
         HeapNode* newParent = [self findNextParent];

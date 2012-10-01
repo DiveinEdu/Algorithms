@@ -522,6 +522,9 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="rE1-oh-qHA">
                                 <rect key="frame" x="20" y="115" width="663" height="569"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="jQ3-Go-0Dp" id="mqi-5e-qvk"/>
+                                </connections>
                             </scrollView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="ugp-oX-xIr">
                                 <rect key="frame" x="237" y="27" width="97" height="30"/>
@@ -575,6 +578,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="maxOrMin" destination="clB-YD-aT6" id="F1O-QX-FUH"/>
                         <outlet property="scrollView" destination="rE1-oh-qHA" id="XJO-11-bfR"/>
                         <outlet property="valueField" destination="ugp-oX-xIr" id="s0p-n7-CWG"/>
                     </connections>
@@ -690,7 +694,7 @@
                 <relationship kind="outlet" name="listView" candidateClass="DoublyLinkedListView"/>
             </relationships>
         </class>
-        <class className="HeapViewController" superclassName="UIViewController">
+        <class className="HeapViewController" superclassName="DataViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HeapViewController.h"/>
             <relationships>
                 <relationship kind="action" name="addValue:"/>
