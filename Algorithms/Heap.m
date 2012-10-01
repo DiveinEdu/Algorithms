@@ -43,7 +43,6 @@
         while (self.root.parent!=nil) {
             self.root = self.root.parent;
         }
-        NSLog(@"self.root: %@",[self description]);
 
         
     }
@@ -55,12 +54,44 @@
 }
 
 -(HeapNode*)getNext{
+    NSLog(@" %@",[self description]);
+
+    if (self.root == nil) {
+        return nil;
+    }
+    if (self.size == 1) {
+        self.size = 0;
+        HeapNode* tmp = self.root;
+        self.root = nil;
+        return tmp;
+        
+    }
     HeapNode* toReturn = self.root;
+    self.size--;
     HeapNode* last = [self findNextParent];
+    NSLog(@"Replacing: %@",last);
+    NSAssert(last.left == last.right, @"Last's left and right are not nil!");
+    //cut it off
+    if (last.parent.left == last)
+        last.parent.left = nil;
+    else
+        last.parent.right = nil;
+    
+    
     last.left = toReturn.left;
     last.right = toReturn.right;
-    last.parent = nil;
+    
+    [last.left setParent:last];
+    [last.right setParent:last];
+    last.parent = self.root.parent;
     [last heapifyDown];
+    HeapNode* tmp = last;
+    while (tmp.parent !=nil) {
+        tmp = tmp.parent;
+    }
+    self.root = tmp;
+    NSLog(@" %@",[self description]);
+
     return toReturn;
 }
 -(int)height:(HeapNode*)node{
@@ -70,7 +101,7 @@
         return MAX([self height:node.left], [self height:node.right]) + 1;
 }
 -(HeapNode*)findNextParent{
-    NSLog(@"size:%i",self.size);
+
     HeapNode* toReturn = self.root;
 
     int height = [self height:self.root];
@@ -86,16 +117,16 @@
         NSInteger location  = (self.size - pow(2,height) + 2);
         NSInteger left = 1;
         NSInteger right= totalNodes - pow(2,(height))+1;
-        NSLog(@"Starting: %i %i %i",location, left,right);
+//        NSLog(@"Starting: %i %i %i",location, left,right);
         BOOL found = false;
         while (!found) {
             NSInteger mid = (left+right)/2;
-            NSLog(@"Location: %i vs (%i+%i)/2=%i ",location, left,right,mid);
+//            NSLog(@"Location: %i vs (%i+%i)/2=%i ",location, left,right,mid);
 
             
             if (location > mid) {
                 left += (right-mid);
-                NSLog(@"Going Right Range now: %i, %i",left,right);
+//                NSLog(@"Going Right Range now: %i, %i",left,right);
                 //go right
                 if (toReturn.right!=nil) {
                     toReturn=toReturn.right;
@@ -106,7 +137,7 @@
             else{
                 //go left
                 right -= (right-mid);
-                NSLog(@"Going left range now: %i, %i",left,right);
+//                NSLog(@"Going left range now: %i, %i",left,right);
                 if (toReturn.left!=nil) 
                     toReturn=toReturn.left;
                 else

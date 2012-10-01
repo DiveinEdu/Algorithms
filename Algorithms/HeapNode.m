@@ -16,11 +16,7 @@
     }
     return self;
 }
-/*
-    1     2      3
-   0     0 1   2   1
-              0
- */
+
 -(void)heapifyUp{
     while (self.parent!=nil && [self compare:self.parent]==[self getComparitor]) {
         //NSLog(@"Swapping: %@ with %@",self,self.parent);
@@ -58,7 +54,71 @@
 
 }
 -(void)heapifyDown{
+    HeapNode* toSwap=nil;
+
+    if(self.left != nil ){
+        if (self.right != nil) {
+            if ([self.right compare: self.left]==NSOrderedDescending) {
+                toSwap =self.left;
+            }
+            else{
+                toSwap = self.right;
+            }
+        }
+        else if ([self.left compare:self]==NSOrderedDescending) {
+            toSwap = self.left;
+        }
+
+    }
+    else if(self.right!=nil){
+        if ([self.right compare:self]==NSOrderedDescending) {
+            toSwap=self.right;
+        }
+    }
     
+    
+    if (toSwap!=nil) {
+        HeapNode* tmp =[HeapNode new];
+        //store my values
+        tmp.left = self.left;
+        tmp.right = self.right;
+        tmp.parent = self.parent;
+        
+        if (self == self.parent.left) {
+            self.parent.left = toSwap;
+        }
+        else{
+            self.parent.right = toSwap;
+        }
+        toSwap.parent = self.parent;
+        self.parent = toSwap;
+
+        
+        if (self.left != toSwap) {
+            self.left.parent = toSwap;
+        }
+        if (self.right != toSwap) {
+            self.right.parent = toSwap;
+        }
+
+        
+        
+        self.left = toSwap.left;
+        self.left.parent = self;
+        self.right = toSwap.right;
+        self.right.parent = self;
+        
+        
+
+        
+        toSwap.left = tmp.left==toSwap? self:tmp.left;
+        toSwap.right = tmp.right==toSwap? self:tmp.right;
+
+        
+        [self heapifyDown];
+    }
+
+
     
     
 }

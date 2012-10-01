@@ -41,7 +41,7 @@
 
 - (IBAction)testHeap:(id)sender {
 
-    for (int i = 0; i<128; i++) {
+    for (int i = 0; i<8; i++) {
         [self.valueField setText:[NSString stringWithFormat:@"%i",arc4random()%100]];
         [self addValue:self];
     }
@@ -62,20 +62,28 @@
         self.heap = [[Heap alloc] initWithType:type];
     }
     [self.heap addValue:[self.valueField text]];
+    [self refresh];
     
+}
+-(void)refresh{
     [self.rootView removeFromSuperview];
-    self.rootView = [[HeapView alloc] initWithNode:[self.heap root]];
-    [self.scrollView addSubview:self.rootView];
-    
-    [self.scrollView setContentSize:self.rootView.frame.size];
-    self.scrollView.minimumZoomScale = self.scrollView.frame.size.width / self.rootView.frame.size.width;
-    self.scrollView.maximumZoomScale = 2.0;
-    [self.scrollView setZoomScale:self.scrollView.minimumZoomScale];
-    
+    if ([self.heap root]) {
+        self.rootView = [[HeapView alloc] initWithNode:[self.heap root]];
+        [self.scrollView addSubview:self.rootView];
+        
+        [self.scrollView setContentSize:self.rootView.frame.size];
+        self.scrollView.minimumZoomScale = self.scrollView.frame.size.width / self.rootView.frame.size.width;
+        self.scrollView.maximumZoomScale = 2.0;
+        [self.scrollView setZoomScale:self.scrollView.minimumZoomScale];
+        
+
+    }
+
 
 }
-
 - (IBAction)remove:(id)sender {
+    /*TreeNode* node =*/ [self.heap getNext];
+    [self refresh];
 }
 
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
