@@ -84,15 +84,17 @@
     }
     else{
         NSInteger location  = (self.size - pow(2,height) + 2);
-        NSInteger left = 0;
-        NSInteger right= totalNodes - (pow(2,(height))-1);;
-        
+        NSInteger left = 1;
+        NSInteger right= totalNodes - pow(2,(height))+1;
+        NSLog(@"Starting: %i %i %i",location, left,right);
         BOOL found = false;
         while (!found) {
-            
+            NSInteger mid = (left+right)/2;
+            NSLog(@"Location: %i vs (%i+%i)/2=%i ",location, left,right,mid);
 
-            if (location > (left + right)/2) {
-                left = right/2;
+            
+            if (location > mid) {
+                left += (right-mid);
                 NSLog(@"Going Right Range now: %i, %i",left,right);
                 //go right
                 if (toReturn.right!=nil) {
@@ -103,7 +105,7 @@
             }
             else{
                 //go left
-                right = right/2;
+                right -= (right-mid);
                 NSLog(@"Going left range now: %i, %i",left,right);
                 if (toReturn.left!=nil) 
                     toReturn=toReturn.left;

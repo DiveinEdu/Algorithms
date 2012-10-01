@@ -33,9 +33,12 @@
         self.left = (self == self.parent.left)? self.parent : self.parent.left;
         self.right = (self == self.parent.right)? self.parent : self.parent.right;
         
+
         //reset my childs (old parent) pointers
         self.parent.left = tmp.left;
         self.parent.right = tmp.right;
+        tmp.left.parent = self.parent;
+        tmp.right.parent = self.parent;
         
         if (self.parent.parent.left == self.parent) {
             self.parent.parent.left = self;
@@ -46,9 +49,9 @@
         
         
         self.parent = self.parent.parent;
-
         self.left.parent = self;
         self.right.parent = self;
+        
         //NSLog(@"Up: %@ Left:%@ Right:%@",self.parent, self.left, self.right);
         
     }
