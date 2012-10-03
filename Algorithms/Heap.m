@@ -69,7 +69,6 @@
     HeapNode* toReturn = self.root;
     self.size--;
     HeapNode* last = [self findNextParent];
-    NSLog(@"Replacing: %@",last);
     NSAssert(last.left == last.right, @"Last's left and right are not nil!");
     //cut it off
     if (last.parent.left == last)
@@ -90,7 +89,6 @@
         tmp = tmp.parent;
     }
     self.root = tmp;
-    NSLog(@" %@",[self description]);
 
     return toReturn;
 }
