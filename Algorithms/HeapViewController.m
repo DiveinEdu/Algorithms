@@ -86,6 +86,36 @@
     [self refresh];
 }
 
+- (IBAction)switchTreeType:(id)sender {
+    if ([self.heap root]!=nil) {
+        switchView = [[UIAlertView alloc] initWithTitle:@"Are You Sure?" message:@"Switching types will erase current Heap" delegate:self cancelButtonTitle:@"Don't Switch" otherButtonTitles:@"Switch", nil];
+        [switchView show ];
+        
+    }
+    else{
+        [self.rootView removeFromSuperview];
+        HEAP_TYPE type = HEAP_MAX;
+        if ([self.maxOrMin selectedSegmentIndex]!=0) {
+            type = HEAP_MIN;
+        }
+        self.heap = [[Heap alloc] initWithType:type];
+    }
+}
+-(void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    if (alertView == switchView) {
+        if (buttonIndex == 1) {
+            [self.rootView removeFromSuperview];
+            HEAP_TYPE type = HEAP_MAX;
+            if ([self.maxOrMin selectedSegmentIndex]!=0) {
+                type = HEAP_MIN;
+            }
+            self.heap = [[Heap alloc] initWithType:type];
+        }
+        else{
+            [self.maxOrMin setSelectedSegmentIndex:([self.maxOrMin selectedSegmentIndex]+1)%2];
+        }
+    }
+}
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.rootView;
 }

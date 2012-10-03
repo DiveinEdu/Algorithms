@@ -65,18 +65,13 @@
     
     
     if (self.right) {
-        if (![[self subviews] containsObject:self.right]) {
-            [self addSubview: self.right];
-        }
         //create the right arrow
         self.rightArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.right.center.x, self.right.frame.origin.y) ];
         [self addSubview:self.rightArrow];
     }
     
     if (self.left) {
-        if (![[self subviews] containsObject:self.left]) {
-            [self addSubview: self.left];
-        }        self.leftArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.left.center.x, self.left.frame.origin.y) ];
+       self.leftArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.left.center.x, self.left.frame.origin.y) ];
         [self addSubview:self.leftArrow];
     }
     

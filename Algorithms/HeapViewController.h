@@ -10,7 +10,9 @@
 @class HeapView;
 @class Heap;
 
-@interface HeapViewController : DataViewController <UIScrollViewDelegate>
+@interface HeapViewController : DataViewController <UIScrollViewDelegate,UIAlertViewDelegate>{
+    UIAlertView* switchView;
+}
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
 @property (nonatomic, strong) HeapView* rootView;
@@ -19,4 +21,5 @@
 - (IBAction)addValue:(id)sender;
 - (IBAction)testHeap:(id)sender;
 - (IBAction)remove:(id)sender;
+- (IBAction)switchTreeType:(id)sender;
 @end

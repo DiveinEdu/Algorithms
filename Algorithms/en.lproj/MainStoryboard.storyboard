@@ -584,6 +584,9 @@
                                     <segment title="Max"/>
                                     <segment title="Min"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switchTreeType:" destination="jQ3-Go-0Dp" eventType="valueChanged" id="xt6-iv-EB8"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
