@@ -47,8 +47,8 @@
         },
         {
              "name":"Red Black Tree",
-             "viewID":"notYet",
-             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+             "viewID":"redBlackTree",
+             "related":["RedBlackTree.h","RedBlackTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m","RedBlackNode.h","RedBlackNode.m"]
         },
         {
              "name":"2 3 Tree",

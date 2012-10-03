@@ -6,16 +6,13 @@
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
-#import "DataViewController.h"
+#import "TreeViewController.h"
 @class HeapView;
 @class Heap;
 
-@interface HeapViewController : DataViewController <UIScrollViewDelegate,UIAlertViewDelegate>{
+@interface HeapViewController : TreeViewController <UIScrollViewDelegate,UIAlertViewDelegate>{
     UIAlertView* switchView;
 }
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet UITextField *valueField;
-@property (nonatomic, strong) HeapView* rootView;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *maxOrMin;
 @property (nonatomic, strong) Heap* heap;
 - (IBAction)addValue:(id)sender;

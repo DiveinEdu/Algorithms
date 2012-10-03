@@ -28,9 +28,6 @@
 - (void)viewDidLoad
 {
     self.binarySearchTree = [BinarySearchTree new];
-    [self.treeView setBackgroundColor:[UIColor cyanColor]];
-    self.treeView.delegate = self;
-
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -46,10 +43,10 @@
     [self.rootView removeFromSuperview];
     if (self.binarySearchTree.root) {
         self.rootView = [[BSTView alloc] initWithNode:self.binarySearchTree.root];
-        [self.treeView addSubview:self.rootView];
-        self.treeView.minimumZoomScale = self.treeView.frame.size.width / self.rootView.frame.size.width;
-        self.treeView.maximumZoomScale = 2.0;
-        [self.treeView setZoomScale:self.treeView.minimumZoomScale];
+        [self.scrollView addSubview:self.rootView];
+        self.scrollView.minimumZoomScale = self.scrollView.frame.size.width / self.rootView.frame.size.width;
+        self.scrollView.maximumZoomScale = 2.0;
+        [self.scrollView setZoomScale:self.scrollView.minimumZoomScale];
     }
 }
 - (IBAction)removeFromTree:(id)sender {
@@ -71,13 +68,10 @@
     }
     
 }
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-    return self.rootView;
-}
+
 - (void)viewDidUnload {
     [self setValueField:nil];
     [self setRootView:nil];
-    [self setTreeView:nil];
     [super viewDidUnload];
 }
 @end

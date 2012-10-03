@@ -6,12 +6,11 @@
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "TreeView.h"
 @class HeapNode;
 @class ArrowView;
 
-@interface HeapView : UIView
-@property (nonatomic, weak)HeapNode* node;
+@interface HeapView : TreeView
 @property (nonatomic, strong)UILabel* value;
 @property (nonatomic, strong)HeapView* left;
 @property (nonatomic, strong)HeapView* right;

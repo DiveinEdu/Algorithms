@@ -116,7 +116,4 @@
         }
     }
 }
-- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
-    return self.rootView;
-}
 @end

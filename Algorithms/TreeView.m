@@ -1,18 +1,18 @@
 //
-//  HeapView.m
+//  TreeView.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 9/30/12.
+//  Created by Carl Wieland on 10/3/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
-#import "HeapView.h"
+#import "TreeView.h"
 #import <QuartzCore/QuartzCore.h>
-#import "HeapNode.h"
 #import "ArrowView.h"
+#import "TreeNode.h"
 
-@implementation HeapView
--(id)initWithNode:(HeapNode *)node{
+@implementation TreeView
+-(id)initWithNode:(TreeNode *)node{
     self = [super initWithFrame:CGRectMake(0, 0, 150, 150)];
     if(self){
         self.node = node;
@@ -23,13 +23,13 @@
         [self.value setAdjustsFontSizeToFitWidth:YES];
         [self.value setAdjustsLetterSpacingToFitWidth:YES];
         [self.value setTextAlignment:NSTextAlignmentCenter];
+        [self.value setText:[self.node description]];
         [self addSubview:self.value];
         [self fixViews];
-    
     }
     return self;
-    
 }
+
 -(void)fixViews{
     for (UIView* view in [self subviews]) {
         if (view!=self.value) {
@@ -37,14 +37,13 @@
         }
     }
     if (self.node.left) {
-        self.left = [[HeapView alloc] initWithNode:(HeapNode*)self.node.left];
+        self.left = [[[self class] alloc] initWithNode:self.node.left];
         [self addSubview:self.left];
     }
     if (self.node.right) {
-        self.right = [[HeapView alloc] initWithNode:(HeapNode*)self.node.right];
+        self.right = [[[self class] alloc] initWithNode:self.node.right];
         [self addSubview:self.right];
     }
-    
     //reset the arrows
     [self.rightArrow removeFromSuperview];
     [self.leftArrow removeFromSuperview];
@@ -71,10 +70,8 @@
     }
     
     if (self.left) {
-       self.leftArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.left.center.x, self.left.frame.origin.y) ];
+        self.leftArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.left.center.x, self.left.frame.origin.y) ];
         [self addSubview:self.leftArrow];
     }
-    
 }
-
 @end

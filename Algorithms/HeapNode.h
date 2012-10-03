@@ -6,13 +6,13 @@
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
-#import "Node.h"
+#import "TreeNode.h"
 typedef enum{
     HEAP_MAX,
     HEAP_MIN
 }HEAP_TYPE;
 
-@interface HeapNode : Node{
+@interface HeapNode : TreeNode{
     HEAP_TYPE type;
 }
 @property ( nonatomic, strong) HeapNode* right;

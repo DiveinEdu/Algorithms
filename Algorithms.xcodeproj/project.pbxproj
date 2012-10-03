@@ -57,6 +57,12 @@
 		09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09584E15160E55B000AF8427 /* CodePopoverController.m */; };
 		096912C9160A6BE600E5AFB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096912C8160A6BE600E5AFB7 /* QuartzCore.framework */; };
 		099EC975160FDC3C00FD136A /* Objects.json in Resources */ = {isa = PBXBuildFile; fileRef = 099EC974160FDC3C00FD136A /* Objects.json */; };
+		09ADEE97161CDBF300BD0CAE /* RedBlackTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */; };
+		09ADEE9A161CDC0400BD0CAE /* RedBlackTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE99161CDC0400BD0CAE /* RedBlackTree.m */; };
+		09ADEE9D161CDC7F00BD0CAE /* RedBlackNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE9C161CDC7F00BD0CAE /* RedBlackNode.m */; };
+		09ADEEA0161CE51C00BD0CAE /* RedBlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE9F161CE51C00BD0CAE /* RedBlackView.m */; };
+		09ADEEA3161CE53500BD0CAE /* TreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEEA2161CE53500BD0CAE /* TreeView.m */; };
+		09ADEEA6161CE9A200BD0CAE /* TreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEEA5161CE9A200BD0CAE /* TreeViewController.m */; };
 		09B33FA316128C58000FF89F /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FA216128C58000FF89F /* BinarySearchTree.m */; };
 		09B33FA61612937F000FF89F /* BSTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FA51612937F000FF89F /* BSTViewController.m */; };
 		09B33FA7161296CE000FF89F /* BinarySearchTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA116128C58000FF89F /* BinarySearchTree.h */; };
@@ -212,6 +218,18 @@
 		09584E15160E55B000AF8427 /* CodePopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodePopoverController.m; sourceTree = "<group>"; };
 		096912C8160A6BE600E5AFB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		099EC974160FDC3C00FD136A /* Objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Objects.json; sourceTree = "<group>"; };
+		09ADEE95161CDBF300BD0CAE /* RedBlackTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBlackTreeViewController.h; sourceTree = "<group>"; };
+		09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBlackTreeViewController.m; sourceTree = "<group>"; };
+		09ADEE98161CDC0400BD0CAE /* RedBlackTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBlackTree.h; sourceTree = "<group>"; };
+		09ADEE99161CDC0400BD0CAE /* RedBlackTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBlackTree.m; sourceTree = "<group>"; };
+		09ADEE9B161CDC7F00BD0CAE /* RedBlackNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBlackNode.h; sourceTree = "<group>"; };
+		09ADEE9C161CDC7F00BD0CAE /* RedBlackNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBlackNode.m; sourceTree = "<group>"; };
+		09ADEE9E161CE51C00BD0CAE /* RedBlackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBlackView.h; sourceTree = "<group>"; };
+		09ADEE9F161CE51C00BD0CAE /* RedBlackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBlackView.m; sourceTree = "<group>"; };
+		09ADEEA1161CE53500BD0CAE /* TreeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeView.h; sourceTree = "<group>"; };
+		09ADEEA2161CE53500BD0CAE /* TreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeView.m; sourceTree = "<group>"; };
+		09ADEEA4161CE9A100BD0CAE /* TreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewController.h; sourceTree = "<group>"; };
+		09ADEEA5161CE9A200BD0CAE /* TreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeViewController.m; sourceTree = "<group>"; };
 		09B33FA116128C58000FF89F /* BinarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
 		09B33FA216128C58000FF89F /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
 		09B33FA41612937E000FF89F /* BSTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTViewController.h; sourceTree = "<group>"; };
@@ -316,6 +334,8 @@
 				09038F4616125F2300D4E530 /* TreeNode.m */,
 				09FA274F1617DE1700738463 /* HeapNode.h */,
 				09FA27501617DE1700738463 /* HeapNode.m */,
+				09ADEE9B161CDC7F00BD0CAE /* RedBlackNode.h */,
+				09ADEE9C161CDC7F00BD0CAE /* RedBlackNode.m */,
 			);
 			name = "Node Types";
 			sourceTree = "<group>";
@@ -334,6 +354,9 @@
 		0937E32416120FF60044040F /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				09ADEEA4161CE9A100BD0CAE /* TreeViewController.h */,
+				09ADEEA5161CE9A200BD0CAE /* TreeViewController.m */,
+				09ADEE93161CDBDA00BD0CAE /* RedBlackTree */,
 				09FA27441617D33400738463 /* Heap */,
 				09B33F9F16128C29000FF89F /* BinarySearchTree */,
 				09F152611612210A0088A374 /* DoublyLinkedList */,
@@ -350,6 +373,8 @@
 				094B746C160A6F3200C47C3E /* ArrowView.m */,
 				09C070A316115BDD001F4C12 /* NodeView.h */,
 				09C070A416115BDD001F4C12 /* NodeView.m */,
+				09ADEEA1161CE53500BD0CAE /* TreeView.h */,
+				09ADEEA2161CE53500BD0CAE /* TreeView.m */,
 			);
 			name = "Auxilary views";
 			sourceTree = "<group>";
@@ -481,6 +506,19 @@
 				0954344E1606D875001D3E5D /* LinkedList.m */,
 			);
 			name = LinkedList;
+			sourceTree = "<group>";
+		};
+		09ADEE93161CDBDA00BD0CAE /* RedBlackTree */ = {
+			isa = PBXGroup;
+			children = (
+				09ADEE95161CDBF300BD0CAE /* RedBlackTreeViewController.h */,
+				09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */,
+				09ADEE98161CDC0400BD0CAE /* RedBlackTree.h */,
+				09ADEE99161CDC0400BD0CAE /* RedBlackTree.m */,
+				09ADEE9E161CE51C00BD0CAE /* RedBlackView.h */,
+				09ADEE9F161CE51C00BD0CAE /* RedBlackView.m */,
+			);
+			name = RedBlackTree;
 			sourceTree = "<group>";
 		};
 		09B33F9F16128C29000FF89F /* BinarySearchTree */ = {
@@ -700,6 +738,12 @@
 				09FA274E1617D4BE00738463 /* ArrayHeap.m in Sources */,
 				09FA27511617DE1700738463 /* HeapNode.m in Sources */,
 				094927041618CBEE00012500 /* HeapView.m in Sources */,
+				09ADEE97161CDBF300BD0CAE /* RedBlackTreeViewController.m in Sources */,
+				09ADEE9A161CDC0400BD0CAE /* RedBlackTree.m in Sources */,
+				09ADEE9D161CDC7F00BD0CAE /* RedBlackNode.m in Sources */,
+				09ADEEA0161CE51C00BD0CAE /* RedBlackView.m in Sources */,
+				09ADEEA3161CE53500BD0CAE /* TreeView.m in Sources */,
+				09ADEEA6161CE9A200BD0CAE /* TreeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
