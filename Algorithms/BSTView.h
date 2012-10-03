@@ -18,6 +18,4 @@
 @property (nonatomic, strong)ArrowView* rightArrow;
 @property (nonatomic, strong)ArrowView* leftArrow;
 -(id)initWithNode:(TreeNode*)node;
--(void)addBSTView:(BSTView*)view;
--(BOOL)removeNode:(TreeNode*)node;
 @end

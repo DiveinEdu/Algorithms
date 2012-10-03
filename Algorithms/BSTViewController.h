@@ -12,11 +12,12 @@
 
 @interface BSTViewController : DataViewController <UIScrollViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
-@property (weak, nonatomic) BSTView *rootView;
+@property (strong, nonatomic) BSTView *rootView;
 @property (nonatomic, strong) BinarySearchTree* binarySearchTree;
 @property (weak, nonatomic) IBOutlet UIScrollView *treeView;
 - (IBAction)removeFromTree:(id)sender;
 
 - (IBAction)addToTree:(id)sender;
+- (IBAction)testTree:(id)sender;
 
 @end

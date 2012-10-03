@@ -28,6 +28,7 @@
 - (void)viewDidLoad
 {
     self.binarySearchTree = [BinarySearchTree new];
+    [self.treeView setBackgroundColor:[UIColor cyanColor]];
     self.treeView.delegate = self;
 
     [super viewDidLoad];
@@ -40,45 +41,35 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)removeFromTree:(id)sender {
-    TreeNode* node = [self.binarySearchTree removeValue:[self.valueField text]];
-    if(node){
-        
-        if ([self.rootView.node compare:node ] == NSOrderedSame) {
-            BSTView* tmpRoot = [[BSTView alloc] initWithNode:node];
-            tmpRoot.left = self.rootView;
-            self.rootView.parent = tmpRoot;
-            [self.rootView removeNode:node];
-            self.rootView = tmpRoot.left;
-            [self.rootView setFrame:CGRectMake(0, 0, self.rootView.frame.size.width, self.rootView.frame.size.height)];
-            [self.treeView addSubview:self.rootView];
-        } else {
-            [self.rootView removeNode:node];
-        }
-    }
-}
 
-- (IBAction)addToTree:(id)sender {
-    TreeNode* node = [self.binarySearchTree addValue:[self.valueField text]];
-    if(node){
-        BSTView* newTree = [[BSTView alloc] initWithNode:node];
-        if (self.rootView == nil) {
-            self.rootView = newTree;
-            [self.treeView addSubview:newTree];
-            [newTree setFrame:CGRectMake( 0, 0,newTree.frame.size.width, newTree.frame.size.height)];
-        }
-        else{
-            [self.rootView addBSTView:newTree];
-            [self.treeView setContentSize:self.rootView.frame.size];
-
-        }
+-(void)refresh{
+    [self.rootView removeFromSuperview];
+    if (self.binarySearchTree.root) {
+        self.rootView = [[BSTView alloc] initWithNode:self.binarySearchTree.root];
+        [self.treeView addSubview:self.rootView];
         self.treeView.minimumZoomScale = self.treeView.frame.size.width / self.rootView.frame.size.width;
         self.treeView.maximumZoomScale = 2.0;
         [self.treeView setZoomScale:self.treeView.minimumZoomScale];
-
-        [self.binarySearchTree traverse];
     }
+}
+- (IBAction)removeFromTree:(id)sender {
+    [self.binarySearchTree removeValue:[self.valueField text]];
+    [self refresh];
+    
+    
+}
+- (IBAction)addToTree:(id)sender {
+    [self.binarySearchTree addValue:[self.valueField text]];
+    [self refresh];
 
+}
+
+- (IBAction)testTree:(id)sender {
+    for (int i = 0; i<16; i++) {
+        [self.valueField setText:[NSString stringWithFormat:@"%i",arc4random()%500]];
+        [self addToTree:self];
+    }
+    
 }
 - (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView {
     return self.rootView;
