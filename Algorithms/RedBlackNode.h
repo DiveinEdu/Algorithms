@@ -8,8 +8,8 @@
 
 #import "TreeNode.h"
 typedef enum{
-    RED,
-    BLACK
+    RED=1,
+    BLACK=2
 } NODE_COLOR;
 
 @interface RedBlackNode : TreeNode

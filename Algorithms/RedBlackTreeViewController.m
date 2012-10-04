@@ -51,7 +51,7 @@
     return _tree;
 }
 - (IBAction)testRedBlack:(id)sender {
-    for (int i = 0; i<16; i++) {
+    for (int i = 0; i<1; i++) {
         [self.valueField setText:[NSString stringWithFormat:@"%i",arc4random()%500]];
         [self addValue:self];
     }

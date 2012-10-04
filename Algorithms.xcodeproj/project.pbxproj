@@ -513,10 +513,10 @@
 			children = (
 				09ADEE95161CDBF300BD0CAE /* RedBlackTreeViewController.h */,
 				09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */,
-				09ADEE98161CDC0400BD0CAE /* RedBlackTree.h */,
-				09ADEE99161CDC0400BD0CAE /* RedBlackTree.m */,
 				09ADEE9E161CE51C00BD0CAE /* RedBlackView.h */,
 				09ADEE9F161CE51C00BD0CAE /* RedBlackView.m */,
+				09ADEE98161CDC0400BD0CAE /* RedBlackTree.h */,
+				09ADEE99161CDC0400BD0CAE /* RedBlackTree.m */,
 			);
 			name = RedBlackTree;
 			sourceTree = "<group>";
