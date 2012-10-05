@@ -68,6 +68,9 @@
 		09B33FA7161296CE000FF89F /* BinarySearchTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA116128C58000FF89F /* BinarySearchTree.h */; };
 		09B33FA8161296D1000FF89F /* BinarySearchTree.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA216128C58000FF89F /* BinarySearchTree.m */; };
 		09B33FAB16129796000FF89F /* BSTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FAA16129796000FF89F /* BSTView.m */; };
+		09B8183F161D25CF004B026C /* AVLTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8183E161D25CF004B026C /* AVLTreeController.m */; };
+		09B81842161D25E2004B026C /* AVLTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B81841161D25E2004B026C /* AVLTree.m */; };
+		09B81845161D279F004B026C /* AVLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B81844161D279F004B026C /* AVLNode.m */; };
 		09C0709C1611579C001F4C12 /* StackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C0709B1611579C001F4C12 /* StackView.m */; };
 		09C0709E161157FF001F4C12 /* Stack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573B1609501800F5D573 /* Stack.h */; };
 		09C0709F16115802001F4C12 /* Stack.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
@@ -236,6 +239,12 @@
 		09B33FA51612937F000FF89F /* BSTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTViewController.m; sourceTree = "<group>"; };
 		09B33FA916129796000FF89F /* BSTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTView.h; sourceTree = "<group>"; };
 		09B33FAA16129796000FF89F /* BSTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTView.m; sourceTree = "<group>"; };
+		09B8183D161D25CF004B026C /* AVLTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLTreeController.h; sourceTree = "<group>"; };
+		09B8183E161D25CF004B026C /* AVLTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLTreeController.m; sourceTree = "<group>"; };
+		09B81840161D25E2004B026C /* AVLTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
+		09B81841161D25E2004B026C /* AVLTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AVLTree.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		09B81843161D279F004B026C /* AVLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLNode.h; sourceTree = "<group>"; };
+		09B81844161D279F004B026C /* AVLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLNode.m; sourceTree = "<group>"; };
 		09C0709A1611579C001F4C12 /* StackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackView.h; sourceTree = "<group>"; };
 		09C0709B1611579C001F4C12 /* StackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackView.m; sourceTree = "<group>"; };
 		09C070A316115BDD001F4C12 /* NodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeView.h; sourceTree = "<group>"; };
@@ -336,6 +345,8 @@
 				09FA27501617DE1700738463 /* HeapNode.m */,
 				09ADEE9B161CDC7F00BD0CAE /* RedBlackNode.h */,
 				09ADEE9C161CDC7F00BD0CAE /* RedBlackNode.m */,
+				09B81843161D279F004B026C /* AVLNode.h */,
+				09B81844161D279F004B026C /* AVLNode.m */,
 			);
 			name = "Node Types";
 			sourceTree = "<group>";
@@ -356,6 +367,7 @@
 			children = (
 				09ADEEA4161CE9A100BD0CAE /* TreeViewController.h */,
 				09ADEEA5161CE9A200BD0CAE /* TreeViewController.m */,
+				09B8183B161D25AB004B026C /* AVLTree */,
 				09ADEE93161CDBDA00BD0CAE /* RedBlackTree */,
 				09FA27441617D33400738463 /* Heap */,
 				09B33F9F16128C29000FF89F /* BinarySearchTree */,
@@ -532,6 +544,17 @@
 				09B33FA216128C58000FF89F /* BinarySearchTree.m */,
 			);
 			name = BinarySearchTree;
+			sourceTree = "<group>";
+		};
+		09B8183B161D25AB004B026C /* AVLTree */ = {
+			isa = PBXGroup;
+			children = (
+				09B8183D161D25CF004B026C /* AVLTreeController.h */,
+				09B8183E161D25CF004B026C /* AVLTreeController.m */,
+				09B81840161D25E2004B026C /* AVLTree.h */,
+				09B81841161D25E2004B026C /* AVLTree.m */,
+			);
+			name = AVLTree;
 			sourceTree = "<group>";
 		};
 		09E9573616094FE300F5D573 /* Stack */ = {
@@ -744,6 +767,9 @@
 				09ADEEA0161CE51C00BD0CAE /* RedBlackView.m in Sources */,
 				09ADEEA3161CE53500BD0CAE /* TreeView.m in Sources */,
 				09ADEEA6161CE9A200BD0CAE /* TreeViewController.m in Sources */,
+				09B8183F161D25CF004B026C /* AVLTreeController.m in Sources */,
+				09B81842161D25E2004B026C /* AVLTree.m in Sources */,
+				09B81845161D279F004B026C /* AVLNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
