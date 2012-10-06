@@ -59,26 +59,32 @@
     
     
 }
+-(RelatedFile*)getOrCreateFileWithName:(NSString*)fileName{
+    static NSString *bundleRoot = nil;
+    if (bundleRoot == nil) {
+        bundleRoot = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"code"];
+    }
+    
+    NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"RelatedFile"];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"name = %@",fileName]];
+    NSArray* files = [self.managedObjectContext executeFetchRequest:request error:nil];
+    
+    if([files count]>0){
+        return [files lastObject];
+    }
+    else{
+        RelatedFile* file = [NSEntityDescription insertNewObjectForEntityForName:@"RelatedFile"
+                                                          inManagedObjectContext:self.managedObjectContext];
+        [file setName:fileName ];
+        [file setFilePath:[bundleRoot stringByAppendingPathComponent:fileName]];
+        return file;
+    }
+}
 
 -(void)setUpFilePathsFor:(Algorithm*)algo inDictionary:(NSDictionary*)dict{
-    NSString *bundleRoot = [[NSBundle mainBundle] bundlePath];
-    bundleRoot =[bundleRoot stringByAppendingPathComponent:@"code"];
     for (NSString* fileName in [dict objectForKey:@"related"]) {
-        NSFetchRequest* request = [NSFetchRequest fetchRequestWithEntityName:@"RelatedFile"];
-        [request setPredicate:[NSPredicate predicateWithFormat:@"name = %@",fileName]];
-        NSArray* files = [self.managedObjectContext executeFetchRequest:request error:nil];
-        
-        if([files count]>0){
-            [[files lastObject] addAlgorithmObject:algo];
-        }
-        else{
-            RelatedFile* file = [NSEntityDescription insertNewObjectForEntityForName:@"RelatedFile"
-                                                              inManagedObjectContext:self.managedObjectContext];
-            [file setName:fileName];
-            [file setFilePath:[bundleRoot stringByAppendingPathComponent:fileName]];
-            [file addAlgorithmObject:algo];
-        }
-        
+        [algo addRelatedFilesObject:[self getOrCreateFileWithName:[fileName stringByAppendingString:@".h"]]];
+        [algo addRelatedFilesObject:[self getOrCreateFileWithName:[fileName stringByAppendingString:@".m"]]];        
     }
 }
 +(DataManager *)shared

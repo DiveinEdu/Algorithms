@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		09006219160FEB3100360BFE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09006218160FEB3100360BFE /* DataManager.m */; };
-		09006229160FEE4700360BFE /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 09006228160FEE4700360BFE /* Algorithm.m */; };
 		09006235160FEE8400360BFE /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 09006233160FEE8400360BFE /* Category.m */; };
 		09038F37161252C500D4E530 /* MergeSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F36161252C500D4E530 /* MergeSort.m */; };
 		09038F3A1612554D00D4E530 /* MergeSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F391612554D00D4E530 /* MergeSortViewController.m */; };
@@ -71,6 +70,11 @@
 		09B8183F161D25CF004B026C /* AVLTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8183E161D25CF004B026C /* AVLTreeController.m */; };
 		09B81842161D25E2004B026C /* AVLTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B81841161D25E2004B026C /* AVLTree.m */; };
 		09B81845161D279F004B026C /* AVLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B81844161D279F004B026C /* AVLNode.m */; };
+		09BAD66F1620BCA200ACCFF8 /* TrieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD66E1620BCA200ACCFF8 /* TrieViewController.m */; };
+		09BAD6721620BCB800ACCFF8 /* Trie.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD6711620BCB800ACCFF8 /* Trie.m */; };
+		09BAD6751620BE3200ACCFF8 /* TrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD6741620BE3200ACCFF8 /* TrieNode.m */; };
+		09BAD6781620C60F00ACCFF8 /* TrieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD6771620C60F00ACCFF8 /* TrieView.m */; };
+		09BAD67B1620C7AA00ACCFF8 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD67A1620C7AA00ACCFF8 /* Algorithm.m */; };
 		09C0709C1611579C001F4C12 /* StackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C0709B1611579C001F4C12 /* StackView.m */; };
 		09C0709E161157FF001F4C12 /* Stack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573B1609501800F5D573 /* Stack.h */; };
 		09C0709F16115802001F4C12 /* Stack.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
@@ -161,8 +165,6 @@
 /* Begin PBXFileReference section */
 		09006217160FEB3100360BFE /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		09006218160FEB3100360BFE /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
-		09006227160FEE4600360BFE /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
-		09006228160FEE4700360BFE /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 		09006232160FEE8400360BFE /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
 		09006233160FEE8400360BFE /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		09038F35161252C500D4E530 /* MergeSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeSort.h; sourceTree = "<group>"; };
@@ -245,6 +247,16 @@
 		09B81841161D25E2004B026C /* AVLTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AVLTree.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		09B81843161D279F004B026C /* AVLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLNode.h; sourceTree = "<group>"; };
 		09B81844161D279F004B026C /* AVLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLNode.m; sourceTree = "<group>"; };
+		09BAD66D1620BCA200ACCFF8 /* TrieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieViewController.h; sourceTree = "<group>"; };
+		09BAD66E1620BCA200ACCFF8 /* TrieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrieViewController.m; sourceTree = "<group>"; };
+		09BAD6701620BCB800ACCFF8 /* Trie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trie.h; sourceTree = "<group>"; };
+		09BAD6711620BCB800ACCFF8 /* Trie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Trie.m; sourceTree = "<group>"; };
+		09BAD6731620BE3200ACCFF8 /* TrieNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieNode.h; sourceTree = "<group>"; };
+		09BAD6741620BE3200ACCFF8 /* TrieNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrieNode.m; sourceTree = "<group>"; };
+		09BAD6761620C60F00ACCFF8 /* TrieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieView.h; sourceTree = "<group>"; };
+		09BAD6771620C60F00ACCFF8 /* TrieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrieView.m; sourceTree = "<group>"; };
+		09BAD6791620C7AA00ACCFF8 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
+		09BAD67A1620C7AA00ACCFF8 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 		09C0709A1611579C001F4C12 /* StackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackView.h; sourceTree = "<group>"; };
 		09C0709B1611579C001F4C12 /* StackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackView.m; sourceTree = "<group>"; };
 		09C070A316115BDD001F4C12 /* NodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeView.h; sourceTree = "<group>"; };
@@ -307,9 +319,9 @@
 		09006236160FEE8B00360BFE /* Core Data Stack */ = {
 			isa = PBXGroup;
 			children = (
-				09006227160FEE4600360BFE /* Algorithm.h */,
-				09006228160FEE4700360BFE /* Algorithm.m */,
 				095434221606D232001D3E5D /* Algorithms.xcdatamodeld */,
+				09BAD6791620C7AA00ACCFF8 /* Algorithm.h */,
+				09BAD67A1620C7AA00ACCFF8 /* Algorithm.m */,
 				09038F4E1612615300D4E530 /* RelatedFile.h */,
 				09038F4F1612615300D4E530 /* RelatedFile.m */,
 				09006232160FEE8400360BFE /* Category.h */,
@@ -347,6 +359,8 @@
 				09ADEE9C161CDC7F00BD0CAE /* RedBlackNode.m */,
 				09B81843161D279F004B026C /* AVLNode.h */,
 				09B81844161D279F004B026C /* AVLNode.m */,
+				09BAD6731620BE3200ACCFF8 /* TrieNode.h */,
+				09BAD6741620BE3200ACCFF8 /* TrieNode.m */,
 			);
 			name = "Node Types";
 			sourceTree = "<group>";
@@ -365,6 +379,7 @@
 		0937E32416120FF60044040F /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				09BAD66B1620BC8300ACCFF8 /* Trie */,
 				09ADEEA4161CE9A100BD0CAE /* TreeViewController.h */,
 				09ADEEA5161CE9A200BD0CAE /* TreeViewController.m */,
 				09B8183B161D25AB004B026C /* AVLTree */,
@@ -387,6 +402,8 @@
 				09C070A416115BDD001F4C12 /* NodeView.m */,
 				09ADEEA1161CE53500BD0CAE /* TreeView.h */,
 				09ADEEA2161CE53500BD0CAE /* TreeView.m */,
+				09BAD6761620C60F00ACCFF8 /* TrieView.h */,
+				09BAD6771620C60F00ACCFF8 /* TrieView.m */,
 			);
 			name = "Auxilary views";
 			sourceTree = "<group>";
@@ -555,6 +572,17 @@
 				09B81841161D25E2004B026C /* AVLTree.m */,
 			);
 			name = AVLTree;
+			sourceTree = "<group>";
+		};
+		09BAD66B1620BC8300ACCFF8 /* Trie */ = {
+			isa = PBXGroup;
+			children = (
+				09BAD66D1620BCA200ACCFF8 /* TrieViewController.h */,
+				09BAD66E1620BCA200ACCFF8 /* TrieViewController.m */,
+				09BAD6701620BCB800ACCFF8 /* Trie.h */,
+				09BAD6711620BCB800ACCFF8 /* Trie.m */,
+			);
+			name = Trie;
 			sourceTree = "<group>";
 		};
 		09E9573616094FE300F5D573 /* Stack */ = {
@@ -739,7 +767,6 @@
 				09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */,
 				091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */,
 				09006219160FEB3100360BFE /* DataManager.m in Sources */,
-				09006229160FEE4700360BFE /* Algorithm.m in Sources */,
 				09006235160FEE8400360BFE /* Category.m in Sources */,
 				09C0709C1611579C001F4C12 /* StackView.m in Sources */,
 				09C070A516115BDD001F4C12 /* NodeView.m in Sources */,
@@ -770,6 +797,11 @@
 				09B8183F161D25CF004B026C /* AVLTreeController.m in Sources */,
 				09B81842161D25E2004B026C /* AVLTree.m in Sources */,
 				09B81845161D279F004B026C /* AVLNode.m in Sources */,
+				09BAD66F1620BCA200ACCFF8 /* TrieViewController.m in Sources */,
+				09BAD6721620BCB800ACCFF8 /* Trie.m in Sources */,
+				09BAD6751620BE3200ACCFF8 /* TrieNode.m in Sources */,
+				09BAD6781620C60F00ACCFF8 /* TrieView.m in Sources */,
+				09BAD67B1620C7AA00ACCFF8 /* Algorithm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

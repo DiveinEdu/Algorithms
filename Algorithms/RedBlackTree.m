@@ -136,6 +136,155 @@
     node.parent = tmp;
 }
 -(RedBlackNode*)removeValue:(id)value{
-    return nil;
+    RedBlackNode* toRemove =[self findNodeWithValue:value];
+
+    [self removeNode:toRemove];
+    return toRemove;
+
 }
+
+-(RedBlackNode*)findNodeWithValue:(id)value{
+    RedBlackNode* node = [[RedBlackNode alloc] initWithValue:value andColor:RED];
+
+    RedBlackNode* toReturn = self.root;
+    BOOL found = NO;
+    while (!found) {
+        switch ([node compare:toReturn]) {
+            case NSOrderedAscending:
+                toReturn = toReturn.left;
+                break;
+            case NSOrderedDescending:
+                toReturn = toReturn.right;
+                break;
+            case NSOrderedSame:
+                found = true;
+            default:
+                break;
+        }
+        if (toReturn == nil) {
+            found = YES;
+        }
+    }
+    return toReturn;
+}
+
+-(RedBlackNode*)removeNode:(RedBlackNode*)node {
+    RedBlackNode* y;
+    RedBlackNode* x;
+    
+    y = (RedBlackNode*)(((node.left == nil) || (node.right == nil)) ? node : [node successor]);
+    x = (RedBlackNode*)((y.left == nil) ? y.right : y.left);
+    if (self.root == (x.parent = y.parent)) { /* assignment of y.p to x.p is intentional */
+        self.root.left=x;
+    } else {
+        if (y == y.parent.left) {
+            y.parent.left=x;
+        } else {
+            y.parent.right=x;
+        }
+    }
+    if (y != node) { /* y should not be nil in this case */
+        /* y is the node to splice out and x is its child */
+        
+        if ([y color]!=RED)
+            [self fixDelete:x];
+    
+        y.left=node.left;
+        y.right=node.right;
+        y.parent=node.parent;
+        y.color = node.color;
+        node.left.parent=node.right.parent=y;
+        if (node == node.parent.left) {
+            node.parent.left=y;
+        } else {
+            node.parent.right=y;
+        }
+    } else {
+
+        if ([y color]!=RED)
+            [self fixDelete:x];
+
+    }
+    return node;
+}
+
+
+
+-(RedBlackNode*)fixDelete:( RedBlackNode *)node
+{
+    RedBlackNode *w;
+    
+    while ( node != self.root && node.color == BLACK )
+    {
+        if ( node == node.parent.left )
+        {
+            w = node.parent.right;
+            
+            if ( w.color == RED )
+            {
+                w.color = BLACK;
+                node.parent.color = RED;
+                [self rotateLeft:node.parent];
+                w = node.parent.right;
+            }
+            
+            if ( w.left.color == BLACK && w.right.color == BLACK )
+            {
+                w.color = RED;
+                node = node.parent;
+            }
+            else if ( w.right.color == BLACK )
+            {
+                w.left.color = BLACK;
+                w.color = RED;
+                [self rotateRight:w];
+                w = node.parent.right;
+            }
+            
+            w.color = node.parent.color;
+            node.parent.color = BLACK;
+            w.right.color = BLACK;
+            [self rotateLeft:node.parent];
+            node = self.root;
+        }
+        else
+        {
+            w = node.parent.left;
+            
+            if ( w.color == RED )
+            {
+                w.color = BLACK;
+                node.parent.color = RED;
+                [self rotateRight:node.parent];
+                w = node.parent.left;
+            }
+            
+            if ( w.right.color == BLACK && w.left.color == BLACK )
+            {
+                w.color = RED;
+                node = node.parent;
+            }
+            else if ( w.left.color == BLACK )
+            {
+                w.right.color = BLACK;
+                w.color = RED;
+                [self rotateLeft: w];
+                w = node.parent.left;
+            }
+            
+            w.color = node.parent.color;
+            node.parent.color = BLACK;
+            w.left.color = BLACK;
+            [self rotateRight:node.parent];
+            node = self.root;
+        }
+    }
+    
+    node.color = BLACK;
+    
+    return 0;
+}
+
+
+
 @end

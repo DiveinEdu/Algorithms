@@ -13,57 +13,57 @@
         {
             "name":"Linked List",
             "viewID":"linkedList",
-            "related":["LinkedList.m","LinkedList.h","ListNode.m","ListNode.h","Node.h","Node.m"]
+            "related":["LinkedList","ListNode","Node"]
         },
         {
             "name":"Stack",
             "viewID":"stackView",
-            "related":["Stack.m","Stack.h","ListNode.m","ListNode.h","Node.h","Node.m"]
+            "related":["Stack","ListNode","Node"]
         },
         {
             "name":"Doubly Linked List",
             "viewID":"doublyLinkedList",
-            "related":["LinkedList.m","LinkedList.h","ListNode.m","ListNode.h","Node.h","Node.m","DoublyLinkedList.h","DoublyLinkedList.m"]
+            "related":["LinkedList","ListNode","Node","DoublyLinkedList"]
         },
         {
              "name":"Binary Search Tree",
              "viewID":"bstView",
-             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+             "related":["BinarySearchTree","TreeNode","Node"]
         },
         {
              "name":"Heap",
              "viewID":"heapView",
-             "related":["Heap.h","Heap.m","ArrayHeap.h","ArrayHeap.m","Node.h","Node.m","HeapNode.h","HeapNode.m"]
+             "related":["Heap","ArrayHeap","Node","HeapNode"]
         },
                 {
              "name":"Graph",
              "viewID":"notYet",
-             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+             "related":["BinarySearchTree"]
         },
         {
              "name":"AVL Tree",
              "viewID":"avlTree",
-             "related":["AVLTree.h","AVLTree.m","AVLNode.h","AVLNode.m","Node.h","Node.m","TreeNode.h","TreeNode.m"]
+             "related":["AVLTree","AVLNode","Node","TreeNode"]
         },
         {
              "name":"Red Black Tree",
              "viewID":"redBlackTree",
-             "related":["RedBlackTree.h","RedBlackTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m","RedBlackNode.h","RedBlackNode.m"]
+             "related":["RedBlackTree","TreeNode","Node","RedBlackNode"]
         },
         {
              "name":"2 3 Tree",
              "viewID":"notYet",
-             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+             "related":["BinarySearchTree","TreeNode","Node"]
         },
         {
              "name":"Skip List",
              "viewID":"notYet",
-             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+             "related":["BinarySearchTree","TreeNode","Node"]
         },
         {
              "name":"Trie",
-             "viewID":"notYet",
-             "related":["BinarySearchTree.h","BinarySearchTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+             "viewID":"trieView",
+             "related":["Trie","TrieNode"]
         }
     ],
     "algorithms":
@@ -71,14 +71,14 @@
         {
             "name":"Bubble Sort",
             "viewID":"bubbleSort",
-            "related":["BubbleSort.m","BubbleSort.h"]
+            "related":["BubbleSort","BubbleSort"]
 
 
         },
          {
          "name":"Merge Sort",
          "viewID":"mergeSort",
-         "related":["MergeSort.m","MergeSort.h"]
+         "related":["MergeSort","MergeSort"]
          },
     ]
 }

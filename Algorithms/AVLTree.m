@@ -132,7 +132,7 @@
             // in the right subtree)
             AVLNode* cur = (AVLNode*)node.right;
             while (cur.left!=nil) {
-                cur = cur.left;
+                cur = (AVLNode*)cur.left;
             }
             if (cur.parent !=node) {
                 //cut off the leaf and use it to fill this spot
