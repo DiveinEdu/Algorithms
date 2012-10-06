@@ -52,6 +52,16 @@
     }
     
 }
+-(NSString*)description{
+    ListNode* n = self.head;
+    NSMutableString* list = [NSMutableString string];
+    while(n!=nil){
+        [list appendFormat:@"%@,",[[n getValue]description]];
+        n = n.next;
+    }
+    
+    return [list substringToIndex:[list length]-1];
+}
 -(int)size{
     return size;
 }

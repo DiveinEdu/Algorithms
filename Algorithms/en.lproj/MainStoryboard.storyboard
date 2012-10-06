@@ -188,11 +188,11 @@
                         <rect key="frame" x="0.0" y="20" width="703" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cyh-TQ-cSt">
-                                <rect key="frame" x="315" y="124" width="55" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gB3-gN-ZG9">
+                                <rect key="frame" x="153" y="20" width="90" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Test">
+                                <state key="normal" title="Generate">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -200,19 +200,89 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="test:" destination="XGK-qi-7Jh" eventType="touchUpInside" id="rzt-0b-WY2"/>
+                                    <action selector="generate:" destination="XGK-qi-7Jh" eventType="touchUpInside" id="Ddf-rY-SFn"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Qz7-xs-ACR">
+                                <rect key="frame" x="20" y="71" width="663" height="657"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="bubbleCell" textLabel="jQ1-t1-4sq" style="IBUITableViewCellStyleDefault" id="nQx-je-PHz">
+                                        <rect key="frame" x="0.0" y="22" width="663" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="663" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jQ1-t1-4sq">
+                                                    <rect key="frame" x="10" y="0.0" width="643" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XGK-qi-7Jh" id="Xqj-GJ-01b"/>
+                                    <outlet property="delegate" destination="XGK-qi-7Jh" id="GwZ-PL-umE"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DUg-hb-nSe">
+                                <rect key="frame" x="372" y="20" width="57" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Step">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextStep:" destination="XGK-qi-7Jh" eventType="touchUpInside" id="ar7-1f-udM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8XU-bq-9oj">
+                                <rect key="frame" x="276" y="20" width="88" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Previous">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="previous:" destination="XGK-qi-7Jh" eventType="touchUpInside" id="A1S-bx-fcX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Isj-Op-uWl">
+                                <rect key="frame" x="447" y="30" width="200" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="stepLabel" destination="Isj-Op-uWl" id="0dG-Ju-4Jc"/>
+                        <outlet property="tableView" destination="Qz7-xs-ACR" id="Qhz-yq-7Ls"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQz-dw-Ear" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-10" y="1939"/>
+            <point key="canvasLocation" x="-10" y="1962"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="50">
@@ -318,7 +388,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZcJ-gG-I3j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="855"/>
+            <point key="canvasLocation" x="201" y="935"/>
         </scene>
         <!--Merge Sort View Controller-->
         <scene sceneID="qMR-jJ-eZi">
@@ -352,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wgv-ku-fZa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="2162"/>
+            <point key="canvasLocation" x="780" y="1962"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oFY-En-wvi">
@@ -384,7 +454,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="RQh-rg-CGr">
-                                <rect key="frame" x="20" y="180" width="663" height="548"/>
+                                <rect key="frame" x="20" y="161" width="663" height="567"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rqr-5W-MTk">
@@ -492,7 +562,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Ws9-Sf-N04">
-                                <rect key="frame" x="22" y="77" width="659" height="607"/>
+                                <rect key="frame" x="22" y="118" width="659" height="566"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </scrollView>
                         </subviews>
@@ -599,7 +669,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="Z9s-hn-xZ5">
-                                <rect key="frame" x="20" y="244" width="663" height="440"/>
+                                <rect key="frame" x="20" y="118" width="663" height="566"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="FGa-O8-gvr">
@@ -716,7 +786,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iZJ-fJ-o6y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928" y="859"/>
+            <point key="canvasLocation" x="1054" y="935"/>
         </scene>
         <!--Heap View Controller-->
         <scene sceneID="Wme-hx-h49">
@@ -896,7 +966,11 @@
         <class className="BubbleSortViewController" superclassName="DataViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BubbleSortViewController.h"/>
             <relationships>
-                <relationship kind="action" name="test:"/>
+                <relationship kind="action" name="generate:"/>
+                <relationship kind="action" name="nextStep:"/>
+                <relationship kind="action" name="previous:"/>
+                <relationship kind="outlet" name="stepLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="CodePopoverController" superclassName="UITableViewController">

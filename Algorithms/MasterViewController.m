@@ -80,8 +80,6 @@
     
     [self.splitViewController setViewControllers:@[self.navigationController,navcontroller]];
     
-    
-
 }
 
 #pragma mark - Fetched results controller

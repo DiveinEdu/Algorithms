@@ -20,5 +20,5 @@
 -(void)removeFront;
 -(void)traverse;
 -(int)size;
-
+-(NSString*)description;
 @end

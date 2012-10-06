@@ -1,21 +1,17 @@
 //
-//  BubbleSort.m
+//  BubbleSortSub.m
 //  Algorithms
 //
-//  Created by Carl Wieland on 9/25/12.
+//  Created by Carl & Hannah Wieland on 10/6/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
-#import "BubbleSort.h"
-#import "LinkedList.h"
-#import "DoublyLinkedList.h"
+#import "BubbleSortSub.h"
 #import "ListNode.h"
-
-@implementation BubbleSort
-
-
-+(void)sortLinkedList:(LinkedList *)list{
-
+#import "LinkedList.h"
+@implementation BubbleSortSub
++(NSArray*)sortLinkedList:(LinkedList *)list{
+    NSMutableArray* array = [NSMutableArray new];
     int i ,j;
     ListNode* cur = nil;
     ListNode* tmp = nil;
@@ -23,7 +19,7 @@
     int size = [list size];
     for(i = 0;i <= size - 1; i++)
     {
-
+        
         //Bubble Part
         for(j = 0, cur = [list head], prev = nil; j <= (size - i); j++)
         {
@@ -34,9 +30,9 @@
             {
                 [cur setNext:[tmp next]];
                 [tmp setNext:cur];
-
+                
                 //fixes for swaping the first element
-                if (prev == nil) 
+                if (prev == nil)
                     list.head = tmp;
                 
                 [prev setNext:tmp];
@@ -47,11 +43,13 @@
                 prev = cur;
                 cur = [cur next];
             }
-        
+            NSString* currentString = [NSString stringWithFormat:@"%@ looking at:%@",[list description],cur];
+            if (![[array lastObject] isEqualToString:currentString]) {
+                [array addObject:currentString];
+
+            }
         }
     }
-    [list traverse];
+    return [NSArray arrayWithArray:array];
 }
-
-
 @end
