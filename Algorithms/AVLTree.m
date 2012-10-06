@@ -27,6 +27,9 @@
     x.right = node;
     node.left = T2;
     
+    AVLNode* tmp =(AVLNode*) node.parent;
+    node.parent = x;
+    x.parent = tmp;
     // Return new root
     return x;
 }
@@ -38,6 +41,9 @@
     y.left = node;
     node.right = T2;
 
+    AVLNode* tmp =(AVLNode*) node.parent;
+    node.parent = y;
+    y.parent = tmp;
     // Return new root
     return y;
 }
@@ -48,17 +54,18 @@
     
     if ([newNode compare:node]==NSOrderedAscending)
         node.left  = [self insertNode:newNode currentNode:(AVLNode*)node.left];
-    else
+    else if ([newNode compare:node]==NSOrderedDescending)
         node.right  = [self insertNode:newNode currentNode:(AVLNode*)node.right];
-    
-    /* 2. Update height of this ancestor node */
 
-    /* 3. Get the balance factor of this ancestor node to check whether
-     this node became unbalanced */
+    if (newNode.parent == nil)
+        newNode.parent = node;
+
+    return [self rebalance:newNode parentNode:node];
+}
+
+
+-(AVLNode*)rebalance:(AVLNode*)newNode parentNode:(AVLNode*)node{
     int balance = [node balance];
-    
-    // If this node becomes unbalanced, then there are 4 cases
-    
     // Left Left Case
     if (!balance > 1 && [newNode compare:node.left]==NSOrderedAscending)
         return [self rightRotate:node];
@@ -80,16 +87,116 @@
         node.right =[self rightRotate:(AVLNode*)node.right];
         return [self leftRotate:node];
     }
-    
-    /* return the (unchanged) node pointer */
     return node;
 }
 
 
 
 -(AVLNode*)removeValue:(id)value{
-    return nil;
-    
+    AVLNode* auxRoot = [[AVLNode alloc] initWithValue:value];
+    self.root = [self removeNode:auxRoot withCurrent:self.root];
+    return auxRoot;
 }
-
+-(AVLNode*)removeNode:(AVLNode*)oldNode withCurrent:(AVLNode*)node{
+    if (node == NULL)
+        return node;
+    
+    if ([oldNode compare:self.root] == NSOrderedAscending)
+        node.left = [self removeNode:oldNode withCurrent:(AVLNode*)node.left];
+    else if([oldNode compare:node] == NSOrderedDescending)
+        node.right = [self removeNode:oldNode withCurrent:(AVLNode*)node.right];
+    else
+    {
+        // node with only one child or no child
+        if( (node.left == NULL) || (node.right == NULL) )
+        {
+            TreeNode *temp = node.left ? node.left : node.right;
+            
+            // No child case
+            if(temp == NULL)
+            {
+                temp = node;
+                node = NULL;
+            }
+            else {
+                node.right = temp.right;
+                node.left = temp.left;
+                node.parent = temp.parent;
+                
+            }
+            
+        }
+        else
+        {
+            // node with two children: Get the inorder successor (smallest
+            // in the right subtree)
+            AVLNode* cur = (AVLNode*)node.right;
+            while (cur.left!=nil) {
+                cur = cur.left;
+            }
+            if (cur.parent !=node) {
+                //cut off the leaf and use it to fill this spot
+                cur.parent.left = nil;
+                cur.parent = node.parent;
+                cur.left = node.left;
+                cur.right = node.right;
+                if (node == node.parent.left)
+                    node.parent.left = cur;
+                
+                else
+                    node.parent.right = cur;
+            }
+            else{
+                if (node == node.parent.left)
+                    node.parent.left = cur;
+                
+                else
+                    node.parent.right = cur;
+                
+                cur.left = node.left;
+                //Don't need right case as cur== node.right
+                cur.parent = node.parent;
+                
+                
+            }
+            node.left = nil;
+            node.right = nil;
+            node = cur;
+        }
+    }
+    
+    // If the tree had only one node then return
+    if (node == NULL)
+        return node;
+    
+    // STEP 3: GET THE BALANCE FACTOR OF THIS NODE (to check whether
+    //  this node became unbalanced)
+    int balance = [node balance];
+    
+    // If this node becomes unbalanced, then there are 4 cases
+    
+    // Left Left Case
+    if (balance > 1 && [(AVLNode*)node.left balance] >= 0)
+        return [self rightRotate:node];
+    
+    // Left Right Case
+    if (balance > 1 && [(AVLNode*)node.left balance] < 0)
+    {
+        node.left = [self leftRotate:(AVLNode*)node.left];
+        return [self rightRotate:node];
+    }
+    
+    // Right Right Case
+    if (balance < -1 && [(AVLNode*)node.right balance] <= 0)
+        return [self leftRotate:node];
+    
+    // Right Left Case
+    if (balance < -1 && [(AVLNode*)node.right balance] > 0)
+    {
+        node.right = [self rightRotate:(AVLNode*)node.right];
+        return [self  leftRotate:node];
+    }
+    
+    return node;
+}
 @end

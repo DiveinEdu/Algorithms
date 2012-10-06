@@ -24,6 +24,8 @@
 }
 
 - (IBAction)removeValue:(id)sender {
+    [self.tree removeValue:[self.valueField text]];
+    [self refresh];
 }
 -(void)refresh{
     [self.rootView removeFromSuperview];

@@ -30,10 +30,12 @@
 - (NSComparisonResult)compare:(Node *)otherObject {
 
     if ([[self getValue] integerValue] > [[otherObject getValue] integerValue]) {
-        return NSOrderedAscending;
+        //self is greater than other object 9 > 1, order is descending
+        return NSOrderedDescending;
     }
     else if ([[self getValue] integerValue] < [[otherObject getValue] integerValue]) {
-        return NSOrderedDescending;
+        //self is less than other object, 3 < 9 order is ascending
+        return NSOrderedAscending;
     }
     else {
         return NSOrderedSame;

@@ -10,7 +10,7 @@
 
 @implementation TreeNode
 -(BOOL)addNode:(TreeNode *)node{
-    switch ([node compare:self]) {
+    switch ([self compare:node]) {
         case NSOrderedAscending:
             if (self.right == nil){
                 self.right = node;
@@ -32,7 +32,7 @@
     }
 }
 -(TreeNode*)removeNode:(TreeNode *)node{
-    switch ([node compare:self]) {
+    switch ([self compare:node]) {
         case NSOrderedDescending:
             if (self.left != NULL)
                 return [self.left removeNode:node] ;

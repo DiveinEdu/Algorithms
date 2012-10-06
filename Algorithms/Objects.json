@@ -43,7 +43,7 @@
         {
              "name":"AVL Tree",
              "viewID":"avlTree",
-             "related":["AVLTree.h","AVLTree.m","TreeNode.m","TreeNode.h","Node.h","Node.m"]
+             "related":["AVLTree.h","AVLTree.m","AVLNode.h","AVLNode.m","Node.h","Node.m","TreeNode.h","TreeNode.m"]
         },
         {
              "name":"Red Black Tree",
