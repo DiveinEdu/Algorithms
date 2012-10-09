@@ -100,70 +100,65 @@
 -(AVLNode*)removeNode:(AVLNode*)oldNode withCurrent:(AVLNode*)node{
     if (node == NULL)
         return node;
-    
-    if ([oldNode compare:self.root] == NSOrderedAscending)
-        node.left = [self removeNode:oldNode withCurrent:(AVLNode*)node.left];
-    else if([oldNode compare:node] == NSOrderedDescending)
-        node.right = [self removeNode:oldNode withCurrent:(AVLNode*)node.right];
-    else
-    {
-        // node with only one child or no child
-        if( (node.left == NULL) || (node.right == NULL) )
-        {
-            TreeNode *temp = node.left ? node.left : node.right;
-            
-            // No child case
-            if(temp == NULL)
+    switch([oldNode compare:node]){
+        case NSOrderedAscending:
+            node.left = [self removeNode:oldNode withCurrent:(AVLNode*)node.left];
+            break;
+        case NSOrderedDescending:
+            node.right = [self removeNode:oldNode withCurrent:(AVLNode*)node.right];
+            break;
+        case NSOrderedSame:
+            // node with only one child or no child
+            if( (node.left == NULL) || (node.right == NULL) )
             {
-                temp = node;
-                node = NULL;
-            }
-            else {
-                node.right = temp.right;
-                node.left = temp.left;
-                node.parent = temp.parent;
+                AVLNode *temp = (AVLNode*)(node.left ? node.left : node.right);
+                
+                // No child case
+                if(temp == NULL)
+                {
+                    if (node == node.parent.left)
+                        node.parent.left = nil;
+                    else
+                        node.parent.right = nil;
+                    node = nil;
+                }
+                else {
+                    temp.parent = node.parent;
+                    node=temp;
+                }
                 
             }
-            
+            else
+            {
+                // node with two children: Get the inorder successor (smallest
+                // in the right subtree)
+                AVLNode* cur = (AVLNode*)[node successor];
+                if (cur.parent !=node) {
+                    //cut off the leaf and use it to fill this spot
+                    //cur.parent.left = nil;
+                    cur.parent = node.parent;
+                    cur.left = node.left;
+                    cur.right = node.right;
+                    if (node == node.parent.left)
+                        node.parent.left = cur;
+                    else
+                        node.parent.right = cur;
+                }
+                else{
+                    
+                    cur.left = node.left;
+                    node.left.parent = cur;
+                    //Don't need right case as cur == node.right
+                    cur.parent = node.parent;
+                    
+                    
+                }
+                node.left = nil;
+                node.right = nil;
+                node = cur;
+            }
+            break;
         }
-        else
-        {
-            // node with two children: Get the inorder successor (smallest
-            // in the right subtree)
-            AVLNode* cur = (AVLNode*)node.right;
-            while (cur.left!=nil) {
-                cur = (AVLNode*)cur.left;
-            }
-            if (cur.parent !=node) {
-                //cut off the leaf and use it to fill this spot
-                cur.parent.left = nil;
-                cur.parent = node.parent;
-                cur.left = node.left;
-                cur.right = node.right;
-                if (node == node.parent.left)
-                    node.parent.left = cur;
-                
-                else
-                    node.parent.right = cur;
-            }
-            else{
-                if (node == node.parent.left)
-                    node.parent.left = cur;
-                
-                else
-                    node.parent.right = cur;
-                
-                cur.left = node.left;
-                //Don't need right case as cur== node.right
-                cur.parent = node.parent;
-                
-                
-            }
-            node.left = nil;
-            node.right = nil;
-            node = cur;
-        }
-    }
     
     // If the tree had only one node then return
     if (node == NULL)

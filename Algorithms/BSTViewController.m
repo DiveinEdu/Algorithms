@@ -1,5 +1,5 @@
 //
-//  BSTViewController.m
+//  TreeViewController.m
 //  Algorithms
 //
 //  Created by Carl & Hannah Wieland on 9/25/12.
@@ -8,22 +8,11 @@
 
 #import "BSTViewController.h"
 #import "BinarySearchTree.h"
-#import "BSTView.h"
+#import "TreeView.h"
 #import "TreeNode.h"
-@interface BSTViewController ()
-
-@end
 
 @implementation BSTViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -42,7 +31,7 @@
 -(void)refresh{
     [self.rootView removeFromSuperview];
     if (self.binarySearchTree.root) {
-        self.rootView = [[BSTView alloc] initWithNode:self.binarySearchTree.root];
+        self.rootView = [[TreeView alloc] initWithNode:self.binarySearchTree.root];
         [self.scrollView addSubview:self.rootView];
         self.scrollView.minimumZoomScale = self.scrollView.frame.size.width / self.rootView.frame.size.width;
         self.scrollView.maximumZoomScale = 2.0;

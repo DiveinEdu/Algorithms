@@ -8,7 +8,6 @@
 
 #import "TreeViewController.h"
 @class BinarySearchTree;
-@class BSTView;
 
 @interface BSTViewController : TreeViewController
 

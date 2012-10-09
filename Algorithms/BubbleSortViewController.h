@@ -8,7 +8,7 @@
 
 #import "DataViewController.h"
 
-@interface BubbleSortViewController : DataViewController <UITableViewDataSource, UITableViewDelegate>
+@interface BubbleSortViewController : DataViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 {
     NSInteger steps;
 }
@@ -16,7 +16,11 @@
 @property (nonatomic, strong)NSMutableArray* lists;
 - (IBAction)previous:(id)sender;
 - (IBAction)nextStep:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *countField;
 
+@property (weak, nonatomic) IBOutlet UITextField *minField;
+@property (weak, nonatomic) IBOutlet UITextField *maxField;
 @property (weak, nonatomic) IBOutlet UILabel *stepLabel;
 - (IBAction)generate:(id)sender;
+- (IBAction)showInfo:(id)sender;
 @end

@@ -43,9 +43,12 @@
                 prev = cur;
                 cur = [cur next];
             }
-            NSString* currentString = [NSString stringWithFormat:@"%@ looking at:%@",[list description],cur];
-            if (![[array lastObject] isEqualToString:currentString]) {
-                [array addObject:currentString];
+            if (cur!=nil) {
+                NSString* currentString = [NSString stringWithFormat:@"%@ looking at:%@",[list description],cur];
+                if (![[array lastObject] isEqualToString:currentString]) {
+                    [array addObject:currentString];
+                    
+                }
 
             }
         }

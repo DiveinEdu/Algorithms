@@ -45,25 +45,30 @@
     [BubbleSort sortLinkedList:linkedList];
 }
 
-- (IBAction)previous:(id)sender {
-    steps = MAX(--steps, 0);
+-(void)refresh{
     [self.tableView reloadData];
     [self.stepLabel setText:[NSString stringWithFormat:@"%i of %i",steps, [self.lists count]]];
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:steps-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 
+}
+- (IBAction)previous:(id)sender {
+    steps = MAX(--steps, 0);
+    [self refresh];
 }
 
 - (IBAction)nextStep:(id)sender {
     steps = MIN(++steps,[self.lists count]);
-    [self.tableView reloadData];
-    [self.stepLabel setText:[NSString stringWithFormat:@"%i of %i",steps, [self.lists count]]];
-
-
+    [self refresh];
 }
 
 - (IBAction)generate:(id)sender {
     LinkedList* linkedList = [LinkedList new];
-    for (int i =0; i < 10; i++){
-        [linkedList addValueToFront:[NSNumber numberWithInt:arc4random()%100]];
+    if([[self.countField text] integerValue]>15)
+        [ self.countField setText:@"15"];
+    for (int i =0; i < MIN([[self.countField text] integerValue],30); i++){
+        NSInteger diff = [[self.maxField text] integerValue] - [[self.minField text] integerValue];
+        NSInteger rand = arc4random()%diff;
+        [linkedList addValueToFront:[NSNumber numberWithInt:[[self.maxField text] integerValue]-rand]];
     }
     steps = 1;
 
@@ -71,6 +76,10 @@
     [self.lists addObjectsFromArray:[BubbleSortSub sortLinkedList:linkedList]];
     [self.stepLabel setText:[NSString stringWithFormat:@"%i of %i",steps, [self.lists count]]];
     [self.tableView reloadData];
+}
+
+- (IBAction)showInfo:(id)sender {
+    [[[UIAlertView alloc] initWithTitle:@"Info" message:@"Only steps with changes are shown" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
 }
 
 
@@ -83,12 +92,24 @@
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"bubbleCell"];
     [[cell textLabel] setText:[self.lists objectAtIndex:[indexPath row]]];
-    
+    [[cell textLabel] setAdjustsFontSizeToFitWidth:YES];
+    [[cell textLabel] setAdjustsLetterSpacingToFitWidth:YES];
     return cell;
 }
 - (void)viewDidUnload {
     [self setTableView:nil];
     [self setStepLabel:nil];
+    [self setMaxField:nil];
+    [self setMinField:nil];
+    [self setCountField:nil];
     [super viewDidUnload];
 }
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSMutableCharacterSet *_alnum = [NSMutableCharacterSet characterSetWithCharactersInString:@"-"];
+    [_alnum formUnionWithCharacterSet:[NSCharacterSet alphanumericCharacterSet]];
+    NSCharacterSet *nonNumberSet = [_alnum invertedSet];
+    return ([string stringByTrimmingCharactersInSet:nonNumberSet].length > 0) || [string isEqualToString:@""];
+}
+
 @end

@@ -66,7 +66,6 @@
 		09B33FA61612937F000FF89F /* BSTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FA51612937F000FF89F /* BSTViewController.m */; };
 		09B33FA7161296CE000FF89F /* BinarySearchTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA116128C58000FF89F /* BinarySearchTree.h */; };
 		09B33FA8161296D1000FF89F /* BinarySearchTree.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA216128C58000FF89F /* BinarySearchTree.m */; };
-		09B33FAB16129796000FF89F /* BSTView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FAA16129796000FF89F /* BSTView.m */; };
 		09B8183F161D25CF004B026C /* AVLTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8183E161D25CF004B026C /* AVLTreeController.m */; };
 		09B81842161D25E2004B026C /* AVLTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B81841161D25E2004B026C /* AVLTree.m */; };
 		09B81845161D279F004B026C /* AVLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B81844161D279F004B026C /* AVLNode.m */; };
@@ -240,8 +239,6 @@
 		09B33FA216128C58000FF89F /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
 		09B33FA41612937E000FF89F /* BSTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTViewController.h; sourceTree = "<group>"; };
 		09B33FA51612937F000FF89F /* BSTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTViewController.m; sourceTree = "<group>"; };
-		09B33FA916129796000FF89F /* BSTView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTView.h; sourceTree = "<group>"; };
-		09B33FAA16129796000FF89F /* BSTView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTView.m; sourceTree = "<group>"; };
 		09B8183D161D25CF004B026C /* AVLTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLTreeController.h; sourceTree = "<group>"; };
 		09B8183E161D25CF004B026C /* AVLTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLTreeController.m; sourceTree = "<group>"; };
 		09B81840161D25E2004B026C /* AVLTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
@@ -560,8 +557,6 @@
 			children = (
 				09B33FA41612937E000FF89F /* BSTViewController.h */,
 				09B33FA51612937F000FF89F /* BSTViewController.m */,
-				09B33FA916129796000FF89F /* BSTView.h */,
-				09B33FAA16129796000FF89F /* BSTView.m */,
 				09B33FA116128C58000FF89F /* BinarySearchTree.h */,
 				09B33FA216128C58000FF89F /* BinarySearchTree.m */,
 			);
@@ -787,7 +782,6 @@
 				09038F501612615300D4E530 /* RelatedFile.m in Sources */,
 				09B33FA316128C58000FF89F /* BinarySearchTree.m in Sources */,
 				09B33FA61612937F000FF89F /* BSTViewController.m in Sources */,
-				09B33FAB16129796000FF89F /* BSTView.m in Sources */,
 				09FA27481617D34D00738463 /* Heap.m in Sources */,
 				09FA274B1617D36400738463 /* HeapViewController.m in Sources */,
 				09FA274E1617D4BE00738463 /* ArrayHeap.m in Sources */,

@@ -63,49 +63,70 @@
                 return nil;
         case NSOrderedSame:
             //I am need to remove myself!
-            
-            
-            if (self.left != NULL && self.right != NULL) {
-                //we find the lowest node on the right subtree
+            if (self.left == nil || self.right == nil) {
+                TreeNode *temp = self.left ? self.left : self.right;
+                
+                // No child case
+                if(temp == nil)
+                {
+                    if (self == self.parent.left)
+                        self.parent.left = nil;
+                    else
+                        self.parent.right = nil;
+                    self.parent = nil;
+                    return self;
+                }
+                else {
+                    //we have only one child so we fix things up
+                    temp.parent = node.parent;
+                    if (self == self.parent.left) {
+                        //hook up the
+                        self.parent.left=temp;
+                    }
+                    else{
+                        self.parent.right = temp;
+                    }
+                    return self;
+                }
+            }
+            else{
+                //we Have two kids!
                 TreeNode* cur = self.right;
                 while (cur.left!=nil) {
                     cur = cur.left;
                 }
-                if (cur.parent !=self) {
-                    //cut off the leaf and use it to fill this spot
-                    cur.parent.left = nil;
-                    cur.parent = self.parent;
-                    cur.left = self.left;
-                    cur.right = self.right;
+                if (cur.parent == self) {
                     if (self == self.parent.left)
                         self.parent.left = cur;
                     
                     else
                         self.parent.right = cur;
+                    cur.parent = self.parent;
+                    cur.left = self.left;
+                    cur.left.parent = cur;
+
+ 
                 }
                 else{
+                    //cut off the leaf and use it to fill my spot
+                    //fix my subtree
+                    cur.parent.left = cur.right;
+                    cur.right.parent = cur.parent;
+
+                    //fix replace self
+                    cur.parent = self.parent;
+                    cur.left = self.left;
+                    cur.left.parent = cur;
+                    cur.right = self.right;
+                    cur.right.parent = cur;
                     if (self == self.parent.left)
                         self.parent.left = cur;
-
                     else
                         self.parent.right = cur;
-                    
-                    cur.left = self.left;
-                    cur.parent = self.parent;
                 }
-                self.left = nil;
-                self.right = nil;
-                return self;
-            } else if (self.parent.left == self) {
-                self.parent.left = (self.left != NULL) ? self.left : self.right;
-                [self.parent.left setParent:self.parent];
-                return self;
-            } else if (self.parent.right == self) {
-                self.parent.right = (self.left != NULL) ? self.left : self.right;
-                [self.parent.right setParent:self.parent];
-
                 return self;
             }
+            break;
         default:
             return nil;
             break;

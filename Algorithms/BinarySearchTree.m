@@ -35,7 +35,7 @@
     else {
         TreeNode* auxRoot = [[TreeNode alloc] initWithValue:value];
 
-        if ([[self.root getValue] integerValue] == [value integerValue]) {
+        if ([self.root compare:auxRoot]==NSOrderedSame ) {
             TreeNode* tmpRoot = [[TreeNode alloc] initWithValue:0];
             tmpRoot.left = self.root;
             self.root.parent = tmpRoot;
