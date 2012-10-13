@@ -57,21 +57,23 @@
     HeapNode* toSwap=nil;
 
     if(self.left != nil ){
+        
         if (self.right != nil) {
-            if ([self.right compare: self.left]==NSOrderedDescending) {
-                toSwap =self.left;
+            
+            if ([self.left compare: self.right] == [self getComparitor]) {
+                toSwap = self.left;
             }
             else{
                 toSwap = self.right;
             }
         }
-        else if ([self.left compare:self]==NSOrderedDescending) {
+        else if ([self.left compare:self] == [self getComparitor]) {
             toSwap = self.left;
         }
 
     }
     else if(self.right!=nil){
-        if ([self.right compare:self]==NSOrderedDescending) {
+        if ([self.right compare:self] ==[self getComparitor]) {
             toSwap=self.right;
         }
     }
@@ -111,8 +113,8 @@
         
 
         
-        toSwap.left = tmp.left==toSwap? self:tmp.left;
-        toSwap.right = tmp.right==toSwap? self:tmp.right;
+        toSwap.left = tmp.left == toSwap ? self : tmp.left;
+        toSwap.right = tmp.right == toSwap ? self : tmp.right;
 
         
         [self heapifyDown];
@@ -126,9 +128,9 @@
 
 -(NSComparisonResult)getComparitor{
     switch (type) {
-        case HEAP_MAX:
-            return NSOrderedAscending;
         case HEAP_MIN:
+            return NSOrderedAscending;
+        case HEAP_MAX:
             return NSOrderedDescending;
         default:
             return NSOrderedSame;

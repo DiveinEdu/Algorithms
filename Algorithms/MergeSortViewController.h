@@ -9,7 +9,17 @@
 
 #import "DataViewController.h"
 
-@interface MergeSortViewController : DataViewController
-
-- (IBAction)testSort:(id)sender;
+@interface MergeSortViewController : DataViewController <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+{
+    NSInteger steps;
+}
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong)NSMutableArray* lists;
+@property (weak, nonatomic) IBOutlet UITextField *countField;
+@property (weak, nonatomic) IBOutlet UITextField *minField;
+@property (weak, nonatomic) IBOutlet UITextField *maxField;
+@property (weak, nonatomic) IBOutlet UILabel *stepLabel;
+- (IBAction)generateList:(id)sender;
+- (IBAction)step:(id)sender;
+- (IBAction)showInfo:(id)sender;
 @end

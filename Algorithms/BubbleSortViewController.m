@@ -60,9 +60,21 @@
     steps = MIN(++steps,[self.lists count]);
     [self refresh];
 }
+-(void)checkEmpty{
+    if ([self.countField text].length == 0) {
+        [self.countField setText:@"15"];
+    }
+    if ([self.minField text].length == 0) {
+        [self.minField setText:@"0"];
+    }
+    if ([self.maxField text].length == 0) {
+        [self.maxField setText:@"100"];
+    }
+}
 
 - (IBAction)generate:(id)sender {
     LinkedList* linkedList = [LinkedList new];
+    [self checkEmpty];
     if([[self.countField text] integerValue]>15)
         [ self.countField setText:@"15"];
     for (int i =0; i < MIN([[self.countField text] integerValue],30); i++){

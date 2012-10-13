@@ -66,6 +66,7 @@
 		09B33FA61612937F000FF89F /* BSTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FA51612937F000FF89F /* BSTViewController.m */; };
 		09B33FA7161296CE000FF89F /* BinarySearchTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA116128C58000FF89F /* BinarySearchTree.h */; };
 		09B33FA8161296D1000FF89F /* BinarySearchTree.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA216128C58000FF89F /* BinarySearchTree.m */; };
+		09B4CDFF16291AEB00145317 /* MergeSortSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B4CDFE16291AEB00145317 /* MergeSortSub.m */; };
 		09B8183F161D25CF004B026C /* AVLTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8183E161D25CF004B026C /* AVLTreeController.m */; };
 		09B81842161D25E2004B026C /* AVLTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B81841161D25E2004B026C /* AVLTree.m */; };
 		09B81845161D279F004B026C /* AVLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B81844161D279F004B026C /* AVLNode.m */; };
@@ -239,6 +240,8 @@
 		09B33FA216128C58000FF89F /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
 		09B33FA41612937E000FF89F /* BSTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTViewController.h; sourceTree = "<group>"; };
 		09B33FA51612937F000FF89F /* BSTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTViewController.m; sourceTree = "<group>"; };
+		09B4CDFD16291AEB00145317 /* MergeSortSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeSortSub.h; sourceTree = "<group>"; };
+		09B4CDFE16291AEB00145317 /* MergeSortSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeSortSub.m; sourceTree = "<group>"; };
 		09B8183D161D25CF004B026C /* AVLTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLTreeController.h; sourceTree = "<group>"; };
 		09B8183E161D25CF004B026C /* AVLTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLTreeController.m; sourceTree = "<group>"; };
 		09B81840161D25E2004B026C /* AVLTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
@@ -340,6 +343,8 @@
 				09038F391612554D00D4E530 /* MergeSortViewController.m */,
 				09038F35161252C500D4E530 /* MergeSort.h */,
 				09038F36161252C500D4E530 /* MergeSort.m */,
+				09B4CDFD16291AEB00145317 /* MergeSortSub.h */,
+				09B4CDFE16291AEB00145317 /* MergeSortSub.m */,
 			);
 			name = MergeSort;
 			sourceTree = "<group>";
@@ -802,6 +807,7 @@
 				09BAD6781620C60F00ACCFF8 /* TrieView.m in Sources */,
 				09BAD67B1620C7AA00ACCFF8 /* Algorithm.m in Sources */,
 				09BAD67E1620D76100ACCFF8 /* BubbleSortSub.m in Sources */,
+				09B4CDFF16291AEB00145317 /* MergeSortSub.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -909,6 +915,7 @@
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
 				INFOPLIST_FILE = "Algorithms/Algorithms-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -920,6 +927,7 @@
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
 				INFOPLIST_FILE = "Algorithms/Algorithms-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
