@@ -58,6 +58,74 @@
     //if it has a value then it has a child with that value
     return [children lastObject];
 }
+-(BOOL)inTree:(NSString*)value{
+    char first = [value characterAtIndex:0];
+    TrieNode* next =[self childWithValue:first];
+    if (next!=nil) {
+        if ([value length]>=2) {
+            return [next inTree:[value substringFromIndex:1]];
+        }
+        return true;
+    }
+    else
+        return false;
+    
+}
+-(NSMutableArray*) allSubs{
+    NSMutableArray* words = [NSMutableArray new];
+    for (TrieNode* node in self.children) {
+        [words addObject:[node allSubs]];
+    }
+    if ([words count] == 0) {
+        [words addObject:[NSString stringWithFormat:@"%c",self.value]];
+        return words;
+    }
+    NSMutableArray* final = [NSMutableArray new];
+    for (NSMutableArray* array in words) {
+        for (NSString* prefix in array) {
+            [final addObject:[NSString stringWithFormat:@"%c%@",self.value,prefix]];
+        }
+    }
+    return final;
+}
+-(NSArray*)suggestions:(NSString*)value{
+    if ([value length]==1) {
+        char last = [value characterAtIndex:0];
+        TrieNode* lastNode = [self childWithValue:last];
+        NSArray* array = [lastNode allSubs];
+        if (self.value == ' ') {
+            return array;
+        }
+        else{
+            NSMutableArray* final=[NSMutableArray new];
+            for (NSString* str in array) {
+                [final addObject:[NSString stringWithFormat:@"%c%@",self.value,str]];
+            }
+            return final;
+        }
+    }
+    else{
+        char next = [value characterAtIndex:0];
+        TrieNode* lastNode = [self childWithValue:next];
+        if (lastNode == nil) {
+            return nil;
+        }
+        else{
+            NSArray* array = [lastNode suggestions:[value substringFromIndex:1]];
+            if (self.value == ' ') {
+                return array;
+            }
+            else{
+                NSMutableArray* final = [NSMutableArray new];
+                for (NSString* str in array) {
+                    [final addObject:[NSString stringWithFormat:@"%c%@",self.value,str]];
+                }
+                return final;
+            }
+        }
+
+    }
+}
 -(NSString*)description{
     return [NSString stringWithFormat:@"%c",self.value];
 }

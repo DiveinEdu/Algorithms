@@ -67,6 +67,8 @@
 		09B33FA7161296CE000FF89F /* BinarySearchTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA116128C58000FF89F /* BinarySearchTree.h */; };
 		09B33FA8161296D1000FF89F /* BinarySearchTree.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA216128C58000FF89F /* BinarySearchTree.m */; };
 		09B4CDFF16291AEB00145317 /* MergeSortSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B4CDFE16291AEB00145317 /* MergeSortSub.m */; };
+		09B4CE02162936BB00145317 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 09B4CE01162936BB00145317 /* words.txt */; };
+		09B4CE091629EFA000145317 /* SuggestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B4CE081629EF9F00145317 /* SuggestionViewController.m */; };
 		09B8183F161D25CF004B026C /* AVLTreeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B8183E161D25CF004B026C /* AVLTreeController.m */; };
 		09B81842161D25E2004B026C /* AVLTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B81841161D25E2004B026C /* AVLTree.m */; };
 		09B81845161D279F004B026C /* AVLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B81844161D279F004B026C /* AVLNode.m */; };
@@ -242,6 +244,9 @@
 		09B33FA51612937F000FF89F /* BSTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSTViewController.m; sourceTree = "<group>"; };
 		09B4CDFD16291AEB00145317 /* MergeSortSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeSortSub.h; sourceTree = "<group>"; };
 		09B4CDFE16291AEB00145317 /* MergeSortSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeSortSub.m; sourceTree = "<group>"; };
+		09B4CE01162936BB00145317 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		09B4CE071629EF9F00145317 /* SuggestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuggestionViewController.h; sourceTree = "<group>"; };
+		09B4CE081629EF9F00145317 /* SuggestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuggestionViewController.m; sourceTree = "<group>"; };
 		09B8183D161D25CF004B026C /* AVLTreeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLTreeController.h; sourceTree = "<group>"; };
 		09B8183E161D25CF004B026C /* AVLTreeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLTreeController.m; sourceTree = "<group>"; };
 		09B81840161D25E2004B026C /* AVLTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLTree.h; sourceTree = "<group>"; };
@@ -384,9 +389,9 @@
 		0937E32416120FF60044040F /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
-				09BAD66B1620BC8300ACCFF8 /* Trie */,
 				09ADEEA4161CE9A100BD0CAE /* TreeViewController.h */,
 				09ADEEA5161CE9A200BD0CAE /* TreeViewController.m */,
+				09BAD66B1620BC8300ACCFF8 /* Trie */,
 				09B8183B161D25AB004B026C /* AVLTree */,
 				09ADEE93161CDBDA00BD0CAE /* RedBlackTree */,
 				09FA27441617D33400738463 /* Heap */,
@@ -582,8 +587,11 @@
 		09BAD66B1620BC8300ACCFF8 /* Trie */ = {
 			isa = PBXGroup;
 			children = (
+				09B4CE01162936BB00145317 /* words.txt */,
 				09BAD66D1620BCA200ACCFF8 /* TrieViewController.h */,
 				09BAD66E1620BCA200ACCFF8 /* TrieViewController.m */,
+				09B4CE071629EF9F00145317 /* SuggestionViewController.h */,
+				09B4CE081629EF9F00145317 /* SuggestionViewController.m */,
 				09BAD6701620BCB800ACCFF8 /* Trie.h */,
 				09BAD6711620BCB800ACCFF8 /* Trie.m */,
 			);
@@ -723,6 +731,7 @@
 				09F0D3F5160CEB9600CF657E /* arrow_right_filled@2x.png in Resources */,
 				09F0D3F7160CEB9600CF657E /* arrow_right@2x.png in Resources */,
 				099EC975160FDC3C00FD136A /* Objects.json in Resources */,
+				09B4CE02162936BB00145317 /* words.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +817,7 @@
 				09BAD67B1620C7AA00ACCFF8 /* Algorithm.m in Sources */,
 				09BAD67E1620D76100ACCFF8 /* BubbleSortSub.m in Sources */,
 				09B4CDFF16291AEB00145317 /* MergeSortSub.m in Sources */,
+				09B4CE091629EFA000145317 /* SuggestionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

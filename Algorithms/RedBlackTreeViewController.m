@@ -62,7 +62,10 @@
     if (self.tree.root) {
         self.rootView = [[RedBlackView alloc] initWithNode:self.tree.root];
         [self.scrollView addSubview:self.rootView];
-        self.scrollView.minimumZoomScale = self.scrollView.frame.size.width / self.rootView.frame.size.width;
+        CGFloat min = MIN(self.scrollView.frame.size.height / self.rootView.frame.size.height
+                          , self.scrollView.frame.size.width / self.rootView.frame.size.width);
+        
+        self.scrollView.minimumZoomScale = min;
         self.scrollView.maximumZoomScale = 2.0;
         [self.scrollView setZoomScale:self.scrollView.minimumZoomScale];
     }

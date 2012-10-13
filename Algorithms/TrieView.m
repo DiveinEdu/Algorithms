@@ -46,7 +46,8 @@
         [self addSubview:view];
         [view setFrame:CGRectMake(width+10, 100, view.frame.size.width, view.frame.size.height)];
         width += 50+view.frame.size.width;
-        height = MAX(height, view.frame.size.height);
+        height =MAX(height,view.frame.size.height+100);
+        
         [self.childrenNodes addObject:view];
     }
     if (width==0) {

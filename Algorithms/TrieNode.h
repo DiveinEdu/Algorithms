@@ -17,4 +17,6 @@
 -(TrieNode*)childWithValue:(char)value;
 -(void)addValue:(NSString*)string;
 -(NSString*)description;
+-(BOOL)inTree:(NSString*)value;
+-(NSArray*)suggestions:(NSString*)value;
 @end

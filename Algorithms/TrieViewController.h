@@ -15,5 +15,8 @@
 @property (nonatomic, strong)Trie* trie;
 - (IBAction)addValue:(id)sender;
 - (IBAction)getSuggestions:(id)sender;
+- (IBAction)buildTree:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *suggestionField;
+@property (nonatomic, strong)NSMutableArray* words;
 
 @end

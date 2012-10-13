@@ -19,10 +19,10 @@
     return TRUE;
 }
 -(BOOL)inTree:(NSString*)value{
-    return YES;
+    return [self.root inTree:value];
 }
 -(NSArray*)suggestionsForString:(NSString*)value{
-    return nil;
+    return [self.root suggestions:value];
 }
 
 
