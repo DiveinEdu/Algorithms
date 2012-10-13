@@ -124,7 +124,15 @@
                 }
                 else {
                     temp.parent = node.parent;
+                    if (node == node.parent.left) {
+                        //hook up the
+                        node.parent.left=temp;
+                    }
+                    else{
+                        node.parent.right = temp;
+                    }
                     node=temp;
+                    
                 }
                 
             }
@@ -132,26 +140,35 @@
             {
                 // node with two children: Get the inorder successor (smallest
                 // in the right subtree)
-                AVLNode* cur = (AVLNode*)[node successor];
-                if (cur.parent !=node) {
-                    //cut off the leaf and use it to fill this spot
-                    //cur.parent.left = nil;
+                AVLNode* cur = (AVLNode*)node.right;
+                while(cur.left!=nil)
+                    cur = (AVLNode*)cur.left;
+                if (cur.parent == node) {
+                    if (node == node.parent.left)
+                        node.parent.left = cur;
+                    
+                    else
+                        node.parent.right = cur;
                     cur.parent = node.parent;
                     cur.left = node.left;
+                    cur.left.parent = cur;
+                }
+                else{
+                    //cut off the leaf and use it to fill my spot
+                    //fix my subtree
+                    cur.parent.left = cur.right;
+                    cur.right.parent = cur.parent;
+                    
+                    //fix replace self
+                    cur.parent = node.parent;
+                    cur.left = node.left;
+                    cur.left.parent = cur;
                     cur.right = node.right;
+                    cur.right.parent = cur;
                     if (node == node.parent.left)
                         node.parent.left = cur;
                     else
                         node.parent.right = cur;
-                }
-                else{
-                    
-                    cur.left = node.left;
-                    node.left.parent = cur;
-                    //Don't need right case as cur == node.right
-                    cur.parent = node.parent;
-                    
-                    
                 }
                 node.left = nil;
                 node.right = nil;
