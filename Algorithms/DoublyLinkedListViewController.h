@@ -9,11 +9,12 @@
 #import "DataViewController.h"
 @class DoublyLinkedList;
 @class DoublyLinkedListView;
-
+@class NodeView;
 @interface DoublyLinkedListViewController : DataViewController
 
 @property (nonatomic, strong) DoublyLinkedList* doublyLinkedList;
-@property (weak, nonatomic) IBOutlet DoublyLinkedListView *listView;
+@property (nonatomic, strong) NodeView* headView;
+@property (weak, nonatomic) IBOutlet UIScrollView *listView;
 @property (weak, nonatomic) IBOutlet UITextField *inputField;
 
 - (IBAction)addFront:(id)sender;

@@ -399,7 +399,7 @@
                                     <action selector="removeFront:" destination="PN3-Dy-Mmf" eventType="touchUpInside" id="Cv5-bd-vn7"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="THQ-zA-Qsg" customClass="LinkedListView">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="THQ-zA-Qsg">
                                 <rect key="frame" x="20" y="87" width="663" height="233"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </scrollView>
@@ -1097,7 +1097,7 @@
                         <rect key="frame" x="0.0" y="20" width="703" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="aOs-U4-5YH" customClass="DoublyLinkedListView">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="aOs-U4-5YH">
                                 <rect key="frame" x="20" y="246" width="663" height="293"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
@@ -1199,16 +1199,13 @@
                 <relationship kind="action" name="loadCode:"/>
             </relationships>
         </class>
-        <class className="DoublyLinkedListView" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DoublyLinkedListView.h"/>
-        </class>
         <class className="DoublyLinkedListViewController" superclassName="DataViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DoublyLinkedListViewController.h"/>
             <relationships>
                 <relationship kind="action" name="addBack:"/>
                 <relationship kind="action" name="addFront:"/>
                 <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="listView" candidateClass="DoublyLinkedListView"/>
+                <relationship kind="outlet" name="listView" candidateClass="UIScrollView"/>
             </relationships>
         </class>
         <class className="HeapViewController" superclassName="TreeViewController">
@@ -1221,16 +1218,13 @@
                 <relationship kind="outlet" name="maxOrMin" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
-        <class className="LinkedListView" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LinkedListView.h"/>
-        </class>
         <class className="LinkedListViewController" superclassName="DataViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LinkedListViewController.h"/>
             <relationships>
                 <relationship kind="action" name="addValue:"/>
                 <relationship kind="action" name="removeFront:"/>
                 <relationship kind="action" name="showCode:"/>
-                <relationship kind="outlet" name="detailView" candidateClass="LinkedListView"/>
+                <relationship kind="outlet" name="detailView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="insertValueField" candidateClass="UITextField"/>
             </relationships>
         </class>

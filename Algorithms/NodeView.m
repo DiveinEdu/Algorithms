@@ -8,6 +8,7 @@
 
 #import "NodeView.h"
 #import "ListNode.h"
+#import "ArrowView.h"
 
 @implementation NodeView
 
@@ -44,18 +45,47 @@
     self.node=node;
 
     if(self){
-
+        self.container = [[UIView alloc] initWithFrame:self.frame];
         [value.layer setBorderWidth:3];
         [value.layer setBorderColor:[UIColor blackColor].CGColor];
         [value setAdjustsFontSizeToFitWidth:YES];
         [value setAdjustsLetterSpacingToFitWidth:YES];
         [value setTextAlignment:NSTextAlignmentCenter];
         [value setText:[self.node description]];
-        [self addSubview:value];
-        [self.layer setBorderColor:[UIColor blackColor].CGColor];
-        [self.layer setBorderWidth:3];
+        [self.container addSubview:value];
+        [self.container.layer setBorderColor:[UIColor blackColor].CGColor];
+        [self.container.layer setBorderWidth:3];
+        [self addSubview:self.container];
+        [self fixViews:direction];
     }
     return self;
+}
+-(void)fixViews:(NODE_DIRECTION)direction{
+    if(self.node.next){
+        NodeView* next = [[NodeView alloc] initWithNode:self.node.next andDirection:direction];
+        [self addSubview:next];
+
+        [next setFrame:CGRectMake(kHorizontalMoveDistance, 0, next.frame.size.width, next.frame.size.height)];
+        
+        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(self.frame.size.width-15, kHorizontalNodeHeight/4, kHorizontalMoveDistance-kHorizontalNodeWidth +15, kHorizontalNodeHeight/3) andArrowType:ARROW_TYPE_FILLED];
+        [self addSubview:arrow];
+        if (self.node.next.previous) {
+            ArrowView* prev = [[ArrowView alloc] initWithFrame:CGRectMake(self.container.frame.size.width-20, kHorizontalNodeHeight/2, kHorizontalMoveDistance-kHorizontalNodeWidth +20, kHorizontalNodeHeight/3) andArrowType:ARROW_TYPE_FILLED];
+            [prev.layer setAnchorPoint:CGPointMake(0.5, 0.5)];
+            
+            // Rotate 90 degrees
+            CGAffineTransform rotationTransform = CGAffineTransformIdentity;
+            rotationTransform = CGAffineTransformRotate(rotationTransform, M_PI);
+            prev.transform = rotationTransform;
+            [self addSubview:prev];
+        }
+
+        
+        [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width+next.frame.size.width+kHorizontalMoveDistance-25, self.frame.size.height)];
+        
+        
+    }
+
 }
 -(void)moveRight{
     [UIView beginAnimations:@"MoveRight" context:nil];

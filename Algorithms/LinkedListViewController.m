@@ -8,7 +8,7 @@
 
 #import "LinkedListViewController.h"
 #import "LinkedList.h"
-#import "LinkedListView.h"
+#import "NodeView.h"
 @interface LinkedListViewController ()
 @property (nonatomic, strong) LinkedList* linkedList;
 
@@ -46,17 +46,22 @@
 {
 	return YES;
 }
-
+-(void)refresh{
+    [self.headView removeFromSuperview];
+    if ([self.linkedList head]) {
+        self.headView = [[NodeView alloc] initWithNode:self.linkedList.head andDirection:NODE_DIRECTION_RIGHT];
+        [self.detailView addSubview:self.headView];
+        [self.detailView setContentSize:CGSizeMake(self.headView.frame.size.width, self.headView.frame.size.height) ];
+    }
+}
 - (IBAction)addValue:(id)sender {
     [self.linkedList addValueToFront:[self.insertValueField text] ];
-    [self.linkedList traverse];
-    [self.detailView addNode:self.linkedList.head];
+    [self refresh];
 }
 
 - (IBAction)removeFront:(id)sender {
     [self.linkedList removeFront];
-    [self.detailView removeNode];
-    [self.linkedList traverse];
+    [self refresh];
 
     
 }

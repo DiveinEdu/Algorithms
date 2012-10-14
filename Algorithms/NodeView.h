@@ -28,6 +28,7 @@ typedef enum{
 
 @class ListNode;
 @interface NodeView : UIView
+@property (nonatomic, strong)UIView* container;
 @property ( nonatomic, weak)ListNode* node;
 
 -(id)initWithNode:(ListNode*)node andDirection:(NODE_DIRECTION)direction;

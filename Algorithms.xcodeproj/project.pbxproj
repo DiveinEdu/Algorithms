@@ -16,7 +16,6 @@
 		09038F3D16125AFD00D4E530 /* MergeSort.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09038F35161252C500D4E530 /* MergeSort.h */; };
 		09038F3E16125B0000D4E530 /* MergeSort.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09038F36161252C500D4E530 /* MergeSort.m */; };
 		09038F4116125B2200D4E530 /* DoublyLinkedListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F4016125B2100D4E530 /* DoublyLinkedListViewController.m */; };
-		09038F4416125B4100D4E530 /* DoublyLinkedListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F4316125B4100D4E530 /* DoublyLinkedListView.m */; };
 		09038F4716125F2300D4E530 /* TreeNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F4616125F2300D4E530 /* TreeNode.m */; };
 		09038F4A16125F7A00D4E530 /* Node.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09038F4816125F7900D4E530 /* Node.h */; };
 		09038F4B16125F7A00D4E530 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F4916125F7900D4E530 /* Node.m */; };
@@ -90,7 +89,6 @@
 		09C8ED771618D67F0076E2D0 /* HeapNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA27501617DE1700738463 /* HeapNode.m */; };
 		09E9573A1609500500F5D573 /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E957391609500500F5D573 /* StackViewController.m */; };
 		09E9573D1609501800F5D573 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
-		09E957401609525900F5D573 /* LinkedListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573F1609525900F5D573 /* LinkedListView.m */; };
 		09F0D3F4160CEB9600CF657E /* arrow_right_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F0160CEB9600CF657E /* arrow_right_filled.png */; };
 		09F0D3F5160CEB9600CF657E /* arrow_right_filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F1160CEB9600CF657E /* arrow_right_filled@2x.png */; };
 		09F0D3F7160CEB9600CF657E /* arrow_right@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F3160CEB9600CF657E /* arrow_right@2x.png */; };
@@ -176,8 +174,6 @@
 		09038F391612554D00D4E530 /* MergeSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeSortViewController.m; sourceTree = "<group>"; };
 		09038F3F16125B2100D4E530 /* DoublyLinkedListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoublyLinkedListViewController.h; sourceTree = "<group>"; };
 		09038F4016125B2100D4E530 /* DoublyLinkedListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoublyLinkedListViewController.m; sourceTree = "<group>"; };
-		09038F4216125B4100D4E530 /* DoublyLinkedListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoublyLinkedListView.h; sourceTree = "<group>"; };
-		09038F4316125B4100D4E530 /* DoublyLinkedListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoublyLinkedListView.m; sourceTree = "<group>"; };
 		09038F4516125F2200D4E530 /* TreeNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeNode.h; sourceTree = "<group>"; };
 		09038F4616125F2300D4E530 /* TreeNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeNode.m; sourceTree = "<group>"; };
 		09038F4816125F7900D4E530 /* Node.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = Node.h; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
@@ -273,8 +269,6 @@
 		09E957391609500500F5D573 /* StackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
 		09E9573B1609501800F5D573 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		09E9573C1609501800F5D573 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
-		09E9573E1609525900F5D573 /* LinkedListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinkedListView.h; sourceTree = "<group>"; };
-		09E9573F1609525900F5D573 /* LinkedListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinkedListView.m; sourceTree = "<group>"; };
 		09F0D3F0160CEB9600CF657E /* arrow_right_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right_filled.png; sourceTree = "<group>"; };
 		09F0D3F1160CEB9600CF657E /* arrow_right_filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right_filled@2x.png"; sourceTree = "<group>"; };
 		09F0D3F3160CEB9600CF657E /* arrow_right@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_right@2x.png"; sourceTree = "<group>"; };
@@ -389,16 +383,8 @@
 		0937E32416120FF60044040F /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
-				09ADEEA4161CE9A100BD0CAE /* TreeViewController.h */,
-				09ADEEA5161CE9A200BD0CAE /* TreeViewController.m */,
-				09BAD66B1620BC8300ACCFF8 /* Trie */,
-				09B8183B161D25AB004B026C /* AVLTree */,
-				09ADEE93161CDBDA00BD0CAE /* RedBlackTree */,
-				09FA27441617D33400738463 /* Heap */,
-				09B33F9F16128C29000FF89F /* BinarySearchTree */,
-				09F152611612210A0088A374 /* DoublyLinkedList */,
-				09E9573616094FE300F5D573 /* Stack */,
-				095434491606D5BA001D3E5D /* LinkedList */,
+				09B4CE0B1629F54200145317 /* Tree */,
+				09B4CE0C1629F54C00145317 /* List */,
 			);
 			name = "Data Structures";
 			sourceTree = "<group>";
@@ -541,8 +527,6 @@
 			children = (
 				0954344A1606D5F3001D3E5D /* LinkedListViewController.h */,
 				0954344B1606D5F3001D3E5D /* LinkedListViewController.m */,
-				09E9573E1609525900F5D573 /* LinkedListView.h */,
-				09E9573F1609525900F5D573 /* LinkedListView.m */,
 				0954344D1606D875001D3E5D /* LinkedList.h */,
 				0954344E1606D875001D3E5D /* LinkedList.m */,
 			);
@@ -571,6 +555,30 @@
 				09B33FA216128C58000FF89F /* BinarySearchTree.m */,
 			);
 			name = BinarySearchTree;
+			sourceTree = "<group>";
+		};
+		09B4CE0B1629F54200145317 /* Tree */ = {
+			isa = PBXGroup;
+			children = (
+				09ADEEA4161CE9A100BD0CAE /* TreeViewController.h */,
+				09ADEEA5161CE9A200BD0CAE /* TreeViewController.m */,
+				09BAD66B1620BC8300ACCFF8 /* Trie */,
+				09B8183B161D25AB004B026C /* AVLTree */,
+				09ADEE93161CDBDA00BD0CAE /* RedBlackTree */,
+				09FA27441617D33400738463 /* Heap */,
+				09B33F9F16128C29000FF89F /* BinarySearchTree */,
+			);
+			name = Tree;
+			sourceTree = "<group>";
+		};
+		09B4CE0C1629F54C00145317 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				09F152611612210A0088A374 /* DoublyLinkedList */,
+				09E9573616094FE300F5D573 /* Stack */,
+				095434491606D5BA001D3E5D /* LinkedList */,
+			);
+			name = List;
 			sourceTree = "<group>";
 		};
 		09B8183B161D25AB004B026C /* AVLTree */ = {
@@ -616,8 +624,6 @@
 			children = (
 				09038F3F16125B2100D4E530 /* DoublyLinkedListViewController.h */,
 				09038F4016125B2100D4E530 /* DoublyLinkedListViewController.m */,
-				09038F4216125B4100D4E530 /* DoublyLinkedListView.h */,
-				09038F4316125B4100D4E530 /* DoublyLinkedListView.m */,
 				09F1525D161221040088A374 /* DoublyLinkedList.h */,
 				09F1525E161221040088A374 /* DoublyLinkedList.m */,
 			);
@@ -775,7 +781,6 @@
 				095434521606D895001D3E5D /* ListNode.m in Sources */,
 				09E9573A1609500500F5D573 /* StackViewController.m in Sources */,
 				09E9573D1609501800F5D573 /* Stack.m in Sources */,
-				09E957401609525900F5D573 /* LinkedListView.m in Sources */,
 				094B746D160A6F3200C47C3E /* ArrowView.m in Sources */,
 				09F0D403160CF04A00CF657E /* DataViewController.m in Sources */,
 				09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */,
@@ -790,7 +795,6 @@
 				09038F37161252C500D4E530 /* MergeSort.m in Sources */,
 				09038F3A1612554D00D4E530 /* MergeSortViewController.m in Sources */,
 				09038F4116125B2200D4E530 /* DoublyLinkedListViewController.m in Sources */,
-				09038F4416125B4100D4E530 /* DoublyLinkedListView.m in Sources */,
 				09038F4716125F2300D4E530 /* TreeNode.m in Sources */,
 				09038F4B16125F7A00D4E530 /* Node.m in Sources */,
 				09038F501612615300D4E530 /* RelatedFile.m in Sources */,

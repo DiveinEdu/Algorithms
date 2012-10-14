@@ -8,7 +8,8 @@
 
 #import "DoublyLinkedListViewController.h"
 #import "DoublyLinkedList.h"
-#import "DoublyLinkedListView.h"
+#import "NodeView.h"
+
 @interface DoublyLinkedListViewController ()
 
 @end
@@ -42,15 +43,22 @@
     [self setInputField:nil];
     [super viewDidUnload];
 }
+-(void)refresh{
+    [self.headView removeFromSuperview];
+    if ([self.doublyLinkedList head]) {
+        self.headView = [[NodeView alloc] initWithNode:self.doublyLinkedList.head andDirection:NODE_DIRECTION_RIGHT];
+        [self.listView addSubview:self.headView];
+        [self.listView setContentSize:CGSizeMake(self.headView.frame.size.width, self.headView.frame.size.height) ];
+    }
+}
 - (IBAction)addFront:(id)sender {
     [self.doublyLinkedList addValueToFront:[self.inputField text] ];
-    [self.doublyLinkedList traverse];
-    [self.listView addNode:self.doublyLinkedList.head];
+    [self refresh];
+
 }
 
 -(IBAction)addBack:(id)sender{
     [self.doublyLinkedList addValueToBack:[self.inputField text] ];
-    [self.doublyLinkedList traverse];
-    [self.listView addNode:self.doublyLinkedList.head];
+    [self refresh];
 }
 @end
