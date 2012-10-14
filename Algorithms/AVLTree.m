@@ -67,7 +67,7 @@
 -(AVLNode*)rebalance:(AVLNode*)newNode parentNode:(AVLNode*)node{
     int balance = [node balance];
     // Left Left Case
-    if (!balance > 1 && [newNode compare:node.left]==NSOrderedAscending)
+    if (balance > 1 && [newNode compare:node.left]==NSOrderedAscending)
         return [self rightRotate:node];
     
     // Right Right Case

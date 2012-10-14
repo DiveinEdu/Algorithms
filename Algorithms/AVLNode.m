@@ -28,14 +28,15 @@
     if (self.left == nil && self.right == nil) {
         return 1;
     }
-    NSInteger left = self.left==nil? 0:[(AVLNode*)self.left height];
-    NSInteger right = self.right==nil? 0:[(AVLNode*)self.right height];
+    NSInteger left = self.left == nil? 0:[(AVLNode*)self.left height];
+    NSInteger right = self.right == nil? 0:[(AVLNode*)self.right height];
     
     return MAX(left,right)+1;
 }
 -(NSInteger)balance{
-    
-    return [(AVLNode*)self.left height] - [((AVLNode*)self.right) height];
+    NSInteger left = [(AVLNode*)self.left height];
+    NSInteger right = [(AVLNode*)self.right height];
+    return left - right;
 
 }
 
