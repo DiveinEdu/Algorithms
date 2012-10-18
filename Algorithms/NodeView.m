@@ -65,23 +65,50 @@
         NodeView* next = [[NodeView alloc] initWithNode:self.node.next andDirection:direction];
         [self addSubview:next];
 
-        [next setFrame:CGRectMake(kHorizontalMoveDistance, 0, next.frame.size.width, next.frame.size.height)];
-        
-        ArrowView* arrow = [[ArrowView alloc] initWithFrame:CGRectMake(self.frame.size.width-15, kHorizontalNodeHeight/4, kHorizontalMoveDistance-kHorizontalNodeWidth +15, kHorizontalNodeHeight/3) andArrowType:ARROW_TYPE_FILLED];
+    
+        ArrowView* arrow = nil;
+        switch (direction) {
+            case NODE_DIRECTION_RIGHT:
+                arrow = [[ArrowView alloc] initWithFrame:CGRectMake(self.frame.size.width-15, kHorizontalNodeHeight/4, kHorizontalMoveDistance-kHorizontalNodeWidth +15, kHorizontalNodeHeight/3) andArrowType:ARROW_TYPE_FILLED];
+                [next setFrame:CGRectMake(kHorizontalMoveDistance, 0, next.frame.size.width, next.frame.size.height)];
+
+                break;
+            case NODE_DIRECTION_DOWN:
+                [next setFrame:CGRectMake(0, kVerticalMoveDistance, next.frame.size.width, next.frame.size.height)];
+                
+                arrow = [[ArrowView alloc] initWithFrame:CGRectMake(0, kVerticalNodeHeight-20, kVerticalMoveDistance-kVerticalNodeHeight+14, 15) andArrowType:ARROW_TYPE_FILLED];
+                [arrow.layer setAnchorPoint:CGPointMake(0, 1)];
+                
+                // Rotate 90 degrees
+                CGAffineTransform rotationTransform = CGAffineTransformIdentity;
+                rotationTransform = CGAffineTransformRotate(rotationTransform, M_PI_2);
+                arrow.transform = rotationTransform;
+            default:
+                break;
+        }
         [self addSubview:arrow];
         if (self.node.next.previous) {
             ArrowView* prev = [[ArrowView alloc] initWithFrame:CGRectMake(self.container.frame.size.width-20, kHorizontalNodeHeight/2, kHorizontalMoveDistance-kHorizontalNodeWidth +20, kHorizontalNodeHeight/3) andArrowType:ARROW_TYPE_FILLED];
             [prev.layer setAnchorPoint:CGPointMake(0.5, 0.5)];
             
-            // Rotate 90 degrees
+            // Rotate 180 degrees
             CGAffineTransform rotationTransform = CGAffineTransformIdentity;
             rotationTransform = CGAffineTransformRotate(rotationTransform, M_PI);
             prev.transform = rotationTransform;
             [self addSubview:prev];
         }
 
-        
-        [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width+next.frame.size.width+kHorizontalMoveDistance-25, self.frame.size.height)];
+        switch (direction) {
+            case NODE_DIRECTION_RIGHT:
+                [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width+next.frame.size.width+kHorizontalMoveDistance-25, self.frame.size.height)];
+                break;
+            case NODE_DIRECTION_DOWN:
+                [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.frame.size.height+kVerticalMoveDistance+25+next.frame.size.height)];
+                break;
+            default:
+                break;
+        }
+
         
         
     }

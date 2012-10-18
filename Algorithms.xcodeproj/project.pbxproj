@@ -83,7 +83,6 @@
 		09BAD6751620BE3200ACCFF8 /* TrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD6741620BE3200ACCFF8 /* TrieNode.m */; };
 		09BAD6781620C60F00ACCFF8 /* TrieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD6771620C60F00ACCFF8 /* TrieView.m */; };
 		09BAD67E1620D76100ACCFF8 /* BubbleSortSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD67D1620D76100ACCFF8 /* BubbleSortSub.m */; };
-		09C0709C1611579C001F4C12 /* StackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C0709B1611579C001F4C12 /* StackView.m */; };
 		09C0709E161157FF001F4C12 /* Stack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573B1609501800F5D573 /* Stack.h */; };
 		09C0709F16115802001F4C12 /* Stack.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
 		09C070A516115BDD001F4C12 /* NodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C070A416115BDD001F4C12 /* NodeView.m */; };
@@ -275,8 +274,6 @@
 		09BAD6771620C60F00ACCFF8 /* TrieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrieView.m; sourceTree = "<group>"; };
 		09BAD67C1620D76100ACCFF8 /* BubbleSortSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSortSub.h; sourceTree = "<group>"; };
 		09BAD67D1620D76100ACCFF8 /* BubbleSortSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortSub.m; sourceTree = "<group>"; };
-		09C0709A1611579C001F4C12 /* StackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackView.h; sourceTree = "<group>"; };
-		09C0709B1611579C001F4C12 /* StackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackView.m; sourceTree = "<group>"; };
 		09C070A316115BDD001F4C12 /* NodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeView.h; sourceTree = "<group>"; };
 		09C070A416115BDD001F4C12 /* NodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeView.m; sourceTree = "<group>"; };
 		09E957381609500500F5D573 /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
@@ -637,8 +634,6 @@
 			children = (
 				09E957381609500500F5D573 /* StackViewController.h */,
 				09E957391609500500F5D573 /* StackViewController.m */,
-				09C0709A1611579C001F4C12 /* StackView.h */,
-				09C0709B1611579C001F4C12 /* StackView.m */,
 				09E9573B1609501800F5D573 /* Stack.h */,
 				09E9573C1609501800F5D573 /* Stack.m */,
 			);
@@ -813,7 +808,6 @@
 				091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */,
 				09006219160FEB3100360BFE /* DataManager.m in Sources */,
 				09006235160FEE8400360BFE /* Category.m in Sources */,
-				09C0709C1611579C001F4C12 /* StackView.m in Sources */,
 				09C070A516115BDD001F4C12 /* NodeView.m in Sources */,
 				0937E3281612106C0044040F /* BubbleSortViewController.m in Sources */,
 				0937E32D161210B00044040F /* BubbleSort.m in Sources */,

@@ -23,14 +23,18 @@
 -(void)push:(ListNode*)node{
     node.next=self.top;
     self.top=node;
+    size++;
 }
 -(ListNode*)pop{
     ListNode* oldTop = self.top;
     self.top=[self.top next];
+    size--;
     return oldTop;
 }
 -(ListNode*)peek{
     return self.top;
 }
-
+-(int)size{
+    return size;
+}
 @end

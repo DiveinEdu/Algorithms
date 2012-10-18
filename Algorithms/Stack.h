@@ -15,5 +15,5 @@
 -(void)push:(ListNode*)node;
 -(ListNode*)pop;
 -(ListNode*)peek;
-
+-(int)size;
 @end

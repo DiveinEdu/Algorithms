@@ -7,7 +7,7 @@
 //
 
 #import "StackViewController.h"
-#import "StackView.h"
+#import "NodeView.h"
 #import "Stack.h"
 #import "ListNode.h"
 @interface StackViewController ()
@@ -43,14 +43,22 @@
     [self setStackView:nil];
     [super viewDidUnload];
 }
+-(void)refresh{
+    [self.headView removeFromSuperview];
+    if ([stack size]) {
+        self.headView = [[NodeView alloc] initWithNode:stack.peek andDirection:NODE_DIRECTION_DOWN];
+        [self.stackView addSubview:self.headView];
+        [self.stackView setContentSize:CGSizeMake(self.headView.frame.size.width, self.headView.frame.size.height) ];
+    }
+}
 - (IBAction)pushValue:(id)sender {
     [stack addValue:[ self.valueField text]];
-    [self.stackView addNode:[stack peek]];
+    [self refresh];
 }
 
 - (IBAction)popValue:(id)sender {
     [stack pop];
-    [self.stackView removeNode];
+    [self refresh];
 }
 
 - (IBAction)peekValue:(id)sender {
