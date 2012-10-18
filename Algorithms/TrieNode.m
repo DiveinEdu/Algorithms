@@ -41,6 +41,9 @@
     if ([value length]>=2) {
         [child addValue:[value substringFromIndex:1]];
     }
+    else{
+        [child setIsTerminal:YES];
+    }
 }
 -(void)addChild:(TrieNode *)node{
     if (![self.children containsObject:node]) {
@@ -85,6 +88,9 @@
         for (NSString* prefix in array) {
             [final addObject:[NSString stringWithFormat:@"%c%@",self.value,prefix]];
         }
+    }
+    if (self.isTerminal) {
+        [final addObject:[NSString stringWithFormat:@"%c",self.value]];
     }
     return final;
 }

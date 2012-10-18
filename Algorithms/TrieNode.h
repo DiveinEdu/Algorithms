@@ -11,6 +11,7 @@
 @interface TrieNode : NSObject
 @property (nonatomic) char value;
 @property (nonatomic, strong)NSMutableArray* children;
+@property (nonatomic) BOOL isTerminal;
 -(id)initForRoot;
 -(id)initWithValue:(char)value;
 -(void)addChild:(TrieNode*)node;
