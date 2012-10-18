@@ -2,7 +2,7 @@
 //  Heap.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 9/29/12.
+//  Created by Carl Wieland on 9/29/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 

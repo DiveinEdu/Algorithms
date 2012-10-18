@@ -2,7 +2,7 @@
 //  Node.h
 //  
 //
-//  Created by Carl & Hannah Wieland on 9/25/12.
+//  Created by Carl Wieland on 9/25/12.
 //
 //
 

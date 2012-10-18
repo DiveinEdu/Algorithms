@@ -2,7 +2,7 @@
 //  TrieViewController.h
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 10/6/12.
+//  Created by Carl Wieland on 10/6/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 

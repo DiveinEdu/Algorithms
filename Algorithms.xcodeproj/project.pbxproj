@@ -199,12 +199,12 @@
 		0937E3271612106C0044040F /* BubbleSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortViewController.m; sourceTree = "<group>"; };
 		0937E32B161210B00044040F /* BubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
 		0937E32C161210B00044040F /* BubbleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
-		09427AC116307A77003534CA /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
-		09427AC416307A9E003534CA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
-		09427AC816307DA7003534CA /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
-		09427ACA16307DAE003534CA /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
-		09427ACC16307DBC003534CA /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		09427AC116307A77003534CA /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-144.png"; path = "../Icon-144.png"; sourceTree = "<group>"; };
+		09427AC416307A9E003534CA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
+		09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		09427AC816307DA7003534CA /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait@2x~ipad.png"; path = "../Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		09427ACA16307DAE003534CA /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		09427ACC16307DBC003534CA /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		09427ACE163081C3003534CA /* Algorithms.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Algorithms.entitlements; sourceTree = "<group>"; };
 		094927021618CBEE00012500 /* HeapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeapView.h; sourceTree = "<group>"; };
 		094927031618CBEE00012500 /* HeapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapView.m; sourceTree = "<group>"; };
@@ -462,12 +462,6 @@
 		095433FC1606D232001D3E5D = {
 			isa = PBXGroup;
 			children = (
-				09427ACC16307DBC003534CA /* Default-Landscape~ipad.png */,
-				09427ACA16307DAE003534CA /* Default-Portrait~ipad.png */,
-				09427AC816307DA7003534CA /* Default-Portrait@2x~ipad.png */,
-				09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */,
-				09427AC416307A9E003534CA /* Icon-72.png */,
-				09427AC116307A77003534CA /* Icon-144.png */,
 				095434131606D232001D3E5D /* Algorithms */,
 				095434381606D233001D3E5D /* AlgorithmsTests */,
 				0954340A1606D232001D3E5D /* Frameworks */,
@@ -525,6 +519,12 @@
 		095434141606D232001D3E5D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				09427ACC16307DBC003534CA /* Default-Landscape~ipad.png */,
+				09427ACA16307DAE003534CA /* Default-Portrait~ipad.png */,
+				09427AC816307DA7003534CA /* Default-Portrait@2x~ipad.png */,
+				09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */,
+				09427AC416307A9E003534CA /* Icon-72.png */,
+				09427AC116307A77003534CA /* Icon-144.png */,
 				09F929C9160EB4F400FC497A /* prettify */,
 				094B7467160A6EA500C47C3E /* Images */,
 				095434151606D232001D3E5D /* Algorithms-Info.plist */,

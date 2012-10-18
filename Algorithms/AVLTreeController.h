@@ -2,7 +2,7 @@
 //  AVLTreeController.h
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 10/3/12.
+//  Created by Carl Wieland on 10/3/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
