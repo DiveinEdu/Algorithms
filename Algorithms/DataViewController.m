@@ -9,6 +9,7 @@
 #import "DataViewController.h"
 #import "CodePopoverController.h"
 #import "Algorithm.h"
+#import "WikiViewController.h"
 
 @interface DataViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -20,6 +21,11 @@
 {
     UIBarButtonItem* codeButton = [[UIBarButtonItem alloc]initWithTitle:@"Code" style:UIBarButtonItemStylePlain target:self action:@selector(loadCode:)];
     [self.navigationItem setRightBarButtonItem:codeButton];
+    [self.navigationItem setLeftBarButtonItem:nil];
+    if ([self.algorithm wikiLink]) {
+        UIBarButtonItem* wikiButton = [[UIBarButtonItem alloc]initWithTitle:@"Wiki" style:UIBarButtonItemStylePlain target:self action:@selector(showWiki:)];
+        [self.navigationItem setLeftBarButtonItem:wikiButton];
+    }
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -51,7 +57,16 @@
 }
 
 
-
+-(IBAction)showWiki:(id)sender{
+    WikiViewController* wiki = [self.storyboard instantiateViewControllerWithIdentifier:@"wikiView"];
+    [wiki setUrl:[self.algorithm wikiURL]];
+    self.codePickerPopover = [[UIPopoverController alloc]
+                              initWithContentViewController:wiki];
+    
+    [self.codePickerPopover presentPopoverFromBarButtonItem:sender
+                                   permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    
+}
 
 
 

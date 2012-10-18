@@ -29,6 +29,15 @@
     
     return toReturn;
 }
+-(NSString*)getDefaultCSS{
+    NSString* def = [[NSUserDefaults standardUserDefaults] objectForKey:@"codeStyle"];
+    if ([def isEqualToString:@"Desert"] || [def isEqualToString:@"Sunburst"]) {
+        return [[def lowercaseString] stringByAppendingString:@".css"];
+    }
+    else{
+        return @"sons-of-obsidian.css";
+    }
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -40,11 +49,11 @@
         NSString* code = [NSString stringWithContentsOfFile:[self.file filePath] encoding:NSUTF8StringEncoding error:nil];
         
         NSString* htmlPage = [NSString stringWithFormat:@"<html>\
-                              <link href=\"./js/sons-of-obsidian.css\" type=\"text/css\" rel=\"stylesheet\" />\
+                              <link href=\"./js/%@\" type=\"text/css\" rel=\"stylesheet\" />\
                               <script type=\"text/javascript\" src=\"./js/prettify.js\"></script>\
                               <body onload=\"prettyPrint()\">\
                               <pre class=\"prettyprint\">%@</pre>\
-                              </body></html>",[self htmlifyString:code]];
+                              </body></html>",[self getDefaultCSS],[self htmlifyString:code]];
         [self.codeView loadHTMLString:htmlPage  baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
         [self.file setFileData:htmlPage];
     }

@@ -29,14 +29,17 @@
         NSArray* categories = [jsonDict objectForKey:@"categories"];
         Category* algo = nil;
         Category* data = nil;
+        Category* set = nil;
         for (NSDictionary* dict in categories) {
             Category* cat = [NSEntityDescription insertNewObjectForEntityForName:@"Category"
                                                           inManagedObjectContext:self.managedObjectContext];
             [cat setValuesForKeysWithDictionary:dict];
             if ([[cat name] isEqualToString:@"Algorithms"])
                 algo = cat;
-            else
+            else if ([[cat name] isEqualToString:@"Data Structures"])
                 data = cat;
+            else if ([[cat name] isEqualToString:@"Settings"])
+                set = cat;
             
         }
         for (NSDictionary* dict in [jsonDict objectForKey:@"data"]) {
@@ -53,7 +56,19 @@
             [newAlg setCategory:algo];
             [self setUpFilePathsFor:newAlg inDictionary:dict];            
         }
-    
+        for (NSDictionary* dict in [jsonDict objectForKey:@"settings"]) {
+            Algorithm* newAlg = [NSEntityDescription insertNewObjectForEntityForName:@"Algorithm"
+                                                              inManagedObjectContext:self.managedObjectContext];
+            [newAlg setCategory:set];
+            [newAlg setValuesForKeysWithDictionary:dict];
+
+        }
+        NSMutableArray* codeStyles = [NSMutableArray new];
+        for (NSString* val in [jsonDict objectForKey:@"codeStyles"]) {
+            [codeStyles addObject:val];
+        }
+        [[NSUserDefaults standardUserDefaults] setObject:codeStyles forKey:@"codeStyles"];
+        [[NSUserDefaults standardUserDefaults] setObject:[codeStyles objectAtIndex:0] forKey:@"codeStyle"];
     }
     return self;
     

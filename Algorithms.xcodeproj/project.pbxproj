@@ -53,7 +53,14 @@
 		09584E12160E4FD000AF8427 /* ListNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095434501606D895001D3E5D /* ListNode.h */; };
 		09584E13160E4FD200AF8427 /* ListNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095434511606D895001D3E5D /* ListNode.m */; };
 		09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09584E15160E55B000AF8427 /* CodePopoverController.m */; };
+		09617168162FBD9700B20431 /* AVLNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B81843161D279F004B026C /* AVLNode.h */; };
+		09617169162FBD9700B20431 /* AVLNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B81844161D279F004B026C /* AVLNode.m */; };
+		0961716A162FBD9700B20431 /* AVLTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B81840161D25E2004B026C /* AVLTree.h */; };
+		0961716B162FBD9700B20431 /* AVLTree.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B81841161D25E2004B026C /* AVLTree.m */; };
+		0961716F162FBF4B00B20431 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0961716E162FBF4B00B20431 /* Algorithm.m */; };
+		09617173162FC1BA00B20431 /* WikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09617172162FC1BA00B20431 /* WikiViewController.m */; };
 		096912C9160A6BE600E5AFB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096912C8160A6BE600E5AFB7 /* QuartzCore.framework */; };
+		09745B39162A6FD90031F65D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09745B38162A6FD90031F65D /* SettingsViewController.m */; };
 		099EC975160FDC3C00FD136A /* Objects.json in Resources */ = {isa = PBXBuildFile; fileRef = 099EC974160FDC3C00FD136A /* Objects.json */; };
 		09ADEE97161CDBF300BD0CAE /* RedBlackTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */; };
 		09ADEE9A161CDC0400BD0CAE /* RedBlackTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE99161CDC0400BD0CAE /* RedBlackTree.m */; };
@@ -75,7 +82,6 @@
 		09BAD6721620BCB800ACCFF8 /* Trie.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD6711620BCB800ACCFF8 /* Trie.m */; };
 		09BAD6751620BE3200ACCFF8 /* TrieNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD6741620BE3200ACCFF8 /* TrieNode.m */; };
 		09BAD6781620C60F00ACCFF8 /* TrieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD6771620C60F00ACCFF8 /* TrieView.m */; };
-		09BAD67B1620C7AA00ACCFF8 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD67A1620C7AA00ACCFF8 /* Algorithm.m */; };
 		09BAD67E1620D76100ACCFF8 /* BubbleSortSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 09BAD67D1620D76100ACCFF8 /* BubbleSortSub.m */; };
 		09C0709C1611579C001F4C12 /* StackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09C0709B1611579C001F4C12 /* StackView.m */; };
 		09C0709E161157FF001F4C12 /* Stack.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E9573B1609501800F5D573 /* Stack.h */; };
@@ -122,6 +128,10 @@
 			dstPath = code;
 			dstSubfolderSpec = 7;
 			files = (
+				09617168162FBD9700B20431 /* AVLNode.h in CopyFiles */,
+				09617169162FBD9700B20431 /* AVLNode.m in CopyFiles */,
+				0961716A162FBD9700B20431 /* AVLTree.h in CopyFiles */,
+				0961716B162FBD9700B20431 /* AVLTree.m in CopyFiles */,
 				09C8ED711618D66A0076E2D0 /* Heap.h in CopyFiles */,
 				09C8ED731618D66D0076E2D0 /* Heap.m in CopyFiles */,
 				09C8ED741618D6750076E2D0 /* ArrayHeap.h in CopyFiles */,
@@ -220,7 +230,13 @@
 		095434511606D895001D3E5D /* ListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListNode.m; sourceTree = "<group>"; };
 		09584E14160E55B000AF8427 /* CodePopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodePopoverController.h; sourceTree = "<group>"; };
 		09584E15160E55B000AF8427 /* CodePopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodePopoverController.m; sourceTree = "<group>"; };
+		0961716D162FBF4B00B20431 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
+		0961716E162FBF4B00B20431 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
+		09617171162FC1BA00B20431 /* WikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiViewController.h; sourceTree = "<group>"; };
+		09617172162FC1BA00B20431 /* WikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiViewController.m; sourceTree = "<group>"; };
 		096912C8160A6BE600E5AFB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		09745B37162A6FD90031F65D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		09745B38162A6FD90031F65D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		099EC974160FDC3C00FD136A /* Objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Objects.json; sourceTree = "<group>"; };
 		09ADEE95161CDBF300BD0CAE /* RedBlackTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBlackTreeViewController.h; sourceTree = "<group>"; };
 		09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBlackTreeViewController.m; sourceTree = "<group>"; };
@@ -257,8 +273,6 @@
 		09BAD6741620BE3200ACCFF8 /* TrieNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrieNode.m; sourceTree = "<group>"; };
 		09BAD6761620C60F00ACCFF8 /* TrieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrieView.h; sourceTree = "<group>"; };
 		09BAD6771620C60F00ACCFF8 /* TrieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrieView.m; sourceTree = "<group>"; };
-		09BAD6791620C7AA00ACCFF8 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
-		09BAD67A1620C7AA00ACCFF8 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 		09BAD67C1620D76100ACCFF8 /* BubbleSortSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSortSub.h; sourceTree = "<group>"; };
 		09BAD67D1620D76100ACCFF8 /* BubbleSortSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortSub.m; sourceTree = "<group>"; };
 		09C0709A1611579C001F4C12 /* StackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackView.h; sourceTree = "<group>"; };
@@ -321,9 +335,9 @@
 		09006236160FEE8B00360BFE /* Core Data Stack */ = {
 			isa = PBXGroup;
 			children = (
+				0961716D162FBF4B00B20431 /* Algorithm.h */,
+				0961716E162FBF4B00B20431 /* Algorithm.m */,
 				095434221606D232001D3E5D /* Algorithms.xcdatamodeld */,
-				09BAD6791620C7AA00ACCFF8 /* Algorithm.h */,
-				09BAD67A1620C7AA00ACCFF8 /* Algorithm.m */,
 				09038F4E1612615300D4E530 /* RelatedFile.h */,
 				09038F4F1612615300D4E530 /* RelatedFile.m */,
 				09006232160FEE8400360BFE /* Category.h */,
@@ -477,12 +491,15 @@
 				0954341F1606D232001D3E5D /* MainStoryboard.storyboard */,
 				095434251606D232001D3E5D /* MasterViewController.h */,
 				095434261606D232001D3E5D /* MasterViewController.m */,
+				09745B37162A6FD90031F65D /* SettingsViewController.h */,
+				09745B38162A6FD90031F65D /* SettingsViewController.m */,
 				09F0D401160CF04A00CF657E /* DataViewController.h */,
 				09F0D402160CF04A00CF657E /* DataViewController.m */,
 				09006236160FEE8B00360BFE /* Core Data Stack */,
 				09038F4D1612603400D4E530 /* Node Types */,
 				0937E325161210100044040F /* Auxilary views */,
 				0937E32216120FE10044040F /* CodeViews */,
+				09617170162FC15D00B20431 /* Wiki View */,
 				0937E32416120FF60044040F /* Data Structures */,
 				0937E32A1612107C0044040F /* Algorithms */,
 				095434141606D232001D3E5D /* Supporting Files */,
@@ -531,6 +548,15 @@
 				0954344E1606D875001D3E5D /* LinkedList.m */,
 			);
 			name = LinkedList;
+			sourceTree = "<group>";
+		};
+		09617170162FC15D00B20431 /* Wiki View */ = {
+			isa = PBXGroup;
+			children = (
+				09617171162FC1BA00B20431 /* WikiViewController.h */,
+				09617172162FC1BA00B20431 /* WikiViewController.m */,
+			);
+			name = "Wiki View";
 			sourceTree = "<group>";
 		};
 		09ADEE93161CDBDA00BD0CAE /* RedBlackTree */ = {
@@ -818,10 +844,12 @@
 				09BAD6721620BCB800ACCFF8 /* Trie.m in Sources */,
 				09BAD6751620BE3200ACCFF8 /* TrieNode.m in Sources */,
 				09BAD6781620C60F00ACCFF8 /* TrieView.m in Sources */,
-				09BAD67B1620C7AA00ACCFF8 /* Algorithm.m in Sources */,
 				09BAD67E1620D76100ACCFF8 /* BubbleSortSub.m in Sources */,
 				09B4CDFF16291AEB00145317 /* MergeSortSub.m in Sources */,
 				09B4CE091629EFA000145317 /* SuggestionViewController.m in Sources */,
+				09745B39162A6FD90031F65D /* SettingsViewController.m in Sources */,
+				0961716F162FBF4B00B20431 /* Algorithm.m in Sources */,
+				09617173162FC1BA00B20431 /* WikiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

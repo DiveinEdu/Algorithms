@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1810" systemVersion="12C54" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C60" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Algorithm" representedClassName="Algorithm" syncable="YES">
+        <attribute name="enabled" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="viewID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wikiLink" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="category" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="algorithms" inverseEntity="Category" syncable="YES"/>
         <relationship name="relatedFiles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RelatedFile" inverseName="algorithm" inverseEntity="RelatedFile" syncable="YES"/>
     </entity>
@@ -17,7 +19,7 @@
         <relationship name="algorithm" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Algorithm" inverseName="relatedFiles" inverseEntity="Algorithm" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Algorithm" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Algorithm" positionX="0" positionY="0" width="128" height="133"/>
         <element name="Category" positionX="196" positionY="0" width="128" height="75"/>
         <element name="RelatedFile" positionX="-288" positionY="167" width="128" height="103"/>
     </elements>

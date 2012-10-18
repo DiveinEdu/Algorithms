@@ -2,7 +2,7 @@
 //  Algorithm.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 10/6/12.
+//  Created by Carl & Hannah Wieland on 10/17/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
@@ -15,10 +15,18 @@
 
 @dynamic name;
 @dynamic viewID;
+@dynamic enabled;
+@dynamic wikiLink;
 @dynamic category;
 @dynamic relatedFiles;
--(void)setValue:(id)value forUndefinedKey:(NSString *)key{
 
+-(NSURL*)wikiURL{
+    NSURL* url = [NSURL URLWithString:self.wikiLink];
+    return url;
+}
+
+-(void)setValue:(id)value forUndefinedKey:(NSString *)key{
+    
 }
 -(id)valueForUndefinedKey:(NSString *)key{
     return nil;

@@ -30,7 +30,6 @@
     }
     NSInteger left = self.left == nil? 0:[(AVLNode*)self.left height];
     NSInteger right = self.right == nil? 0:[(AVLNode*)self.right height];
-    
     return MAX(left,right)+1;
 }
 -(NSInteger)balance{

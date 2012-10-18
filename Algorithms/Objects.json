@@ -1,84 +1,111 @@
 {
     "categories":
     [
-                      {
-                        "name":"Algorithms",
-                      },
-                      {
-                        "name":"Data Structures",
-                      }
-    ],
+     {
+     "name":"Algorithms"
+     },
+     {
+     "name":"Data Structures"
+     },
+     {
+     "name":"Settings"
+     }
+     
+     ],
     "data":
     [
-        {
-            "name":"Linked List",
-            "viewID":"linkedList",
-            "related":["LinkedList","ListNode","Node"]
-        },
-        {
-            "name":"Stack",
-            "viewID":"stackView",
-            "related":["Stack","ListNode","Node"]
-        },
-        {
-            "name":"Doubly Linked List",
-            "viewID":"doublyLinkedList",
-            "related":["LinkedList","ListNode","Node","DoublyLinkedList"]
-        },
-        {
-             "name":"Binary Search Tree",
-             "viewID":"bstView",
-             "related":["BinarySearchTree","TreeNode","Node"]
-        },
-        {
-             "name":"Heap",
-             "viewID":"heapView",
-             "related":["Heap","ArrayHeap","Node","HeapNode"]
-        },
-                {
-             "name":"Graph",
-             "viewID":"notYet",
-             "related":["BinarySearchTree"]
-        },
-        {
-             "name":"AVL Tree",
-             "viewID":"avlTree",
-             "related":["AVLTree","AVLNode","Node","TreeNode"]
-        },
-        {
-             "name":"Red Black Tree",
-             "viewID":"redBlackTree",
-             "related":["RedBlackTree","TreeNode","Node","RedBlackNode"]
-        },
-        {
-             "name":"2 3 Tree",
-             "viewID":"notYet",
-             "related":["BinarySearchTree","TreeNode","Node"]
-        },
-        {
-             "name":"Skip List",
-             "viewID":"notYet",
-             "related":["BinarySearchTree","TreeNode","Node"]
-        },
-        {
-             "name":"Trie",
-             "viewID":"trieView",
-             "related":["Trie","TrieNode"]
-        }
+     {
+     "name":"Linked List",
+     "viewID":"linkedList",
+     "related":["LinkedList","ListNode","Node"],
+     "wikiLink":"http://wikipedia.org/wiki/Linked_list"
+     },
+     {
+     "name":"Stack",
+     "viewID":"stackView",
+     "related":["Stack","ListNode","Node"],
+     "wikiLink":"http://wikipedia.org/wiki/Stack_(abstract_data_type)"
+     },
+     {
+     "name":"Doubly Linked List",
+     "viewID":"doublyLinkedList",
+     "related":["LinkedList","ListNode","Node","DoublyLinkedList"],
+     "wikiLink":"http://wikipedia.org/wiki/Doubly_linked_list"
+     },
+     {
+     "name":"Binary Search Tree",
+     "viewID":"bstView",
+     "related":["BinarySearchTree","TreeNode","Node"],
+     "wikiLink":"http://wikipedia.org/wiki/Binary_search_tree"
+     },
+     {
+     "name":"Heap",
+     "viewID":"heapView",
+     "related":["Heap","ArrayHeap","Node","HeapNode"],
+     "wikiLink":"http://wikipedia.org/wiki/Heap_(data_structure)"
+     },
+     {
+     "name":"Graph",
+     "viewID":"notYet",
+     "related":["BinarySearchTree"]
+     },
+     {
+     "name":"AVL Tree",
+     "viewID":"avlTree",
+     "related":["AVLTree","AVLNode","Node","TreeNode"],
+     "wikiLink":"http://wikipedia.org/wiki/AVL_tree"
+     
+     },
+     {
+     "name":"Red Black Tree",
+     "viewID":"redBlackTree",
+     "related":["RedBlackTree","TreeNode","Node","RedBlackNode"],
+     "wikiLink":"http://wikipedia.org/wiki/Red–black_tree"
+     },
+     {
+     "name":"2 3 Tree",
+     "viewID":"notYet",
+     "related":["BinarySearchTree","TreeNode","Node"]
+     },
+     {
+     "name":"Skip List",
+     "viewID":"notYet",
+     "related":["BinarySearchTree","TreeNode","Node"]
+     },
+     {
+     "name":"Trie",
+     "viewID":"trieView",
+     "related":["Trie","TrieNode"],
+     "wikiLink":"http://wikipedia.org/wiki/Trie"
+     }
     ],
     "algorithms":
     [
-        {
-            "name":"Bubble Sort",
-            "viewID":"bubbleSort",
-            "related":["BubbleSort","BubbleSort"]
+     {
+     "name":"Bubble Sort",
+     "viewID":"bubbleSort",
+     "related":["BubbleSort","BubbleSort"],
+     "wikiLink":"http://wikipedia.org/wiki/Bubble_sort"
+     },
+     {
+     "name":"Merge Sort",
+     "viewID":"mergeSort",
+     "related":["MergeSort","MergeSort"],
+     "wikiLink":"http://wikipedia.org/wiki/Merge_sort"
+     }
+    ],
+    "settings":
+    [
+     {
+     "name":"Settings",
+     "viewID":"settingsView"
+     }
 
-
-        },
-         {
-         "name":"Merge Sort",
-         "viewID":"mergeSort",
-         "related":["MergeSort","MergeSort"]
-         },
-    ]
+     ],
+    "codeStyles":
+    [
+     "Desert",
+     "Sunburst",
+     "Sons of Obsidian"
+     ]
 }
