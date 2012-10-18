@@ -26,6 +26,10 @@
 		092F4D7016122D01003F4850 /* BubbleSort.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0937E32B161210B00044040F /* BubbleSort.h */; };
 		0937E3281612106C0044040F /* BubbleSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E3271612106C0044040F /* BubbleSortViewController.m */; };
 		0937E32D161210B00044040F /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E32C161210B00044040F /* BubbleSort.m */; };
+		09427AC216307A77003534CA /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427AC116307A77003534CA /* Icon-144.png */; };
+		09427AC516307A9E003534CA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427AC416307A9E003534CA /* Icon-72.png */; };
+		09427AC716307AC2003534CA /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */; };
+		09427ACD16307DBC003534CA /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427ACC16307DBC003534CA /* Default-Landscape~ipad.png */; };
 		094927041618CBEE00012500 /* HeapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094927031618CBEE00012500 /* HeapView.m */; };
 		094B746A160A6EF000C47C3E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 094B7469160A6EF000C47C3E /* arrow_right.png */; };
 		094B746D160A6F3200C47C3E /* ArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094B746C160A6F3200C47C3E /* ArrowView.m */; };
@@ -195,6 +199,13 @@
 		0937E3271612106C0044040F /* BubbleSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortViewController.m; sourceTree = "<group>"; };
 		0937E32B161210B00044040F /* BubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
 		0937E32C161210B00044040F /* BubbleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
+		09427AC116307A77003534CA /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
+		09427AC416307A9E003534CA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
+		09427AC816307DA7003534CA /* Default-Portrait@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait@2x~ipad.png"; sourceTree = "<group>"; };
+		09427ACA16307DAE003534CA /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Portrait~ipad.png"; sourceTree = "<group>"; };
+		09427ACC16307DBC003534CA /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-Landscape~ipad.png"; sourceTree = "<group>"; };
+		09427ACE163081C3003534CA /* Algorithms.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Algorithms.entitlements; sourceTree = "<group>"; };
 		094927021618CBEE00012500 /* HeapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeapView.h; sourceTree = "<group>"; };
 		094927031618CBEE00012500 /* HeapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapView.m; sourceTree = "<group>"; };
 		094B7469160A6EF000C47C3E /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
@@ -451,6 +462,12 @@
 		095433FC1606D232001D3E5D = {
 			isa = PBXGroup;
 			children = (
+				09427ACC16307DBC003534CA /* Default-Landscape~ipad.png */,
+				09427ACA16307DAE003534CA /* Default-Portrait~ipad.png */,
+				09427AC816307DA7003534CA /* Default-Portrait@2x~ipad.png */,
+				09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */,
+				09427AC416307A9E003534CA /* Icon-72.png */,
+				09427AC116307A77003534CA /* Icon-144.png */,
 				095434131606D232001D3E5D /* Algorithms */,
 				095434381606D233001D3E5D /* AlgorithmsTests */,
 				0954340A1606D232001D3E5D /* Frameworks */,
@@ -483,6 +500,7 @@
 		095434131606D232001D3E5D /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				09427ACE163081C3003534CA /* Algorithms.entitlements */,
 				0954341C1606D232001D3E5D /* AppDelegate.h */,
 				0954341D1606D232001D3E5D /* AppDelegate.m */,
 				0954341F1606D232001D3E5D /* MainStoryboard.storyboard */,
@@ -759,6 +777,10 @@
 				09F0D3F7160CEB9600CF657E /* arrow_right@2x.png in Resources */,
 				099EC975160FDC3C00FD136A /* Objects.json in Resources */,
 				09B4CE02162936BB00145317 /* words.txt in Resources */,
+				09427AC216307A77003534CA /* Icon-144.png in Resources */,
+				09427AC516307A9E003534CA /* Icon-72.png in Resources */,
+				09427AC716307AC2003534CA /* Default-Landscape@2x~ipad.png in Resources */,
+				09427ACD16307DBC003534CA /* Default-Landscape~ipad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -947,10 +969,13 @@
 		095434441606D233001D3E5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
 				INFOPLIST_FILE = "Algorithms/Algorithms-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -959,10 +984,15 @@
 		095434451606D233001D3E5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
 				INFOPLIST_FILE = "Algorithms/Algorithms-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};

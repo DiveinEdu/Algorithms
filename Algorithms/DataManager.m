@@ -63,12 +63,14 @@
             [newAlg setValuesForKeysWithDictionary:dict];
 
         }
-        NSMutableArray* codeStyles = [NSMutableArray new];
-        for (NSString* val in [jsonDict objectForKey:@"codeStyles"]) {
-            [codeStyles addObject:val];
+        if(![[NSUserDefaults standardUserDefaults] objectForKey:@"codeStyle"]){
+            NSMutableArray* codeStyles = [NSMutableArray new];
+            for (NSString* val in [jsonDict objectForKey:@"codeStyles"]) {
+                [codeStyles addObject:val];
+            }
+            [[NSUserDefaults standardUserDefaults] setObject:codeStyles forKey:@"codeStyles"];
+            [[NSUserDefaults standardUserDefaults] setObject:[codeStyles objectAtIndex:0] forKey:@"codeStyle"];
         }
-        [[NSUserDefaults standardUserDefaults] setObject:codeStyles forKey:@"codeStyles"];
-        [[NSUserDefaults standardUserDefaults] setObject:[codeStyles objectAtIndex:0] forKey:@"codeStyle"];
     }
     return self;
     
