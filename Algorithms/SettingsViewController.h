@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
 
-@interface SettingsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface SettingsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate >
 @property (nonatomic, strong) NSArray* codeStyles;
 @property (nonatomic, weak) UITableViewCell* currentDefault;
+- (IBAction)contactUs:(id)sender;
 @end

@@ -19,13 +19,17 @@
 
 - (void)viewDidLoad
 {
-    UIBarButtonItem* codeButton = [[UIBarButtonItem alloc]initWithTitle:@"Code" style:UIBarButtonItemStylePlain target:self action:@selector(loadCode:)];
-    [self.navigationItem setRightBarButtonItem:codeButton];
-    [self.navigationItem setLeftBarButtonItem:nil];
-    if ([self.algorithm wikiLink]) {
-        UIBarButtonItem* wikiButton = [[UIBarButtonItem alloc]initWithTitle:@"Wiki" style:UIBarButtonItemStylePlain target:self action:@selector(showWiki:)];
-        [self.navigationItem setLeftBarButtonItem:wikiButton];
+    if (self.algorithm) {
+        UIBarButtonItem* codeButton = [[UIBarButtonItem alloc]initWithTitle:@"Code" style:UIBarButtonItemStylePlain target:self action:@selector(loadCode:)];
+        [self.navigationItem setRightBarButtonItem:codeButton];
+        [self.navigationItem setLeftBarButtonItem:nil];
+        if ([self.algorithm wikiLink]) {
+            UIBarButtonItem* wikiButton = [[UIBarButtonItem alloc]initWithTitle:@"Wiki" style:UIBarButtonItemStylePlain target:self action:@selector(showWiki:)];
+            [self.navigationItem setLeftBarButtonItem:wikiButton];
+        }
     }
+    
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -58,20 +62,29 @@
 
 
 -(IBAction)showWiki:(id)sender{
-    WikiViewController* wiki = [self.storyboard instantiateViewControllerWithIdentifier:@"wikiView"];
-    [wiki setUrl:[self.algorithm wikiURL]];
-    self.codePickerPopover = [[UIPopoverController alloc]
-                              initWithContentViewController:wiki];
-    
-    [self.codePickerPopover presentPopoverFromBarButtonItem:sender
-                                   permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-    
+    if ([self.codePickerPopover isPopoverVisible]) {
+        [self.codePickerPopover dismissPopoverAnimated:YES];
+
+    }
+    else{
+        WikiViewController* wiki = [self.storyboard instantiateViewControllerWithIdentifier:@"wikiView"];
+        [wiki setUrl:[self.algorithm wikiURL]];
+        self.codePickerPopover  = [[UIPopoverController alloc]
+                                  initWithContentViewController:wiki];
+        
+        [self.codePickerPopover  presentPopoverFromBarButtonItem:sender
+                                       permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
 }
 
 
 
 -(IBAction)loadCode:(id)sender{
-    if(self.algorithm){
+    if ([self.codePickerPopover isPopoverVisible]) {
+        [self.codePickerPopover dismissPopoverAnimated:YES];
+        
+    }
+    else{
         UINavigationController* navCont =[self.storyboard instantiateViewControllerWithIdentifier:@"popNavController"];
         
         self.codePicker = [[navCont viewControllers] lastObject];
@@ -84,7 +97,6 @@
                                        permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 
     }
-
 }
 
 

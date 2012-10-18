@@ -45,7 +45,7 @@
 
 -(void)checkEmpty{
     if ([self.countField text].length == 0) {
-        [self.countField setText:@"15"];
+        [self.countField setText:@"32"];
     }
     if ([self.minField text].length == 0) {
         [self.minField setText:@"0"];
@@ -57,8 +57,8 @@
 - (IBAction)generateList:(id)sender {
     LinkedList* linkedList = [LinkedList new];
     [self checkEmpty];
-    if([[self.countField text] integerValue]>15)
-        [ self.countField setText:@"15"];
+    if([[self.countField text] integerValue]>32)
+        [ self.countField setText:@"32"];
     for (int i =0; i < MIN([[self.countField text] integerValue],30); i++){
         NSInteger diff = [[self.maxField text] integerValue] - [[self.minField text] integerValue];
         NSInteger rand = arc4random()%diff;

@@ -41,15 +41,19 @@
 }
 
 - (IBAction)getSuggestions:(UIButton*)sender {
-    NSArray* array = [self.trie suggestionsForString:[self.suggestionField text]];
-    NSLog(@"%@",array);
-    SuggestionViewController* sugg = [self.storyboard instantiateViewControllerWithIdentifier:@"suggestionView"];
-    [sugg setData:array];
-    self.codePickerPopover = [[UIPopoverController alloc]
-                              initWithContentViewController:sugg];
-    
-    [self.codePickerPopover presentPopoverFromRect:sender.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-
+    if ([self.codePickerPopover isPopoverVisible]) {
+        [self.codePickerPopover dismissPopoverAnimated:YES];
+        
+    }
+    else{
+        NSArray* array = [self.trie suggestionsForString:[self.suggestionField text]];
+        SuggestionViewController* sugg = [self.storyboard instantiateViewControllerWithIdentifier:@"suggestionView"];
+        [sugg setData:array];
+        self.codePickerPopover = [[UIPopoverController alloc]
+                                  initWithContentViewController:sugg];
+        
+        [self.codePickerPopover presentPopoverFromRect:sender.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
 
 }
 -(void)loadWords{

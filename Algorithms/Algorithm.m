@@ -21,7 +21,7 @@
 @dynamic relatedFiles;
 
 -(NSURL*)wikiURL{
-    NSURL* url = [NSURL URLWithString:self.wikiLink];
+    NSURL* url = [NSURL URLWithString:[self.wikiLink stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     return url;
 }
 

@@ -33,48 +33,34 @@
         if ( node.parent == node.parent.parent.left ) {
             tmp = node.parent.parent.right;
             if ( tmp.color == RED ) {
-                /* case 1 - change the colours */
                 node.parent.color = BLACK;
                 tmp.color = BLACK;
                 node.parent.parent.color = RED;
-                /* Move x up the tree */
                 node = node.parent.parent;
             }
             else {
-                /* y is a black node */
                 if ( node == node.parent.right ) {
-                    /* and x is to the right */
-                    /* case 2 - move x up and rotate */
                     node = node.parent;
                     [self rotateLeft:node];
                 }
-                /* case 3 */
                 node.parent.color = BLACK;
                 node.parent.parent.color = RED;
                 [self rotateRight: node.parent.parent ];
             }
         }
         else {
-            /* repeat the "if" part with right and left
-             exchanged */
             tmp = node.parent.parent.left;
             if ( tmp.color == RED ) {
-                /* case 1 - change the colours */
                 node.parent.color = BLACK;
                 tmp.color = BLACK;
                 node.parent.parent.color = RED;
-                /* Move x up the tree */
                 node = node.parent.parent;
             }
             else {
-                /* y is a black node */
                 if ( node == node.parent.left ) {
-                    /* and x is to the right */
-                    /* case 2 - move x up and rotate */
                     node = node.parent;
                     [self rotateRight:node];
                 }
-                /* case 3 */
                 node.parent.color = BLACK;
                 node.parent.parent.color = RED;
                 [self rotateLeft: node.parent.parent ];
@@ -90,23 +76,17 @@
 -(void)rotateLeft:(RedBlackNode*)node{
     RedBlackNode* tmp;
     tmp = node.right;
-    /* Turn y's left sub-tree into x's right sub-tree */
     node.right = tmp.left;
-    if ( tmp.left != NULL )
+    if ( tmp.left != nil )
         tmp.left.parent = node;
-    /* y's new parent was x's parent */
     tmp.parent = node.parent;
-    /* Set the parent to point to y instead of x */
-    /* First see whether we're at the root */
-    if ( node.parent == NULL ) self.root = tmp;
+    if ( node.parent == nil ) self.root = tmp;
     else
         if ( node == node.parent.left )
-        /* x was on the left of its parent */
             node.parent.left = tmp;
         else
-        /* x must have been on the right */
             node.parent.right = tmp;
-    /* Finally, put x on y's left */
+
     tmp.left = node;
     node.parent = tmp;
 
@@ -115,23 +95,19 @@
     
     RedBlackNode* tmp;
     tmp = node.left;
-    /* Turn y's left sub-tree into x's right sub-tree */
+
     node.left = tmp.right;
-    if ( tmp.right != NULL )
+    if ( tmp.right != nil )
         tmp.right.parent = node;
-    /* y's new parent was x's parent */
+
     tmp.parent = node.parent;
-    /* Set the parent to point to y instead of x */
-    /* First see whether we're at the root */
-    if ( node.parent == NULL ) self.root = tmp;
+    if ( node.parent == nil ) self.root = tmp;
     else
         if ( node == node.parent.right )
-        /* x was on the left of its parent */
             node.parent.right = tmp;
         else
-        /* x must have been on the right */
             node.parent.left = tmp;
-    /* Finally, put x on y's left */
+
     tmp.right = node;
     node.parent = tmp;
 }
@@ -183,9 +159,7 @@
             y.parent.right=x;
         }
     }
-    if (y != node) { /* y should not be nil in this case */
-        /* y is the node to splice out and x is its child */
-        
+    if (y != node) {
         if ([y color]!=RED)
             [self fixDelete:x];
     

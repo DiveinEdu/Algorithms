@@ -30,6 +30,19 @@
 		09427AC516307A9E003534CA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427AC416307A9E003534CA /* Icon-72.png */; };
 		09427AC716307AC2003534CA /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */; };
 		09427ACD16307DBC003534CA /* Default-Landscape~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427ACC16307DBC003534CA /* Default-Landscape~ipad.png */; };
+		09427AD4163088D8003534CA /* RedBlackNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09ADEE9B161CDC7F00BD0CAE /* RedBlackNode.h */; };
+		09427AD5163088D8003534CA /* RedBlackNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09ADEE9C161CDC7F00BD0CAE /* RedBlackNode.m */; };
+		09427AD6163088D8003534CA /* RedBlackTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09ADEE98161CDC0400BD0CAE /* RedBlackTree.h */; };
+		09427AD7163088D8003534CA /* RedBlackTree.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09ADEE99161CDC0400BD0CAE /* RedBlackTree.m */; };
+		09427AD816308A7F003534CA /* TreeNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09038F4516125F2200D4E530 /* TreeNode.h */; };
+		09427AD916308A7F003534CA /* TreeNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09038F4616125F2300D4E530 /* TreeNode.m */; };
+		09427ADA1630B8FB003534CA /* TrieNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09BAD6731620BE3200ACCFF8 /* TrieNode.h */; };
+		09427ADB1630B8FB003534CA /* TrieNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09BAD6741620BE3200ACCFF8 /* TrieNode.m */; };
+		09427ADC1630B8FB003534CA /* Trie.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09BAD6701620BCB800ACCFF8 /* Trie.h */; };
+		09427ADD1630B8FB003534CA /* Trie.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09BAD6711620BCB800ACCFF8 /* Trie.m */; };
+		09427AE01630C1ED003534CA /* Welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427ADE1630C1ED003534CA /* Welcome.png */; };
+		09427AE11630C1ED003534CA /* Welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427ADF1630C1ED003534CA /* Welcome@2x.png */; };
+		09427AE31630C336003534CA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09427AE21630C336003534CA /* MessageUI.framework */; };
 		094927041618CBEE00012500 /* HeapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094927031618CBEE00012500 /* HeapView.m */; };
 		094B746A160A6EF000C47C3E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 094B7469160A6EF000C47C3E /* arrow_right.png */; };
 		094B746D160A6F3200C47C3E /* ArrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094B746C160A6F3200C47C3E /* ArrowView.m */; };
@@ -131,6 +144,16 @@
 			dstPath = code;
 			dstSubfolderSpec = 7;
 			files = (
+				09427ADA1630B8FB003534CA /* TrieNode.h in CopyFiles */,
+				09427ADB1630B8FB003534CA /* TrieNode.m in CopyFiles */,
+				09427ADC1630B8FB003534CA /* Trie.h in CopyFiles */,
+				09427ADD1630B8FB003534CA /* Trie.m in CopyFiles */,
+				09427AD816308A7F003534CA /* TreeNode.h in CopyFiles */,
+				09427AD916308A7F003534CA /* TreeNode.m in CopyFiles */,
+				09427AD4163088D8003534CA /* RedBlackNode.h in CopyFiles */,
+				09427AD5163088D8003534CA /* RedBlackNode.m in CopyFiles */,
+				09427AD6163088D8003534CA /* RedBlackTree.h in CopyFiles */,
+				09427AD7163088D8003534CA /* RedBlackTree.m in CopyFiles */,
 				09617168162FBD9700B20431 /* AVLNode.h in CopyFiles */,
 				09617169162FBD9700B20431 /* AVLNode.m in CopyFiles */,
 				0961716A162FBD9700B20431 /* AVLTree.h in CopyFiles */,
@@ -206,6 +229,9 @@
 		09427ACA16307DAE003534CA /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		09427ACC16307DBC003534CA /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		09427ACE163081C3003534CA /* Algorithms.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Algorithms.entitlements; sourceTree = "<group>"; };
+		09427ADE1630C1ED003534CA /* Welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Welcome.png; sourceTree = "<group>"; };
+		09427ADF1630C1ED003534CA /* Welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Welcome@2x.png"; sourceTree = "<group>"; };
+		09427AE21630C336003534CA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		094927021618CBEE00012500 /* HeapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeapView.h; sourceTree = "<group>"; };
 		094927031618CBEE00012500 /* HeapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapView.m; sourceTree = "<group>"; };
 		094B7469160A6EF000C47C3E /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
@@ -318,6 +344,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09427AE31630C336003534CA /* MessageUI.framework in Frameworks */,
 				096912C9160A6BE600E5AFB7 /* QuartzCore.framework in Frameworks */,
 				0954340C1606D232001D3E5D /* UIKit.framework in Frameworks */,
 				0954340E1606D232001D3E5D /* Foundation.framework in Frameworks */,
@@ -462,6 +489,7 @@
 		095433FC1606D232001D3E5D = {
 			isa = PBXGroup;
 			children = (
+				09427AE21630C336003534CA /* MessageUI.framework */,
 				095434131606D232001D3E5D /* Algorithms */,
 				095434381606D233001D3E5D /* AlgorithmsTests */,
 				0954340A1606D232001D3E5D /* Frameworks */,
@@ -525,6 +553,8 @@
 				09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */,
 				09427AC416307A9E003534CA /* Icon-72.png */,
 				09427AC116307A77003534CA /* Icon-144.png */,
+				09427ADE1630C1ED003534CA /* Welcome.png */,
+				09427ADF1630C1ED003534CA /* Welcome@2x.png */,
 				09F929C9160EB4F400FC497A /* prettify */,
 				094B7467160A6EA500C47C3E /* Images */,
 				095434151606D232001D3E5D /* Algorithms-Info.plist */,
@@ -781,6 +811,8 @@
 				09427AC516307A9E003534CA /* Icon-72.png in Resources */,
 				09427AC716307AC2003534CA /* Default-Landscape@2x~ipad.png in Resources */,
 				09427ACD16307DBC003534CA /* Default-Landscape~ipad.png in Resources */,
+				09427AE01630C1ED003534CA /* Welcome.png in Resources */,
+				09427AE11630C1ED003534CA /* Welcome@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,7 +1001,6 @@
 		095434441606D233001D3E5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
@@ -984,7 +1015,6 @@
 		095434451606D233001D3E5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
