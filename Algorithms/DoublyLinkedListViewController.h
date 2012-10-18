@@ -19,5 +19,7 @@
 
 - (IBAction)addFront:(id)sender;
 - (IBAction)addBack:(id)sender;
+- (IBAction)removeFront:(id)sender;
+- (IBAction)removeBack:(id)sender;
 
 @end

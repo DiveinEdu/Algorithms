@@ -14,12 +14,15 @@
 -(void)addValueToFront:(id)value{
     [super addValueToFront:value];
     [self.head.next setPrevious:self.head];
+    if (self.tail ==nil) {
+        self.tail=self.head;
+    }
 }
 //We introduce a tail pointer to keep things simpler
 -(void)addValueToBack:(id)value{
     ListNode* newNode = [[ListNode alloc] initWithValue:value];
 
-    if (self.tail ==nil) {
+    if (self.tail == nil || self.tail.next!=nil) {
         self.tail = self.head;
         while (self.tail.next != nil ) {
             self.tail = self.tail.next;
@@ -39,6 +42,20 @@
     }
     
     
+}
+-(ListNode*)removeBack{
+    ListNode* toReturn = self.tail;
+
+    if (self.tail==self.head) {
+        self.tail=self.head=nil;
+    }
+    else{
+        //reset the tail
+        self.tail = self.tail.previous;
+        //cut it off the last one
+        self.tail.next=nil;
+    }
+    return toReturn;
 }
 
 @end

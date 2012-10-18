@@ -1224,6 +1224,36 @@
                                     <action selector="addBack:" destination="vGR-Iz-IWM" eventType="touchUpInside" id="IaY-Sp-q7O"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z2N-Xs-SWu">
+                                <rect key="frame" x="388" y="75" width="125" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Remove Front">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeFront:" destination="vGR-Iz-IWM" eventType="touchUpInside" id="uu3-Cj-1or"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xb8-DP-rSi">
+                                <rect key="frame" x="523" y="75" width="123" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Remove Back">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeBack:" destination="vGR-Iz-IWM" eventType="touchUpInside" id="A0e-fr-blg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1240,6 +1270,152 @@
             <point key="canvasLocation" x="1970" y="935"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AVLTreeController" superclassName="TreeViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AVLTreeController.h"/>
+            <relationships>
+                <relationship kind="action" name="addValue:"/>
+                <relationship kind="action" name="removeValue:"/>
+                <relationship kind="action" name="testTree:"/>
+            </relationships>
+        </class>
+        <class className="BSTViewController" superclassName="TreeViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BSTViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addToTree:"/>
+                <relationship kind="action" name="removeFromTree:"/>
+                <relationship kind="action" name="testTree:"/>
+            </relationships>
+        </class>
+        <class className="BubbleSortViewController" superclassName="DataViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BubbleSortViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="generate:"/>
+                <relationship kind="action" name="nextStep:"/>
+                <relationship kind="action" name="previous:"/>
+                <relationship kind="action" name="showInfo:"/>
+                <relationship kind="action" name="test:"/>
+                <relationship kind="outlet" name="countField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="maxField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="minField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="stepLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="CodePopoverController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CodePopoverController.h"/>
+        </class>
+        <class className="CodeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CodeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="codeView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="DataViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DataViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loadCode:"/>
+                <relationship kind="action" name="showWiki:"/>
+            </relationships>
+        </class>
+        <class className="DoublyLinkedListViewController" superclassName="DataViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DoublyLinkedListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addBack:"/>
+                <relationship kind="action" name="addFront:"/>
+                <relationship kind="action" name="removeBack:"/>
+                <relationship kind="action" name="removeFront:"/>
+                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="listView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="HeapViewController" superclassName="TreeViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addValue:"/>
+                <relationship kind="action" name="remove:"/>
+                <relationship kind="action" name="switchTreeType:"/>
+                <relationship kind="action" name="testHeap:"/>
+                <relationship kind="outlet" name="maxOrMin" candidateClass="UISegmentedControl"/>
+            </relationships>
+        </class>
+        <class className="LinkedListViewController" superclassName="DataViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LinkedListViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addValue:"/>
+                <relationship kind="action" name="removeFront:"/>
+                <relationship kind="action" name="showCode:"/>
+                <relationship kind="outlet" name="detailView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="insertValueField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="MasterViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
+        </class>
+        <class className="MergeSortViewController" superclassName="DataViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MergeSortViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="generateList:"/>
+                <relationship kind="action" name="showInfo:"/>
+                <relationship kind="action" name="step:"/>
+                <relationship kind="outlet" name="countField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="maxField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="minField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="stepLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="RedBlackTreeViewController" superclassName="TreeViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RedBlackTreeViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addValue:"/>
+                <relationship kind="action" name="removeValue:"/>
+                <relationship kind="action" name="testRedBlack:"/>
+            </relationships>
+        </class>
+        <class className="SettingsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
+        </class>
+        <class className="StackView" superclassName="UIScrollView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StackView.h"/>
+        </class>
+        <class className="StackViewController" superclassName="DataViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StackViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="peekValue:"/>
+                <relationship kind="action" name="popValue:"/>
+                <relationship kind="action" name="pushValue:"/>
+                <relationship kind="outlet" name="stackView" candidateClass="StackView"/>
+                <relationship kind="outlet" name="valueField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="SuggestionViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SuggestionViewController.h"/>
+        </class>
+        <class className="TreeViewController" superclassName="DataViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TreeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="valueField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="TrieViewController" superclassName="TreeViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TrieViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="addValue:"/>
+                <relationship kind="action" name="buildTree:"/>
+                <relationship kind="action" name="getSuggestions:"/>
+                <relationship kind="outlet" name="suggestionField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="WikiViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="launchSafari:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

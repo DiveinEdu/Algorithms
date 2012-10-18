@@ -12,5 +12,5 @@
 
 @interface DoublyLinkedList : LinkedList
 @property (nonatomic, weak) ListNode* tail;
-
+-(ListNode*)removeBack;
 @end

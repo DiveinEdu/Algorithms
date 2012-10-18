@@ -61,4 +61,14 @@
     [self.doublyLinkedList addValueToBack:[self.inputField text] ];
     [self refresh];
 }
+
+- (IBAction)removeFront:(id)sender {
+    [self.doublyLinkedList removeFront];
+    [self refresh];
+}
+
+- (IBAction)removeBack:(id)sender {
+    [self.doublyLinkedList removeBack];
+    [self refresh];
+}
 @end
