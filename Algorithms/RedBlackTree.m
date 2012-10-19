@@ -113,8 +113,18 @@
 }
 -(RedBlackNode*)removeValue:(id)value{
     RedBlackNode* toRemove =[self findNodeWithValue:value];
+    
+    if ([self.root compare:toRemove]==NSOrderedSame ) {
+        RedBlackNode* tmpRoot = [[RedBlackNode alloc] initWithValue:0];
+        tmpRoot.left = self.root;
+        self.root.parent = tmpRoot;
+        [self removeNode:toRemove];
+        self.root = tmpRoot.left;
 
-    [self removeNode:toRemove];
+    }
+    else{
+     [self removeNode:toRemove];   
+    }
     return toRemove;
 
 }
@@ -176,7 +186,7 @@
     } else {
 
         if ([y color]!=RED)
-            [self fixDelete:x];
+            node = [self fixDelete:x];
 
     }
     return node;
@@ -256,7 +266,7 @@
     
     node.color = BLACK;
     
-    return 0;
+    return nil;
 }
 
 

@@ -71,8 +71,6 @@
     }
 }
 - (IBAction)removeValue:(id)sender {
-    [[[UIAlertView alloc] initWithTitle:@"Oops" message:@"Not working correctly!" delegate:nil cancelButtonTitle:@"I'll look at the code!" otherButtonTitles: nil] show];
-
     [self.tree removeValue:[self.valueField text]];
     [self refresh];
 }
