@@ -46,8 +46,9 @@
      },
      {
      "name":"Graph",
-     "viewID":"notYet",
-     "related":["BinarySearchTree"]
+     "viewID":"graphView",
+     "related":["GraphNode","GraphEdge","EdgeWeight"],
+     "wikiLink":"http://wikipedia.org/wiki/Graph_(data_structure)"
      },
      {
      "name":"AVL Tree",

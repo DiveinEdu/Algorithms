@@ -40,8 +40,6 @@
 		09427ADB1630B8FB003534CA /* TrieNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09BAD6741620BE3200ACCFF8 /* TrieNode.m */; };
 		09427ADC1630B8FB003534CA /* Trie.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09BAD6701620BCB800ACCFF8 /* Trie.h */; };
 		09427ADD1630B8FB003534CA /* Trie.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09BAD6711620BCB800ACCFF8 /* Trie.m */; };
-		09427AE01630C1ED003534CA /* Welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427ADE1630C1ED003534CA /* Welcome.png */; };
-		09427AE11630C1ED003534CA /* Welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427ADF1630C1ED003534CA /* Welcome@2x.png */; };
 		09427AE31630C336003534CA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09427AE21630C336003534CA /* MessageUI.framework */; };
 		094927041618CBEE00012500 /* HeapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 094927031618CBEE00012500 /* HeapView.m */; };
 		094B746A160A6EF000C47C3E /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 094B7469160A6EF000C47C3E /* arrow_right.png */; };
@@ -77,6 +75,10 @@
 		0961716F162FBF4B00B20431 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0961716E162FBF4B00B20431 /* Algorithm.m */; };
 		09617173162FC1BA00B20431 /* WikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09617172162FC1BA00B20431 /* WikiViewController.m */; };
 		096912C9160A6BE600E5AFB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096912C8160A6BE600E5AFB7 /* QuartzCore.framework */; };
+		096D6C41163639E4005CF7C2 /* Welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 096D6C3F163639E4005CF7C2 /* Welcome.png */; };
+		096D6C42163639E4005CF7C2 /* Welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 096D6C40163639E4005CF7C2 /* Welcome@2x.png */; };
+		096D6C4516363A71005CF7C2 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 096D6C4316363A71005CF7C2 /* background.png */; };
+		096D6C4616363A71005CF7C2 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 096D6C4416363A71005CF7C2 /* background@2x.png */; };
 		09745B39162A6FD90031F65D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09745B38162A6FD90031F65D /* SettingsViewController.m */; };
 		099EC975160FDC3C00FD136A /* Objects.json in Resources */ = {isa = PBXBuildFile; fileRef = 099EC974160FDC3C00FD136A /* Objects.json */; };
 		09ADEE97161CDBF300BD0CAE /* RedBlackTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */; };
@@ -109,6 +111,10 @@
 		09C8ED751618D6780076E2D0 /* ArrayHeap.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA274D1617D4BE00738463 /* ArrayHeap.m */; };
 		09C8ED761618D67D0076E2D0 /* HeapNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA274F1617DE1700738463 /* HeapNode.h */; };
 		09C8ED771618D67F0076E2D0 /* HeapNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA27501617DE1700738463 /* HeapNode.m */; };
+		09D65B751631B967001EF3C2 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D65B741631B967001EF3C2 /* GraphViewController.m */; };
+		09D65B781631B9A3001EF3C2 /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D65B771631B9A3001EF3C2 /* GraphNode.m */; };
+		09D65B7B1631BA0C001EF3C2 /* GraphEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D65B7A1631BA0C001EF3C2 /* GraphEdge.m */; };
+		09D65B7E1631BA39001EF3C2 /* EdgeWeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D65B7D1631BA39001EF3C2 /* EdgeWeight.m */; };
 		09E9573A1609500500F5D573 /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E957391609500500F5D573 /* StackViewController.m */; };
 		09E9573D1609501800F5D573 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
 		09F0D3F4160CEB9600CF657E /* arrow_right_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F0160CEB9600CF657E /* arrow_right_filled.png */; };
@@ -229,8 +235,6 @@
 		09427ACA16307DAE003534CA /* Default-Portrait~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Portrait~ipad.png"; path = "../Default-Portrait~ipad.png"; sourceTree = "<group>"; };
 		09427ACC16307DBC003534CA /* Default-Landscape~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape~ipad.png"; path = "../Default-Landscape~ipad.png"; sourceTree = "<group>"; };
 		09427ACE163081C3003534CA /* Algorithms.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Algorithms.entitlements; sourceTree = "<group>"; };
-		09427ADE1630C1ED003534CA /* Welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Welcome.png; sourceTree = "<group>"; };
-		09427ADF1630C1ED003534CA /* Welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Welcome@2x.png"; sourceTree = "<group>"; };
 		09427AE21630C336003534CA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		094927021618CBEE00012500 /* HeapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeapView.h; sourceTree = "<group>"; };
 		094927031618CBEE00012500 /* HeapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeapView.m; sourceTree = "<group>"; };
@@ -271,6 +275,10 @@
 		09617171162FC1BA00B20431 /* WikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiViewController.h; sourceTree = "<group>"; };
 		09617172162FC1BA00B20431 /* WikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiViewController.m; sourceTree = "<group>"; };
 		096912C8160A6BE600E5AFB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		096D6C3F163639E4005CF7C2 /* Welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Welcome.png; sourceTree = "<group>"; };
+		096D6C40163639E4005CF7C2 /* Welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Welcome@2x.png"; sourceTree = "<group>"; };
+		096D6C4316363A71005CF7C2 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		096D6C4416363A71005CF7C2 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
 		09745B37162A6FD90031F65D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		09745B38162A6FD90031F65D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		099EC974160FDC3C00FD136A /* Objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Objects.json; sourceTree = "<group>"; };
@@ -313,6 +321,14 @@
 		09BAD67D1620D76100ACCFF8 /* BubbleSortSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortSub.m; sourceTree = "<group>"; };
 		09C070A316115BDD001F4C12 /* NodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeView.h; sourceTree = "<group>"; };
 		09C070A416115BDD001F4C12 /* NodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeView.m; sourceTree = "<group>"; };
+		09D65B731631B967001EF3C2 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		09D65B741631B967001EF3C2 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		09D65B761631B9A3001EF3C2 /* GraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphNode.h; sourceTree = "<group>"; };
+		09D65B771631B9A3001EF3C2 /* GraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphNode.m; sourceTree = "<group>"; };
+		09D65B791631BA0C001EF3C2 /* GraphEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphEdge.h; sourceTree = "<group>"; };
+		09D65B7A1631BA0C001EF3C2 /* GraphEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphEdge.m; sourceTree = "<group>"; };
+		09D65B7C1631BA39001EF3C2 /* EdgeWeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeWeight.h; sourceTree = "<group>"; };
+		09D65B7D1631BA39001EF3C2 /* EdgeWeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeWeight.m; sourceTree = "<group>"; };
 		09E957381609500500F5D573 /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
 		09E957391609500500F5D573 /* StackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
 		09E9573B1609501800F5D573 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -432,6 +448,7 @@
 		0937E32416120FF60044040F /* Data Structures */ = {
 			isa = PBXGroup;
 			children = (
+				09D65B711631B81F001EF3C2 /* Graph */,
 				09B4CE0B1629F54200145317 /* Tree */,
 				09B4CE0C1629F54C00145317 /* List */,
 			);
@@ -553,8 +570,10 @@
 				09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */,
 				09427AC416307A9E003534CA /* Icon-72.png */,
 				09427AC116307A77003534CA /* Icon-144.png */,
-				09427ADE1630C1ED003534CA /* Welcome.png */,
-				09427ADF1630C1ED003534CA /* Welcome@2x.png */,
+				096D6C3F163639E4005CF7C2 /* Welcome.png */,
+				096D6C40163639E4005CF7C2 /* Welcome@2x.png */,
+				096D6C4316363A71005CF7C2 /* background.png */,
+				096D6C4416363A71005CF7C2 /* background@2x.png */,
 				09F929C9160EB4F400FC497A /* prettify */,
 				094B7467160A6EA500C47C3E /* Images */,
 				095434151606D232001D3E5D /* Algorithms-Info.plist */,
@@ -675,6 +694,21 @@
 				09BAD6711620BCB800ACCFF8 /* Trie.m */,
 			);
 			name = Trie;
+			sourceTree = "<group>";
+		};
+		09D65B711631B81F001EF3C2 /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+				09D65B731631B967001EF3C2 /* GraphViewController.h */,
+				09D65B741631B967001EF3C2 /* GraphViewController.m */,
+				09D65B761631B9A3001EF3C2 /* GraphNode.h */,
+				09D65B771631B9A3001EF3C2 /* GraphNode.m */,
+				09D65B791631BA0C001EF3C2 /* GraphEdge.h */,
+				09D65B7A1631BA0C001EF3C2 /* GraphEdge.m */,
+				09D65B7C1631BA39001EF3C2 /* EdgeWeight.h */,
+				09D65B7D1631BA39001EF3C2 /* EdgeWeight.m */,
+			);
+			name = Graph;
 			sourceTree = "<group>";
 		};
 		09E9573616094FE300F5D573 /* Stack */ = {
@@ -811,8 +845,10 @@
 				09427AC516307A9E003534CA /* Icon-72.png in Resources */,
 				09427AC716307AC2003534CA /* Default-Landscape@2x~ipad.png in Resources */,
 				09427ACD16307DBC003534CA /* Default-Landscape~ipad.png in Resources */,
-				09427AE01630C1ED003534CA /* Welcome.png in Resources */,
-				09427AE11630C1ED003534CA /* Welcome@2x.png in Resources */,
+				096D6C41163639E4005CF7C2 /* Welcome.png in Resources */,
+				096D6C42163639E4005CF7C2 /* Welcome@2x.png in Resources */,
+				096D6C4516363A71005CF7C2 /* background.png in Resources */,
+				096D6C4616363A71005CF7C2 /* background@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -898,6 +934,10 @@
 				09745B39162A6FD90031F65D /* SettingsViewController.m in Sources */,
 				0961716F162FBF4B00B20431 /* Algorithm.m in Sources */,
 				09617173162FC1BA00B20431 /* WikiViewController.m in Sources */,
+				09D65B751631B967001EF3C2 /* GraphViewController.m in Sources */,
+				09D65B781631B9A3001EF3C2 /* GraphNode.m in Sources */,
+				09D65B7B1631BA0C001EF3C2 /* GraphEdge.m in Sources */,
+				09D65B7E1631BA39001EF3C2 /* EdgeWeight.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

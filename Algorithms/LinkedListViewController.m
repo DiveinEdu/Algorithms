@@ -30,6 +30,7 @@
 - (void)viewDidLoad
 {
     self.linkedList = [LinkedList new];
+    [self.detailView setBackgroundColor:[UIColor cyanColor]];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }

@@ -29,6 +29,7 @@
 {
     self.doublyLinkedList = [DoublyLinkedList new];
     [super viewDidLoad];
+    [self.listView setBackgroundColor:[UIColor cyanColor]];
 	// Do any additional setup after loading the view.
 }
 

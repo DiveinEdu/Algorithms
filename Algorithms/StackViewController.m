@@ -28,6 +28,8 @@
 - (void)viewDidLoad
 {
     stack=[Stack new];
+    [self.stackView setBackgroundColor:[UIColor cyanColor]];
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
