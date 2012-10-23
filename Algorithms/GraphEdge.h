@@ -7,7 +7,5 @@
 //
 
 #import <Foundation/Foundation.h>
-@class EdgeWeight;
 @interface GraphEdge : NSObject
--(id)initWithWeight:(EdgeWeight*)weight;
 @end

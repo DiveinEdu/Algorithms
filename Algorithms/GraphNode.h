@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface GraphNode : NSObject
-
+-(id)initWithValue:(id)value;
 @end
