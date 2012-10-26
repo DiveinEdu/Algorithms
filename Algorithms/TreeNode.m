@@ -73,14 +73,12 @@
                         self.parent.left = nil;
                     else
                         self.parent.right = nil;
-                    self.parent = nil;
                     return self;
                 }
                 else {
-                    //we have only one child so we fix things up
-                    temp.parent = node.parent;
+                    //have only one child so it replaces my spot
+                    temp.parent = self.parent;
                     if (self == self.parent.left) {
-                        //hook up the
                         self.parent.left=temp;
                     }
                     else{
@@ -90,17 +88,18 @@
                 }
             }
             else{
-                //we Have two kids!
+                //Two kids!
                 TreeNode* cur = self.right;
                 while (cur.left!=nil) {
                     cur = cur.left;
                 }
                 if (cur.parent == self) {
+                    //just my right child
                     if (self == self.parent.left)
                         self.parent.left = cur;
-                    
                     else
                         self.parent.right = cur;
+
                     cur.parent = self.parent;
                     cur.left = self.left;
                     cur.left.parent = cur;
@@ -116,9 +115,10 @@
                     //fix replace self
                     cur.parent = self.parent;
                     cur.left = self.left;
-                    cur.left.parent = cur;
+                    self.left.parent = cur;
                     cur.right = self.right;
-                    cur.right.parent = cur;
+                    self.right.parent = cur;
+                    
                     if (self == self.parent.left)
                         self.parent.left = cur;
                     else

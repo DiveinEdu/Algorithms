@@ -512,7 +512,6 @@
 		095433FC1606D232001D3E5D = {
 			isa = PBXGroup;
 			children = (
-				09427AE21630C336003534CA /* MessageUI.framework */,
 				095434131606D232001D3E5D /* Algorithms */,
 				095434381606D233001D3E5D /* AlgorithmsTests */,
 				0954340A1606D232001D3E5D /* Frameworks */,
@@ -532,6 +531,7 @@
 		0954340A1606D232001D3E5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				09427AE21630C336003534CA /* MessageUI.framework */,
 				096912C8160A6BE600E5AFB7 /* QuartzCore.framework */,
 				0954340B1606D232001D3E5D /* UIKit.framework */,
 				0954340D1606D232001D3E5D /* Foundation.framework */,
@@ -1053,7 +1053,6 @@
 		095434441606D233001D3E5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
@@ -1068,7 +1067,6 @@
 		095434451606D233001D3E5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

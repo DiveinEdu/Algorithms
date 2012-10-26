@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad
 {
+    self.inArray = [NSMutableArray new];
     self.binarySearchTree = [BinarySearchTree new];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.

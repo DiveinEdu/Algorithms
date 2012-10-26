@@ -10,8 +10,8 @@
 @class BinarySearchTree;
 
 @interface BSTViewController : TreeViewController
-
 @property (nonatomic, strong) BinarySearchTree* binarySearchTree;
+@property (nonatomic, strong) NSMutableArray* inArray;
 
 - (IBAction)removeFromTree:(id)sender;
 
