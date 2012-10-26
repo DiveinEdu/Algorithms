@@ -8,8 +8,8 @@
 
 #import "TreeNode.h"
 typedef enum{
-    RED=1,
-    BLACK=2
+    BLACK=0,
+    RED=1
 } NODE_COLOR;
 
 @interface RedBlackNode : TreeNode
@@ -18,5 +18,8 @@ typedef enum{
 @property (nonatomic, weak) RedBlackNode* parent;
 @property (nonatomic)NODE_COLOR color;
 -(id)initWithValue:(id)value andColor:(NODE_COLOR)color;
-
+-(id)initCopy:(RedBlackNode*)node;
+-(RedBlackNode*)grandparent;
+-(RedBlackNode*)sibling;
+-(RedBlackNode*)uncle;
 @end
