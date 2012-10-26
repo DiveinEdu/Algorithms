@@ -68,10 +68,10 @@
         }
     }
     self.root.color = BLACK;
-
+    
 }
 
-    
+
 
 -(void)rotateLeft:(RedBlackNode*)node{
     RedBlackNode* tmp;
@@ -86,20 +86,20 @@
             node.parent.left = tmp;
         else
             node.parent.right = tmp;
-
+    
     tmp.left = node;
     node.parent = tmp;
-
+    
 }
 -(void)rotateRight:(RedBlackNode*)node{
     
     RedBlackNode* tmp;
     tmp = node.left;
-
+    
     node.left = tmp.right;
     if ( tmp.right != nil )
         tmp.right.parent = node;
-
+    
     tmp.parent = node.parent;
     if ( node.parent == nil ) self.root = tmp;
     else
@@ -107,31 +107,31 @@
             node.parent.right = tmp;
         else
             node.parent.left = tmp;
-
+    
     tmp.right = node;
     node.parent = tmp;
 }
 -(RedBlackNode*)removeValue:(id)value{
     RedBlackNode* toRemove =[self findNodeWithValue:value];
     
-    if ([self.root compare:toRemove]==NSOrderedSame ) {
+    if (toRemove!=nil && [self.root compare:toRemove]==NSOrderedSame ) {
         RedBlackNode* tmpRoot = [[RedBlackNode alloc] initWithValue:0];
         tmpRoot.left = self.root;
         self.root.parent = tmpRoot;
         [self removeNode:toRemove];
         self.root = tmpRoot.left;
-
+        
     }
-    else{
-     [self removeNode:toRemove];   
+    else if (toRemove != nil){
+        [self removeNode:toRemove];
     }
     return toRemove;
-
+    
 }
 
 -(RedBlackNode*)findNodeWithValue:(id)value{
     RedBlackNode* node = [[RedBlackNode alloc] initWithValue:value andColor:RED];
-
+    
     RedBlackNode* toReturn = self.root;
     BOOL found = NO;
     while (!found) {
@@ -160,7 +160,8 @@
     
     y = (RedBlackNode*)(((node.left == nil) || (node.right == nil)) ? node : [node successor]);
     x = (RedBlackNode*)((y.left == nil) ? y.right : y.left);
-    if (self.root == (x.parent = y.parent)) { /* assignment of y.p to x.p is intentional */
+    x.parent =y.parent;
+    if (self.root == x.parent) {
         self.root.left=x;
     } else {
         if (y == y.parent.left) {
@@ -172,7 +173,7 @@
     if (y != node) {
         if ([y color]!=RED)
             [self fixDelete:x];
-    
+        
         y.left=node.left;
         y.right=node.right;
         y.parent=node.parent;
@@ -184,10 +185,8 @@
             node.parent.right=y;
         }
     } else {
-
-        if ([y color]!=RED)
-            node = [self fixDelete:x];
-
+         [self fixDelete:node];
+        
     }
     return node;
 }

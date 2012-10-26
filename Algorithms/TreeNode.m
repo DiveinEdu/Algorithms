@@ -33,7 +33,8 @@
 }
 -(TreeNode*)successor{
     TreeNode* toReturn = nil;
-    if ((toReturn = self.right) !=nil ) {
+    if ( self.right !=nil ) {
+        toReturn = self.right;
         while(toReturn.left != nil) { /* returns the minium of the right subtree of x */
             toReturn=toReturn.left;
         }
@@ -41,11 +42,10 @@
     } else {
         toReturn=self.parent;
         TreeNode* tmp = self;
-        while(tmp == toReturn.right) { /* sentinel used instead of checking for nil */
+        while(toReturn!=nil && tmp == toReturn.right) { /* sentinel used instead of checking for nil */
             tmp=toReturn;
             toReturn=toReturn.parent;
         }
-        if (toReturn.parent == nil) return(nil);
         return toReturn;
     }
 }
