@@ -31,24 +31,7 @@
             return false;
     }
 }
--(TreeNode*)successor{
-    TreeNode* toReturn = nil;
-    if ( self.right !=nil ) {
-        toReturn = self.right;
-        while(toReturn.left != nil) { /* returns the minium of the right subtree of x */
-            toReturn=toReturn.left;
-        }
-        return toReturn;
-    } else {
-        toReturn=self.parent;
-        TreeNode* tmp = self;
-        while(toReturn!=nil && tmp == toReturn.right) { /* sentinel used instead of checking for nil */
-            tmp=toReturn;
-            toReturn=toReturn.parent;
-        }
-        return toReturn;
-    }
-}
+
 -(TreeNode*)removeNode:(TreeNode *)node{
     switch ([self compare:node]) {
         case NSOrderedDescending:

@@ -14,5 +14,4 @@
 
 -(BOOL)addNode:(TreeNode*)node;
 -(TreeNode*)removeNode:(TreeNode*)node;
--(TreeNode*)successor;
 @end

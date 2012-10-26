@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WikiViewController : UIViewController
+@interface WikiViewController : UIViewController <UIWebViewDelegate>
+@property (nonatomic, strong)IBOutlet UIView* loadingView;
 @property (nonatomic, strong) NSURL* url;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 - (IBAction)launchSafari:(id)sender;

@@ -15,14 +15,6 @@
 
 @implementation CodeViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 -(NSString*)htmlifyString:(NSString*)string{
     NSString* toReturn = [string stringByReplacingOccurrencesOfString:@"<" withString:@"&lt;"];
     toReturn = [toReturn stringByReplacingOccurrencesOfString:@">" withString:@"&gt;"];
@@ -31,35 +23,35 @@
 }
 -(NSString*)getDefaultCSS{
     NSString* def = [[NSUserDefaults standardUserDefaults] objectForKey:@"codeStyle"];
-    if ([def isEqualToString:@"Desert"] || [def isEqualToString:@"Sunburst"]) {
+    if (![def isEqualToString:@"sons-of-obsidian.css"]) {
         return [[def lowercaseString] stringByAppendingString:@".css"];
     }
     else{
         return @"sons-of-obsidian.css";
     }
+    
+}
+-(NSString*)defaultLineNum{
+    if ([[NSUserDefaults standardUserDefaults]boolForKey:@"showLineNums"]) {
+        return @" linenums";
+    }
+    return @"";
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if ([self.file fileData]) {
-        [self.codeView loadHTMLString:[self.file fileData]  baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
-
-    }
-    else{
+    if (![self.file fileData]) {
         NSString* code = [NSString stringWithContentsOfFile:[self.file filePath] encoding:NSUTF8StringEncoding error:nil];
-        
-        NSString* htmlPage = [NSString stringWithFormat:@"<html>\
-                              <link href=\"./js/%@\" type=\"text/css\" rel=\"stylesheet\" />\
-                              <script type=\"text/javascript\" src=\"./js/prettify.js\"></script>\
-                              <body onload=\"prettyPrint()\">\
-                              <pre class=\"prettyprint\">%@</pre>\
-                              </body></html>",[self getDefaultCSS],[self htmlifyString:code]];
-        [self.codeView loadHTMLString:htmlPage  baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
-        [self.file setFileData:htmlPage];
-    }
-    
+        [self.file setFileData:[self htmlifyString:code]];
+    }    
+    NSString* htmlPage = [NSString stringWithFormat:@"<html>\
+                          <link href=\"./js/%@\" type=\"text/css\" rel=\"stylesheet\" />\
+                          <script type=\"text/javascript\" src=\"./js/prettify.js\"></script>\
+                          <body onload=\"prettyPrint()\">\
+                          <pre class=\"prettyprint%@\">%@  </pre>\
+                          </body></html>",[self getDefaultCSS],[self defaultLineNum],self.file.fileData];
+    [self.codeView loadHTMLString:htmlPage  baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]]];
 
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning

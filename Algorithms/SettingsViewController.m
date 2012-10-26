@@ -27,6 +27,7 @@
 {
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]]];
     self.codeStyles = [[NSUserDefaults standardUserDefaults] objectForKey:@"codeStyles"];
+    [self.lineNumSwitch  setOn:[[NSUserDefaults standardUserDefaults] boolForKey:@"showLineNums"]];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -36,9 +37,32 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)toggleShowLineNums:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setBool:[self.lineNumSwitch isOn] forKey:@"showLineNums"];
+}
 
 
-
+- (IBAction)contactUs:(id)sender {
+    
+    if ([MFMailComposeViewController canSendMail]) {
+        
+        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
+        mailViewController.mailComposeDelegate = self;
+        [mailViewController setToRecipients:@[@"balanceoni@gmail.com"]];
+        [mailViewController setSubject:@"Algorithm Handbook Feedback"];
+        [mailViewController setMessageBody:@"I love your cool app!" isHTML:NO];
+        
+        [self presentModalViewController:mailViewController animated:YES];
+        
+    }
+    
+    else {
+        
+        UIAlertView* alert =[[UIAlertView alloc] initWithTitle:@"Oops" message:@"Can't send emails currently" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+        
+    }
+}
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -75,27 +99,8 @@
     
     
 }
-- (IBAction)contactUs:(id)sender {
-    
-    if ([MFMailComposeViewController canSendMail]) {
-        
-        MFMailComposeViewController *mailViewController = [[MFMailComposeViewController alloc] init];
-        mailViewController.mailComposeDelegate = self;
-        [mailViewController setToRecipients:@[@"balanceoni@gmail.com"]];
-        [mailViewController setSubject:@"Algorithm Handbook Feedback"];
-        [mailViewController setMessageBody:@"I love your cool app!" isHTML:NO];
-        
-        [self presentModalViewController:mailViewController animated:YES];
-        
-    }
-    
-    else {
-        
-        UIAlertView* alert =[[UIAlertView alloc] initWithTitle:@"Oops" message:@"Can't send emails currently" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
-        
-    }
-}
+
+
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
     
     UIAlertView* alert=nil;
@@ -123,5 +128,9 @@
         
     }
     [self dismissModalViewControllerAnimated:YES];
+}
+- (void)viewDidUnload {
+    [self setLineNumSwitch:nil];
+    [super viewDidUnload];
 }
 @end

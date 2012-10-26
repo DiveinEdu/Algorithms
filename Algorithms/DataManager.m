@@ -70,6 +70,7 @@
             }
             [[NSUserDefaults standardUserDefaults] setObject:codeStyles forKey:@"codeStyles"];
             [[NSUserDefaults standardUserDefaults] setObject:[codeStyles objectAtIndex:0] forKey:@"codeStyle"];
+            [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"showLineNums"];
         }
     }
     return self;

@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad
 {
+    [self.loadingView setBackgroundColor:[UIColor blackColor]];
+    [self.loadingView setAlpha:.5];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -38,5 +40,9 @@
 }
 - (IBAction)launchSafari:(id)sender {
         [[UIApplication sharedApplication] openURL:self.webView.request.URL];
+}
+-(void)webViewDidFinishLoad:(UIWebView *)webView{
+    [self.loadingView removeFromSuperview];
+    
 }
 @end

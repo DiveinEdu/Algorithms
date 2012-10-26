@@ -12,6 +12,8 @@
 
 @interface SettingsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate >
 @property (nonatomic, strong) NSArray* codeStyles;
+@property (weak, nonatomic) IBOutlet UISwitch *lineNumSwitch;
 @property (nonatomic, weak) UITableViewCell* currentDefault;
+- (IBAction)toggleShowLineNums:(id)sender;
 - (IBAction)contactUs:(id)sender;
 @end
