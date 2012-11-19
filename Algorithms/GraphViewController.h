@@ -8,7 +8,9 @@
 
 #import "DataViewController.h"
 #import "GraphScrollView.h"
+@class Graph;
 @interface GraphViewController : DataViewController <GraphScrollMenu>
+@property (nonatomic, strong)Graph* graph;
 @property (weak, nonatomic) IBOutlet GraphScrollView *scrollView;
 @property (nonatomic, strong) UILongPressGestureRecognizer* pressRecognizer;
 @property (nonatomic) CGPoint touchPoint;

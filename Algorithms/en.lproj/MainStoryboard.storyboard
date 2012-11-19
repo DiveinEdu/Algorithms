@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2843" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1929"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -690,6 +690,146 @@
             </objects>
             <point key="canvasLocation" x="780" y="1962"/>
         </scene>
+        <!--Quicksort View Controller-->
+        <scene sceneID="cex-Oi-W1H">
+            <objects>
+                <viewController storyboardIdentifier="Quicksort" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dfd-KM-G0r" customClass="QuicksortViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IHy-Ii-Ogv">
+                        <rect key="frame" x="0.0" y="20" width="703" height="748"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="uqq-L3-zrB">
+                                <rect key="frame" x="20" y="71" width="663" height="657"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="quickCell" textLabel="Qh7-bV-wSh" style="IBUITableViewCellStyleDefault" id="2rV-Rm-GZs">
+                                        <rect key="frame" x="0.0" y="22" width="663" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="663" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qh7-bV-wSh">
+                                                    <rect key="frame" x="10" y="0.0" width="643" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dfd-KM-G0r" id="87K-Gj-GLb"/>
+                                    <outlet property="delegate" destination="dfd-KM-G0r" id="ar0-xH-18R"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zgL-Ym-KmK">
+                                <rect key="frame" x="271" y="20" width="90" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Generate">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="generate:" destination="dfd-KM-G0r" eventType="touchUpInside" id="N8r-Kd-hfF"/>
+                                    <action selector="generate:" destination="XGK-qi-7Jh" eventType="touchUpInside" id="Tpt-gP-KQt"/>
+                                    <action selector="generateList:" destination="eFs-Ii-Oxo" eventType="touchUpInside" id="Uxz-yL-4kg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="THK-Ts-cae">
+                                <rect key="frame" x="369" y="19" width="57" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Step">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextStep:" destination="XGK-qi-7Jh" eventType="touchUpInside" id="CzV-F5-p0g"/>
+                                    <action selector="step:" destination="eFs-Ii-Oxo" eventType="touchUpInside" id="Ke4-gk-8Hw"/>
+                                    <action selector="step:" destination="dfd-KM-G0r" eventType="touchUpInside" id="Oaz-os-nUu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ykm-oc-fwU">
+                                <rect key="frame" x="460" y="28" width="140" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="pjc-0g-9EG">
+                                <rect key="frame" x="434" y="28" width="18" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showInfo:" destination="eFs-Ii-Oxo" eventType="touchUpInside" id="QVu-a3-9Fl"/>
+                                    <action selector="showInfo:" destination="XGK-qi-7Jh" eventType="touchUpInside" id="Yub-6R-fHa"/>
+                                    <action selector="showInfo:" destination="dfd-KM-G0r" eventType="touchUpInside" id="ii1-tb-ELm"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="max" minimumFontSize="17" id="MSW-Ld-wcK">
+                                <rect key="frame" x="20" y="25" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XGK-qi-7Jh" id="zwz-Lb-Eki"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="count" minimumFontSize="17" id="sIA-XZ-aaH">
+                                <rect key="frame" x="153" y="25" width="110" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XGK-qi-7Jh" id="e6K-TU-S49"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="min" minimumFontSize="17" id="8ZS-Ig-d1h">
+                                <rect key="frame" x="91" y="25" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="XGK-qi-7Jh" id="56K-e3-gHO"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="countField" destination="sIA-XZ-aaH" id="ckB-Yl-IM0"/>
+                        <outlet property="maxField" destination="MSW-Ld-wcK" id="Qe6-KV-1bP"/>
+                        <outlet property="minField" destination="8ZS-Ig-d1h" id="qFW-XN-JWM"/>
+                        <outlet property="stepLabel" destination="Ykm-oc-fwU" id="THN-WB-B03"/>
+                        <outlet property="tableView" destination="uqq-L3-zrB" id="LHq-JT-jsM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFf-gG-UiW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1550" y="1957"/>
+        </scene>
         <!--Graph View Controller-->
         <scene sceneID="eFo-nd-c5F">
             <objects>
@@ -716,10 +856,10 @@
             </objects>
             <point key="canvasLocation" x="3512" y="-327"/>
         </scene>
-        <!--View Controller-->
+        <!--Binary Tree-->
         <scene sceneID="oFY-En-wvi">
             <objects>
-                <viewController storyboardIdentifier="bstView" id="5Zr-p5-WYw" customClass="BSTViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="huffman" id="5Zr-p5-WYw" userLabel="Binary Tree" customClass="HuffmanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M4v-yk-97M">
                         <rect key="frame" x="0.0" y="20" width="703" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1340,6 +1480,87 @@
             </objects>
             <point key="canvasLocation" x="1970" y="935"/>
         </scene>
+        <!--Binary Tree-->
+        <scene sceneID="8D4-96-5Lj">
+            <objects>
+                <viewController storyboardIdentifier="bstView" id="QDZ-b3-NbN" userLabel="Binary Tree" customClass="BSTViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pG1-ug-exS">
+                        <rect key="frame" x="0.0" y="20" width="703" height="748"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q92-h3-abd">
+                                <rect key="frame" x="331" y="20" width="98" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Add Value">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addToTree:" destination="QDZ-b3-NbN" eventType="touchUpInside" id="Wnz-8K-caA"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="2VE-xn-U0j">
+                                <rect key="frame" x="132" y="27" width="191" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="0zg-oC-uOr">
+                                <rect key="frame" x="20" y="161" width="663" height="567"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="QDZ-b3-NbN" id="clz-6F-sY6"/>
+                                </connections>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jYh-ES-sVo">
+                                <rect key="frame" x="459" y="20" width="127" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Remove Value">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeFromTree:" destination="QDZ-b3-NbN" eventType="touchUpInside" id="h7f-bY-x2j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2cH-Wd-wJr">
+                                <rect key="frame" x="619" y="20" width="55" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Test">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testTree:" destination="QDZ-b3-NbN" eventType="touchUpInside" id="DuT-ve-lk5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="scrollView" destination="0zg-oC-uOr" id="bty-hH-5NI"/>
+                        <outlet property="valueField" destination="2VE-xn-U0j" id="B5Z-kc-2wx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZ5-c6-dLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4470" y="901"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Welcome.png" width="703" height="704"/>
@@ -1420,6 +1641,9 @@
                 <relationship kind="outlet" name="maxOrMin" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
+        <class className="HuffmanViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HuffmanViewController.h"/>
+        </class>
         <class className="LinkedListViewController" superclassName="DataViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LinkedListViewController.h"/>
             <relationships>
@@ -1437,6 +1661,19 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MergeSortViewController.h"/>
             <relationships>
                 <relationship kind="action" name="generateList:"/>
+                <relationship kind="action" name="showInfo:"/>
+                <relationship kind="action" name="step:"/>
+                <relationship kind="outlet" name="countField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="maxField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="minField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="stepLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="QuicksortViewController" superclassName="DataViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuicksortViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="generate:"/>
                 <relationship kind="action" name="showInfo:"/>
                 <relationship kind="action" name="step:"/>
                 <relationship kind="outlet" name="countField" candidateClass="UITextField"/>

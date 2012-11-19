@@ -47,7 +47,7 @@
      {
      "name":"Graph",
      "viewID":"graphView",
-     "related":["GraphNode","GraphEdge","EdgeWeight"],
+     "related":["GraphNode","Graph"],
      "wikiLink":"http://wikipedia.org/wiki/Graph_(data_structure)"
      },
      {
@@ -75,15 +75,28 @@
      {
      "name":"Bubble Sort",
      "viewID":"bubbleSort",
-     "related":["BubbleSort","BubbleSort"],
+     "related":["BubbleSort"],
      "wikiLink":"http://wikipedia.org/wiki/Bubble_sort"
      },
      {
      "name":"Merge Sort",
      "viewID":"mergeSort",
-     "related":["MergeSort","MergeSort"],
+     "related":["MergeSort"],
      "wikiLink":"http://wikipedia.org/wiki/Merge_sort"
+     },
+     {
+     "name":"Quicksort",
+     "viewID":"Quicksort",
+     "related":["QuickSort","MergeSort"],
+     "wikiLink":"http://wikipedia.org/wiki/Quicksort"
+     },
+     {
+     "name":"Huffman Coding",
+     "viewID":"huffman",
+     "related":["HuffmanTree"],
+     "wikiLink":"http://wikipedia.org/wiki/Quicksort"
      }
+     
     ],
     "settings":
     [

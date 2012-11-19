@@ -10,10 +10,6 @@
 
 @interface ArrayHeap : Heap
 @property (nonatomic, strong)NSMutableArray* nodes;
+-(void)addNode:(HeapNode*)node;
 
--(int) left:(int) parent;
--(int) right:(int) parent;
--(int) parent:(int) child;
--(void) heapifyUp:(int) index;
--(void) heapifyDown:(int) index;
 @end

@@ -60,6 +60,53 @@
         secondNode.next = [MergeSort split:secondNode.next];
         return secondNode;
     }
+    
+}
+
++(void)sortArray:(NSMutableArray *)array{
+    
+    [array replaceObjectsInRange:NSMakeRange(0, [array count]) withObjectsFromArray:[MergeSort mergeSortArray:array]];
+    
+}
++(NSMutableArray*)mergeSortArray:(NSMutableArray*)array{
+    if([array count]<=1)
+        return array;
+    NSInteger mid = [array count]/2;
+    NSRange lRange = NSMakeRange(0, mid);
+    NSRange rRange = NSMakeRange(mid, [array count]-mid);
+    NSMutableArray* left = [MergeSort mergeSortArray:[NSMutableArray arrayWithArray:[array subarrayWithRange:lRange]]];
+    NSMutableArray* right = [MergeSort mergeSortArray:[NSMutableArray arrayWithArray:[array subarrayWithRange:rRange]]];
+    
+    NSLog(@"%@",left);
+    NSLog(@"%@",right);
+    return [MergeSort mergeArray:left withArray:right];
+    
+}
++(NSMutableArray*)mergeArray:(NSMutableArray*)left withArray:(NSMutableArray*)right{
+    NSMutableArray* merged = [NSMutableArray new];
+    while( [left count] > 0 || [right count] > 0){
+        if( [left count] > 0 && [right count] > 0){
+            if ( [left[0] integerValue] <= [right[0] integerValue]){
+                [merged addObject:left[0]];
+                [left removeObjectAtIndex:0];
+                
+            }else{
+                [merged addObject:right[0]];
+                [right removeObjectAtIndex:0];
+            }
+            
+        }
+        else if ( [left count] > 0){
+            [merged addObject:left[0]];
+            [left removeObjectAtIndex:0];
+        }
+        else if ([right count] > 0){
+            [merged addObject:right[0]];
+            [right removeObjectAtIndex:0];
+        }
+    }
+    NSLog(@"Merged:%@",merged);
+    return merged;
 }
 
 @end

@@ -10,6 +10,7 @@
 #import "HeapNode.h"
 @implementation ArrayHeap
 
+
 -(NSMutableArray*)nodes{
     if (_nodes != nil)
         return _nodes;    
@@ -22,7 +23,10 @@
     [self.nodes addObject:node];
     [self heapifyUp:([self.nodes count]-1) ];
 }
-
+-(void)addNode:(HeapNode*)node{
+    [self.nodes addObject:node];
+    [self heapifyUp:([self.nodes count]-1) ];
+}
 
 -(HeapNode*)getMin{
     if ([self.nodes count] >0) {

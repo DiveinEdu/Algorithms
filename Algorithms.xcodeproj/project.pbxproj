@@ -22,6 +22,9 @@
 		09038F4C16125F7A00D4E530 /* Node.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09038F4916125F7900D4E530 /* Node.m */; };
 		09038F501612615300D4E530 /* RelatedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F4F1612615300D4E530 /* RelatedFile.m */; };
 		091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64AD160E5D0200F9439A /* CodeViewController.m */; };
+		0928CA32165AC38500ADC886 /* HuffmanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CA31165AC38500ADC886 /* HuffmanViewController.m */; };
+		0928CA36165ACA4500ADC886 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CA35165ACA4500ADC886 /* Graph.m */; };
+		0928CA39165ACA7600ADC886 /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CA38165ACA7600ADC886 /* GraphNode.m */; };
 		092F4D6E16122CFE003F4850 /* BubbleSort.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0937E32C161210B00044040F /* BubbleSort.m */; };
 		092F4D7016122D01003F4850 /* BubbleSort.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0937E32B161210B00044040F /* BubbleSort.h */; };
 		0937E3281612106C0044040F /* BubbleSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E3271612106C0044040F /* BubbleSortViewController.m */; };
@@ -68,12 +71,19 @@
 		09584E12160E4FD000AF8427 /* ListNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095434501606D895001D3E5D /* ListNode.h */; };
 		09584E13160E4FD200AF8427 /* ListNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095434511606D895001D3E5D /* ListNode.m */; };
 		09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09584E15160E55B000AF8427 /* CodePopoverController.m */; };
+		095DA74816574BAB00473540 /* Quicksort.m in Sources */ = {isa = PBXBuildFile; fileRef = 095DA74716574BAB00473540 /* Quicksort.m */; };
+		095DA74916574BBD00473540 /* Quicksort.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095DA74716574BAB00473540 /* Quicksort.m */; };
+		095DA74A16574BC100473540 /* Quicksort.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095DA74616574BAB00473540 /* Quicksort.h */; };
+		095DA74D16574ED200473540 /* QuicksortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095DA74C16574ED200473540 /* QuicksortViewController.m */; };
+		095DA7501657534E00473540 /* QuicksortSub.m in Sources */ = {isa = PBXBuildFile; fileRef = 095DA74F1657534E00473540 /* QuicksortSub.m */; };
 		09617168162FBD9700B20431 /* AVLNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B81843161D279F004B026C /* AVLNode.h */; };
 		09617169162FBD9700B20431 /* AVLNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B81844161D279F004B026C /* AVLNode.m */; };
 		0961716A162FBD9700B20431 /* AVLTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B81840161D25E2004B026C /* AVLTree.h */; };
 		0961716B162FBD9700B20431 /* AVLTree.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B81841161D25E2004B026C /* AVLTree.m */; };
 		0961716F162FBF4B00B20431 /* Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0961716E162FBF4B00B20431 /* Algorithm.m */; };
 		09617173162FC1BA00B20431 /* WikiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09617172162FC1BA00B20431 /* WikiViewController.m */; };
+		0964FFFD165AA4920080CFA7 /* HuffmanTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 0964FFFC165AA4920080CFA7 /* HuffmanTree.m */; };
+		0964FFFF165AA54C0080CFA7 /* EnglishFreq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0964FFFE165AA54C0080CFA7 /* EnglishFreq.txt */; };
 		096912C9160A6BE600E5AFB7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096912C8160A6BE600E5AFB7 /* QuartzCore.framework */; };
 		096D6C41163639E4005CF7C2 /* Welcome.png in Resources */ = {isa = PBXBuildFile; fileRef = 096D6C3F163639E4005CF7C2 /* Welcome.png */; };
 		096D6C42163639E4005CF7C2 /* Welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 096D6C40163639E4005CF7C2 /* Welcome@2x.png */; };
@@ -114,9 +124,6 @@
 		09C8ED761618D67D0076E2D0 /* HeapNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA274F1617DE1700738463 /* HeapNode.h */; };
 		09C8ED771618D67F0076E2D0 /* HeapNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA27501617DE1700738463 /* HeapNode.m */; };
 		09D65B751631B967001EF3C2 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D65B741631B967001EF3C2 /* GraphViewController.m */; };
-		09D65B781631B9A3001EF3C2 /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D65B771631B9A3001EF3C2 /* GraphNode.m */; };
-		09D65B7B1631BA0C001EF3C2 /* GraphEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D65B7A1631BA0C001EF3C2 /* GraphEdge.m */; };
-		09D65B7E1631BA39001EF3C2 /* EdgeWeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D65B7D1631BA39001EF3C2 /* EdgeWeight.m */; };
 		09E9573A1609500500F5D573 /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E957391609500500F5D573 /* StackViewController.m */; };
 		09E9573D1609501800F5D573 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
 		09F0D3F4160CEB9600CF657E /* arrow_right_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F0160CEB9600CF657E /* arrow_right_filled.png */; };
@@ -188,6 +195,8 @@
 				09038F4C16125F7A00D4E530 /* Node.m in CopyFiles */,
 				09B33FA7161296CE000FF89F /* BinarySearchTree.h in CopyFiles */,
 				09B33FA8161296D1000FF89F /* BinarySearchTree.m in CopyFiles */,
+				095DA74A16574BC100473540 /* Quicksort.h in CopyFiles */,
+				095DA74916574BBD00473540 /* Quicksort.m in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +235,12 @@
 		09038F4F1612615300D4E530 /* RelatedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedFile.m; sourceTree = "<group>"; };
 		091F64AC160E5D0200F9439A /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
 		091F64AD160E5D0200F9439A /* CodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeViewController.m; sourceTree = "<group>"; };
+		0928CA30165AC38500ADC886 /* HuffmanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanViewController.h; sourceTree = "<group>"; };
+		0928CA31165AC38500ADC886 /* HuffmanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanViewController.m; sourceTree = "<group>"; };
+		0928CA34165ACA4500ADC886 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
+		0928CA35165ACA4500ADC886 /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
+		0928CA37165ACA7600ADC886 /* GraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphNode.h; sourceTree = "<group>"; };
+		0928CA38165ACA7600ADC886 /* GraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphNode.m; sourceTree = "<group>"; };
 		0937E3261612106B0044040F /* BubbleSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSortViewController.h; sourceTree = "<group>"; };
 		0937E3271612106C0044040F /* BubbleSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortViewController.m; sourceTree = "<group>"; };
 		0937E32B161210B00044040F /* BubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
@@ -272,10 +287,19 @@
 		095434511606D895001D3E5D /* ListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListNode.m; sourceTree = "<group>"; };
 		09584E14160E55B000AF8427 /* CodePopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodePopoverController.h; sourceTree = "<group>"; };
 		09584E15160E55B000AF8427 /* CodePopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodePopoverController.m; sourceTree = "<group>"; };
+		095DA74616574BAB00473540 /* Quicksort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quicksort.h; sourceTree = "<group>"; };
+		095DA74716574BAB00473540 /* Quicksort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quicksort.m; sourceTree = "<group>"; };
+		095DA74B16574ED200473540 /* QuicksortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuicksortViewController.h; sourceTree = "<group>"; };
+		095DA74C16574ED200473540 /* QuicksortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuicksortViewController.m; sourceTree = "<group>"; };
+		095DA74E1657534E00473540 /* QuicksortSub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuicksortSub.h; sourceTree = "<group>"; };
+		095DA74F1657534E00473540 /* QuicksortSub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuicksortSub.m; sourceTree = "<group>"; };
 		0961716D162FBF4B00B20431 /* Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Algorithm.h; sourceTree = "<group>"; };
 		0961716E162FBF4B00B20431 /* Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Algorithm.m; sourceTree = "<group>"; };
 		09617171162FC1BA00B20431 /* WikiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WikiViewController.h; sourceTree = "<group>"; };
 		09617172162FC1BA00B20431 /* WikiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WikiViewController.m; sourceTree = "<group>"; };
+		0964FFFB165AA4920080CFA7 /* HuffmanTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanTree.h; sourceTree = "<group>"; };
+		0964FFFC165AA4920080CFA7 /* HuffmanTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanTree.m; sourceTree = "<group>"; };
+		0964FFFE165AA54C0080CFA7 /* EnglishFreq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EnglishFreq.txt; sourceTree = "<group>"; };
 		096912C8160A6BE600E5AFB7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		096D6C3F163639E4005CF7C2 /* Welcome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Welcome.png; sourceTree = "<group>"; };
 		096D6C40163639E4005CF7C2 /* Welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Welcome@2x.png"; sourceTree = "<group>"; };
@@ -329,12 +353,6 @@
 		09C070A416115BDD001F4C12 /* NodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeView.m; sourceTree = "<group>"; };
 		09D65B731631B967001EF3C2 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		09D65B741631B967001EF3C2 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
-		09D65B761631B9A3001EF3C2 /* GraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphNode.h; sourceTree = "<group>"; };
-		09D65B771631B9A3001EF3C2 /* GraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphNode.m; sourceTree = "<group>"; };
-		09D65B791631BA0C001EF3C2 /* GraphEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphEdge.h; sourceTree = "<group>"; };
-		09D65B7A1631BA0C001EF3C2 /* GraphEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphEdge.m; sourceTree = "<group>"; };
-		09D65B7C1631BA39001EF3C2 /* EdgeWeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeWeight.h; sourceTree = "<group>"; };
-		09D65B7D1631BA39001EF3C2 /* EdgeWeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeWeight.m; sourceTree = "<group>"; };
 		09E957381609500500F5D573 /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
 		09E957391609500500F5D573 /* StackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
 		09E9573B1609501800F5D573 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -492,6 +510,8 @@
 		0937E32A1612107C0044040F /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				0964FFF9165AA23E0080CFA7 /* Huffman Coding */,
+				095DA74416574B6300473540 /* QuickSort */,
 				09038F33161252B500D4E530 /* MergeSort */,
 				0937E329161210710044040F /* BubbleSort */,
 			);
@@ -620,6 +640,19 @@
 			name = LinkedList;
 			sourceTree = "<group>";
 		};
+		095DA74416574B6300473540 /* QuickSort */ = {
+			isa = PBXGroup;
+			children = (
+				095DA74616574BAB00473540 /* Quicksort.h */,
+				095DA74716574BAB00473540 /* Quicksort.m */,
+				095DA74E1657534E00473540 /* QuicksortSub.h */,
+				095DA74F1657534E00473540 /* QuicksortSub.m */,
+				095DA74B16574ED200473540 /* QuicksortViewController.h */,
+				095DA74C16574ED200473540 /* QuicksortViewController.m */,
+			);
+			name = QuickSort;
+			sourceTree = "<group>";
+		};
 		09617170162FC15D00B20431 /* Wiki View */ = {
 			isa = PBXGroup;
 			children = (
@@ -627,6 +660,18 @@
 				09617172162FC1BA00B20431 /* WikiViewController.m */,
 			);
 			name = "Wiki View";
+			sourceTree = "<group>";
+		};
+		0964FFF9165AA23E0080CFA7 /* Huffman Coding */ = {
+			isa = PBXGroup;
+			children = (
+				0928CA30165AC38500ADC886 /* HuffmanViewController.h */,
+				0928CA31165AC38500ADC886 /* HuffmanViewController.m */,
+				0964FFFE165AA54C0080CFA7 /* EnglishFreq.txt */,
+				0964FFFB165AA4920080CFA7 /* HuffmanTree.h */,
+				0964FFFC165AA4920080CFA7 /* HuffmanTree.m */,
+			);
+			name = "Huffman Coding";
 			sourceTree = "<group>";
 		};
 		09ADEE93161CDBDA00BD0CAE /* RedBlackTree */ = {
@@ -707,16 +752,14 @@
 			children = (
 				09D65B731631B967001EF3C2 /* GraphViewController.h */,
 				09D65B741631B967001EF3C2 /* GraphViewController.m */,
-				09D65B761631B9A3001EF3C2 /* GraphNode.h */,
-				09D65B771631B9A3001EF3C2 /* GraphNode.m */,
-				09D65B791631BA0C001EF3C2 /* GraphEdge.h */,
-				09D65B7A1631BA0C001EF3C2 /* GraphEdge.m */,
-				09D65B7C1631BA39001EF3C2 /* EdgeWeight.h */,
-				09D65B7D1631BA39001EF3C2 /* EdgeWeight.m */,
 				096D6C4716364034005CF7C2 /* GraphScrollView.h */,
 				096D6C4816364034005CF7C2 /* GraphScrollView.m */,
 				096D6C4A163643CD005CF7C2 /* GraphView.h */,
 				096D6C4B163643CE005CF7C2 /* GraphView.m */,
+				0928CA34165ACA4500ADC886 /* Graph.h */,
+				0928CA35165ACA4500ADC886 /* Graph.m */,
+				0928CA37165ACA7600ADC886 /* GraphNode.h */,
+				0928CA38165ACA7600ADC886 /* GraphNode.m */,
 			);
 			name = Graph;
 			sourceTree = "<group>";
@@ -859,6 +902,7 @@
 				096D6C42163639E4005CF7C2 /* Welcome@2x.png in Resources */,
 				096D6C4516363A71005CF7C2 /* background.png in Resources */,
 				096D6C4616363A71005CF7C2 /* background@2x.png in Resources */,
+				0964FFFF165AA54C0080CFA7 /* EnglishFreq.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,11 +989,15 @@
 				0961716F162FBF4B00B20431 /* Algorithm.m in Sources */,
 				09617173162FC1BA00B20431 /* WikiViewController.m in Sources */,
 				09D65B751631B967001EF3C2 /* GraphViewController.m in Sources */,
-				09D65B781631B9A3001EF3C2 /* GraphNode.m in Sources */,
-				09D65B7B1631BA0C001EF3C2 /* GraphEdge.m in Sources */,
-				09D65B7E1631BA39001EF3C2 /* EdgeWeight.m in Sources */,
 				096D6C4916364034005CF7C2 /* GraphScrollView.m in Sources */,
 				096D6C4C163643CE005CF7C2 /* GraphView.m in Sources */,
+				095DA74816574BAB00473540 /* Quicksort.m in Sources */,
+				095DA74D16574ED200473540 /* QuicksortViewController.m in Sources */,
+				095DA7501657534E00473540 /* QuicksortSub.m in Sources */,
+				0964FFFD165AA4920080CFA7 /* HuffmanTree.m in Sources */,
+				0928CA32165AC38500ADC886 /* HuffmanViewController.m in Sources */,
+				0928CA36165ACA4500ADC886 /* Graph.m in Sources */,
+				0928CA39165ACA7600ADC886 /* GraphNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1003,11 +1051,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = armv7;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1022,8 +1070,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -1031,11 +1081,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = armv7;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
@@ -1044,6 +1094,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
 				VALIDATE_PRODUCT = YES;
@@ -1054,12 +1105,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
 				INFOPLIST_FILE = "Algorithms/Algorithms-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};
@@ -1069,14 +1118,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
 				INFOPLIST_FILE = "Algorithms/Algorithms-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = app;
 			};

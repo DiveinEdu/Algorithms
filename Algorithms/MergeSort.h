@@ -10,5 +10,5 @@
 @class LinkedList;
 @interface MergeSort : NSObject
 +(void)sortLinkedList:(LinkedList*)list;
-
++(void)sortArray:(NSMutableArray*)array;
 @end
