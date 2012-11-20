@@ -8,6 +8,7 @@
 
 #import "DataViewController.h"
 #import "GraphScrollView.h"
+#import "GraphView.h"
 @class Graph;
 @interface GraphViewController : DataViewController <GraphScrollMenu>
 @property (nonatomic, strong)Graph* graph;

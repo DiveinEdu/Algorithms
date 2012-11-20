@@ -59,10 +59,11 @@
 }
 
 -(NSString*)description{
-    return [NSString stringWithFormat:@"%i in: %i out:%i",myID,[self inDegree],[self outDegree]];
+    return [NSString stringWithFormat:@"%i in: %i out:%i\n%@",myID,[self inDegree],[self outDegree],self.successors];
 }
 -(Graph*)graph{
-    return self.graph;
+    
+    return _graph;
 }
 
 -(void)cleanUp{

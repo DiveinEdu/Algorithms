@@ -10,9 +10,10 @@
 #import "GraphScrollView.h"
 #import "GraphNode.h"
 #import "GraphView.h"
-
-@interface GraphViewController ()
-
+#import "Graph.h"
+@interface GraphViewController (){
+    GraphNode* fromNode;
+}
 @end
 
 @implementation GraphViewController
@@ -25,7 +26,10 @@
     }
     return self;
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    fromNode=nil;
+    [super viewWillAppear:animated];
+}
 - (void)viewDidLoad
 {
     self.pressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
@@ -68,11 +72,37 @@
 
 //Graph Scroll View Delegates
 -(void)addNewNode{
-    GraphNode* newNode = [[GraphNode alloc] initWithValue: @"Node"];
+    GraphNode* newNode = [[GraphNode alloc] initWithValue: @"Node" andGraph:self.graph];
     GraphView* newView = [[GraphView alloc] initWithNode: newNode];
+    [newNode setView:newView];
+    [newView addTarget:self action:@selector(userSelectedNode:) forControlEvents:UIControlEventTouchUpInside];
     [newView setCenter:self.touchPoint];
     [self.scrollView addSubview:newView];
  
     NSLog(@"Add New Node");
+}
+-(void)userSelectedNode:(GraphView *)view{
+    GraphNode* node = view.node;
+    if (fromNode==nil) {
+        fromNode=node;
+        [view setShouldHighlight:YES];
+    }
+    else{
+        //we have both
+        [self.graph addEdgeFrom:fromNode toNode:node];
+        [fromNode.view setShouldHighlight:NO];
+        [view setShouldHighlight:NO];
+        [fromNode.view refresh];
+        fromNode = nil;
+
+    }
+    [view refresh];
+    
+}
+-(Graph*)graph{
+    if (_graph==nil) {
+        _graph = [Graph new];
+    }
+    return _graph;
 }
 @end

@@ -8,8 +8,10 @@
 
 #import "Node.h"
 @class Graph;
+@class GraphView;
 
 @interface GraphNode : Node
+@property (nonatomic, weak) GraphView* view;
 @property (nonatomic, strong)NSMutableSet* successors; /*outflow*/
 @property (nonatomic, strong)NSMutableSet* predecessors; /* inflow */
 
