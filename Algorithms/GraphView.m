@@ -67,7 +67,7 @@
     CGPoint mid = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
     
     /*draw arrow to their node*/
-    ArrowView* av = [[ArrowView alloc] initWithStartPoint:mid andEndPoint:CGPointMake(mid.x+width, mid.y+height)];
+    ArrowView* av = [[ArrowView alloc] initWithStartPoint:mid andEndPoint:CGPointMake(mid.x+width, mid.y+height) withOffset:GRAPH_NODE_DIAMETER/2];
     [self.arrowViews addObject:av];
     [self addSubview:av];
 }

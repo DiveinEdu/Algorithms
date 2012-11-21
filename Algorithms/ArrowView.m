@@ -3,12 +3,13 @@
 //  Algorithms
 //
 //  Created by Carl Wieland on 9/19/12.
-//  Copyright (c) 2012 balanceoni. All rights reserved.
+//  Copyright (c) ARROW_WIDTH12 balanceoni. All rights reserved.
 //
 
 #import "ArrowView.h"
 #import <QuartzCore/QuartzCore.h>
 #import <math.h>
+#define ARROW_WIDTH 20
 @interface ArrowView()
 -(UIImage*)imageForType:(ARROW_TYPE) type;
 @end
@@ -33,9 +34,10 @@
         CGFloat angle = atan(y / x);
         
         UIView * separator = nil;
-        UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
 
         if (start.x <= end.x) {
+            UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
+
             if(start.y<=end.y){
                 //we are going down to the right
                 /*
@@ -45,11 +47,8 @@
                  */
                 separator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, len, 1)];
                 [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
-                [arrowView setFrame:CGRectMake(frame.size.width-10, frame.size.height-5, 10, 10)];
+                [arrowView setFrame:CGRectMake(separator.frame.size.width-ARROW_WIDTH, separator.frame.size.height-ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
                 [separator addSubview:arrowView];
-                [arrowView setFrame:CGRectMake(len-10, -10, 10, 10)];
-                CGAffineTransform arrow = CGAffineTransformMakeRotation(angle);
-                [arrowView setTransform:arrow];
                 CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
                 [separator setTransform:transform];
             }
@@ -60,31 +59,33 @@
                  | /|
                  |/_|
                  *
+                 
                  */
                 separator = [[UIView alloc] initWithFrame:CGRectMake(0, y, len, 1)];
                 [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
-                [arrowView setFrame:CGRectMake(frame.size.width-10, frame.size.height-5, 10, 10)];
-                [self setAnchorPoint:CGPointMake(1, .5) forView:arrowView];
-                CGAffineTransform arrow = CGAffineTransformMakeRotation(-angle);
-                [arrowView setTransform:arrow];
+                [arrowView setFrame:CGRectMake(separator.frame.size.width-ARROW_WIDTH, separator.frame.size.height-ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
+                [separator addSubview:arrowView];
+
                 CGAffineTransform transform = CGAffineTransformMakeRotation(-angle);
                 [separator setTransform:transform];
             }
 
         }
         else{
+            UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_left_filled.png"]];
+
             //going to the left
             if(start.y<=end.y){
-                /*__*
+                /*Down Left
+                  __*
                  | /|
                  |/_|
+                 
                  */
                 separator = [[UIView alloc] initWithFrame:CGRectMake(0,y, len, 1)];
                 [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
-                [arrowView setFrame:CGRectMake(-10, frame.size.height-5, 10, 10)];
-                [self setAnchorPoint:CGPointMake(1, .5) forView:arrowView];
-                CGAffineTransform arrow = CGAffineTransformMakeRotation(-(M_PI+angle));
-                [arrowView setTransform:arrow];
+                [arrowView setFrame:CGRectMake(offset, -ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
+                [separator addSubview:arrowView];
                 CGAffineTransform transform = CGAffineTransformMakeRotation(-angle);
                 [separator setTransform:transform];
             }
@@ -97,11 +98,8 @@
                  */
                 separator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, len, 1)];
                 [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
-                [arrowView setFrame:CGRectMake(frame.size.width-10, frame.size.height-5, 10, 10)];
+                [arrowView setFrame:CGRectMake(offset, -ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
                 [separator addSubview:arrowView];
-                [arrowView setFrame:CGRectMake(len-10, -10, 10, 10)];
-                CGAffineTransform arrow = CGAffineTransformMakeRotation(angle);
-                [arrowView setTransform:arrow];
                 CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
                 [separator setTransform:transform];
 
@@ -134,18 +132,12 @@
         
         
         UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
-
         UIView * separator = [[UIView alloc] initWithFrame:CGRectMake(0, 1.5, len, 3)];
         separator.backgroundColor = [UIColor blackColor];
         [self addSubview:separator];
         [self addSubview:arrowView];
         [arrowView setTransform:transform];
         [separator setTransform:transform];
-       // [arrowView setFrame:CGRectMake(arrowView.frame.size.width-frame.size.height, frame.size.height, frame.size.height, frame.size.height)];
-        //[separator setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        
-        
-
         
         
         
