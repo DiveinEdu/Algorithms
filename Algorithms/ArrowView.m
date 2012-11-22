@@ -83,8 +83,8 @@
 
         separator.backgroundColor = [UIColor blackColor];
         [self addSubview:container];
-
-
+        [self setUserInteractionEnabled:NO];
+        
     }
     return self;
     

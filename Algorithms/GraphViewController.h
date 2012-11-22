@@ -14,6 +14,9 @@
 @property (nonatomic, strong)Graph* graph;
 @property (weak, nonatomic) IBOutlet GraphScrollView *scrollView;
 @property (nonatomic, strong) UILongPressGestureRecognizer* pressRecognizer;
+@property (nonatomic, strong) UITapGestureRecognizer* tapRecognizer;
+@property (nonatomic, strong) UIMenuController* menuController;
 @property (nonatomic) CGPoint touchPoint;
+
 
 @end

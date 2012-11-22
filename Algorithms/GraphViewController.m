@@ -34,24 +34,35 @@
 {
     self.pressRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
     [self.pressRecognizer setMinimumPressDuration:.2];
+    
+    self.tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cancelMenu:)];
+    [self.tapRecognizer setNumberOfTapsRequired:2];
+    [self.scrollView addGestureRecognizer:self.tapRecognizer];
     [self.scrollView addGestureRecognizer:self.pressRecognizer];
     [self.scrollView setGraphDelegate:self];
     [super viewDidLoad];
     
 	// Do any additional setup after loading the view.
 }
-
+-(void)cancelMenu:(UITapGestureRecognizer*)recognizer{
+    if (recognizer.state == UIGestureRecognizerStateRecognized) {
+        [self.menuController setMenuVisible:NO animated:YES];
+        [fromNode.view setShouldHighlight:NO];
+        [fromNode.view refresh];
+        fromNode = nil;
+    }
+}
 -(void)longPress:(UILongPressGestureRecognizer*)recognizer{
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         [recognizer.view becomeFirstResponder];
         
-        UIMenuController* mc = [UIMenuController sharedMenuController];
+        self.menuController = [UIMenuController sharedMenuController];
         UIMenuItem* addNode = [[UIMenuItem alloc] initWithTitle: @"Add Node" action:@selector( addNewNode)];
         self.touchPoint = [recognizer locationInView:recognizer.view];
-        mc.menuItems = [NSArray arrayWithObjects: addNode, nil];
+        self.menuController.menuItems = [NSArray arrayWithObjects: addNode, nil];
         CGRect bounds = CGRectMake(self.touchPoint.x, self.touchPoint.y, 0, 0);
-        [mc setTargetRect: bounds inView: recognizer.view.superview];
-        [mc setMenuVisible: YES animated: YES];
+        [self.menuController setTargetRect: bounds inView: recognizer.view.superview];
+        [self.menuController setMenuVisible: YES animated: YES];
 
     }
       
@@ -87,7 +98,7 @@
         fromNode=node;
         [view setShouldHighlight:YES];
     }
-    else{
+    else if(fromNode !=view.node){
         //we have both
         [self.graph addEdgeFrom:fromNode toNode:node];
         [fromNode.view setShouldHighlight:NO];
@@ -95,6 +106,10 @@
         [fromNode.view refresh];
         fromNode = nil;
 
+    }
+    else{
+        [fromNode.view setShouldHighlight:NO];
+        fromNode = nil;
     }
     [view refresh];
     
