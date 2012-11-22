@@ -58,7 +58,7 @@
         [desc appendFormat:@"%@:",node];
         
     }
-
+    return desc;
 }
 -(NSMutableSet*)nodes{
     if(_nodes)

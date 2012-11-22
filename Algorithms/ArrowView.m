@@ -9,7 +9,7 @@
 #import "ArrowView.h"
 #import <QuartzCore/QuartzCore.h>
 #import <math.h>
-#define ARROW_WIDTH 20
+#define ARROW_WIDTH 18
 @interface ArrowView()
 -(UIImage*)imageForType:(ARROW_TYPE) type;
 @end
@@ -30,88 +30,59 @@
     if(self){
         CGFloat x = self.frame.size.width;
         CGFloat y = self.frame.size.height;
-        CGFloat len = sqrtf((x*x) + (y*y))-offset;
+        CGFloat len = sqrtf((x*x) + (y*y))-(offset*2);
         CGFloat angle = atan(y / x);
         
         UIView * separator = nil;
-
+        UIImageView* arrowView=nil;
         if (start.x <= end.x) {
-            UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
+            arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
 
             if(start.y<=end.y){
-                //we are going down to the right
-                /*
-                 *___
-                 |\  |
-                 |_\_|
-                 */
-                separator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, len, 1)];
-                [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
-                [arrowView setFrame:CGRectMake(separator.frame.size.width-ARROW_WIDTH, separator.frame.size.height-ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
-                [separator addSubview:arrowView];
-                CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
-                [separator setTransform:transform];
+                /* down right */
+                separator = [[UIView alloc] initWithFrame:CGRectMake(offset, 0, len, 1)];
+                [arrowView setFrame:CGRectMake(separator.frame.size.width-ARROW_WIDTH+offset, separator.frame.size.height-ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
+
             }
             else{
-                //we are going up to the right
-                /*
-                 ___
-                 | /|
-                 |/_|
-                 *
-                 
-                 */
-                separator = [[UIView alloc] initWithFrame:CGRectMake(0, y, len, 1)];
-                [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
-                [arrowView setFrame:CGRectMake(separator.frame.size.width-ARROW_WIDTH, separator.frame.size.height-ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
-                [separator addSubview:arrowView];
-
-                CGAffineTransform transform = CGAffineTransformMakeRotation(-angle);
-                [separator setTransform:transform];
+                /* up right*/
+                separator = [[UIView alloc] initWithFrame:CGRectMake(offset, y, len, 1)];
+                [arrowView setFrame:CGRectMake(separator.frame.size.width-ARROW_WIDTH+offset, separator.frame.size.height-ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
+                angle*=-1;
             }
 
         }
         else{
-            UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_left_filled.png"]];
+             arrowView= [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_left_filled.png"]];
 
             //going to the left
             if(start.y<=end.y){
-                /*Down Left
-                  __*
-                 | /|
-                 |/_|
-                 
-                 */
-                separator = [[UIView alloc] initWithFrame:CGRectMake(0,y, len, 1)];
-                [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
+                /*Down Left*/
+                separator = [[UIView alloc] initWithFrame:CGRectMake(offset,y, len, 1)];
                 [arrowView setFrame:CGRectMake(offset, -ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
-                [separator addSubview:arrowView];
-                CGAffineTransform transform = CGAffineTransformMakeRotation(-angle);
-                [separator setTransform:transform];
+                angle*=-1;
+
             }
             else{
-                /*
-                 ____
-                 |\ |
-                 |_\|*
-                 Up Left
-                 */
-                separator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, len, 1)];
-                [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
+                /* Up Left */
+                separator = [[UIView alloc] initWithFrame:CGRectMake(offset, 0, len, 1)];
                 [arrowView setFrame:CGRectMake(offset, -ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
-                [separator addSubview:arrowView];
-                CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
-                [separator setTransform:transform];
-
                 
             }
-
-
-
         }
-        
+        [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
+
+
+        UIView* container = [[UIView alloc] initWithFrame:CGRectMake(0, separator.frame.origin.y, len+offset, 1)];
+        [container addSubview:separator];
+        [container addSubview:arrowView];
+        [separator setFrame:CGRectMake(offset, 0, separator.frame.size.width, separator.frame.size.height)];
+        [self setAnchorPoint:CGPointMake(0, 0) forView:container];
+        CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
+        [container setTransform:transform];
+
         separator.backgroundColor = [UIColor blackColor];
-        [self addSubview:separator];
+        [self addSubview:container];
 
 
     }

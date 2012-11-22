@@ -20,6 +20,7 @@
         [self.value setText:[self.node description]];
         [self.value.layer setBorderWidth:3];
         [self.value.layer setBorderColor:[UIColor blackColor].CGColor];
+        [self.value.layer setCornerRadius:25];
         [self.value setAdjustsFontSizeToFitWidth:YES];
         [self.value setAdjustsLetterSpacingToFitWidth:YES];
         [self.value setTextAlignment:NSTextAlignmentCenter];

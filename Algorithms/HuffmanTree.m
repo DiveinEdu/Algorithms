@@ -41,9 +41,9 @@
     [self buildTreeWithValues:valueMap];
 }
 -(NSString*)encodeString:(NSString*)value{
-    
+    return nil;
 }
 -(NSString*)decodeString:(NSString*)value{
-    
+    return nil;
 }
 @end
