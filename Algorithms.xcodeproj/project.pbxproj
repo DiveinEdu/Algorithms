@@ -94,6 +94,7 @@
 		096D6C4916364034005CF7C2 /* GraphScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D6C4816364034005CF7C2 /* GraphScrollView.m */; };
 		096D6C4C163643CE005CF7C2 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D6C4B163643CE005CF7C2 /* GraphView.m */; };
 		09745B39162A6FD90031F65D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09745B38162A6FD90031F65D /* SettingsViewController.m */; };
+		09773E0916601A0A00BDAFBE /* HuffmanNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09773E0816601A0A00BDAFBE /* HuffmanNode.m */; };
 		099EC975160FDC3C00FD136A /* Objects.json in Resources */ = {isa = PBXBuildFile; fileRef = 099EC974160FDC3C00FD136A /* Objects.json */; };
 		09ADEE97161CDBF300BD0CAE /* RedBlackTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */; };
 		09ADEE9A161CDC0400BD0CAE /* RedBlackTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE99161CDC0400BD0CAE /* RedBlackTree.m */; };
@@ -315,6 +316,8 @@
 		096D6C4B163643CE005CF7C2 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		09745B37162A6FD90031F65D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		09745B38162A6FD90031F65D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		09773E0716601A0A00BDAFBE /* HuffmanNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanNode.h; sourceTree = "<group>"; };
+		09773E0816601A0A00BDAFBE /* HuffmanNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanNode.m; sourceTree = "<group>"; };
 		099EC974160FDC3C00FD136A /* Objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Objects.json; sourceTree = "<group>"; };
 		09ADEE95161CDBF300BD0CAE /* RedBlackTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBlackTreeViewController.h; sourceTree = "<group>"; };
 		09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBlackTreeViewController.m; sourceTree = "<group>"; };
@@ -676,6 +679,8 @@
 				0964FFFE165AA54C0080CFA7 /* EnglishFreq.txt */,
 				0964FFFB165AA4920080CFA7 /* HuffmanTree.h */,
 				0964FFFC165AA4920080CFA7 /* HuffmanTree.m */,
+				09773E0716601A0A00BDAFBE /* HuffmanNode.h */,
+				09773E0816601A0A00BDAFBE /* HuffmanNode.m */,
 			);
 			name = "Huffman Coding";
 			sourceTree = "<group>";
@@ -1006,6 +1011,7 @@
 				0928CA32165AC38500ADC886 /* HuffmanViewController.m in Sources */,
 				0928CA36165ACA4500ADC886 /* Graph.m in Sources */,
 				0928CA39165ACA7600ADC886 /* GraphNode.m in Sources */,
+				09773E0916601A0A00BDAFBE /* HuffmanNode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

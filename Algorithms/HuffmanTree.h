@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 @class ArrayHeap;
+@class HuffmanNode;
+
 @interface HuffmanTree : NSObject{
     ArrayHeap* priorityQueue;
 }
-
+@property (nonatomic, strong)HuffmanNode* root;
 -(void)buildTreeWithValues:(NSDictionary*)valueMap;
 -(void)buildTreeWithString:(NSString*)value;
 -(NSString*)encodeString:(NSString*)value;

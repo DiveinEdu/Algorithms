@@ -57,9 +57,12 @@
 -(BOOL)adjoin:(GraphNode*)node{
     return [self goesToNode:node] || [self comesFrom:node];
 }
+-(NSString*)nodeDescription{
+    return [NSString stringWithFormat:@"id:%i\nin:%i\nout:%i",myID,[self inDegree],[self outDegree]];
 
+}
 -(NSString*)description{
-    return [NSString stringWithFormat:@"%i in: %i out:%i\n%@",myID,[self inDegree],[self outDegree],self.successors];
+    return [NSString stringWithFormat:@"%i in: %i out:%i",myID,[self inDegree],[self outDegree]];
 }
 -(Graph*)graph{
     

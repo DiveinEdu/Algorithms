@@ -85,12 +85,10 @@
 -(void)addNewNode{
     GraphNode* newNode = [[GraphNode alloc] initWithValue: @"Node" andGraph:self.graph];
     GraphView* newView = [[GraphView alloc] initWithNode: newNode];
-    [newNode setView:newView];
     [newView addTarget:self action:@selector(userSelectedNode:) forControlEvents:UIControlEventTouchUpInside];
     [newView setCenter:self.touchPoint];
     [self.scrollView addSubview:newView];
  
-    NSLog(@"Add New Node");
 }
 -(void)userSelectedNode:(GraphView *)view{
     GraphNode* node = view.node;

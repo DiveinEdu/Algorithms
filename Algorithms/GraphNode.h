@@ -33,4 +33,7 @@
 -(BOOL)adjoin:(GraphNode*)node;
 -(Graph*)graph;
 -(void)cleanUp;
+-(NSString*)nodeDescription;
+
+
 @end

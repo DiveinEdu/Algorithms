@@ -8,14 +8,38 @@
 
 #import "HuffmanTree.h"
 #import "ArrayHeap.h"
+#import "HuffmanNode.h"
+
 @implementation HuffmanTree
 
-
+-(id)init{
+    self = [super init];
+    if(self){
+        priorityQueue = [[ArrayHeap alloc] initWithType:HEAP_MIN];
+    }
+    return self;
+}
 
 
 
 -(void)buildTreeWithValues:(NSDictionary*)valueMap{
-    
+    for (NSString* key in [valueMap keyEnumerator]) {
+        NSNumber* value = valueMap[key];
+        NSAssert([value doubleValue]<1, @"Non normalized weight!");
+        HuffmanNode* newNode = [[HuffmanNode alloc] initWithValue:value andString:key];
+        [priorityQueue addNode:newNode];
+    }
+    HuffmanNode* left, *right;
+    while ([priorityQueue size]>1) {
+        left = (HuffmanNode*)[priorityQueue getNext];
+        right = (HuffmanNode*)[priorityQueue getNext];
+        HuffmanNode* combined = [[HuffmanNode alloc] initWithValue:[NSNumber numberWithDouble:[[left weight]doubleValue] +[[right weight]doubleValue]]];
+        [combined setRight:right];
+        [combined setLeft:left];
+        [priorityQueue addNode:combined];
+    }
+    self.root = (HuffmanNode*)[priorityQueue getNext];
+    NSAssert([[self.root weight] integerValue]==1 , @"Root is not 1");
 }
 -(void)buildTreeWithString:(NSString*)value{
 

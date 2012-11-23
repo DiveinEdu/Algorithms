@@ -24,13 +24,15 @@
         [self.layer setBorderColor:[UIColor blackColor].CGColor];
         [self.layer setBorderWidth:2];
         [self setBackgroundColor:[UIColor whiteColor]];
-        UILabel* value = [[UILabel alloc] initWithFrame:CGRectMake(0, GRAPH_NODE_DIAMETER/2-10, 75, 20)];
-        [value setBackgroundColor:[UIColor clearColor]];
-        [value setTextAlignment:NSTextAlignmentCenter];
-        [value setText:[NSString stringWithFormat:@"%@",self.node]];
+        self.value = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 75, 75)];
+        [self.value setBackgroundColor:[UIColor clearColor]];
+        [self.value setTextAlignment:NSTextAlignmentCenter];
+        [self.value setText:[NSString stringWithFormat:@"%@",[self.node nodeDescription]]];
+        [self.value setNumberOfLines:0];
         self.shouldHighlight = NO;
         self.arrowViews = [NSMutableArray new];
-        [self addSubview:value];
+        [self addSubview:self.value];
+        node.view = self;
         
     }
     return self;
@@ -48,6 +50,8 @@
     for (GraphNode* n in self.node.successors) {
         [self addArrowTo:n];
     }
+    [self.value setText:[NSString stringWithFormat:@"%@",[self.node nodeDescription]]];
+
 }
 
 

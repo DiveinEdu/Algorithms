@@ -13,6 +13,7 @@
 @interface GraphView : UIControl
 @property (nonatomic, weak)GraphNode* node;
 @property (nonatomic) BOOL shouldHighlight;
+@property (nonatomic, strong)UILabel* value;
 -(id)initWithNode:(GraphNode*)node;
 -(void)refresh;
 @end

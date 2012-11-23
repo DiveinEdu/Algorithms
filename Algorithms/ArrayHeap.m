@@ -17,7 +17,9 @@
     _nodes = [NSMutableArray new];
     return _nodes;
 }
-
+-(int)size{
+    return [self.nodes count];
+}
 -(void)addValue:(id)value{
     HeapNode* node = [[HeapNode alloc] initWithValue:value];
     [self.nodes addObject:node];
@@ -27,7 +29,9 @@
     [self.nodes addObject:node];
     [self heapifyUp:([self.nodes count]-1) ];
 }
-
+-(HeapNode*)getNext{
+    return [self getMin];
+}
 -(HeapNode*)getMin{
     if ([self.nodes count] >0) {
         HeapNode* min = self.nodes[0];
@@ -39,7 +43,9 @@
     }
     return nil;
 }
-
+-(HeapNode*)root{
+    return self.nodes[0];
+}
 
 -(int) left:(int) parent{
     int i = ( parent << 1 ) + 1;
