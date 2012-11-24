@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-@class ArrayHeap;
+@class PriorityQueue;
 @class HuffmanNode;
 
 @interface HuffmanTree : NSObject{
-    ArrayHeap* priorityQueue;
+    PriorityQueue* priorityQueue;
+    NSMutableDictionary* lookups;
 }
 @property (nonatomic, strong)HuffmanNode* root;
 -(void)buildTreeWithValues:(NSDictionary*)valueMap;

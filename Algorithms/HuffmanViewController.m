@@ -26,14 +26,9 @@
 
 - (void)viewDidLoad
 {
+    self.tree = [HuffmanTree new];
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-}
--(void)viewDidAppear:(BOOL)animated{
-    self.tree= [HuffmanTree new];
-    [self.tree buildTreeWithString:@"This is a test String!"];
-    [self refresh];
-    [super viewDidAppear:animated];
 }
 -(void)refresh{
     [self.rootView removeFromSuperview];
@@ -63,4 +58,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buildWithUS:(id)sender {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"USWeights" ofType:@"plist"];
+
+    NSDictionary* values = [NSDictionary dictionaryWithContentsOfFile:path];
+    NSLog(@"%@",values);
+    [self.tree buildTreeWithValues:values];
+    [self refresh];
+}
+
+- (IBAction)buildWithCustom:(id)sender {
+}
+
+- (IBAction)buildWithString:(id)sender {
+    [self.tree buildTreeWithString:[self.stringBuilder text]];
+    [self refresh];
+}
+
+- (IBAction)encode:(id)sender {
+    [self.outputLabel setText:[self.tree encodeString:[self.valueField text]]];
+}
+
+- (IBAction)decode:(id)sender {
+}
+- (void)viewDidUnload {
+    [self setOutputLabel:nil];
+    [self setStringBuilder:nil];
+    [super viewDidUnload];
+}
 @end

@@ -861,42 +861,21 @@
             <objects>
                 <viewController storyboardIdentifier="huffman" id="5Zr-p5-WYw" userLabel="Huffman Coding" customClass="HuffmanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M4v-yk-97M">
-                        <rect key="frame" x="0.0" y="20" width="703" height="748"/>
+                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vbY-pc-ooh">
-                                <rect key="frame" x="331" y="20" width="98" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Add Value">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addToTree:" destination="5Zr-p5-WYw" eventType="touchUpInside" id="EJk-J3-7Ct"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="cSm-x3-6mt">
-                                <rect key="frame" x="132" y="27" width="191" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="RQh-rg-CGr">
-                                <rect key="frame" x="20" y="161" width="663" height="567"/>
+                                <rect key="frame" x="20" y="219" width="663" height="465"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <outlet property="delegate" destination="5Zr-p5-WYw" id="T1O-qU-A7N"/>
                                 </connections>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Rqr-5W-MTk">
-                                <rect key="frame" x="459" y="20" width="127" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="yOA-lj-zQK">
+                                <rect key="frame" x="385" y="19" width="128" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Remove Value">
+                                <state key="normal" title="Custom String">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -904,14 +883,20 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="removeFromTree:" destination="5Zr-p5-WYw" eventType="touchUpInside" id="M2U-Cj-SxO"/>
+                                    <action selector="buildWithString:" destination="5Zr-p5-WYw" eventType="touchUpInside" id="Uvi-XL-FOA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aVJ-AU-Mnt">
-                                <rect key="frame" x="619" y="20" width="55" height="44"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Custom String" minimumFontSize="17" id="stE-JA-5gu">
+                                <rect key="frame" x="20" y="78" width="663" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="MMx-Bq-Lgl">
+                                <rect key="frame" x="110" y="20" width="116" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Test">
+                                <state key="normal" title="U.S. Weights">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -919,23 +904,110 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="testTree:" destination="5Zr-p5-WYw" eventType="touchUpInside" id="DCA-tS-a0j"/>
+                                    <action selector="buildWithUS:" destination="5Zr-p5-WYw" eventType="touchUpInside" id="eqb-mx-ym6"/>
                                 </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="M5G-RW-xLT">
+                                <rect key="frame" x="234" y="20" width="143" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Custom Weights">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buildWithCustom:" destination="5Zr-p5-WYw" eventType="touchUpInside" id="PhV-Mo-sgN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="encode/decode" minimumFontSize="17" id="gnY-Ov-Hcu">
+                                <rect key="frame" x="20" y="141" width="298" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Output:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m8f-x2-kB5">
+                                <rect key="frame" x="20" y="185" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="l1C-EG-jPs">
+                                <rect key="frame" x="84" y="185" width="599" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Build With:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TxX-VJ-YIa">
+                                <rect key="frame" x="20" y="30" width="82" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dfk-Pp-37X">
+                                <rect key="frame" x="323" y="134" width="79" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Encode">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="encode:" destination="5Zr-p5-WYw" eventType="touchUpInside" id="c7l-1m-fAS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iGJ-kF-jtS">
+                                <rect key="frame" x="410" y="134" width="79" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Decode">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="decode:" destination="5Zr-p5-WYw" eventType="touchUpInside" id="f7U-4h-5Wb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lEs-t8-my7">
+                                <rect key="frame" x="626" y="134" width="57" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Step">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="outputLabel" destination="l1C-EG-jPs" id="Yil-dd-bmF"/>
                         <outlet property="scrollView" destination="RQh-rg-CGr" id="mpl-06-9x1"/>
-                        <outlet property="valueField" destination="cSm-x3-6mt" id="M5G-41-C5p"/>
+                        <outlet property="stringBuilder" destination="stE-JA-5gu" id="ysY-u6-Jg2"/>
+                        <outlet property="valueField" destination="gnY-Ov-Hcu" id="1Qa-2B-hJi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2H-7h-0Xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3494" y="935"/>
+            <point key="canvasLocation" x="4882" y="-409"/>
         </scene>
         <!--AVLTree-->
         <scene sceneID="ado-DQ-vo2">
@@ -1565,182 +1637,6 @@
     <resources>
         <image name="Welcome.png" width="703" height="704"/>
     </resources>
-    <classes>
-        <class className="AVLTreeController" superclassName="TreeViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AVLTreeController.h"/>
-            <relationships>
-                <relationship kind="action" name="addValue:"/>
-                <relationship kind="action" name="removeValue:"/>
-                <relationship kind="action" name="testTree:"/>
-            </relationships>
-        </class>
-        <class className="BSTViewController" superclassName="TreeViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BSTViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addToTree:"/>
-                <relationship kind="action" name="removeFromTree:"/>
-                <relationship kind="action" name="testTree:"/>
-            </relationships>
-        </class>
-        <class className="BubbleSortViewController" superclassName="DataViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BubbleSortViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="generate:"/>
-                <relationship kind="action" name="nextStep:"/>
-                <relationship kind="action" name="previous:"/>
-                <relationship kind="action" name="showInfo:"/>
-                <relationship kind="outlet" name="countField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="maxField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="minField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="stepLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="CodePopoverController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CodePopoverController.h"/>
-        </class>
-        <class className="CodeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CodeViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="codeView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="DataViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DataViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loadCode:"/>
-                <relationship kind="action" name="showWiki:"/>
-            </relationships>
-        </class>
-        <class className="DoublyLinkedListViewController" superclassName="DataViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DoublyLinkedListViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addBack:"/>
-                <relationship kind="action" name="addFront:"/>
-                <relationship kind="action" name="removeBack:"/>
-                <relationship kind="action" name="removeFront:"/>
-                <relationship kind="outlet" name="inputField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="listView" candidateClass="UIScrollView"/>
-            </relationships>
-        </class>
-        <class className="GraphScrollView" superclassName="UIScrollView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphScrollView.h"/>
-        </class>
-        <class className="GraphViewController" superclassName="DataViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="scrollView" candidateClass="GraphScrollView"/>
-            </relationships>
-        </class>
-        <class className="HeapViewController" superclassName="TreeViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HeapViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addValue:"/>
-                <relationship kind="action" name="remove:"/>
-                <relationship kind="action" name="switchTreeType:"/>
-                <relationship kind="action" name="testHeap:"/>
-                <relationship kind="outlet" name="maxOrMin" candidateClass="UISegmentedControl"/>
-            </relationships>
-        </class>
-        <class className="HuffmanViewController" superclassName="HeapViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/HuffmanViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="remove:"/>
-            </relationships>
-        </class>
-        <class className="LinkedListViewController" superclassName="DataViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LinkedListViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addValue:"/>
-                <relationship kind="action" name="removeFront:"/>
-                <relationship kind="action" name="showCode:"/>
-                <relationship kind="outlet" name="detailView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="insertValueField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="MasterViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MasterViewController.h"/>
-        </class>
-        <class className="MergeSortViewController" superclassName="DataViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MergeSortViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="generateList:"/>
-                <relationship kind="action" name="showInfo:"/>
-                <relationship kind="action" name="step:"/>
-                <relationship kind="outlet" name="countField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="maxField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="minField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="stepLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="QuicksortViewController" superclassName="DataViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/QuicksortViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="generate:"/>
-                <relationship kind="action" name="showInfo:"/>
-                <relationship kind="action" name="step:"/>
-                <relationship kind="outlet" name="countField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="maxField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="minField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="stepLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="RedBlackTreeViewController" superclassName="TreeViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RedBlackTreeViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addValue:"/>
-                <relationship kind="action" name="removeValue:"/>
-                <relationship kind="action" name="testRedBlack:"/>
-            </relationships>
-        </class>
-        <class className="SettingsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="contactUs:"/>
-                <relationship kind="action" name="toggleShowLineNums:"/>
-                <relationship kind="outlet" name="lineNumSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="StackViewController" superclassName="DataViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StackViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="peekValue:"/>
-                <relationship kind="action" name="popValue:"/>
-                <relationship kind="action" name="pushValue:"/>
-                <relationship kind="outlet" name="stackView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="valueField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="SuggestionViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SuggestionViewController.h"/>
-        </class>
-        <class className="TreeViewController" superclassName="DataViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TreeViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="scrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="valueField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="TrieViewController" superclassName="TreeViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TrieViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addValue:"/>
-                <relationship kind="action" name="buildTree:"/>
-                <relationship kind="action" name="getSuggestions:"/>
-                <relationship kind="outlet" name="suggestionField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="WikiViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/WikiViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="launchSafari:"/>
-                <relationship kind="outlet" name="loadingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

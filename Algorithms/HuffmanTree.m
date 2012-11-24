@@ -7,7 +7,7 @@
 //
 
 #import "HuffmanTree.h"
-#import "ArrayHeap.h"
+#import "PriorityQueue.h"
 #import "HuffmanNode.h"
 
 @implementation HuffmanTree
@@ -15,11 +15,29 @@
 -(id)init{
     self = [super init];
     if(self){
-        priorityQueue = [[ArrayHeap alloc] initWithType:HEAP_MIN];
+        priorityQueue = [PriorityQueue new];
+        lookups=[NSMutableDictionary new];
     }
     return self;
 }
 
+-(void)generateLookups:(HuffmanNode*)node path:(NSMutableString*)currentPath{
+    
+    if (!(node.left && node.right)) {
+        /* we hit a leaf*/
+        [lookups setObject:[currentPath copy] forKey:node.character];
+    }
+    else{
+        [currentPath appendString:@"0"];
+        [self generateLookups:(HuffmanNode*)node.left path:currentPath];
+        //clean off this path
+        [currentPath deleteCharactersInRange:NSMakeRange([currentPath length]-1, 1)];
+        [currentPath appendString:@"1"];
+        [self generateLookups:(HuffmanNode*)node.right path:currentPath];
+        [currentPath deleteCharactersInRange:NSMakeRange([currentPath length]-1, 1)];
+    }
+    
+}
 
 
 -(void)buildTreeWithValues:(NSDictionary*)valueMap{
@@ -39,10 +57,11 @@
         [priorityQueue addNode:combined];
     }
     self.root = (HuffmanNode*)[priorityQueue getNext];
-    NSAssert([[self.root weight] integerValue]==1 , @"Root is not 1");
+
+    [self generateLookups:self.root path:[NSMutableString new]];
 }
 -(void)buildTreeWithString:(NSString*)value{
-
+    
     NSInteger total=[value length];
     NSParameterAssert(total!=0);
     NSMutableDictionary* valueMap=[NSMutableDictionary new];
@@ -65,7 +84,21 @@
     [self buildTreeWithValues:valueMap];
 }
 -(NSString*)encodeString:(NSString*)value{
-    return nil;
+    NSMutableString* toReturn = [NSMutableString new];
+    NSInteger total=[value length];
+    NSParameterAssert(total!=0);
+    
+    unichar buffer[total + 1];
+    [value getCharacters:buffer range:NSMakeRange(0, total)];
+    /* Count occurances to build probabilities */
+    for(int i = 0; i < total; ++i) {
+        NSString* key = [NSString stringWithFormat:@"%c", buffer[i]];
+        if(lookups[key]==nil)
+            return [NSString stringWithFormat:@"Error! '%@' Not in Tree!",key];
+        else
+            [toReturn appendString:lookups[key]];
+    }
+    return toReturn;
 }
 -(NSString*)decodeString:(NSString*)value{
     return nil;

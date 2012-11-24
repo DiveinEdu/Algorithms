@@ -12,4 +12,11 @@
 @interface HuffmanViewController : HeapViewController
 @property (nonatomic, strong)HuffmanTree* tree;
 @property (nonatomic, strong)HuffmanView* rootView;
+- (IBAction)buildWithUS:(id)sender;
+- (IBAction)buildWithCustom:(id)sender;
+- (IBAction)buildWithString:(id)sender;
+- (IBAction)encode:(id)sender;
+- (IBAction)decode:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *stringBuilder;
+@property (weak, nonatomic) IBOutlet UILabel *outputLabel;
 @end

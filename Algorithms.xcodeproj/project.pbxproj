@@ -73,6 +73,10 @@
 		09584E12160E4FD000AF8427 /* ListNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095434501606D895001D3E5D /* ListNode.h */; };
 		09584E13160E4FD200AF8427 /* ListNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095434511606D895001D3E5D /* ListNode.m */; };
 		09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09584E15160E55B000AF8427 /* CodePopoverController.m */; };
+		095D930A166150FC007BBD4F /* HuffmanWeightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D9309166150FC007BBD4F /* HuffmanWeightController.m */; };
+		095D930D1661511C007BBD4F /* HuffmanWeightController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095D930C1661511C007BBD4F /* HuffmanWeightController.xib */; };
+		095D930F1661539D007BBD4F /* USWeights.plist in Resources */ = {isa = PBXBuildFile; fileRef = 095D930E1661539D007BBD4F /* USWeights.plist */; };
+		095D931216615851007BBD4F /* PriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D931116615851007BBD4F /* PriorityQueue.m */; };
 		095DA74816574BAB00473540 /* Quicksort.m in Sources */ = {isa = PBXBuildFile; fileRef = 095DA74716574BAB00473540 /* Quicksort.m */; };
 		095DA74916574BBD00473540 /* Quicksort.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095DA74716574BAB00473540 /* Quicksort.m */; };
 		095DA74A16574BC100473540 /* Quicksort.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095DA74616574BAB00473540 /* Quicksort.h */; };
@@ -293,6 +297,12 @@
 		095434511606D895001D3E5D /* ListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListNode.m; sourceTree = "<group>"; };
 		09584E14160E55B000AF8427 /* CodePopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodePopoverController.h; sourceTree = "<group>"; };
 		09584E15160E55B000AF8427 /* CodePopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodePopoverController.m; sourceTree = "<group>"; };
+		095D9308166150FC007BBD4F /* HuffmanWeightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanWeightController.h; sourceTree = "<group>"; };
+		095D9309166150FC007BBD4F /* HuffmanWeightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanWeightController.m; sourceTree = "<group>"; };
+		095D930C1661511C007BBD4F /* HuffmanWeightController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HuffmanWeightController.xib; sourceTree = "<group>"; };
+		095D930E1661539D007BBD4F /* USWeights.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = USWeights.plist; sourceTree = "<group>"; };
+		095D931016615851007BBD4F /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		095D931116615851007BBD4F /* PriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriorityQueue.m; sourceTree = "<group>"; };
 		095DA74616574BAB00473540 /* Quicksort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quicksort.h; sourceTree = "<group>"; };
 		095DA74716574BAB00473540 /* Quicksort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Quicksort.m; sourceTree = "<group>"; };
 		095DA74B16574ED200473540 /* QuicksortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuicksortViewController.h; sourceTree = "<group>"; };
@@ -644,6 +654,8 @@
 		095434491606D5BA001D3E5D /* LinkedList */ = {
 			isa = PBXGroup;
 			children = (
+				095D931016615851007BBD4F /* PriorityQueue.h */,
+				095D931116615851007BBD4F /* PriorityQueue.m */,
 				0954344A1606D5F3001D3E5D /* LinkedListViewController.h */,
 				0954344B1606D5F3001D3E5D /* LinkedListViewController.m */,
 				0954344D1606D875001D3E5D /* LinkedList.h */,
@@ -679,9 +691,13 @@
 			children = (
 				0928CA30165AC38500ADC886 /* HuffmanViewController.h */,
 				0928CA31165AC38500ADC886 /* HuffmanViewController.m */,
+				095D9308166150FC007BBD4F /* HuffmanWeightController.h */,
+				095D9309166150FC007BBD4F /* HuffmanWeightController.m */,
+				095D930C1661511C007BBD4F /* HuffmanWeightController.xib */,
 				09773E131660969A00BDAFBE /* HuffmanView.h */,
 				09773E141660969A00BDAFBE /* HuffmanView.m */,
 				0964FFFE165AA54C0080CFA7 /* EnglishFreq.txt */,
+				095D930E1661539D007BBD4F /* USWeights.plist */,
 				0964FFFB165AA4920080CFA7 /* HuffmanTree.h */,
 				0964FFFC165AA4920080CFA7 /* HuffmanTree.m */,
 				09773E0716601A0A00BDAFBE /* HuffmanNode.h */,
@@ -921,6 +937,8 @@
 				0964FFFF165AA54C0080CFA7 /* EnglishFreq.txt in Resources */,
 				091914F8165C9A2800330CC1 /* arrow_left_filled.png in Resources */,
 				091914F9165C9A2800330CC1 /* arrow_left_filled@2x.png in Resources */,
+				095D930D1661511C007BBD4F /* HuffmanWeightController.xib in Resources */,
+				095D930F1661539D007BBD4F /* USWeights.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,6 +1036,8 @@
 				0928CA39165ACA7600ADC886 /* GraphNode.m in Sources */,
 				09773E0916601A0A00BDAFBE /* HuffmanNode.m in Sources */,
 				09773E151660969A00BDAFBE /* HuffmanView.m in Sources */,
+				095D930A166150FC007BBD4F /* HuffmanWeightController.m in Sources */,
+				095D931216615851007BBD4F /* PriorityQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -93,7 +93,7 @@
      {
      "name":"Huffman Coding",
      "viewID":"huffman",
-     "related":["HuffmanTree"],
+     "related":["HuffmanTree","PriorityQueue","HuffmanNode"],
      "wikiLink":"http://wikipedia.org/wiki/Quicksort"
      }
      
