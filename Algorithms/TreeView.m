@@ -31,20 +31,28 @@
     return self;
 }
 
+-(void)fixLeft{
+    if (self.node.left) {
+        self.left = [[TreeView alloc] initWithNode:self.node.left];
+        [self addSubview:self.left];
+    }
+}
+-(void)fixRight{
+    if (self.node.right) {
+        self.right = [[TreeView alloc] initWithNode:self.node.right];
+        [self addSubview:self.right];
+    }
+}
 -(void)fixViews{
     for (UIView* view in [self subviews]) {
         if (view!=self.value) {
             [view removeFromSuperview];
         }
     }
-    if (self.node.left) {
-        self.left = [[[self class] alloc] initWithNode:self.node.left];
-        [self addSubview:self.left];
-    }
-    if (self.node.right) {
-        self.right = [[[self class] alloc] initWithNode:self.node.right];
-        [self addSubview:self.right];
-    }
+    [self fixLeft];
+    [self fixRight];
+    
+
     //reset the arrows
     [self.rightArrow removeFromSuperview];
     [self.leftArrow removeFromSuperview];

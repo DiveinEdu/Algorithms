@@ -15,20 +15,28 @@
 -(id)initWithNode:(HeapNode *)node{
     return [super initWithNode:node];
 }
+-(void)fixLeft{
+    if (self.node.left) {
+        self.left = [[HeapView alloc] initWithNode:(HeapNode*)self.node.left];
+        [self addSubview:self.left];
+    }
+}
+-(void)fixRight{
+    if (self.node.right) {
+        self.right = [[HeapView alloc] initWithNode:(HeapNode*)self.node.right];
+        [self addSubview:self.right];
+    }
+}
 -(void)fixViews{
     for (UIView* view in [self subviews]) {
         if (view!=self.value) {
             [view removeFromSuperview];
         }
     }
-    if (self.node.left) {
-        self.left = [[HeapView alloc] initWithNode:(HeapNode*)self.node.left];
-        [self addSubview:self.left];
-    }
-    if (self.node.right) {
-        self.right = [[HeapView alloc] initWithNode:(HeapNode*)self.node.right];
-        [self addSubview:self.right];
-    }
+    [self fixLeft];
+    [self fixRight];
+
+
     
     //reset the arrows
     [self.rightArrow removeFromSuperview];

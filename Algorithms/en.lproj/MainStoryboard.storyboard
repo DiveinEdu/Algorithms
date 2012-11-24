@@ -856,10 +856,10 @@
             </objects>
             <point key="canvasLocation" x="3512" y="-327"/>
         </scene>
-        <!--Binary Tree-->
+        <!--Huffman Coding-->
         <scene sceneID="oFY-En-wvi">
             <objects>
-                <viewController storyboardIdentifier="huffman" id="5Zr-p5-WYw" userLabel="Binary Tree" customClass="HuffmanViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="huffman" id="5Zr-p5-WYw" userLabel="Huffman Coding" customClass="HuffmanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="M4v-yk-97M">
                         <rect key="frame" x="0.0" y="20" width="703" height="748"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -937,10 +937,10 @@
             </objects>
             <point key="canvasLocation" x="3494" y="935"/>
         </scene>
-        <!--Tree Controller-->
+        <!--AVLTree-->
         <scene sceneID="ado-DQ-vo2">
             <objects>
-                <viewController storyboardIdentifier="avlTree" id="ZUM-8e-m6k" customClass="AVLTreeController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="avlTree" id="ZUM-8e-m6k" userLabel="AVLTree" customClass="AVLTreeController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bOM-0Q-y0A">
                         <rect key="frame" x="0.0" y="64" width="703" height="704"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1609,6 +1609,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DataViewController.h"/>
             <relationships>
                 <relationship kind="action" name="loadCode:"/>
+                <relationship kind="action" name="showWiki:"/>
             </relationships>
         </class>
         <class className="DoublyLinkedListViewController" superclassName="DataViewController">
@@ -1641,8 +1642,11 @@
                 <relationship kind="outlet" name="maxOrMin" candidateClass="UISegmentedControl"/>
             </relationships>
         </class>
-        <class className="HuffmanViewController" superclassName="UIViewController">
+        <class className="HuffmanViewController" superclassName="HeapViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HuffmanViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="remove:"/>
+            </relationships>
         </class>
         <class className="LinkedListViewController" superclassName="DataViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LinkedListViewController.h"/>

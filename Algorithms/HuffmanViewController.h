@@ -7,7 +7,9 @@
 //
 
 #import "HeapViewController.h"
-
+@class HuffmanTree;
+@class HuffmanView;
 @interface HuffmanViewController : HeapViewController
-
+@property (nonatomic, strong)HuffmanTree* tree;
+@property (nonatomic, strong)HuffmanView* rootView;
 @end
