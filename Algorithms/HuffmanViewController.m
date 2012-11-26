@@ -80,6 +80,7 @@
 }
 
 - (IBAction)decode:(id)sender {
+    [self.outputLabel setText:[self.tree decodeString:[self.valueField text]]];
 }
 - (void)viewDidUnload {
     [self setOutputLabel:nil];

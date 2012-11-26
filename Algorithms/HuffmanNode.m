@@ -23,20 +23,17 @@
 -(NSNumber*)weight{
     return [self getValue];
 }
+
 /*THIS IS BACKWARDS WE WANT LOWER VALUES FIRST*/
 - (NSComparisonResult)compare:(Node *)otherObject {
     double mine = [[self getValue] doubleValue];
     double theirs = [[otherObject getValue] doubleValue];
-    if (mine > theirs) {
-        //self is greater than other object 9 > 1, order is descending
+    if (mine > theirs)
         return NSOrderedAscending;
-    }
-    else if (mine < theirs) {
-        //self is less than other object, 3 < 9 order is ascending
+    else if (mine < theirs)
         return NSOrderedDescending;
-    }
-    else {
+    else
         return NSOrderedSame;
-    }
+    
 }
 @end

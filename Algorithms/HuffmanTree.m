@@ -58,7 +58,7 @@
         [priorityQueue addNode:combined];
     }
     self.root = (HuffmanNode*)[priorityQueue getNext];
-
+    
     [self generateLookups:self.root path:[NSMutableString new]];
     NSLog(@"%@",lookups);
 }
@@ -103,6 +103,35 @@
     return toReturn;
 }
 -(NSString*)decodeString:(NSString*)value{
-    return nil;
+    NSMutableString* stringBuild = [NSMutableString new];
+    [self decodeString:value intoString:stringBuild withNode:self.root atPathIndex:0];
+    return stringBuild;
+}
+-(void)decodeString:(NSString*)value
+         intoString:(NSMutableString*)stringBuilder
+           withNode:(HuffmanNode*)node
+        atPathIndex:(NSInteger)index{
+    
+    if(node.left ==nil && node.right == nil){
+        //we've reached a terminal so we need to append it
+        [stringBuilder appendString:node.character];
+        if(index<[value length])
+            [self decodeString:value intoString:stringBuilder withNode:self.root atPathIndex:index];
+
+    }
+    else{
+        if((index) < [value length]){
+            if ([value characterAtIndex:index] == '0') {
+                [self decodeString:value intoString:stringBuilder withNode:(HuffmanNode*)node.left atPathIndex:index+1];
+            }
+            else{
+                [self decodeString:value intoString:stringBuilder withNode:(HuffmanNode*)node.right atPathIndex:index+1];
+            }
+        }
+        else{
+            [stringBuilder setString:@"Invalid Input, doesn't cleanly translate!"];
+        }
+    }
+    
 }
 @end
