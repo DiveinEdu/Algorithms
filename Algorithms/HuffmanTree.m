@@ -54,11 +54,13 @@
         HuffmanNode* combined = [[HuffmanNode alloc] initWithValue:[NSNumber numberWithDouble:[[left weight]doubleValue] +[[right weight]doubleValue]]];
         [combined setRight:right];
         [combined setLeft:left];
+        NSLog(@"%@",combined);
         [priorityQueue addNode:combined];
     }
     self.root = (HuffmanNode*)[priorityQueue getNext];
 
     [self generateLookups:self.root path:[NSMutableString new]];
+    NSLog(@"%@",lookups);
 }
 -(void)buildTreeWithString:(NSString*)value{
     
