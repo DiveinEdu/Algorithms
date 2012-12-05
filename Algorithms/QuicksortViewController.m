@@ -28,6 +28,7 @@
     }
 }
 - (IBAction)generate:(id)sender {
+    
     [self checkEmpty];
     if([[self.countField text] integerValue]>64 ||[[self.countField text] integerValue]<0 )
         [ self.countField setText:@"64"];

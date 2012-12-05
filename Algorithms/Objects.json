@@ -87,7 +87,7 @@
      {
      "name":"Quicksort",
      "viewID":"Quicksort",
-     "related":["QuickSort","MergeSort"],
+     "related":["QuickSort"],
      "wikiLink":"http://wikipedia.org/wiki/Quicksort"
      },
      {
