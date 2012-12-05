@@ -47,7 +47,7 @@
     
 }
 - (IBAction)remove:(id)sender {
-
+    
     [self refresh];
 }
 
@@ -60,7 +60,7 @@
 
 - (IBAction)buildWithUS:(id)sender {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"USWeights" ofType:@"plist"];
-
+    
     NSDictionary* values = [NSDictionary dictionaryWithContentsOfFile:path];
     NSLog(@"%@",values);
     [self.tree buildTreeWithValues:values];
@@ -68,11 +68,22 @@
 }
 
 - (IBAction)buildWithCustom:(id)sender {
+    HuffmanWeightController* weighController = [[HuffmanWeightController alloc] initWithNibName:@"HuffmanWeightController" bundle:nil];
+    [weighController setDelegate:self];
+    UIButton *button = (UIButton*)sender;
+    popover = [[UIPopoverController alloc] initWithContentViewController:weighController];
+    [popover presentPopoverFromRect:CGRectMake(button.frame.size.width / 2, button.frame.size.height, 1, 1) inView:button permittedArrowDirections:UIPopoverArrowDirectionUp animated:YES];
+    
 }
-
+-(void)createTableWithDictionary:(NSDictionary *)weights{
+        [self.tree buildTreeWithValues:weights];
+        [self refresh];
+}
 - (IBAction)buildWithString:(id)sender {
-    [self.tree buildTreeWithString:[self.stringBuilder text]];
-    [self refresh];
+    if([[self.stringBuilder text] length]>0){
+        [self.tree buildTreeWithString:[self.stringBuilder text]];
+        [self refresh];
+    }
 }
 
 - (IBAction)encode:(id)sender {

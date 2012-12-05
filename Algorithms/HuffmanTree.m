@@ -51,16 +51,17 @@
     while ([priorityQueue size]>1) {
         left = (HuffmanNode*)[priorityQueue getNext];
         right = (HuffmanNode*)[priorityQueue getNext];
-        HuffmanNode* combined = [[HuffmanNode alloc] initWithValue:[NSNumber numberWithDouble:[[left weight]doubleValue] +[[right weight]doubleValue]]];
+        NSNumber* sum = [NSNumber numberWithDouble:[left weight]+[right weight]];
+        HuffmanNode* combined = [[HuffmanNode alloc] initWithValue:sum];
         [combined setRight:right];
         [combined setLeft:left];
-        NSLog(@"%@",combined);
+        //NSLog(@"%@",combined);
         [priorityQueue addNode:combined];
     }
     self.root = (HuffmanNode*)[priorityQueue getNext];
     
     [self generateLookups:self.root path:[NSMutableString new]];
-    NSLog(@"%@",lookups);
+    //NSLog(@"%@",lookups);
 }
 -(void)buildTreeWithString:(NSString*)value{
     

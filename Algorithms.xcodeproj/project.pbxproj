@@ -73,8 +73,6 @@
 		09584E12160E4FD000AF8427 /* ListNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095434501606D895001D3E5D /* ListNode.h */; };
 		09584E13160E4FD200AF8427 /* ListNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095434511606D895001D3E5D /* ListNode.m */; };
 		09584E16160E55B000AF8427 /* CodePopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09584E15160E55B000AF8427 /* CodePopoverController.m */; };
-		095D930A166150FC007BBD4F /* HuffmanWeightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D9309166150FC007BBD4F /* HuffmanWeightController.m */; };
-		095D930D1661511C007BBD4F /* HuffmanWeightController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 095D930C1661511C007BBD4F /* HuffmanWeightController.xib */; };
 		095D930F1661539D007BBD4F /* USWeights.plist in Resources */ = {isa = PBXBuildFile; fileRef = 095D930E1661539D007BBD4F /* USWeights.plist */; };
 		095D931216615851007BBD4F /* PriorityQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 095D931116615851007BBD4F /* PriorityQueue.m */; };
 		095DA74816574BAB00473540 /* Quicksort.m in Sources */ = {isa = PBXBuildFile; fileRef = 095DA74716574BAB00473540 /* Quicksort.m */; };
@@ -100,6 +98,13 @@
 		09745B39162A6FD90031F65D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09745B38162A6FD90031F65D /* SettingsViewController.m */; };
 		09773E0916601A0A00BDAFBE /* HuffmanNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09773E0816601A0A00BDAFBE /* HuffmanNode.m */; };
 		09773E151660969A00BDAFBE /* HuffmanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09773E141660969A00BDAFBE /* HuffmanView.m */; };
+		098CD6F91667FCE1001B68D6 /* HuffmanNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09773E0716601A0A00BDAFBE /* HuffmanNode.h */; };
+		098CD6FA1667FCE1001B68D6 /* HuffmanNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09773E0816601A0A00BDAFBE /* HuffmanNode.m */; };
+		098CD6FC1667FCEA001B68D6 /* HuffmanTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0964FFFB165AA4920080CFA7 /* HuffmanTree.h */; };
+		098CD6FD1667FCEA001B68D6 /* HuffmanTree.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0964FFFC165AA4920080CFA7 /* HuffmanTree.m */; };
+		098CD6FE1667FD6D001B68D6 /* PriorityQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095D931016615851007BBD4F /* PriorityQueue.h */; };
+		098CD6FF1667FD6D001B68D6 /* PriorityQueue.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095D931116615851007BBD4F /* PriorityQueue.m */; };
+		0995F9A416667DEE0060E546 /* WeightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0995F9A316667DEE0060E546 /* WeightCell.xib */; };
 		099EC975160FDC3C00FD136A /* Objects.json in Resources */ = {isa = PBXBuildFile; fileRef = 099EC974160FDC3C00FD136A /* Objects.json */; };
 		09ADEE97161CDBF300BD0CAE /* RedBlackTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */; };
 		09ADEE9A161CDC0400BD0CAE /* RedBlackTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE99161CDC0400BD0CAE /* RedBlackTree.m */; };
@@ -107,6 +112,9 @@
 		09ADEEA0161CE51C00BD0CAE /* RedBlackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE9F161CE51C00BD0CAE /* RedBlackView.m */; };
 		09ADEEA3161CE53500BD0CAE /* TreeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEEA2161CE53500BD0CAE /* TreeView.m */; };
 		09ADEEA6161CE9A200BD0CAE /* TreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEEA5161CE9A200BD0CAE /* TreeViewController.m */; };
+		09B0DFA21663DC3700D57D28 /* HuffmanWeightController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B0DFA01663DC3700D57D28 /* HuffmanWeightController.m */; };
+		09B0DFA31663DC3700D57D28 /* HuffmanWeightController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09B0DFA11663DC3700D57D28 /* HuffmanWeightController.xib */; };
+		09B0DFA61663E0ED00D57D28 /* WeightCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B0DFA51663E0ED00D57D28 /* WeightCell.m */; };
 		09B33FA316128C58000FF89F /* BinarySearchTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FA216128C58000FF89F /* BinarySearchTree.m */; };
 		09B33FA61612937F000FF89F /* BSTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09B33FA51612937F000FF89F /* BSTViewController.m */; };
 		09B33FA7161296CE000FF89F /* BinarySearchTree.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09B33FA116128C58000FF89F /* BinarySearchTree.h */; };
@@ -167,6 +175,8 @@
 			dstPath = code;
 			dstSubfolderSpec = 7;
 			files = (
+				098CD6F91667FCE1001B68D6 /* HuffmanNode.h in CopyFiles */,
+				098CD6FA1667FCE1001B68D6 /* HuffmanNode.m in CopyFiles */,
 				09427ADA1630B8FB003534CA /* TrieNode.h in CopyFiles */,
 				09427ADB1630B8FB003534CA /* TrieNode.m in CopyFiles */,
 				09427ADC1630B8FB003534CA /* Trie.h in CopyFiles */,
@@ -187,6 +197,10 @@
 				09C8ED751618D6780076E2D0 /* ArrayHeap.m in CopyFiles */,
 				09C8ED761618D67D0076E2D0 /* HeapNode.h in CopyFiles */,
 				09C8ED771618D67F0076E2D0 /* HeapNode.m in CopyFiles */,
+				098CD6FC1667FCEA001B68D6 /* HuffmanTree.h in CopyFiles */,
+				098CD6FD1667FCEA001B68D6 /* HuffmanTree.m in CopyFiles */,
+				098CD6FE1667FD6D001B68D6 /* PriorityQueue.h in CopyFiles */,
+				098CD6FF1667FD6D001B68D6 /* PriorityQueue.m in CopyFiles */,
 				09C0709E161157FF001F4C12 /* Stack.h in CopyFiles */,
 				09584E10160E4FC200AF8427 /* LinkedList.m in CopyFiles */,
 				09584E11160E4FC900AF8427 /* LinkedList.h in CopyFiles */,
@@ -297,9 +311,6 @@
 		095434511606D895001D3E5D /* ListNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListNode.m; sourceTree = "<group>"; };
 		09584E14160E55B000AF8427 /* CodePopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodePopoverController.h; sourceTree = "<group>"; };
 		09584E15160E55B000AF8427 /* CodePopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodePopoverController.m; sourceTree = "<group>"; };
-		095D9308166150FC007BBD4F /* HuffmanWeightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanWeightController.h; sourceTree = "<group>"; };
-		095D9309166150FC007BBD4F /* HuffmanWeightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanWeightController.m; sourceTree = "<group>"; };
-		095D930C1661511C007BBD4F /* HuffmanWeightController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HuffmanWeightController.xib; sourceTree = "<group>"; };
 		095D930E1661539D007BBD4F /* USWeights.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = USWeights.plist; sourceTree = "<group>"; };
 		095D931016615851007BBD4F /* PriorityQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
 		095D931116615851007BBD4F /* PriorityQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PriorityQueue.m; sourceTree = "<group>"; };
@@ -331,6 +342,7 @@
 		09773E0816601A0A00BDAFBE /* HuffmanNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanNode.m; sourceTree = "<group>"; };
 		09773E131660969A00BDAFBE /* HuffmanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanView.h; sourceTree = "<group>"; };
 		09773E141660969A00BDAFBE /* HuffmanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanView.m; sourceTree = "<group>"; };
+		0995F9A316667DEE0060E546 /* WeightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeightCell.xib; sourceTree = "<group>"; };
 		099EC974160FDC3C00FD136A /* Objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Objects.json; sourceTree = "<group>"; };
 		09ADEE95161CDBF300BD0CAE /* RedBlackTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBlackTreeViewController.h; sourceTree = "<group>"; };
 		09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBlackTreeViewController.m; sourceTree = "<group>"; };
@@ -344,6 +356,11 @@
 		09ADEEA2161CE53500BD0CAE /* TreeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeView.m; sourceTree = "<group>"; };
 		09ADEEA4161CE9A100BD0CAE /* TreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewController.h; sourceTree = "<group>"; };
 		09ADEEA5161CE9A200BD0CAE /* TreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeViewController.m; sourceTree = "<group>"; };
+		09B0DF9F1663DC3700D57D28 /* HuffmanWeightController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanWeightController.h; sourceTree = "<group>"; };
+		09B0DFA01663DC3700D57D28 /* HuffmanWeightController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanWeightController.m; sourceTree = "<group>"; };
+		09B0DFA11663DC3700D57D28 /* HuffmanWeightController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HuffmanWeightController.xib; sourceTree = "<group>"; };
+		09B0DFA41663E0ED00D57D28 /* WeightCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeightCell.h; sourceTree = "<group>"; };
+		09B0DFA51663E0ED00D57D28 /* WeightCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeightCell.m; sourceTree = "<group>"; };
 		09B33FA116128C58000FF89F /* BinarySearchTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchTree.h; sourceTree = "<group>"; };
 		09B33FA216128C58000FF89F /* BinarySearchTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTree.m; sourceTree = "<group>"; };
 		09B33FA41612937E000FF89F /* BSTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSTViewController.h; sourceTree = "<group>"; };
@@ -691,9 +708,12 @@
 			children = (
 				0928CA30165AC38500ADC886 /* HuffmanViewController.h */,
 				0928CA31165AC38500ADC886 /* HuffmanViewController.m */,
-				095D9308166150FC007BBD4F /* HuffmanWeightController.h */,
-				095D9309166150FC007BBD4F /* HuffmanWeightController.m */,
-				095D930C1661511C007BBD4F /* HuffmanWeightController.xib */,
+				09B0DF9F1663DC3700D57D28 /* HuffmanWeightController.h */,
+				09B0DFA01663DC3700D57D28 /* HuffmanWeightController.m */,
+				09B0DFA11663DC3700D57D28 /* HuffmanWeightController.xib */,
+				09B0DFA41663E0ED00D57D28 /* WeightCell.h */,
+				09B0DFA51663E0ED00D57D28 /* WeightCell.m */,
+				0995F9A316667DEE0060E546 /* WeightCell.xib */,
 				09773E131660969A00BDAFBE /* HuffmanView.h */,
 				09773E141660969A00BDAFBE /* HuffmanView.m */,
 				0964FFFE165AA54C0080CFA7 /* EnglishFreq.txt */,
@@ -937,8 +957,9 @@
 				0964FFFF165AA54C0080CFA7 /* EnglishFreq.txt in Resources */,
 				091914F8165C9A2800330CC1 /* arrow_left_filled.png in Resources */,
 				091914F9165C9A2800330CC1 /* arrow_left_filled@2x.png in Resources */,
-				095D930D1661511C007BBD4F /* HuffmanWeightController.xib in Resources */,
 				095D930F1661539D007BBD4F /* USWeights.plist in Resources */,
+				09B0DFA31663DC3700D57D28 /* HuffmanWeightController.xib in Resources */,
+				0995F9A416667DEE0060E546 /* WeightCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1036,8 +1057,9 @@
 				0928CA39165ACA7600ADC886 /* GraphNode.m in Sources */,
 				09773E0916601A0A00BDAFBE /* HuffmanNode.m in Sources */,
 				09773E151660969A00BDAFBE /* HuffmanView.m in Sources */,
-				095D930A166150FC007BBD4F /* HuffmanWeightController.m in Sources */,
 				095D931216615851007BBD4F /* PriorityQueue.m in Sources */,
+				09B0DFA21663DC3700D57D28 /* HuffmanWeightController.m in Sources */,
+				09B0DFA61663E0ED00D57D28 /* WeightCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
