@@ -22,7 +22,7 @@
         [self.value setAdjustsLetterSpacingToFitWidth:YES];
         [self.value setTextAlignment:NSTextAlignmentCenter];
         if(node.left && node.right)
-            [self.value setText:[NSString stringWithFormat:@"%.2f",[[node weight] doubleValue]]];
+            [self.value setText:[NSString stringWithFormat:@"%.2f",[node weight]]];
         else
             [self.value setText:[NSString stringWithFormat:@"%@",[node character]]];
         [self addSubview:self.value];

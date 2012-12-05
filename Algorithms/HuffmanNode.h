@@ -13,6 +13,6 @@
 
 -(id)initWithValue:(id)value andString:(NSString*)character;
 -(id)initWithValue:(id)value;
--(NSNumber*)weight;
+-(double)weight;
 @end
 

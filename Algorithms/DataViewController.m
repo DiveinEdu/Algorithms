@@ -29,6 +29,7 @@
             [self.navigationItem setLeftBarButtonItem:wikiButton];
         }
     }
+    [self setTitle:self.algorithm.name];
     
 
     [super viewDidLoad];

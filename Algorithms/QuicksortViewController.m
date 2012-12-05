@@ -28,19 +28,20 @@
     }
 }
 - (IBAction)generate:(id)sender {
-    NSMutableArray* values = [[NSMutableArray alloc] initWithCapacity:100];
     [self checkEmpty];
     if([[self.countField text] integerValue]>64 ||[[self.countField text] integerValue]<0 )
         [ self.countField setText:@"64"];
+    NSMutableArray* values = [[NSMutableArray alloc] initWithCapacity:[[self.countField text] integerValue]];
+
     NSInteger diff = [[self.maxField text] integerValue] - [[self.minField text] integerValue];
     for (int i =0; i < [[self.countField text] integerValue]; i++){
         NSInteger rand = arc4random()%diff;
         [values addObject:[NSNumber numberWithInt:[[self.maxField text] integerValue]-rand]];
     }
-    steps = 1;
+    steps = 0;
     self.lists = [QuicksortSub quickSort:values];
 
-    for(int i =1; i<100; i++){
+    for(int i =1; i<[values count]; i++){
         NSAssert([[values objectAtIndex:i-1] integerValue] <= [[values objectAtIndex:i] integerValue], @"Not sorted!");
     }
     [self.stepLabel setText:[NSString stringWithFormat:@"%i of %i",steps, [self.lists count]]];
@@ -69,7 +70,7 @@
 }
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"quickCell"];
-    [[cell textLabel] setText:[self.lists objectAtIndex:[indexPath row]]];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"%@",[self.lists objectAtIndex:[indexPath row]]]];
     [[cell textLabel] setAdjustsFontSizeToFitWidth:YES];
     [[cell textLabel] setAdjustsLetterSpacingToFitWidth:YES];
     return cell;

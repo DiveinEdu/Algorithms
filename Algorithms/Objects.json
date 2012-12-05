@@ -94,14 +94,14 @@
      "name":"Huffman Coding",
      "viewID":"huffman",
      "related":["HuffmanTree","PriorityQueue","HuffmanNode"],
-     "wikiLink":"http://wikipedia.org/wiki/Quicksort"
+     "wikiLink":"http://en.wikipedia.org/wiki/Huffman_coding"
      }
      
     ],
     "settings":
     [
      {
-     "name":"Settings",
+     "name":"General",
      "viewID":"settingsView"
      }
 

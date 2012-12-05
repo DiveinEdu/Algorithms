@@ -9,7 +9,11 @@
 #import "HeapViewController.h"
 @class HuffmanTree;
 @class HuffmanView;
-@interface HuffmanViewController : HeapViewController
+#import "HuffmanWeightController.h"
+
+@interface HuffmanViewController : HeapViewController <HuffmanWeight>{
+    UIPopoverController* popover;
+}
 @property (nonatomic, strong)HuffmanTree* tree;
 @property (nonatomic, strong)HuffmanView* rootView;
 - (IBAction)buildWithUS:(id)sender;

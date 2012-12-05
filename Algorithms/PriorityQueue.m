@@ -28,7 +28,7 @@
         int i=0;
         for (i = [self size] - 1; i >= 0; i--) // start at end,
         {
-            if ([node compare:queue[i]]==NSOrderedDescending)
+            if ([node compare:queue[i]]==NSOrderedAscending)
                 queue[i + 1] = queue[i]; // shift upward
             else
                 // if smaller,

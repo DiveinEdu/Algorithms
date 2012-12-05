@@ -63,7 +63,10 @@
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
-
+-(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    return [[[self.fetchedResultsController sections] objectAtIndex:section] name];
+    
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -18,8 +18,8 @@
     int i = left, j = right;
     
     NSNumber* tmp;
-    NSInteger pivot = [array[(left + right) / 2] integerValue];
-    [toReturn addObject:[array subarrayWithRange:NSMakeRange(left, (right-left))]];
+    NSInteger pivot = [array[(left + right) / 2] integerValue];//pivot on the middle value
+    [toReturn addObject:@[[NSNumber numberWithInt:(right-left)],[NSNumber numberWithInt:pivot],[array subarrayWithRange:NSMakeRange(left, (right-left))]]];
     
     /* partition */
     while (i <= j) {
