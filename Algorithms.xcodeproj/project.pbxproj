@@ -140,6 +140,10 @@
 		09C8ED761618D67D0076E2D0 /* HeapNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA274F1617DE1700738463 /* HeapNode.h */; };
 		09C8ED771618D67F0076E2D0 /* HeapNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09FA27501617DE1700738463 /* HeapNode.m */; };
 		09D65B751631B967001EF3C2 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D65B741631B967001EF3C2 /* GraphViewController.m */; };
+		09D7EB6F166FD317002D28E5 /* Graph.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0928CA34165ACA4500ADC886 /* Graph.h */; };
+		09D7EB70166FD317002D28E5 /* Graph.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0928CA35165ACA4500ADC886 /* Graph.m */; };
+		09D7EB71166FD317002D28E5 /* GraphNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0928CA37165ACA7600ADC886 /* GraphNode.h */; };
+		09D7EB72166FD317002D28E5 /* GraphNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0928CA38165ACA7600ADC886 /* GraphNode.m */; };
 		09E9573A1609500500F5D573 /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E957391609500500F5D573 /* StackViewController.m */; };
 		09E9573D1609501800F5D573 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
 		09F0D3F4160CEB9600CF657E /* arrow_right_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F0160CEB9600CF657E /* arrow_right_filled.png */; };
@@ -219,6 +223,10 @@
 				09B33FA8161296D1000FF89F /* BinarySearchTree.m in CopyFiles */,
 				095DA74A16574BC100473540 /* Quicksort.h in CopyFiles */,
 				095DA74916574BBD00473540 /* Quicksort.m in CopyFiles */,
+				09D7EB6F166FD317002D28E5 /* Graph.h in CopyFiles */,
+				09D7EB70166FD317002D28E5 /* Graph.m in CopyFiles */,
+				09D7EB71166FD317002D28E5 /* GraphNode.h in CopyFiles */,
+				09D7EB72166FD317002D28E5 /* GraphNode.m in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1166,7 +1174,6 @@
 		095434441606D233001D3E5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
 				INFOPLIST_FILE = "Algorithms/Algorithms-Info.plist";
@@ -1179,7 +1186,6 @@
 		095434451606D233001D3E5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
 				INFOPLIST_FILE = "Algorithms/Algorithms-Info.plist";

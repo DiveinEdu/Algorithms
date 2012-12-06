@@ -15,7 +15,8 @@
 +(void)quickSort:(NSMutableArray*)array left:(NSInteger)left right:(NSInteger)right{
     int i = left, j = right;
     NSNumber* tmp;
-    NSInteger pivot = ([array[(left + right) / 2] integerValue]+[array[left] integerValue]+[array[right] integerValue])/3;//pivot on the average of left,right and middle
+    //pivot on the average of left,right and middle
+    NSInteger pivot = ([array[(left + right) / 2] integerValue]+[array[left] integerValue]+[array[right] integerValue])/3;
     
     /* partition */
     while (i <= j) {

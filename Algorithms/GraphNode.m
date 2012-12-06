@@ -52,8 +52,10 @@
     NSMutableSet* suc = [self.successors copy];
     [suc unionSet:self.predecessors];
     return suc;
+
     
 }
+
 -(BOOL)adjoin:(GraphNode*)node{
     return [self goesToNode:node] || [self comesFrom:node];
 }

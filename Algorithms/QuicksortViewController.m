@@ -18,7 +18,7 @@
 
 -(void)checkEmpty{
     if ([self.countField text].length == 0) {
-        [self.countField setText:@"64"];
+        [self.countField setText:@"16"];
     }
     if ([self.minField text].length == 0) {
         [self.minField setText:@"0"];
@@ -30,8 +30,8 @@
 - (IBAction)generate:(id)sender {
     
     [self checkEmpty];
-    if([[self.countField text] integerValue]>64 ||[[self.countField text] integerValue]<0 )
-        [ self.countField setText:@"64"];
+    if([[self.countField text] integerValue]>16 || [[self.countField text] integerValue]<0 )
+        [ self.countField setText:@"16"];
     NSMutableArray* values = [[NSMutableArray alloc] initWithCapacity:[[self.countField text] integerValue]];
 
     NSInteger diff = [[self.maxField text] integerValue] - [[self.minField text] integerValue];

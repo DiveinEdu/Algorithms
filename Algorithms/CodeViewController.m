@@ -22,13 +22,8 @@
     return toReturn;
 }
 -(NSString*)getDefaultCSS{
-    NSString* def = [[NSUserDefaults standardUserDefaults] objectForKey:@"codeStyle"];
-    if (![def isEqualToString:@"sons-of-obsidian.css"]) {
+    NSString* def = [[[NSUserDefaults standardUserDefaults] objectForKey:@"codeStyle"] stringByReplacingOccurrencesOfString:@" " withString:@"-"];
         return [[def lowercaseString] stringByAppendingString:@".css"];
-    }
-    else{
-        return @"sons-of-obsidian.css";
-    }
     
 }
 -(NSString*)defaultLineNum{
