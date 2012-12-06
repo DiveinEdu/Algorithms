@@ -2,7 +2,7 @@
 //  Quicksort.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 11/16/12.
+//  Created by Carl Wieland on 11/16/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 

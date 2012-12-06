@@ -2,7 +2,7 @@
 //  HuffmanWeightController.m
 //  Algorithms
 //
-//  Created by Carl & Hannah Wieland on 11/26/12.
+//  Created by Carl Wieland on 11/26/12.
 //  Copyright (c) 2012 balanceoni. All rights reserved.
 //
 
