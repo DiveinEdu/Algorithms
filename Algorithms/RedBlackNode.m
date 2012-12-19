@@ -23,6 +23,7 @@
         self.left = node.left;
         self.parent = node.parent;
         self.right = node.right;
+        self.color = node.color;
     }
     return self;
 }
