@@ -8,7 +8,6 @@
 
 #import "Graph.h"
 #import "GraphNode.h"
-
 @interface Graph()
 @property (nonatomic,strong)NSMutableSet* nodes;
 @end

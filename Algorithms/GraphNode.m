@@ -8,6 +8,7 @@
 
 #import "GraphNode.h"
 #import "Graph.h"
+
 @interface GraphNode(){
     NSInteger myID;
 }
@@ -107,4 +108,5 @@
 -(void)removeSuccessor:(GraphNode *)succ{
     [self.successors removeObject:succ];
 }
+
 @end

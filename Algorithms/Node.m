@@ -11,6 +11,11 @@
 @property (nonatomic, strong) id value;
 @end
 
+@implementation Node (MutableNode)
+-(void)setNewValue:(id)value{
+    self.value = value;
+}
+@end
 
 @implementation Node
 -(id)initWithValue:(id)value{
@@ -41,5 +46,6 @@
         return NSOrderedSame;
     }
 }
+
 
 @end

@@ -29,6 +29,8 @@
 		0928CA39165ACA7600ADC886 /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CA38165ACA7600ADC886 /* GraphNode.m */; };
 		092F4D6E16122CFE003F4850 /* BubbleSort.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0937E32C161210B00044040F /* BubbleSort.m */; };
 		092F4D7016122D01003F4850 /* BubbleSort.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0937E32B161210B00044040F /* BubbleSort.h */; };
+		093379B816705DA300E46825 /* GraphPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093379B616705DA300E46825 /* GraphPopoverController.m */; };
+		093379B916705DA300E46825 /* GraphPopoverController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093379B716705DA300E46825 /* GraphPopoverController.xib */; };
 		0937E3281612106C0044040F /* BubbleSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E3271612106C0044040F /* BubbleSortViewController.m */; };
 		0937E32D161210B00044040F /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E32C161210B00044040F /* BubbleSort.m */; };
 		09427AC216307A77003534CA /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427AC116307A77003534CA /* Icon-144.png */; };
@@ -273,6 +275,10 @@
 		0928CA35165ACA4500ADC886 /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
 		0928CA37165ACA7600ADC886 /* GraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphNode.h; sourceTree = "<group>"; };
 		0928CA38165ACA7600ADC886 /* GraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphNode.m; sourceTree = "<group>"; };
+		093379B516705DA300E46825 /* GraphPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphPopoverController.h; sourceTree = "<group>"; };
+		093379B616705DA300E46825 /* GraphPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphPopoverController.m; sourceTree = "<group>"; };
+		093379B716705DA300E46825 /* GraphPopoverController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraphPopoverController.xib; sourceTree = "<group>"; };
+		093379BA1670628900E46825 /* Node+MutableNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Node+MutableNode.h"; sourceTree = "<group>"; };
 		0937E3261612106B0044040F /* BubbleSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSortViewController.h; sourceTree = "<group>"; };
 		0937E3271612106C0044040F /* BubbleSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortViewController.m; sourceTree = "<group>"; };
 		0937E32B161210B00044040F /* BubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
@@ -487,6 +493,7 @@
 			children = (
 				09038F4816125F7900D4E530 /* Node.h */,
 				09038F4916125F7900D4E530 /* Node.m */,
+				093379BA1670628900E46825 /* Node+MutableNode.h */,
 				095434501606D895001D3E5D /* ListNode.h */,
 				095434511606D895001D3E5D /* ListNode.m */,
 				09038F4516125F2200D4E530 /* TreeNode.h */,
@@ -812,6 +819,9 @@
 			children = (
 				09D65B731631B967001EF3C2 /* GraphViewController.h */,
 				09D65B741631B967001EF3C2 /* GraphViewController.m */,
+				093379B516705DA300E46825 /* GraphPopoverController.h */,
+				093379B616705DA300E46825 /* GraphPopoverController.m */,
+				093379B716705DA300E46825 /* GraphPopoverController.xib */,
 				096D6C4716364034005CF7C2 /* GraphScrollView.h */,
 				096D6C4816364034005CF7C2 /* GraphScrollView.m */,
 				096D6C4A163643CD005CF7C2 /* GraphView.h */,
@@ -968,6 +978,7 @@
 				095D930F1661539D007BBD4F /* USWeights.plist in Resources */,
 				09B0DFA31663DC3700D57D28 /* HuffmanWeightController.xib in Resources */,
 				0995F9A416667DEE0060E546 /* WeightCell.xib in Resources */,
+				093379B916705DA300E46825 /* GraphPopoverController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,6 +1079,7 @@
 				095D931216615851007BBD4F /* PriorityQueue.m in Sources */,
 				09B0DFA21663DC3700D57D28 /* HuffmanWeightController.m in Sources */,
 				09B0DFA61663E0ED00D57D28 /* WeightCell.m in Sources */,
+				093379B816705DA300E46825 /* GraphPopoverController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

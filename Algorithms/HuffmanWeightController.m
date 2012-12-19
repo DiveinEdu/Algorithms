@@ -57,7 +57,7 @@
         runTotal +=[val doubleValue];
         [vals setObject:val forKey:[dict objectForKey:@"char"]];
     }
-    if( abs((runTotal-.95)) >.5 ){
+    if( abs((runTotal-.98)) >.02 ){
         UIAlertView* error = [[UIAlertView alloc] initWithTitle:@"Oops" message:@"Weights don't add up to 1" delegate:self cancelButtonTitle:@"Normalize" otherButtonTitles:@"OK", nil];
         [error show];
     }

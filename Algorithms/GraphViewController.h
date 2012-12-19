@@ -16,7 +16,7 @@
 @property (nonatomic, strong) UILongPressGestureRecognizer* pressRecognizer;
 @property (nonatomic, strong) UITapGestureRecognizer* tapRecognizer;
 @property (nonatomic, strong) UIMenuController* menuController;
+@property (nonatomic, strong) UIPopoverController* popover;
 @property (nonatomic) CGPoint touchPoint;
-
 
 @end

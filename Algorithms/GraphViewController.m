@@ -11,6 +11,7 @@
 #import "GraphNode.h"
 #import "GraphView.h"
 #import "Graph.h"
+#import "GraphPopoverController.h"
 @interface GraphViewController (){
     GraphNode* fromNode;
 }
@@ -88,6 +89,12 @@
     [newView addTarget:self action:@selector(userSelectedNode:) forControlEvents:UIControlEventTouchUpInside];
     [newView setCenter:self.touchPoint];
     [self.scrollView addSubview:newView];
+    GraphPopoverController* graphPopController = [[GraphPopoverController alloc ]initWithNibName:@"GraphPopoverController" bundle:nil];
+    [graphPopController setNode:newNode];
+    self.popover = [[UIPopoverController alloc] initWithContentViewController:graphPopController];
+    [self.popover presentPopoverFromRect:newView.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    
+    
  
 }
 -(void)userSelectedNode:(GraphView *)view{

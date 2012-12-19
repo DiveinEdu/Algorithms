@@ -7,6 +7,7 @@
 //
 
 #import "Node.h"
+#import "Node+MutableNode.h"
 @class Graph;
 @class GraphView;
 
@@ -24,6 +25,7 @@
 
 -(id)initWithGraph:(Graph*)graph;
 -(id)initWithValue:(id)value andGraph:(Graph*)graph;
+
 -(NSInteger)degree;
 -(NSInteger)outDegree;
 -(NSInteger)inDegree;
