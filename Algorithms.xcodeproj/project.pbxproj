@@ -21,6 +21,8 @@
 		09038F4B16125F7A00D4E530 /* Node.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F4916125F7900D4E530 /* Node.m */; };
 		09038F4C16125F7A00D4E530 /* Node.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09038F4916125F7900D4E530 /* Node.m */; };
 		09038F501612615300D4E530 /* RelatedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F4F1612615300D4E530 /* RelatedFile.m */; };
+		091559641686BF8E00E7BC2C /* RSAEncryption.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E60AC416866C2A007E3084 /* RSAEncryption.m */; };
+		091559661686BF9100E7BC2C /* RSAEncryption.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E60AC316866C2A007E3084 /* RSAEncryption.h */; };
 		091914F8165C9A2800330CC1 /* arrow_left_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 091914F6165C9A2800330CC1 /* arrow_left_filled.png */; };
 		091914F9165C9A2800330CC1 /* arrow_left_filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091914F7165C9A2800330CC1 /* arrow_left_filled@2x.png */; };
 		091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64AD160E5D0200F9439A /* CodeViewController.m */; };
@@ -146,6 +148,9 @@
 		09D7EB70166FD317002D28E5 /* Graph.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0928CA35165ACA4500ADC886 /* Graph.m */; };
 		09D7EB71166FD317002D28E5 /* GraphNode.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0928CA37165ACA7600ADC886 /* GraphNode.h */; };
 		09D7EB72166FD317002D28E5 /* GraphNode.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0928CA38165ACA7600ADC886 /* GraphNode.m */; };
+		09E60AC216866B8B007E3084 /* RSAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E60AC116866B8B007E3084 /* RSAViewController.m */; };
+		09E60AC516866C2A007E3084 /* RSAEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E60AC416866C2A007E3084 /* RSAEncryption.m */; };
+		09E60AC816867E80007E3084 /* EChooserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E60AC716867E80007E3084 /* EChooserViewController.m */; };
 		09E9573A1609500500F5D573 /* StackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E957391609500500F5D573 /* StackViewController.m */; };
 		09E9573D1609501800F5D573 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 09E9573C1609501800F5D573 /* Stack.m */; };
 		09F0D3F4160CEB9600CF657E /* arrow_right_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 09F0D3F0160CEB9600CF657E /* arrow_right_filled.png */; };
@@ -229,6 +234,8 @@
 				09D7EB70166FD317002D28E5 /* Graph.m in CopyFiles */,
 				09D7EB71166FD317002D28E5 /* GraphNode.h in CopyFiles */,
 				09D7EB72166FD317002D28E5 /* GraphNode.m in CopyFiles */,
+				091559661686BF9100E7BC2C /* RSAEncryption.h in CopyFiles */,
+				091559641686BF8E00E7BC2C /* RSAEncryption.m in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +411,12 @@
 		09C070A416115BDD001F4C12 /* NodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NodeView.m; sourceTree = "<group>"; };
 		09D65B731631B967001EF3C2 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
 		09D65B741631B967001EF3C2 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
+		09E60AC016866B8B007E3084 /* RSAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAViewController.h; sourceTree = "<group>"; };
+		09E60AC116866B8B007E3084 /* RSAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAViewController.m; sourceTree = "<group>"; };
+		09E60AC316866C2A007E3084 /* RSAEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAEncryption.h; sourceTree = "<group>"; };
+		09E60AC416866C2A007E3084 /* RSAEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSAEncryption.m; sourceTree = "<group>"; };
+		09E60AC616867E80007E3084 /* EChooserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EChooserViewController.h; sourceTree = "<group>"; };
+		09E60AC716867E80007E3084 /* EChooserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EChooserViewController.m; sourceTree = "<group>"; };
 		09E957381609500500F5D573 /* StackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackViewController.h; sourceTree = "<group>"; };
 		09E957391609500500F5D573 /* StackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackViewController.m; sourceTree = "<group>"; };
 		09E9573B1609501800F5D573 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
@@ -470,7 +483,6 @@
 				09006233160FEE8400360BFE /* Category.m */,
 				09006217160FEB3100360BFE /* DataManager.h */,
 				09006218160FEB3100360BFE /* DataManager.m */,
-				099EC974160FDC3C00FD136A /* Objects.json */,
 			);
 			name = "Core Data Stack";
 			sourceTree = "<group>";
@@ -562,6 +574,7 @@
 		0937E32A1612107C0044040F /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				09E60ABF16866B69007E3084 /* RSA */,
 				0964FFF9165AA23E0080CFA7 /* Huffman Coding */,
 				095DA74416574B6300473540 /* QuickSort */,
 				09038F33161252B500D4E530 /* MergeSort */,
@@ -629,6 +642,7 @@
 				09745B38162A6FD90031F65D /* SettingsViewController.m */,
 				09F0D401160CF04A00CF657E /* DataViewController.h */,
 				09F0D402160CF04A00CF657E /* DataViewController.m */,
+				099EC974160FDC3C00FD136A /* Objects.json */,
 				09006236160FEE8B00360BFE /* Core Data Stack */,
 				09038F4D1612603400D4E530 /* Node Types */,
 				0937E325161210100044040F /* Auxilary views */,
@@ -832,6 +846,19 @@
 				0928CA38165ACA7600ADC886 /* GraphNode.m */,
 			);
 			name = Graph;
+			sourceTree = "<group>";
+		};
+		09E60ABF16866B69007E3084 /* RSA */ = {
+			isa = PBXGroup;
+			children = (
+				09E60AC016866B8B007E3084 /* RSAViewController.h */,
+				09E60AC116866B8B007E3084 /* RSAViewController.m */,
+				09E60AC616867E80007E3084 /* EChooserViewController.h */,
+				09E60AC716867E80007E3084 /* EChooserViewController.m */,
+				09E60AC316866C2A007E3084 /* RSAEncryption.h */,
+				09E60AC416866C2A007E3084 /* RSAEncryption.m */,
+			);
+			name = RSA;
 			sourceTree = "<group>";
 		};
 		09E9573616094FE300F5D573 /* Stack */ = {
@@ -1080,6 +1107,9 @@
 				09B0DFA21663DC3700D57D28 /* HuffmanWeightController.m in Sources */,
 				09B0DFA61663E0ED00D57D28 /* WeightCell.m in Sources */,
 				093379B816705DA300E46825 /* GraphPopoverController.m in Sources */,
+				09E60AC216866B8B007E3084 /* RSAViewController.m in Sources */,
+				09E60AC516866C2A007E3084 /* RSAEncryption.m in Sources */,
+				09E60AC816867E80007E3084 /* EChooserViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1186,7 +1216,6 @@
 		095434441606D233001D3E5D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
 				INFOPLIST_FILE = "Algorithms/Algorithms-Info.plist";
@@ -1199,7 +1228,6 @@
 		095434451606D233001D3E5D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = Algorithms/Algorithms.entitlements;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Algorithms/Algorithms-Prefix.pch";
 				INFOPLIST_FILE = "Algorithms/Algorithms-Info.plist";

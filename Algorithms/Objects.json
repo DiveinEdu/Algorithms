@@ -95,7 +95,14 @@
      "viewID":"huffman",
      "related":["HuffmanTree","PriorityQueue","HuffmanNode"],
      "wikiLink":"http://en.wikipedia.org/wiki/Huffman_coding"
+     },
+     {
+     "name":"RSA Encryption",
+     "viewID":"rsa",
+     "related":["RSAEncryption"],
+     "wikiLink":"http://en.wikipedia.org/wiki/RSA_(algorithm)"
      }
+     
      
     ],
     "settings":
