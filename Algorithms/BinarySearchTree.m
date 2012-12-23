@@ -14,6 +14,7 @@
 -(TreeNode*)addValue:(id)value{
     //[self traverse];
     TreeNode* node = [[TreeNode alloc] initWithValue:value];
+    node.onPath = YES;
     if(self.root == nil){
         self.root = node;
         return node;
@@ -55,7 +56,6 @@
 -(void)traverse{
     NSMutableString* path = [NSMutableString new];
     [self visit:self.root toString:path];
-    NSLog(@"%@",path);
 }
 -(void)visit:(TreeNode*)node toString:(NSMutableString*)sorted{
     if (node.left !=nil) {

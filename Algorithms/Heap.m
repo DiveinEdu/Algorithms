@@ -32,30 +32,36 @@
     if(self.root != nil){
         //find correct location
         HeapNode* newParent = [self findNextParent];
-        if (newParent.left == nil)
+        if (newParent.left == nil){
             newParent.left = node;
-        else
+        }
+        else{
             newParent.right = node;
-            
+        }
         node.parent = newParent;
         [node heapifyUp];
         //check root
         while (self.root.parent!=nil) {
             self.root = self.root.parent;
         }
-
+        HeapNode* n = node;
+        while(n.parent !=nil){
+            n.onPath = YES;
+            n = n.parent;
+        }
+        
         
     }
     else
         self.root = node;
     self.size += 1;
-
-
+    
+    
 }
 
 -(HeapNode*)getNext{
     NSLog(@" %@",[self description]);
-
+    
     if (self.root == nil) {
         return nil;
     }
@@ -89,7 +95,7 @@
         tmp = tmp.parent;
     }
     self.root = tmp;
-
+    
     return toReturn;
 }
 -(int)height:(HeapNode*)node{
@@ -99,9 +105,9 @@
         return MAX([self height:node.left], [self height:node.right]) + 1;
 }
 -(HeapNode*)findNextParent{
-
+    
     HeapNode* toReturn = self.root;
-
+    
     int height = [self height:self.root];
     int totalNodes =pow(2,(height+1))-1;
     //NSLog(@"level: %i height: %i totalNodes: %i, size: %i",level,height,totalNodes,self.size);
@@ -115,16 +121,16 @@
         NSInteger location  = (self.size - pow(2,height) + 2);
         NSInteger left = 1;
         NSInteger right= totalNodes - pow(2,(height))+1;
-//        NSLog(@"Starting: %i %i %i",location, left,right);
+        //        NSLog(@"Starting: %i %i %i",location, left,right);
         BOOL found = false;
         while (!found) {
             NSInteger mid = (left+right)/2;
-//            NSLog(@"Location: %i vs (%i+%i)/2=%i ",location, left,right,mid);
-
+            //            NSLog(@"Location: %i vs (%i+%i)/2=%i ",location, left,right,mid);
+            
             
             if (location > mid) {
                 left += (right-mid);
-//                NSLog(@"Going Right Range now: %i, %i",left,right);
+                //                NSLog(@"Going Right Range now: %i, %i",left,right);
                 //go right
                 if (toReturn.right!=nil) {
                     toReturn=toReturn.right;
@@ -135,13 +141,13 @@
             else{
                 //go left
                 right -= (right-mid);
-//                NSLog(@"Going left range now: %i, %i",left,right);
-                if (toReturn.left!=nil) 
+                //                NSLog(@"Going left range now: %i, %i",left,right);
+                if (toReturn.left!=nil)
                     toReturn=toReturn.left;
                 else
-                        found = TRUE;
+                    found = TRUE;
             }
-
+            
         }
     }
     /*
@@ -161,11 +167,11 @@
     if (node.left != nil) {
         [self visit:node.left withString:string];
     }
-
+    
     [string appendFormat:@"%@ ",[node description]];
     if (node.right != nil) {
         [self visit:node.right withString:string];
     }
-
+    
 }
 @end

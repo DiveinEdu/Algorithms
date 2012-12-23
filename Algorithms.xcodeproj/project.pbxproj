@@ -23,6 +23,8 @@
 		09038F501612615300D4E530 /* RelatedFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 09038F4F1612615300D4E530 /* RelatedFile.m */; };
 		091559641686BF8E00E7BC2C /* RSAEncryption.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E60AC416866C2A007E3084 /* RSAEncryption.m */; };
 		091559661686BF9100E7BC2C /* RSAEncryption.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 09E60AC316866C2A007E3084 /* RSAEncryption.h */; };
+		091559691686C28800E7BC2C /* plainBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 091559671686C28800E7BC2C /* plainBackground.png */; };
+		0915596A1686C28800E7BC2C /* plainBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091559681686C28800E7BC2C /* plainBackground@2x.png */; };
 		091914F8165C9A2800330CC1 /* arrow_left_filled.png in Resources */ = {isa = PBXBuildFile; fileRef = 091914F6165C9A2800330CC1 /* arrow_left_filled.png */; };
 		091914F9165C9A2800330CC1 /* arrow_left_filled@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 091914F7165C9A2800330CC1 /* arrow_left_filled@2x.png */; };
 		091F64AE160E5D0200F9439A /* CodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 091F64AD160E5D0200F9439A /* CodeViewController.m */; };
@@ -272,6 +274,8 @@
 		09038F4916125F7900D4E530 /* Node.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = Node.m; sourceTree = "<group>"; tabWidth = 4; usesTabs = 0; wrapsLines = 1; };
 		09038F4E1612615300D4E530 /* RelatedFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RelatedFile.h; sourceTree = "<group>"; };
 		09038F4F1612615300D4E530 /* RelatedFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RelatedFile.m; sourceTree = "<group>"; };
+		091559671686C28800E7BC2C /* plainBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plainBackground.png; sourceTree = "<group>"; };
+		091559681686C28800E7BC2C /* plainBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plainBackground@2x.png"; sourceTree = "<group>"; };
 		091914F6165C9A2800330CC1 /* arrow_left_filled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left_filled.png; sourceTree = "<group>"; };
 		091914F7165C9A2800330CC1 /* arrow_left_filled@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow_left_filled@2x.png"; sourceTree = "<group>"; };
 		091F64AC160E5D0200F9439A /* CodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeViewController.h; sourceTree = "<group>"; };
@@ -586,6 +590,8 @@
 		094B7467160A6EA500C47C3E /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				091559671686C28800E7BC2C /* plainBackground.png */,
+				091559681686C28800E7BC2C /* plainBackground@2x.png */,
 				091914F6165C9A2800330CC1 /* arrow_left_filled.png */,
 				091914F7165C9A2800330CC1 /* arrow_left_filled@2x.png */,
 				094B7469160A6EF000C47C3E /* arrow_right.png */,
@@ -1006,6 +1012,8 @@
 				09B0DFA31663DC3700D57D28 /* HuffmanWeightController.xib in Resources */,
 				0995F9A416667DEE0060E546 /* WeightCell.xib in Resources */,
 				093379B916705DA300E46825 /* GraphPopoverController.xib in Resources */,
+				091559691686C28800E7BC2C /* plainBackground.png in Resources */,
+				0915596A1686C28800E7BC2C /* plainBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

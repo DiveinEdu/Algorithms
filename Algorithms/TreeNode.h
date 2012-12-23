@@ -11,6 +11,7 @@
 @property ( nonatomic, strong) TreeNode* right;
 @property ( nonatomic, strong) TreeNode* left;
 @property (nonatomic, weak) TreeNode* parent;
+@property (nonatomic) BOOL onPath;
 
 -(BOOL)addNode:(TreeNode*)node;
 -(TreeNode*)removeNode:(TreeNode*)node;

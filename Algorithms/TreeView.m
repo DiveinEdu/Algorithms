@@ -76,11 +76,17 @@
         //create the right arrow
         self.rightArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.right.center.x, self.right.frame.origin.y) ];
         [self addSubview:self.rightArrow];
+        if (self.node.right.onPath) {
+            [self.rightArrow.line setBackgroundColor:[UIColor redColor]];
+        }
     }
     
     if (self.left) {
         self.leftArrow = [[ArrowView alloc ]initWithStartPoint:CGPointMake(self.value.center.x, self.value.frame.size.height) andEndPoint:CGPointMake(self.left.center.x, self.left.frame.origin.y) ];
         [self addSubview:self.leftArrow];
+        if (self.node.left.onPath) {
+            [self.leftArrow.line setBackgroundColor:[UIColor redColor]];
+        }
     }
 }
 @end

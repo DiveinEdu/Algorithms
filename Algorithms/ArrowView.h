@@ -13,6 +13,7 @@ typedef enum {
 }ARROW_TYPE;
 
 @interface ArrowView : UIView
+@property (nonatomic, strong)UIView* line;
 -(id)initWithStartPoint:(CGPoint)start andEndPoint:(CGPoint)end;
 -(id)initWithStartPoint:(CGPoint)start andEndPoint:(CGPoint)end withOffset:(NSInteger)offset;
 

@@ -12,6 +12,7 @@
 -(BOOL)addNode:(TreeNode *)node{
     switch ([self compare:node]) {
         case NSOrderedAscending:
+            self.onPath = YES;
             if (self.right == nil){
                 self.right = node;
                 node.parent = self;
@@ -20,6 +21,7 @@
             else
                 return [self.right addNode:node];
         case NSOrderedDescending:
+            self.onPath = YES;
             if  (self.left==nil){
                 self.left = node;
                 node.parent = self;
@@ -115,5 +117,10 @@
             break;
     }
     
+}
+-(BOOL)onPath{
+    BOOL toR = _onPath;
+    _onPath = NO;
+    return toR;
 }
 @end

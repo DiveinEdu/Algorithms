@@ -33,21 +33,21 @@
         CGFloat len = sqrtf((x*x) + (y*y))-(offset*2);
         CGFloat angle = atan(y / x);
         
-        UIView * separator = nil;
+
         UIImageView* arrowView=nil;
         if (start.x <= end.x) {
             arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
 
             if(start.y<=end.y){
                 /* down right */
-                separator = [[UIView alloc] initWithFrame:CGRectMake(offset, 0, len, 1)];
-                [arrowView setFrame:CGRectMake(separator.frame.size.width-ARROW_WIDTH+offset, separator.frame.size.height-ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
+                self.line = [[UIView alloc] initWithFrame:CGRectMake(offset, 0, len, 1)];
+                [arrowView setFrame:CGRectMake(self.line.frame.size.width-ARROW_WIDTH+offset, self.line.frame.size.height-ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
 
             }
             else{
                 /* up right*/
-                separator = [[UIView alloc] initWithFrame:CGRectMake(offset, y, len, 1)];
-                [arrowView setFrame:CGRectMake(separator.frame.size.width-ARROW_WIDTH+offset, separator.frame.size.height-ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
+                self.line = [[UIView alloc] initWithFrame:CGRectMake(offset, y, len, 1)];
+                [arrowView setFrame:CGRectMake(self.line.frame.size.width-ARROW_WIDTH+offset, self.line.frame.size.height-ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
                 angle*=-1;
             }
 
@@ -58,30 +58,30 @@
             //going to the left
             if(start.y<=end.y){
                 /*Down Left*/
-                separator = [[UIView alloc] initWithFrame:CGRectMake(offset,y, len, 1)];
+                self.line = [[UIView alloc] initWithFrame:CGRectMake(offset,y, len, 1)];
                 [arrowView setFrame:CGRectMake(offset, -ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
                 angle*=-1;
 
             }
             else{
                 /* Up Left */
-                separator = [[UIView alloc] initWithFrame:CGRectMake(offset, 0, len, 1)];
+                self.line = [[UIView alloc] initWithFrame:CGRectMake(offset, 0, len, 1)];
                 [arrowView setFrame:CGRectMake(offset, -ARROW_WIDTH/2, ARROW_WIDTH, ARROW_WIDTH)];
                 
             }
         }
-        [self setAnchorPoint:CGPointMake(0, 0) forView:separator];
+        [self setAnchorPoint:CGPointMake(0, 0) forView:self.line];
 
 
-        UIView* container = [[UIView alloc] initWithFrame:CGRectMake(0, separator.frame.origin.y, len+offset, 1)];
-        [container addSubview:separator];
+        UIView* container = [[UIView alloc] initWithFrame:CGRectMake(0, self.line.frame.origin.y, len+offset, 1)];
+        [container addSubview:self.line];
         [container addSubview:arrowView];
-        [separator setFrame:CGRectMake(offset, 0, separator.frame.size.width, separator.frame.size.height)];
+        [self.line setFrame:CGRectMake(offset, 0, self.line.frame.size.width, self.line.frame.size.height)];
         [self setAnchorPoint:CGPointMake(0, 0) forView:container];
         CGAffineTransform transform = CGAffineTransformMakeRotation(angle);
         [container setTransform:transform];
 
-        separator.backgroundColor = [UIColor blackColor];
+        self.line.backgroundColor = [UIColor blackColor];
         [self addSubview:container];
         [self setUserInteractionEnabled:NO];
         
@@ -103,12 +103,12 @@
         
         
         UIImageView* arrowView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow_right_filled.png"]];
-        UIView * separator = [[UIView alloc] initWithFrame:CGRectMake(0, 1.5, len, 3)];
-        separator.backgroundColor = [UIColor blackColor];
-        [self addSubview:separator];
+        self.line = [[UIView alloc] initWithFrame:CGRectMake(0, 1.5, len, 3)];
+        self.line.backgroundColor = [UIColor blackColor];
+        [self addSubview:self.line];
         [self addSubview:arrowView];
         [arrowView setTransform:transform];
-        [separator setTransform:transform];
+        [self.line setTransform:transform];
         
         
         
@@ -122,9 +122,9 @@
     if (self) {
         UIImageView* arrowView = [[UIImageView alloc] initWithImage:[self imageForType:type]];
         
-        UIView * separator = [[UIView alloc] initWithFrame:CGRectMake(0, (frame.size.height/2)-1, frame.size.width, 2)];
-        separator.backgroundColor = [UIColor blackColor];
-        [self addSubview:separator];
+        self.line = [[UIView alloc] initWithFrame:CGRectMake(0, (frame.size.height/2)-1, frame.size.width, 2)];
+        self.line.backgroundColor = [UIColor blackColor];
+        [self addSubview:self.line];
         [self addSubview:arrowView];
         [arrowView setFrame:CGRectMake(frame.size.width-frame.size.height, 0, frame.size.height, self.frame.size.height)];
     }

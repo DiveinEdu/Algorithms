@@ -18,5 +18,4 @@
 @property (nonatomic, strong)ArrowView* leftArrow;
 
 -(id)initWithNode:(HeapNode*)node;
--(void)fixViews;
 @end
