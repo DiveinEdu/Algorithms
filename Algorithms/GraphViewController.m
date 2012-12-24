@@ -77,6 +77,7 @@
 
 - (void)viewDidUnload {
     [self setScrollView:nil];
+    [self setGraphType:nil];
     [super viewDidUnload];
 }
 
@@ -84,7 +85,7 @@
 
 //Graph Scroll View Delegates
 -(void)addNewNode{
-    GraphNode* newNode = [[GraphNode alloc] initWithValue: @"Node" andGraph:self.graph];
+    GraphNode* newNode = [[GraphNode alloc] initWithValue:nil andGraph:self.graph];
     GraphView* newView = [[GraphView alloc] initWithNode: newNode];
     [newView addTarget:self action:@selector(userSelectedNode:) forControlEvents:UIControlEventTouchUpInside];
     [newView setCenter:self.touchPoint];
@@ -121,7 +122,7 @@
 }
 -(Graph*)graph{
     if (_graph==nil) {
-        _graph = [Graph new];
+        _graph = [[Graph alloc] initWithType:[self.graphType selectedSegmentIndex]];
     }
     return _graph;
 }

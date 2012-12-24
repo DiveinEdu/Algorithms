@@ -8,6 +8,8 @@
 
 #import "GraphNode.h"
 #import "Graph.h"
+#import "GraphEdge.h"
+#import "GraphConnections.h"
 
 @interface GraphNode(){
     NSInteger myID;
@@ -50,18 +52,51 @@
     return [self.predecessors containsObject:node];
 }
 -(NSSet*)adjoiningNodes{
-    NSMutableSet* suc = [self.successors copy];
-    [suc unionSet:self.predecessors];
-    return suc;
+    GraphConnections* suc = [self.successors copy];
+    [suc unionWith:self.predecessors];
+    return [suc nodes];
+}
 
-    
+-(NSInteger)weightToNode:(GraphNode *)node{
+    GraphEdge* edge = [self edgeToNode:node];
+    if (edge == nil) {
+        edge = [self edgeFromNode:node];
+        if (edge==nil) {
+            return INT_MAX;
+        }
+        return edge.weight;
+    }
+    return edge.weight;
+}
+-(GraphEdge*)edgeFromNode:(GraphNode *)node{
+    for (GraphEdge* edge in [self.predecessors edges]) {
+        if ([edge.node isEqual:node]) {
+            return edge;
+        }
+    }
+    return nil;
+}
+-(GraphEdge*)edgeToNode:(GraphNode *)node{
+    for (GraphEdge* edge in [self.successors edges]) {
+        if ([edge.node isEqual:node]) {
+            return edge;
+        }
+    }
+
+    return nil;
 }
 
 -(BOOL)adjoin:(GraphNode*)node{
     return [self goesToNode:node] || [self comesFrom:node];
 }
 -(NSString*)nodeDescription{
-    return [NSString stringWithFormat:@"id:%i\nin:%i\nout:%i",myID,[self inDegree],[self outDegree]];
+    if ([self getValue]==nil) {
+        return [NSString stringWithFormat:@"id:%i\nin:%i\nout:%i",myID,[self inDegree],[self outDegree]];
+    }
+    else{
+        return [NSString stringWithFormat:@"%@\nin:%i\nout:%i",[self getValue],[self inDegree],[self outDegree]];
+
+    }
 
 }
 -(NSString*)description{
@@ -73,10 +108,10 @@
 }
 
 -(void)cleanUp{
-    for (GraphNode* g in self.predecessors) {
+    for (GraphNode* g in [self.predecessors edges]) {
         [g removeMe:self];
     }
-    for (GraphNode*g in self.successors) {
+    for (GraphNode* g in [self.successors edges]) {
         [g removeMe:self];
     }
 }
@@ -85,23 +120,24 @@
     [self.predecessors removeObject:toRemove];
 }
 
--(NSMutableSet*)successors{
+-(GraphConnections*)successors{
     if (_successors==nil)
-        _successors = [NSMutableSet new];
+        _successors = [GraphConnections new];
     return _successors;
 }
--(NSMutableSet*)predecessors{
+-(GraphConnections*)predecessors{
     if(_predecessors==nil)
-        _predecessors = [NSMutableSet new];
+        _predecessors = [GraphConnections new];
     return _predecessors;
 }
 
 -(void)addPredecessor:(GraphNode *)pred{
-    [self.predecessors addObject:pred];
+    [self.predecessors addObject:[[GraphEdge alloc] initWithNode:pred]];
 }
 -(void)addSuccessor:(GraphNode *)object{
-    [self.successors addObject:object];
+    [self.successors addObject:[[GraphEdge alloc] initWithNode:object]];
 }
+
 -(void)removePredecessor:(GraphNode *)pred{
     [self.predecessors removeObject:pred];
 }
@@ -109,4 +145,10 @@
     [self.successors removeObject:succ];
 }
 
+-(void)addDoubleEdgeTo:(GraphNode*)toNode withWeight:(NSInteger)weight{
+    GraphEdge* edge = [[GraphEdge alloc] initWithNode:toNode andWeight:weight];
+    [self.successors addObject:edge];
+    
+    [toNode.successors addObject:[[GraphEdge alloc] initWithNode:self andWeight:weight]];
+}
 @end

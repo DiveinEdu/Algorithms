@@ -9,7 +9,10 @@
 #import "GraphView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "GraphNode.h"
-#import "ArrowView.h"
+#import "EdgeView.h"
+#import "GraphEdge.h"
+#import "GraphConnections.h"
+
 @interface GraphView()
 @property (nonatomic, strong)NSMutableArray* arrowViews;
 @end
@@ -43,21 +46,21 @@
     else
         [self.layer setBorderColor:[UIColor blackColor].CGColor];
 
-    for (ArrowView *v in self.arrowViews) {
+    for (EdgeView *v in self.arrowViews) {
         [v removeFromSuperview];
     }
     
-    for (GraphNode* n in self.node.successors) {
-        [self addArrowTo:n];
+    for (GraphEdge* edge in [self.node.successors edges]) {
+        [self addEdge:edge];
     }
     [self.value setText:[NSString stringWithFormat:@"%@",[self.node nodeDescription]]];
-
 }
 
 
--(void)addArrowTo:(GraphNode*)n{
+-(void)addEdge:(GraphEdge*)edge{
     CGFloat width = 0;
     CGFloat height = 0;
+    GraphNode* n = edge.node;
     width = abs(self.center.x - n.view.center.x);
     if(self.center.x>n.view.center.x)
         width*=-1;
@@ -71,10 +74,8 @@
     CGPoint mid = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
     
     /*draw arrow to their node*/
-    ArrowView* av = [[ArrowView alloc] initWithStartPoint:mid andEndPoint:CGPointMake(mid.x+width, mid.y+height) withOffset:GRAPH_NODE_DIAMETER/2];
+    EdgeView* av = [[EdgeView alloc] initWithStartPoint:mid andEndPoint:CGPointMake(mid.x+width, mid.y+height) withOffset:GRAPH_NODE_DIAMETER/2 andWeight:edge.weight];
     [self.arrowViews addObject:av];
     [self addSubview:av];
 }
-
-
 @end

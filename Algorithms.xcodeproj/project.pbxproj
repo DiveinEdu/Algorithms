@@ -111,7 +111,10 @@
 		098CD6FE1667FD6D001B68D6 /* PriorityQueue.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095D931016615851007BBD4F /* PriorityQueue.h */; };
 		098CD6FF1667FD6D001B68D6 /* PriorityQueue.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 095D931116615851007BBD4F /* PriorityQueue.m */; };
 		0995F9A416667DEE0060E546 /* WeightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0995F9A316667DEE0060E546 /* WeightCell.xib */; };
+		0998D6241688C1DA00010148 /* EdgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0998D6231688C1DA00010148 /* EdgeView.m */; };
 		099EC975160FDC3C00FD136A /* Objects.json in Resources */ = {isa = PBXBuildFile; fileRef = 099EC974160FDC3C00FD136A /* Objects.json */; };
+		09A5CB7516880FF0006E7023 /* GraphEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A5CB7416880FF0006E7023 /* GraphEdge.m */; };
+		09A5CB7916881252006E7023 /* GraphConnections.m in Sources */ = {isa = PBXBuildFile; fileRef = 09A5CB7816881252006E7023 /* GraphConnections.m */; };
 		09ADEE97161CDBF300BD0CAE /* RedBlackTreeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */; };
 		09ADEE9A161CDC0400BD0CAE /* RedBlackTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE99161CDC0400BD0CAE /* RedBlackTree.m */; };
 		09ADEE9D161CDC7F00BD0CAE /* RedBlackNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 09ADEE9C161CDC7F00BD0CAE /* RedBlackNode.m */; };
@@ -368,7 +371,13 @@
 		09773E131660969A00BDAFBE /* HuffmanView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HuffmanView.h; sourceTree = "<group>"; };
 		09773E141660969A00BDAFBE /* HuffmanView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HuffmanView.m; sourceTree = "<group>"; };
 		0995F9A316667DEE0060E546 /* WeightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeightCell.xib; sourceTree = "<group>"; };
+		0998D6221688C1DA00010148 /* EdgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EdgeView.h; sourceTree = "<group>"; };
+		0998D6231688C1DA00010148 /* EdgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EdgeView.m; sourceTree = "<group>"; };
 		099EC974160FDC3C00FD136A /* Objects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Objects.json; sourceTree = "<group>"; };
+		09A5CB7316880FF0006E7023 /* GraphEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphEdge.h; sourceTree = "<group>"; };
+		09A5CB7416880FF0006E7023 /* GraphEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphEdge.m; sourceTree = "<group>"; };
+		09A5CB7716881252006E7023 /* GraphConnections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphConnections.h; sourceTree = "<group>"; };
+		09A5CB7816881252006E7023 /* GraphConnections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphConnections.m; sourceTree = "<group>"; };
 		09ADEE95161CDBF300BD0CAE /* RedBlackTreeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBlackTreeViewController.h; sourceTree = "<group>"; };
 		09ADEE96161CDBF300BD0CAE /* RedBlackTreeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RedBlackTreeViewController.m; sourceTree = "<group>"; };
 		09ADEE98161CDC0400BD0CAE /* RedBlackTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RedBlackTree.h; sourceTree = "<group>"; };
@@ -552,6 +561,8 @@
 			children = (
 				094B746B160A6F3200C47C3E /* ArrowView.h */,
 				094B746C160A6F3200C47C3E /* ArrowView.m */,
+				0998D6221688C1DA00010148 /* EdgeView.h */,
+				0998D6231688C1DA00010148 /* EdgeView.m */,
 				09C070A316115BDD001F4C12 /* NodeView.h */,
 				09C070A416115BDD001F4C12 /* NodeView.m */,
 				09ADEEA1161CE53500BD0CAE /* TreeView.h */,
@@ -850,6 +861,10 @@
 				0928CA35165ACA4500ADC886 /* Graph.m */,
 				0928CA37165ACA7600ADC886 /* GraphNode.h */,
 				0928CA38165ACA7600ADC886 /* GraphNode.m */,
+				09A5CB7716881252006E7023 /* GraphConnections.h */,
+				09A5CB7816881252006E7023 /* GraphConnections.m */,
+				09A5CB7316880FF0006E7023 /* GraphEdge.h */,
+				09A5CB7416880FF0006E7023 /* GraphEdge.m */,
 			);
 			name = Graph;
 			sourceTree = "<group>";
@@ -1118,6 +1133,9 @@
 				09E60AC216866B8B007E3084 /* RSAViewController.m in Sources */,
 				09E60AC516866C2A007E3084 /* RSAEncryption.m in Sources */,
 				09E60AC816867E80007E3084 /* EChooserViewController.m in Sources */,
+				09A5CB7516880FF0006E7023 /* GraphEdge.m in Sources */,
+				09A5CB7916881252006E7023 /* GraphConnections.m in Sources */,
+				0998D6241688C1DA00010148 /* EdgeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+
+typedef enum  {
+    DIRECTED_GRAPH = 0,
+    UN_DIRECTED_GRAPH = 1
+}Graph_Type;
+
 @class GraphNode;
 
 @interface Graph : NSObject
+-(id)initWithType:(Graph_Type)type;
 -(NSInteger)addNodeToGraph:(GraphNode*)node;
 -(GraphNode*)newNode;
 -(void)check:(GraphNode*)node;

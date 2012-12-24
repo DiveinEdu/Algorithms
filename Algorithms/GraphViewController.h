@@ -18,5 +18,6 @@
 @property (nonatomic, strong) UIMenuController* menuController;
 @property (nonatomic, strong) UIPopoverController* popover;
 @property (nonatomic) CGPoint touchPoint;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *graphType;
 
 @end

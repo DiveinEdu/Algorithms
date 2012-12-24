@@ -839,9 +839,24 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="p3F-iW-yK0" customClass="GraphScrollView">
-                                <rect key="frame" x="0.0" y="0.0" width="703" height="748"/>
+                                <rect key="frame" x="0.0" y="57" width="703" height="691"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </scrollView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="bso-Yt-qYg">
+                                <rect key="frame" x="118" y="17" width="167" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Directed"/>
+                                    <segment title="Un-Directed"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Graph Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xqZ-cd-O0i">
+                                <rect key="frame" x="20" y="19" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -849,12 +864,13 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="graphType" destination="bso-Yt-qYg" id="KrW-V8-P24"/>
                         <outlet property="scrollView" destination="p3F-iW-yK0" id="Gir-ee-qEi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ynm-3k-4Lz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3512" y="-327"/>
+            <point key="canvasLocation" x="3466" y="-337"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6gh-ZD-onp">
@@ -2087,6 +2103,7 @@
         <class className="GraphViewController" superclassName="DataViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="graphType" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="scrollView" candidateClass="GraphScrollView"/>
             </relationships>
         </class>
@@ -2108,6 +2125,7 @@
                 <relationship kind="action" name="buildWithUS:"/>
                 <relationship kind="action" name="decode:"/>
                 <relationship kind="action" name="encode:"/>
+                <relationship kind="action" name="remove:"/>
                 <relationship kind="outlet" name="outputLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="stringBuilder" candidateClass="UITextField"/>
             </relationships>
