@@ -9,8 +9,9 @@
 #import "DataViewController.h"
 #import "GraphScrollView.h"
 #import "GraphView.h"
+#import "GraphPopoverController.h"
 @class Graph;
-@interface GraphViewController : DataViewController <GraphScrollMenu>
+@interface GraphViewController : DataViewController <GraphScrollMenu, GraphPopoverDelegate>
 @property (nonatomic, strong)Graph* graph;
 @property (weak, nonatomic) IBOutlet GraphScrollView *scrollView;
 @property (nonatomic, strong) UILongPressGestureRecognizer* pressRecognizer;

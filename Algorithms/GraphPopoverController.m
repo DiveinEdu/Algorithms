@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad
 {
-    self.contentSizeForViewInPopover = CGSizeMake(250, 75);
+    self.contentSizeForViewInPopover = CGSizeMake(310, 75);
 
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -46,5 +46,10 @@
 }
 - (IBAction)valueChanged:(id)sender {
     [self.node setNewValue:self.valueField.text];
+}
+
+- (IBAction)saveValue:(id)sender {
+    [self.node setNewValue:self.valueField.text];
+    [self.delegate finishedEditingValue];
 }
 @end

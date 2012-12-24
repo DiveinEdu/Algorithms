@@ -91,6 +91,7 @@
     [newView setCenter:self.touchPoint];
     [self.scrollView addSubview:newView];
     GraphPopoverController* graphPopController = [[GraphPopoverController alloc ]initWithNibName:@"GraphPopoverController" bundle:nil];
+    [graphPopController setDelegate:self];
     [graphPopController setNode:newNode];
     self.popover = [[UIPopoverController alloc] initWithContentViewController:graphPopController];
     [self.popover presentPopoverFromRect:newView.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
@@ -119,6 +120,9 @@
     }
     [view refresh];
     
+}
+-(void)finishedEditingValue{
+    [self.popover dismissPopoverAnimated:YES];
 }
 -(Graph*)graph{
     if (_graph==nil) {
