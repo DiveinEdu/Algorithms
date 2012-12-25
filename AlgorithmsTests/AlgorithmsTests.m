@@ -9,6 +9,7 @@
 #import "AlgorithmsTests.h"
 #import "BinarySearchTree.h"
 #import "TreeNode.h"
+#import "HashTable.h"
 @implementation AlgorithmsTests
 
 - (void)setUp
@@ -66,6 +67,20 @@
     }
     if(bst.root !=nil){
         STFail(@"Not Removing Everything!");
+    }
+}
+-(void)testHashTable{
+    HashTable* table = [HashTable new];
+    NSString* val = @"Value";
+    NSString* key = @"key";
+    [table putObject:val forKey:key];
+    if (![val isEqual:[table objectForKey:key]]) {
+        STFail(@"HASH TABLE DIDNT RETURN SAME OBJECT");
+    }
+    NSString* val2 = @"Val2";
+    [table putObject:val2 forKey:key];
+    if ([val isEqual:[table objectForKey:key]]) {
+        STFail(@"HASH TABLE DIDNT replace OBJECT");
     }
 }
 

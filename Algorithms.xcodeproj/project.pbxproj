@@ -31,12 +31,16 @@
 		0928CA32165AC38500ADC886 /* HuffmanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CA31165AC38500ADC886 /* HuffmanViewController.m */; };
 		0928CA36165ACA4500ADC886 /* Graph.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CA35165ACA4500ADC886 /* Graph.m */; };
 		0928CA39165ACA7600ADC886 /* GraphNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0928CA38165ACA7600ADC886 /* GraphNode.m */; };
+		092CB6511688E1160057AC97 /* SkipList.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CB6501688E1160057AC97 /* SkipList.m */; };
+		092CB6561688E2140057AC97 /* SkipNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 092CB6551688E2140057AC97 /* SkipNode.m */; };
 		092F4D6E16122CFE003F4850 /* BubbleSort.m in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0937E32C161210B00044040F /* BubbleSort.m */; };
 		092F4D7016122D01003F4850 /* BubbleSort.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0937E32B161210B00044040F /* BubbleSort.h */; };
 		093379B816705DA300E46825 /* GraphPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 093379B616705DA300E46825 /* GraphPopoverController.m */; };
 		093379B916705DA300E46825 /* GraphPopoverController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093379B716705DA300E46825 /* GraphPopoverController.xib */; };
 		0937E3281612106C0044040F /* BubbleSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E3271612106C0044040F /* BubbleSortViewController.m */; };
 		0937E32D161210B00044040F /* BubbleSort.m in Sources */ = {isa = PBXBuildFile; fileRef = 0937E32C161210B00044040F /* BubbleSort.m */; };
+		093F9FEB168911D200D6ADF7 /* HashTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 093F9FEA168911D200D6ADF7 /* HashTable.m */; };
+		093F9FF01689122600D6ADF7 /* HashEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 093F9FEF1689122600D6ADF7 /* HashEntry.m */; };
 		09427AC216307A77003534CA /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427AC116307A77003534CA /* Icon-144.png */; };
 		09427AC516307A9E003534CA /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427AC416307A9E003534CA /* Icon-72.png */; };
 		09427AC716307AC2003534CA /* Default-Landscape@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */; };
@@ -289,6 +293,10 @@
 		0928CA35165ACA4500ADC886 /* Graph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Graph.m; sourceTree = "<group>"; };
 		0928CA37165ACA7600ADC886 /* GraphNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphNode.h; sourceTree = "<group>"; };
 		0928CA38165ACA7600ADC886 /* GraphNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphNode.m; sourceTree = "<group>"; };
+		092CB64F1688E1160057AC97 /* SkipList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkipList.h; sourceTree = "<group>"; };
+		092CB6501688E1160057AC97 /* SkipList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkipList.m; sourceTree = "<group>"; };
+		092CB6541688E2140057AC97 /* SkipNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkipNode.h; sourceTree = "<group>"; };
+		092CB6551688E2140057AC97 /* SkipNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkipNode.m; sourceTree = "<group>"; };
 		093379B516705DA300E46825 /* GraphPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphPopoverController.h; sourceTree = "<group>"; };
 		093379B616705DA300E46825 /* GraphPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphPopoverController.m; sourceTree = "<group>"; };
 		093379B716705DA300E46825 /* GraphPopoverController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GraphPopoverController.xib; sourceTree = "<group>"; };
@@ -297,6 +305,10 @@
 		0937E3271612106C0044040F /* BubbleSortViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSortViewController.m; sourceTree = "<group>"; };
 		0937E32B161210B00044040F /* BubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
 		0937E32C161210B00044040F /* BubbleSort.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BubbleSort.m; sourceTree = "<group>"; };
+		093F9FE9168911D200D6ADF7 /* HashTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTable.h; sourceTree = "<group>"; };
+		093F9FEA168911D200D6ADF7 /* HashTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HashTable.m; sourceTree = "<group>"; };
+		093F9FEE1689122600D6ADF7 /* HashEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashEntry.h; sourceTree = "<group>"; };
+		093F9FEF1689122600D6ADF7 /* HashEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HashEntry.m; sourceTree = "<group>"; };
 		09427AC116307A77003534CA /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-144.png"; path = "../Icon-144.png"; sourceTree = "<group>"; };
 		09427AC416307A9E003534CA /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "../Icon-72.png"; sourceTree = "<group>"; };
 		09427AC616307AC2003534CA /* Default-Landscape@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-Landscape@2x~ipad.png"; path = "../Default-Landscape@2x~ipad.png"; sourceTree = "<group>"; };
@@ -531,8 +543,19 @@
 				09B81844161D279F004B026C /* AVLNode.m */,
 				09BAD6731620BE3200ACCFF8 /* TrieNode.h */,
 				09BAD6741620BE3200ACCFF8 /* TrieNode.m */,
+				092CB6541688E2140057AC97 /* SkipNode.h */,
+				092CB6551688E2140057AC97 /* SkipNode.m */,
 			);
 			name = "Node Types";
+			sourceTree = "<group>";
+		};
+		092CB6531688E11A0057AC97 /* SkipList */ = {
+			isa = PBXGroup;
+			children = (
+				092CB64F1688E1160057AC97 /* SkipList.h */,
+				092CB6501688E1160057AC97 /* SkipList.m */,
+			);
+			name = SkipList;
 			sourceTree = "<group>";
 		};
 		0937E32216120FE10044040F /* CodeViews */ = {
@@ -552,6 +575,7 @@
 				09D65B711631B81F001EF3C2 /* Graph */,
 				09B4CE0B1629F54200145317 /* Tree */,
 				09B4CE0C1629F54C00145317 /* List */,
+				093F9FED168911DA00D6ADF7 /* HashTable */,
 			);
 			name = "Data Structures";
 			sourceTree = "<group>";
@@ -596,6 +620,17 @@
 				0937E329161210710044040F /* BubbleSort */,
 			);
 			name = Algorithms;
+			sourceTree = "<group>";
+		};
+		093F9FED168911DA00D6ADF7 /* HashTable */ = {
+			isa = PBXGroup;
+			children = (
+				093F9FE9168911D200D6ADF7 /* HashTable.h */,
+				093F9FEA168911D200D6ADF7 /* HashTable.m */,
+				093F9FEE1689122600D6ADF7 /* HashEntry.h */,
+				093F9FEF1689122600D6ADF7 /* HashEntry.m */,
+			);
+			name = HashTable;
 			sourceTree = "<group>";
 		};
 		094B7467160A6EA500C47C3E /* Images */ = {
@@ -816,6 +851,7 @@
 				09F152611612210A0088A374 /* DoublyLinkedList */,
 				09E9573616094FE300F5D573 /* Stack */,
 				095434491606D5BA001D3E5D /* LinkedList */,
+				092CB6531688E11A0057AC97 /* SkipList */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -1136,6 +1172,10 @@
 				09A5CB7516880FF0006E7023 /* GraphEdge.m in Sources */,
 				09A5CB7916881252006E7023 /* GraphConnections.m in Sources */,
 				0998D6241688C1DA00010148 /* EdgeView.m in Sources */,
+				092CB6511688E1160057AC97 /* SkipList.m in Sources */,
+				092CB6561688E2140057AC97 /* SkipNode.m in Sources */,
+				093F9FEB168911D200D6ADF7 /* HashTable.m in Sources */,
+				093F9FF01689122600D6ADF7 /* HashEntry.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
